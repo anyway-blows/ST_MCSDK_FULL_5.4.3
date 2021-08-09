@@ -1,0 +1,25 @@
+<application xmlns="http://ns.adobe.com/air/application/23.0">
+  <id>STMotorProfiler</id>
+  <filename>STMotorProfiler</filename>
+  <name>ST Motor Profiler</name>
+  <versionNumber>1.0.0</versionNumber>
+  <copyright>Copyright (c) 2019 STMicroelectronics</copyright>
+  <initialWindow>
+    <content>MotorProfiler.swf</content>
+    <visible>true</visible>
+    <fullScreen>true</fullScreen>
+    <renderMode>gpu</renderMode>
+    <requestedDisplayResolution>high</requestedDisplayResolution>
+  </initialWindow>
+  <icon>
+    <image16x16>resources/icons/MotorProfiler_16.png</image16x16>
+    <image32x32>resources/icons/MotorProfiler_32.png</image32x32>
+    <image48x48>resources/icons/MotorProfiler_48.png</image48x48>
+    <image80x80>resources/icons/MotorProfiler_80.png</image80x80>
+    <image128x128>resources/icons/MotorProfiler_128.png</image128x128>
+    <image144x144>resources/icons/MotorProfiler_144.png</image144x144>
+    <image152x152>resources/icons/MotorProfiler_152.png</image152x152>
+    <image512x512>resources/icons/MotorProfiler_512.png</image512x512>
+    <image1024x1024>resources/icons/MotorProfiler_1024.png</image1024x1024>
+  </icon>
+</application>

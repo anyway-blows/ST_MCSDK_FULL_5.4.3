@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<board id="STEVAL-IPMNG3S-1Sh" label="STEVAL-IPMNG3S-1Sh" img="img/image_steval-ipmng3s.png" description="300 W motor control power board based on STGIPNS3H60T-H SLLIMM™-nano SMD IPM MOSFET" connection_interface="morpho, mc_connector" based_on="STGIPNS3H60T-H">
+  <features>
+    <dc_input_voltage min="125"   max="400"	 	unit="Vdc"/>
+    <output_current	  min=""	  max="3"  	unit=""/>
+    <nominal_power    min=""	  max="300"		unit="W"/>
+  </features>
+  <system type="motor 1">
+		<power_stage version="3.0">
+			<code_id>51</code_id>
+			<name>Power Stage</name>
+			<uid>PS</uid>
+			<type>PS</type>
+			<handler_name>PS</handler_name>
+			<board_name>STEVAL-IPMNG3S</board_name>
+			<original_board_name></original_board_name>
+			<mp_supported>false</mp_supported>
+			<vars>
+				<var version="1.0" type="MC_Int" name="Min dead-time" enable="true" visible="true" readonly="false" value="1000" />
+				<var version="1.0" type="MC_Int" name="Max switching frequency" enable="true" visible="true" readonly="false" value="40" />
+				<var version="1.0" type="MC_Int" name="Max rated voltage" enable="true" visible="true" readonly="false" value="400" />
+				<var version="1.0" type="MC_Int" name="Min rated voltage" enable="true" visible="true" readonly="false" value="125" />
+				<var version="1.0" type="MC_Int" name="Nominal voltage" enable="true" visible="true" readonly="false" value="325" />
+				<var version="1.0" type="MC_Bool" name="Bus voltage sensing enable" enable="true" visible="true" readonly="false" value="true" />
+				<var version="1.0" type="MC_Double" name="Bus voltage divider" enable="false" visible="true" readonly="false" value="126" />
+				<var version="1.0" type="MC_Double" name="R1" enable="true" visible="true" readonly="false" value="940" />
+				<var version="1.0" type="MC_Double" name="R2" enable="true" visible="true" readonly="false" value="7.5" />
+				<var version="1.0" type="MC_Bool" name="Current sensing enable" enable="true" visible="true" readonly="false" value="true" />
+				<var version="1.0" type="MC_List" name="Current reading topology" enable="true" visible="true" readonly="false" value="0">
+					<items>
+						<item tag="0" text="One Shunt Resistor" />
+						<item tag="1" text="Three Shunt Resistors" />
+						<item tag="2" text="Two Insulated Current Sensors" />
+					</items>
+				</var>
+				<var version="1.0" type="MC_Double" name="ICS gain" enable="false" visible="true" readonly="false" value="1" />
+				<var version="1.0" type="MC_Double" name="Shunt resistor(s) value" enable="true" visible="true" readonly="false" value="0.2" />
+				<var version="1.0" type="MC_Bool" name="Amplifying network gain available" enable="true" visible="true" readonly="false" value="true" />
+				<var version="1.0" type="MC_Double" name="Amplifying network gain" enable="true" visible="true" readonly="false" value="1.9000000000000001" />
+				<var version="1.0" type="MC_Int" name="Tnoise" enable="false" visible="true" readonly="false" value="2000" />
+				<var version="1.0" type="MC_Int" name="Trise" enable="true" visible="true" readonly="false" value="1500" />
+				<var version="1.0" type="MC_Bool" name="Over current protection enable" enable="true" visible="true" readonly="false" value="true" />
+				<var version="1.0" type="MC_Double" name="Comparator threshold" enable="true" visible="true" readonly="false" value="0.53" />
+				<var version="1.0" type="MC_Double" name="Over current network offset" enable="true" visible="true" readonly="false" value="0" />
+				<var version="1.0" type="MC_Double" name="Over current network gain" enable="true" visible="true" readonly="false" value="0.1" />
+				<var version="1.0" type="MC_Double" name="Expected over-current threshold" enable="true" visible="true" readonly="true" value="5.3" />
+				<var version="1.0" type="MC_List" name="Over-current feedback signal polarity" enable="true" visible="true" readonly="false" value="0">
+					<items>
+						<item tag="0" text="Active low" />
+						<item tag="1" text="Active high" />
+					</items>
+				</var>
+				<var version="1.0" type="MC_Bool" name="Over-current protection disabling network" enable="true" visible="true" readonly="false" value="false" />
+				<var version="1.0" type="MC_List" name="Over-current protection disabling network polarity" enable="false" visible="true" readonly="false" value="1">
+					<items>
+						<item tag="0" text="Active low" />
+						<item tag="1" text="Active high" />
+					</items>
+				</var>
+				<var version="1.0" type="MC_Bool" name="Dissipative brake enable" enable="true" visible="true" readonly="false" value="false" />
+				<var version="1.0" type="MC_List" name="Dissipative brake polarity" enable="false" visible="true" readonly="false" value="1">
+					<items>
+						<item tag="0" text="Active low" />
+						<item tag="1" text="Active high" />
+					</items>
+				</var>
+				<var version="1.0" type="MC_List" name="U Driver High side driving signal polarity" enable="true" visible="true" readonly="false" value="1">
+					<items>
+						<item tag="0" text="Active low" />
+						<item tag="1" text="Active high" />
+					</items>
+				</var>
+				<var version="1.0" type="MC_List" name="U Driver Low side driving signal polarity" enable="true" visible="true" readonly="false" value="1">
+					<items>
+						<item tag="0" text="Active low" />
+						<item tag="1" text="Active high" />
+					</items>
+				</var>
+				<var version="1.0" type="MC_Bool" name="U Driver enabling signal enable" enable="false" visible="true" readonly="false" value="false" />
+				<var version="1.0" type="MC_List" name="U Driver enabling signal polarity" enable="false" visible="true" readonly="true" value="1">
+					<items>
+						<item tag="0" text="Active low" />
+						<item tag="1" text="Active high" />
+					</items>
+				</var>
+				<var version="1.0" type="MC_List" name="V Driver High side driving signal polarity" enable="true" visible="true" readonly="false" value="1">
+					<items>
+						<item tag="0" text="Active low" />
+						<item tag="1" text="Active high" />
+					</items>
+				</var>
+				<var version="1.0" type="MC_List" name="V Driver Low side driving signal polarity" enable="true" visible="true" readonly="false" value="1">
+					<items>
+						<item tag="0" text="Active low" />
+						<item tag="1" text="Active high" />
+					</items>
+				</var>
+				<var version="1.0" type="MC_Bool" name="V Driver enabling signal enable" enable="false" visible="true" readonly="false" value="false" />
+				<var version="1.0" type="MC_List" name="V Driver enabling signal polarity" enable="false" visible="true" readonly="true" value="1">
+					<items>
+						<item tag="0" text="Active low" />
+						<item tag="1" text="Active high" />
+					</items>
+				</var>
+				<var version="1.0" type="MC_List" name="W Driver High side driving signal polarity" enable="true" visible="true" readonly="false" value="1">
+					<items>
+						<item tag="0" text="Active low" />
+						<item tag="1" text="Active high" />
+					</items>
+				</var>
+				<var version="1.0" type="MC_List" name="W Driver Low side driving signal polarity" enable="true" visible="true" readonly="false" value="1">
+					<items>
+						<item tag="0" text="Active low" />
+						<item tag="1" text="Active high" />
+					</items>
+				</var>
+				<var version="1.0" type="MC_Bool" name="W Driver enabling signal enable" enable="false" visible="true" readonly="false" value="false" />
+				<var version="1.0" type="MC_List" name="W Driver enabling signal polarity" enable="false" visible="true" readonly="true" value="1">
+					<items>
+						<item tag="0" text="Active low" />
+						<item tag="1" text="Active high" />
+					</items>
+				</var>
+				<var version="1.0" type="MC_Bool" name="x Driver complemented from high side" enable="true" visible="true" readonly="false" value="false" />
+				<var version="1.0" type="MC_Int" name="x Driver HW inserted dead time" enable="false" visible="true" readonly="false" value="100" />
+				<var version="1.0" type="MC_Bool" name="xAllDrive" enable="true" visible="true" readonly="false" value="true" />
+				<var version="1.0" type="MC_Bool" name="xAllDriver_signal_enable" enable="true" visible="true" readonly="false" value="false" />
+				<var version="1.0" type="MC_Bool" name="use_STGAP1S" enable="true" visible="true" readonly="false" value="false" />
+
+        <var version="1.0" type="MC_Double" name="SettParamGain - Input - Imax" enable="true" visible="true" readonly="false" value="4" />
+        <var version="1.0" type="MC_Double" name="SettParamGain - Input - Vm" enable="true" visible="true" readonly="false" value="1.6" />
+        <var version="1.0" type="MC_Double" name="SettParamGain - Input - Prating" enable="true" visible="true" readonly="false" value="1.6" />
+        <var version="1.0" type="MC_Double" name="SettParamGain - Input - R1" enable="true" visible="true" readonly="false" value="1000" />
+        <var version="1.0" type="MC_Double" name="SettParamGain - Input - R2" enable="true" visible="true" readonly="false" value="1900" />
+        <var version="1.0" type="MC_Double" name="SettParamGain - Input - R3" enable="true" visible="true" readonly="false" value="1000" />
+        <var version="1.0" type="MC_Double" name="SettParamGain - Input - R4" enable="true" visible="true" readonly="false" value="1000" />
+        <var version="1.0" type="MC_Double" name="SettParamGain - Input - R5" enable="true" visible="true" readonly="false" value="1900" />
+        <var version="1.0" type="MC_Bool" name="SettParamGain - Input - R3using" enable="true" visible="true" readonly="false" value="false" />
+        <var version="1.0" type="MC_Bool" name="SettParamGain - Input - R4R5fixed" enable="true" visible="true" readonly="false" value="false" />
+			</vars>
+			<temperature_sensing version="1.0">
+				<vars>
+					<var version="1.0" type="MC_Bool" name="Temperature sensing enable" enable="true" visible="true" readonly="false" value="false" />
+					<var version="1.0" type="MC_Double" name="Temperature sensing - V0" enable="true" visible="true" readonly="false" value="290" />
+					<var version="1.0" type="MC_Double" name="Temperature sensing - T0" enable="true" visible="true" readonly="false" value="25" />
+					<var version="1.0" type="MC_Double" name="Temperature sensing - Ratio V/T" enable="true" visible="true" readonly="false" value="25" />
+					<var version="1.0" type="MC_Int" name="Max working temperature on sensor" enable="true" visible="true" readonly="false" value="70" />
+				</vars>
+			</temperature_sensing>
+			<pfc version="1.0">
+				<vars>
+					<var version="1.0" type="MC_Bool" name="PFC availability" enable="true" visible="true" readonly="false" value="false" />
+					<var version="1.0" type="MC_Int" name="PFC - Nominal power" enable="true" visible="true" readonly="false" value="1000" />
+					<var version="1.0" type="MC_Double" name="PFC_nominal_current" enable="true" visible="true" readonly="true" value="6.149" />
+					<var version="1.0" type="MC_Double" name="PFC - Shunt resistor value" enable="true" visible="true" readonly="false" value="0.22" />
+					<var version="1.0" type="MC_Bool" name="PFC_OPAMP_presentOnboard" enable="true" visible="true" readonly="false" value="true" />
+					<var version="1.0" type="MC_Bool" name="PFC_useOPAMPForCurrentProtection" enable="true" visible="true" readonly="false" value="true" />
+					<var version="1.0" type="MC_Double" name="PFC_Comparator_threshold" enable="true" visible="true" readonly="false" value="1.2" />
+					<var version="1.0" type="MC_Double" name="PFC_Expected_overcurrent_threshold" enable="true" visible="true" readonly="true" value="1.976" />
+					<var version="1.0" type="MC_Double" name="PFC - Amplifying network gain" enable="true" visible="true" readonly="false" value="2.7600000000000002" />
+					<var version="1.0" type="MC_Int" name="PFC - AC voltage sensing divider" enable="true" visible="true" readonly="false" value="116" />
+					<var version="1.0" type="MC_Int" name="PFC - Ton propagation delay" enable="true" visible="true" readonly="false" value="2550" />
+					<var version="1.0" type="MC_Int" name="PFC - Toff propagation delay" enable="true" visible="true" readonly="false" value="2550" />
+					<var version="1.0" type="MC_List" name="PFC - Driving signal polarity" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="0" text="Active low" />
+							<item tag="1" text="Active high" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="PFC - Overcurrent signal polarity" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="0" text="Active low" />
+							<item tag="1" text="Active high" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="PFC - AC Mains synch signal polarity" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="0" text="Falling edge" />
+							<item tag="1" text="Rising edge" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_Double" name="PFC_maxPowerTransistorCurrent" enable="true" visible="true" readonly="false" value="10" />
+				</vars>
+			</pfc>
+			<ac_input version="1.0">
+				<vars>
+					<var version="1.0" type="MC_List" name="AC_Main_Freq" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="50" text="50" />
+							<item tag="60" text="60" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_Int" name="AC_Min_Input_Voltage" enable="true" visible="true" readonly="false" value="160" />
+					<var version="1.0" type="MC_Int" name="AC_Max_Input_Voltage" enable="true" visible="true" readonly="false" value="340" />
+					<var version="1.0" type="MC_List" name="AC_Voltage_Range" enable="true" visible="true" readonly="false" value="3">
+						<items>
+							<item tag="0" text="230 V - 50Hz" />
+							<item tag="1" text="115 V - 60Hz" />
+							<item tag="2" text="wide range - 50 Hz" />
+							<item tag="3" text="custom" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_Int" name="AC_Nominal_Input_Voltage" enable="true" visible="true" readonly="false" value="230" />
+				</vars>
+			</ac_input>
+			<inrush_current_limiter version="1.0">
+				<vars>
+					<var version="1.0" type="MC_Bool" name="Inrush current limiter enable" enable="true" visible="true" readonly="false" value="false" />
+					<var version="1.0" type="MC_List" name="Inrush current limiter polarity" enable="true" visible="true" readonly="false" value="1">
+						<items>
+							<item tag="0" text="Active low" />
+							<item tag="1" text="Active high" />
+						</items>
+					</var>
+				</vars>
+			</inrush_current_limiter>
+		</power_stage>
+	</system>
+	<applications>
+		<application>generic</application>
+		<application>pumps</application>
+		<application>compressor</application>
+		<application>fans</application>
+	</applications>
+</board>

@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pn name="STM32G474QE">
+  <peripherals>
+    <usarts default="USART1">
+      <usart name="USART1">
+        <channel name="TX"  pins="A9,B6,C4,E0,G9" default="C4"/>
+        <channel name="RX"  pins="A10,B7,C5,E1" default="C5"/>
+      </usart>
+      <usart name="USART2">
+        <channel name="TX"  pins="A2,A14,B3,D5" default="A2"/>
+        <channel name="RX"  pins="A3,A15,B4,D6" default="A3"/>
+      </usart>
+      <usart name="USART3">
+        <channel name="TX"  pins="B9,B10,C10,D8" default="B10"/>
+        <channel name="RX"  pins="B8,B11,C11,D9,E15" default="B11"/>
+      </usart>
+      <usart name="USART4">
+        <channel name="TX"  pins="C10" default="C10"/>
+        <channel name="RX"  pins="C11" default="C11"/>
+      </usart>
+      <usart name="USART5">
+        <channel name="TX"  pins="C12" default="C12"/>
+        <channel name="RX"  pins="D2" default="D2"/>
+      </usart>
+    </usarts>
+    <timers>
+      <timer name="TIM1">
+        <channel name="CH1"  pins="A8,C0,E9" default="A8" />
+        <channel name="CH2"  pins="A9,C1,E11" default="A9" />
+        <channel name="CH3"  pins="A10,C2,E13" default="A10" />
+        <channel name="CH1N" pins="A7,A11,B13,C13,E8" default="B13" />
+        <channel name="CH2N" pins="A12,B0,B14,E10" default="B0" />
+        <channel name="CH3N" pins="B1,B9,B15,E12" default="B1" />
+        <!--<channel name="BKIN" pins="A6,A14,A15,B8,B10,B12,C13,E15" default="A6" />-->
+        <channel name="BKIN" pins="A11,C3,E14" default="A11" />
+        <!-- BKIN2-->
+      </timer>
+      <timer name="TIM2">
+        <channel name="CH1"  pins="A0,A5,A15,D3" default="A15" />
+        <channel name="CH2"  pins="A1,B3,D4" default="B3" />
+        <channel name="CH3"  pins="A2,A9,B10,D7" default="B10" />
+      </timer>
+      <timer name="TIM3">
+        <channel name="CH1"  pins="A6,B4,C6,E2" default="C6" />
+        <channel name="CH2"  pins="A4,A7,B5,C7" default="B5" />
+        <channel name="CH3"  pins="B0,C8,E4" default="B0" />
+      </timer>
+      <timer name="TIM4">
+        <channel name="CH1"  pins="A11,B6,D12" default="B6" />
+        <channel name="CH2"  pins="A12,B7,D13" default="B7" />
+        <channel name="CH3"  pins="A13,B8,D14" default="B8" />
+      </timer>
+      <timer name="TIM5">
+        <channel name="CH1"  pins="A0,B2,F6" default="F6" />
+        <channel name="CH2"  pins="A1,C12,F7" default="F7" />
+        <channel name="CH3"  pins="A2,E8,F8" default="F8" />
+      </timer>
+      <timer name="TIM6"/>
+      <timer name="TIM8">
+        <channel name="CH1"  pins="A15,B6,C6" default="C6" />
+        <channel name="CH2"  pins="A14,B8,C7" default="C7" />
+        <channel name="CH3"  pins="B9,C8" default="C8" />
+        <channel name="CH1N" pins="A7,B3,C10" default="C10" />
+        <channel name="CH2N" pins="B0,B4,C11" default="C11" />
+        <channel name="CH3N" pins="B1,B5,C12" default="C12" />
+        <!--<channel name="BKIN" pins="A0,A6,A10,B7,D2" default="A0" />-->
+        <channel name="BKIN" pins="B6,C9" default="C9" />
+        <!-- BKIN2-->
+      </timer>
+      <functionality name="FREERTOS" default="TIM6">
+        <timer name="TIM3"/>
+        <timer name="TIM4"/>
+        <timer name="TIM6"/>
+      </functionality>
+      <functionality name="MCT">
+        <timer name="TIM1"/>
+        <timer name="TIM8"/>
+      </functionality>
+      <functionality name="HIT,EIT" default="TIM2" default_M2="TIM5">
+        <timer name="TIM2"/>
+        <timer name="TIM3"/>
+        <timer name="TIM4"/>
+        <timer name="TIM5"/>
+      </functionality>
+    </timers>
+    <alternate_function>
+      <pin name="A0">
+        <function number="1" func="TIM2_CH1"/>
+      </pin>
+      <pin name="A1">
+        <function number="1" func="TIM2_CH2"/>
+      </pin>
+      <pin name="A2">
+        <function number="1" func="TIM2_CH3"/>
+        <function number="7" func="USART2_TX"/>
+      </pin>
+      <pin name="A3">
+        <function number="7" func="USART2_RX" />
+      </pin>
+      <pin name="A5">
+        <function number="1" func="TIM2_CH1"/>
+      </pin>
+      <pin name="A6">
+        <function number="2" func="TIM3_CH1"/>
+      </pin>
+      <pin name="A7">
+        <function number="2" func="TIM3_CH2"/>
+        <function number="6" func="TIM1_CH1N"/>
+      </pin>
+      <pin name="A8">
+        <function number="6" func="TIM1_CH1"/>
+      </pin>
+      <pin name="A9">
+        <function number="6" func="TIM1_CH2"/>
+        <function number="7" func="USART1_TX"/>
+        <function number="10" func="TIM1_CH2"/>
+      </pin>
+      <pin name="A10">
+        <function number="6" func="TIM1_CH3"/>
+        <function number="7" func="USART1_RX"/>
+      </pin>
+      <pin name="A11">
+        <function number="6" func="TIM1_CH1N" />
+        <function number="10" func="TIM4_CH1" />
+        <function number="12" func="TIM1_BKIN2" />
+      </pin>
+      <pin name="A12">
+        <function number="10" func="TIM4_CH2" />
+      </pin>
+      <pin name="A13">
+        <function number="10" func="TIM4_CH3" />
+      </pin>
+      <pin name="A14">
+        <function number="5" func="TIM8_CH2" />
+        <function number="7" func="USART2_TX"/>
+      </pin>
+      <pin name="A15">
+        <function number="2" func="TIM8_CH2" />
+        <function number="7" func="USART2_RX"/>
+      </pin>
+      <pin name="B0">
+        <function number="2" func="TIM3_CH3"/>
+        <function number="4" func="TIM8_CH2N"/>
+        <function number="6" func="TIM1_CH2N"/>
+      </pin>
+      <pin name="B1">
+        <function number="4" func="TIM1_CH3N"/>
+        <function number="6" func="TIM8_CH3N"/>
+      </pin>
+      <pin name="B3">
+        <function number="2" func="TIM2_CH2"/>
+        <function number="5" func="TIM8_CH1"/>
+        <function number="7" func="USART1_TX"/>
+      </pin>
+      <pin name="B4">
+        <function number="2" func="TIM3_CH1"/>
+        <function number="4" func="TIM8_CH2N"/>
+        <function number="7" func="USART2_RX"/>
+      </pin>
+      <pin name="B5">
+        <function number="2" func="TIM3_CH2"/>
+        <function number="4" func="TIM8_CH3N"/>
+      </pin>
+      <pin name="B6">
+        <function number="2" func="TIM4_CH1" />
+        <function number="7" func="USART1_TX"/>
+        <function number="10" func="TIM1_BKIN2" />
+      </pin>
+      <pin name="B7">
+        <function number="2" func="TIM4_CH2" />
+        <function number="7" func="USART1_RX"/>
+      </pin>
+      <pin name="B8">
+        <function number="2" func="TIM4_CH3" />
+        <function number="7" func="USART3_TX"/>
+        <function number="10" func="TIM8_CH2"/>
+      </pin>
+      <pin name="B9">
+        <function number="7" func="USART3_RX"/>
+        <function number="10" func="TIM8_CH3"/>
+        <function number="12" func="TIM1_CH3n"/>
+      </pin>
+      <pin name="B10">
+        <function number="1" func="TIM2_CH3"/>
+        <function number="7" func="USART3_TX"/>
+      </pin>
+      <pin name="B11">
+        <function number="7" func="USART3_RX"/>
+      </pin>
+      <pin name="B13">
+        <function number="6" func="TIM1_CH1N"/>
+      </pin>
+      <pin name="B14">
+        <function number="6" func="TIM1_CH2N"/>
+      </pin>
+      <pin name="B15">
+        <function number="4" func="TIM1_CH3N"/>
+      </pin>
+      <pin name="C0">
+        <function number="2" func="TIM1_CH1"/>
+      </pin>
+      <pin name="C1">
+        <function number="2" func="TIM1_CH2"/>
+      </pin>
+      <pin name="C2">
+        <function number="2" func="TIM1_CH3"/>
+      </pin>
+      <pin name="C3">
+        <function number="6" func="TIM1_BKIN2"/>
+      </pin>
+      <pin name="C4">
+        <function number="7" func="USART1_TX"/>
+      </pin>
+      <pin name="C5">
+        <function number="7" func="USART1_RX"/>
+      </pin>
+      <pin name="C6">
+        <function number="2" func="TIM3_CH1"/>
+        <function number="4" func="TIM8_CH1"/>
+      </pin>
+      <pin name="C7">
+        <function number="2" func="TIM3_CH2"/>
+        <function number="4" func="TIM8_CH2"/>
+      </pin>
+      <pin name="C8">
+        <function number="2" func="TIM3_CH3"/>
+        <function number="4" func="TIM8_CH3"/>
+      </pin>
+      <pin name="C9">
+        <function number="6" func="TIM8_BKIN2"/>
+      </pin>
+      <pin name="C10">
+        <function number="4" func="TIM8_CH1N"/>
+        <function number="5" func="USART4_TX"/>
+        <function number="7" func="USART3_TX"/>
+      </pin>
+      <pin name="C11">
+        <function number="4" func="TIM8_CH2N"/>
+        <function number="5" func="USART4_RX"/>
+        <function number="7" func="USART7_RX"/>
+      </pin>
+      <pin name="C12">
+        <function number="4" func="TIM8_CH3N"/>
+      </pin>
+      <pin name="C13">
+        <function number="4" func="TIM1_CH1N"/>
+      </pin>
+    </alternate_function>
+  </peripherals>
+</pn>
+

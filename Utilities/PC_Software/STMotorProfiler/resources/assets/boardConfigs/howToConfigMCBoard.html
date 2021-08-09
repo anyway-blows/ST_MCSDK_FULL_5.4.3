@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<!--
+    Stellar by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+        <title>ST Motor Profiler Board Configuration</title>
+        <base href="/" >
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+
+<body>
+
+        <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <span class="logo"><img src="images/MotorProfiler_144.png" alt="" /></span>
+            <h1>Motor Profiler</h1>
+
+            <p>Board Configuration</p>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <!-- class="active" -->
+                <li><a href="#bundles" >Bundles</a></li>
+                {{#boards_list}}
+                <li><a href="#{{type}}Config" >{{type}} Board</a></li>
+                {{/boards_list}}
+            </ul>
+        </nav>
+
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- BUNDLE -->
+            <section id="bundles" class="main special">
+                <header>
+                    <h2>Board Configuration</h2>
+                </header>
+
+                {{^boards_list}}
+                    <h3>To properly configure the boards in Motor Control MODE, please, refer to their respective user manual.</h3>
+                {{/boards_list}}
+
+                <ul class="features">
+                    {{#boards_list}}
+                        <li>
+                            <p>{{name}}</p>
+                            <!--<span class="icon major style1 fa-code"></span>-->
+                            <a class="image"><img src="{{path}}/{{image}}" alt="" data-position="center center"/></a>
+                            <h3>{{type}} Board</h3>
+                        </li>
+                    {{/boards_list}}
+                </ul>
+            </section>
+
+            <!-- BOARDS -->
+            {{#boards_list}}
+                <section id="{{type}}Config" class="main">
+                <h1   align="center"  >{{type}} Board</h1>
+
+                {{#steps}}
+                    <div class="spotlight">
+                        <span class="image"><img src="{{path}}/{{image}}" alt="" /></span>
+                        <div class="content">
+                            <header class="major">
+                                <h2>{{name}}
+                                    {{^position}} <!-- {{/position}}
+                                    <span class="super">{{position}}</span>
+                                    {{^position}} --> {{/position}}
+                                </h2>
+                            </header>
+                            <ol>
+                                {{%IMPLICIT-ITERATOR}}{{#descriptions}}
+                                <li style="text-align: left">{{.}}</li>
+                                {{/descriptions}}
+                            </ol>
+                        </div>
+                    </div>
+
+                    {{^last}}<hr>{{/last}}
+                {{/steps}}
+
+            </section>
+            {{/boards_list}}
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <!-- ST LINKS -->
+            <section >
+                <ul class="icons">
+                    <li><a href="https://www.facebook.com/STMicroelectronics.NV"     class="icon fa-facebook alt"    target="_blank"><span class="label" >Facebook</span></a></li>
+                    <li><a href="https://twitter.com/st_world"                       class="icon fa-twitter alt"     target="_blank"><span class="label" >Twitter</span></a></li>
+                    <li><a href="https://plus.google.com/+stmicroelectronics"        class="icon fa-google-plus alt" target="_blank"><span class="label" >Google+</span></a></li>
+                    <li><a href="http://www.youtube.com/user/STonlineMedia"          class="icon fa-youtube alt"     target="_blank"><span class="label" >YouTube</span></a></li>
+                    <li><a href="http://www.linkedin.com/company/stmicroelectronics" class="icon fa-linkedin alt"    target="_blank"><span class="label" >LinkedIn</span></a></li>
+
+                    <li>All rights reserved &copy; 2019 <a target="_blank" href="http://www.st.com"
+                    >STMicroelectronics</a></li>
+                </ul>
+            </section>
+
+            <!-- CREDITS -->
+            <section >
+                <div style="height: 49px">&nbsp;</div>
+                <p style="text-align: right">Credits: <a target="_blank" href="https://html5up.net">HTML5 UP</a></p>
+            </section>
+
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<systems>
+  <application>
+    <item name="custom"           id="generic" />
+    <item name="pumps"            id="pumps" />
+    <item name="compressor"       id="compressor" />
+    <item name="air conditioning" id="air conditioning" />
+    <item name="dish washer"      id="dish washer" />
+    <item name="fans"             id="fans" />
+    <item name="drone"            id="drone" />
+  </application>
+
+  <inverter>
+    <item name="STEVAL-ESC001V1"              id ="STEVAL-ESC001V1" />
+    <item name="STEVAL-IHM034V2"              id ="STEVAL-IHM034V2" />
+    <item name="STEVAL-IHM042V1"              id ="STEVAL-IHM042V1" />
+    <item name="STEVAL-SPIN3201"              id ="STEVAL-SPIN3201" />
+    <item name="STEVAL-SPIN3202"              id ="STEVAL-SPIN3202" />
+    <item name="X-NUCLEO-IHM16_NUCLEO-F303RE" id ="IHM16_F303RE" />
+    <item name="B-G431B-ESC1"                 id ="B-G431B-ESC1" />
+
+    <item name="EVSPIN32F0251S1"              id ="EVSPIN32F0251S1" />
+    <item name="EVSPIN32F0601S1"              id ="EVSPIN32F0601S1" />
+    <item name="EVSPIN32F0601S3"              id ="EVSPIN32F0601S3" />
+    <item name="EVSPIN32F0602S1"              id ="EVSPIN32F0602S1" />
+  </inverter>
+  <power>
+    <item name="STEVAL-IHM023V3-3Sh-LV" id ="STEVAL-IHM023V3-3Sh-LV" />
+    <item name="STEVAL-IHM023V3-1Sh-LV" id ="STEVAL-IHM023V3-1Sh-LV" />
+    <item name="STEVAL-IHM023V3-3Sh-HV" id ="STEVAL-IHM023V3-3Sh-HV" />
+    <item name="STEVAL-IHM023V3-1Sh-HV" id ="STEVAL-IHM023V3-1Sh-HV" />
+    <item name="STEVAL-IHM028V2-3Sh"    id ="STEVAL-IHM028V2-3Sh" />
+    <item name="STEVAL-IHM028V2-1Sh"    id ="STEVAL-IHM028V2-1Sh" />
+    <item name="STEVAL-IHM045V1-3Sh"    id ="STEVAL-IHM045V1-3Sh" />
+    <item name="STEVAL-IHM045V1-1Sh"    id ="STEVAL-IHM045V1-1Sh" />
+    <item name="X-NUCLEO-IHM07M1-3Sh"   id ="X-NUCLEO-IHM07M1-3Sh" />
+    <item name="X-NUCLEO-IHM07M1-1Sh"   id ="X-NUCLEO-IHM07M1-1Sh" />
+    <item name="X-NUCLEO-IHM08M1-3Sh"   id ="X-NUCLEO-IHM08M1-3Sh" />
+    <item name="X-NUCLEO-IHM08M1-1Sh"   id ="X-NUCLEO-IHM08M1-1Sh" />
+    <item name="X-NUCLEO-IHM11M1-1Sh"   id ="X-NUCLEO-IHM11M1-1Sh" />
+    <item name="X-NUCLEO-IHM16M1-3Sh"   id ="X-NUCLEO-IHM16M1-3Sh" />
+    <item name="X-NUCLEO-IHM16M1-1Sh"   id ="X-NUCLEO-IHM16M1-1Sh" />
+    <item name="STEVAL-IPM05F-3Sh"      id ="STEVAL-IPM05F-3Sh" />
+    <item name="STEVAL-IPM05F-1Sh"      id ="STEVAL-IPM05F-1Sh" />
+    <item name="STEVAL-IPM07F-3Sh"      id ="STEVAL-IPM07F-3Sh" />
+    <item name="STEVAL-IPM07F-1Sh"      id ="STEVAL-IPM07F-1Sh" />
+    <item name="STEVAL-IPM10B-3Sh"      id ="STEVAL-IPM10B-3Sh" />
+    <item name="STEVAL-IPM10B-1Sh"      id ="STEVAL-IPM10B-1Sh" />
+    <item name="STEVAL-IPM10F-3Sh"      id ="STEVAL-IPM10F-3Sh" />
+    <item name="STEVAL-IPM10F-1Sh"      id ="STEVAL-IPM10F-1Sh" />
+    <item name="STEVAL-IPM15B-3Sh"      id ="STEVAL-IPM15B-3Sh" />
+    <item name="STEVAL-IPM15B-1Sh"      id ="STEVAL-IPM15B-1Sh" />
+    <item name="STEVAL-IPM08B-3Sh"      id ="STEVAL-IPM08B-3Sh" />
+    <item name="STEVAL-IPM08B-1Sh"      id ="STEVAL-IPM08B-1Sh" />
+    <item name="STEVAL-IPMNG3Q-1Sh"     id ="STEVAL-IPMNG3Q-1Sh" />
+    <item name="STEVAL-IPMNG3Q-3Sh"     id ="STEVAL-IPMNG3Q-3Sh" />
+    <item name="STEVAL-IPMNG5Q-1Sh"     id ="STEVAL-IPMNG5Q-1Sh" />
+    <item name="STEVAL-IPMNG5Q-3Sh"     id ="STEVAL-IPMNG5Q-3Sh" />
+    <item name="STEVAL-IPMNG8Q-1Sh"     id ="STEVAL-IPMNG8Q-1Sh" />
+    <item name="STEVAL-IPMNG8Q-3Sh"     id ="STEVAL-IPMNG8Q-3Sh" />
+    <item name="STEVAL-IPMNM1N-1Sh"     id ="STEVAL-IPMNM1N-1Sh" />
+    <item name="STEVAL-IPMNM1N-3Sh"     id ="STEVAL-IPMNM1N-3Sh" />
+    <item name="STEVAL-IPMNM2N-1Sh"     id ="STEVAL-IPMNM2N-1Sh" />
+    <item name="STEVAL-IPMNM2N-3Sh"     id ="STEVAL-IPMNM2N-3Sh" />
+    <item name="STEVAL-CTM009V1-ICS"    id ="STEVAL-CTM009V1-ICS" />
+    <item name="STEVAL-IPMNG3S-3Sh"     id ="STEVAL-IPMNG3S-3Sh" />
+    <item name="STEVAL-IPMNG3S-1Sh"     id ="STEVAL-IPMNG3S-1Sh" />
+    <item name="STEVAL-IPMNM1S-1Sh"     id ="STEVAL-IPMNM1S-1Sh" />
+    <item name="STEVAL-IPMNM1S-3Sh"     id ="STEVAL-IPMNM1S-3Sh" />
+    <item name="STEVAL-IPMNM2S-1Sh"     id ="STEVAL-IPMNM2S-1Sh" />
+    <item name="STEVAL-IPMNM2S-3Sh"     id ="STEVAL-IPMNM2S-3Sh" />
+  </power>
+
+  <control>
+    <item name="STM32072B-EVAL"   id ="STM32072B-EVAL" />
+    <item name="STM3210E-EVAL"    id ="STM3210E-EVAL" />
+    <item name="STM32303E-EVAL"   id ="STM32303E-EVAL" />
+    <item name="STM3240G-EVAL"    id ="STM3240G-EVAL" />
+    <item name="STM3241G-EVAL"    id ="STM3241G-EVAL" />
+    <item name="STM32446E-EVAL"   id ="STM32446E-EVAL" />
+    <item name="STEVAL-IHM039V1"  id ="STEVAL-IHM039V1" />
+    <item name="NUCLEO-F302R8"    id ="NUCLEO-F302R8" />
+    <item name="NUCLEO-F303RE"    id ="NUCLEO-F303RE" />
+    <item name="NUCLEO-F446RE"    id ="NUCLEO-F446RE" />
+    <item name="NUCLEO-F072RB"    id ="NUCLEO-F072RB" />
+    <item name="NUCLEO-F030R8"    id ="NUCLEO-F030R8" />
+    <item name="NUCLEO-F103RB"    id ="NUCLEO-F103RB" />
+    <item name="STM32L476G-EVAL"  id ="STM32L476G-EVAL" />
+    <item name="NUCLEO-L476RG"    id ="NUCLEO-L476RG" />
+    <item name="NUCLEO-L452RE"    id ="NUCLEO-L452RE" />
+    <item name="NUCLEO-F746ZG"    id ="NUCLEO-F746ZG" />
+    <item name="STM32F769I-EVAL"  id ="STM32F769I-EVAL" />
+    <item name="NUCLEO-F401RE"    id ="NUCLEO-F401RE" />
+    <item name="STM32G081B-EVAL"  id ="STM32G081B-EVAL" />
+    <item name="NUCLEO-G431RB"    id ="NUCLEO-G431RB" />
+    <item name="STM32G474E-EVAL"  id ="STM32G474E-EVAL" />
+    
+  </control>
+
+  <kit>
+    <item name="P-NUCLEO-IHM001-3Sh" id ="P-NUCLEO-IHM001-3Sh"/>
+    <item name="P-NUCLEO-IHM001-1Sh" id ="P-NUCLEO-IHM001-1Sh"/>
+    <item name="P-NUCLEO-IHM003-3Sh" id ="P-NUCLEO-IHM003-3Sh"/>
+  </kit>
+
+  <motor>
+    <item name="LowVoltage"      id ="motorLowVoltage"/>
+    <item name="HighVoltage"     id ="motorHighVoltage"/>
+    <item name="Shinano"         id ="motorShinano"/>
+    <item name="BullRunning"     id ="BR2804-1700kv"/>
+    <item name="Allen Bradley"   id ="Allen Bradley"/>
+    <item name="GimBal"          id ="GBM2804H-100T"/>
+  </motor>
+</systems>

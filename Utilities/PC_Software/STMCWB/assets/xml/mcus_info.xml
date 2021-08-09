@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mcus_info>
+    <mcu_super_set wb_id ="30"    pn="STM32F030RC"   />
+    <mcu_super_set wb_id ="31"    pn="STM32F031C6"   />
+    <mcu_super_set wb_id ="51"    pn="STM32F051R8"   />
+    <mcu_super_set wb_id ="1032"  pn="STM32F103R6"   />
+    <mcu_super_set wb_id ="1031"  pn="STM32F103VB"   />
+    <mcu_super_set wb_id ="1030"  pn="STM32F103ZG"   />
+    <mcu_super_set wb_id ="2000"  pn="STM32F207IG"   />
+    <mcu_super_set wb_id ="3022"  pn="STM32F302VB"   />
+    <mcu_super_set wb_id ="3023"  pn="STM32F302VC"   />
+    <mcu_super_set wb_id ="3024"  pn="STM32F302R8"   />
+    <mcu_super_set wb_id ="3032"  pn="STM32F303VB"   />
+    <mcu_super_set wb_id ="3033"  pn="STM32F303VC"   />
+    <mcu_super_set wb_id ="3034"  pn="STM32F303ZE"   />
+    <mcu_super_set wb_id ="4000"  pn="STM32F417IG"   />
+    <mcu_super_set wb_id ="4046"  pn="STM32F446ZE"   />
+    <mcu_super_set wb_id ="70"    pn="STM32F072VB"   />
+    <mcu_super_set wb_id ="9031"  pn="STSPIN32F0"    />
+    <mcu_super_set wb_id ="9131"  pn="STSPIN32F0A"   />
+    <mcu_super_set wb_id ="14000" pn="STM32L476ZG"   />
+    <mcu_super_set wb_id ="14500" pn="STM32L452VE"   />
+    <mcu_super_set wb_id ="17000" pn="STM32F746ZG"   />
+    <mcu_super_set wb_id ="17600" pn="STM32F769NI"   />
+    <mcu_super_set wb_id ="27000" pn="STM32H745ZI"   />    
+    <mcu_super_set wb_id ="4001"  pn="STM32F401VE"   />
+    <mcu_super_set wb_id ="700"   pn="STM32G071RB"   />
+    <mcu_super_set wb_id ="800"   pn="STM32G081RB"   />
+    <mcu_super_set wb_id ="40310" pn="STM32G431RB"   />
+    <mcu_super_set wb_id ="40311" pn="STM32G431CB"   />
+    <mcu_super_set wb_id ="40312" pn="STM32G474QE"   />
+    <mcu_super_set wb_id ="9251"  pn="STSPIN32F0251" />
+    <mcu_super_set wb_id ="9252"  pn="STSPIN32F0252" />
+    <mcu_super_set wb_id ="9601"  pn="STSPIN32F0601" />
+    <mcu_super_set wb_id ="9602"  pn="STSPIN32F0602" />
+
+
+  <clock_source_info>          
+        <info id="8_crystal"     text="8MHz External crystal/ceramic resonator"  define ="EXT_CLK_8_MHZ"  define_type ="EXTERNAL" wb_id="0"></info>
+        <info id="16_crystal"    text="16MHz External crystal/ceramic resonator" define ="EXT_CLK_16_MHZ" define_type ="EXTERNAL" wb_id="2"></info>
+        <info id="24_crystal"    text="24MHz External crystal/ceramic resonator" define ="EXT_CLK_24_MHZ" define_type ="EXTERNAL" wb_id="6"></info>
+        <info id="25_crystal"    text="25MHz External crystal/ceramic resonator" define ="EXT_CLK_25_MHZ" define_type ="EXTERNAL" wb_id="1"></info>
+        <info id="8_bypass"      text="8MHz BYPASS Clock Source"                 define ="EXT_CLK_8_MHZ"  define_type ="EXTERNAL" wb_id="5"></info>
+        <info id="16_bypass"     text="16MHz BYPASS Clock Source"                define ="EXT_CLK_16_MHZ" define_type ="EXTERNAL" wb_id="4"></info>
+        <info id="25_bypass"     text="25MHz BYPASS Clock Source"                define ="EXT_CLK_25_MHZ" define_type ="EXTERNAL" wb_id="3"></info>
+        <info id="internal_osc"  text="Internal RC oscillator"                   define ="INT_RC_OSC"     define_type ="INTERNAL" wb_id="100"></info>
+    </clock_source_info>
+    
+    <mcus>
+        <family name="STM32F4">
+            <sub_family name="STM32F407">
+                <mcu name="STM32F407IG" wb_id ="4000" package="UFBGA176" define="STM32F4xx" used_in_drive_number="1,2">
+                    <clock default_source_m1="25_crystal" default_source_m2="8_crystal">
+                        <clock_source ck_id="8_crystal" >
+                            <frequency mhz="168" />
+                        </clock_source>
+                        <clock_source ck_id="16_crystal">
+                            <frequency mhz="168" />
+                        </clock_source>
+                        <clock_source ck_id="25_crystal">
+                            <frequency mhz="168" />
+                        </clock_source>
+                    </clock>
+                </mcu>
+            </sub_family>
+            <sub_family name="STM32F415">
+                <mcu name="STM32F415ZG" wb_id ="4000" package="LQFP144"  define="STM32F4xx" used_in_drive_number="1,2">
+                    <clock default_source_m1="25_crystal" default_source_m2="8_crystal">
+                        <clock_source ck_id="8_crystal" >
+                            <frequency mhz="168" />
+                        </clock_source>
+                        <clock_source ck_id="16_crystal">
+                            <frequency mhz="168" />
+                        </clock_source>
+                        <clock_source ck_id="25_crystal">
+                            <frequency mhz="168" />
+                        </clock_source>
+                    </clock>
+                </mcu>
+            </sub_family>
+            <sub_family name="STM32F417">
+                <mcu name="STM32F417IG" wb_id ="4000" package="UFBGA176" define="STM32F4xx" used_in_drive_number="1,2">
+                    <clock default_source_m1="25_crystal" default_source_m2="8_crystal">
+                        <clock_source ck_id="8_crystal" >
+                            <frequency mhz="168" />
+                        </clock_source>
+                        <clock_source ck_id="16_crystal">
+                            <frequency mhz="168" />
+                        </clock_source>
+                        <clock_source ck_id="25_crystal">
+                            <frequency mhz="168" />
+                        </clock_source>
+                    </clock>
+                </mcu>
+            </sub_family>
+            <sub_family name="STM32F401">
+                <mcu name="STM32F401RE"  wb_id ="4001" package="LQFP64"  define="STM32F401XX" used_in_drive_number="1"/>
+                <mcu name="STM32F401VE"  wb_id ="4001" package="LQFP100" define="STM32F401XX" used_in_drive_number="1"/>
+                <clock default_source_m1="25_crystal" default_source_m2="8_crystal">
+                    <clock_source ck_id="8_crystal" >
+                        <frequency mhz="84" />
+                    </clock_source>
+                    <clock_source ck_id="16_crystal">
+                        <frequency mhz="84" />
+                    </clock_source>
+                    <clock_source ck_id="25_crystal">
+                        <frequency mhz="84" />
+                    </clock_source>
+                </clock>
+            </sub_family>
+            <sub_family name="STM32F446">
+                <mcu name="STM32F446RE"  wb_id ="4046" package="LQFP64"  define="STM32F446xC_xE" used_in_drive_number="1,2"/>
+                <mcu name="STM32F446ZE"  wb_id ="4046" package="LQFP144" define="STM32F446xC_xE" used_in_drive_number="1,2"/>
+                <clock default_source_m1="25_crystal" default_source_m2="8_crystal">
+                    <clock_source ck_id="8_crystal" >
+                        <frequency mhz="180" />
+                    </clock_source>
+                    <clock_source ck_id="16_crystal">
+                        <frequency mhz="180" />
+                    </clock_source>
+                    <clock_source ck_id="25_crystal">
+                        <frequency mhz="180" />
+                    </clock_source>
+                </clock>
+            </sub_family>
+        </family>
+        <family name="STM32F3" >
+            <sub_family name="STM32F303" >
+                <mcu name="STM32F303CB" wb_id ="3032" package="LQFP48"  define="STM32F303xB"  used_in_drive_number="1,2" />
+                <mcu name="STM32F303VB" wb_id ="3032" package="LQFP100" define="STM32F303xB"  used_in_drive_number="1,2" />
+                <mcu name="STM32F303CC" wb_id ="3033" package="LQFP48"  define="STM32F303xC"  used_in_drive_number="1,2" />
+                <mcu name="STM32F303VC" wb_id ="3033" package="LQFP100" define="STM32F303xC"  used_in_drive_number="1,2" />
+                <mcu name="STM32F303RE" wb_id ="3034" package="LQFP64"  define="STM32F303xC"  used_in_drive_number="1,2" />
+                <mcu name="STM32F303RB" wb_id ="3034" package="LQFP64"  define="STM32F303xC"  used_in_drive_number="1,2" />
+                <mcu name="STM32F303VE" wb_id ="3034" package="LQFP100" define="STM32F303xC"  used_in_drive_number="1,2" />
+                <mcu name="STM32F303ZE" wb_id ="3034" package="LQFP144" define="STM32F303xC"  used_in_drive_number="1,2" />
+                <clock default_freq_m1 ="72" default_freq_m2 ="72">
+                    <clock_source ck_id="8_crystal" >
+                        <frequency mhz="24" />
+                        <frequency mhz="48" />
+                        <frequency mhz="56" />
+                        <frequency mhz="72" />
+                    </clock_source>
+                </clock>
+            </sub_family>
+            <sub_family name="STM32F302" >
+                <mcu name="STM32F302VB" wb_id ="3022" package="LQFP100"  define="STM32F302xB" used_in_drive_number="1">
+                    <clock default_freq_m1 ="72">
+                        <clock_source ck_id="8_crystal" >
+                            <frequency mhz="24" />
+                            <frequency mhz="48" />
+                            <frequency mhz="56" />
+                            <frequency mhz="72" />
+                        </clock_source>
+                    </clock>
+                </mcu>
+                <mcu name="STM32F302VC" wb_id ="3023" package="LQFP100"  define="STM32F302xC" used_in_drive_number="1">
+                    <clock default_freq_m1 ="72">
+                        <clock_source ck_id="8_crystal" >
+                            <frequency mhz="24" />
+                            <frequency mhz="48" />
+                            <frequency mhz="56" />
+                            <frequency mhz="72" />
+                        </clock_source>
+                    </clock>
+                </mcu>
+                <mcu name="STM32F302R8" wb_id ="3024" package="LQFP64"   define="STM32F302X8" used_in_drive_number="1">
+                    <clock default_freq_m1 ="72">
+                        <clock_source ck_id="8_crystal" >
+                            <frequency mhz="24" />
+                            <frequency mhz="48" />
+                            <frequency mhz="56" />
+                            <frequency mhz="72" />
+                        </clock_source>
+                        <clock_source ck_id="internal_osc">
+                            <frequency mhz="64" />
+                        </clock_source>
+                    </clock>
+                </mcu>
+            </sub_family>
+        </family>
+        <family name="STM32F1" >
+            <sub_family name="STM32F103">
+                <mcu name="STM32F103ZG" wb_id ="1030" package="LQFP144" define="STM32F103x_HD" used_in_drive_number="1"/>
+                <mcu name="STM32F103RC" wb_id ="1030" package="LQFP64"  define="STM32F103x_HD" used_in_drive_number="1"/>
+                <mcu name="STM32F103RB" wb_id ="1031" package="LQFP64"  define="STM32F103x_MD" used_in_drive_number="1"/>
+                <mcu name="STM32F103VB" wb_id ="1031" package="LQFP100" define="STM32F103x_MD" used_in_drive_number="1"/>
+                <mcu name="STM32F103R6" wb_id ="1032" package="LQFP64"  define="STM32F103x_LD" used_in_drive_number="1"/>
+            </sub_family>
+            <clock default_freq_m1 ="72">
+                <clock_source ck_id="8_crystal" >
+                    <frequency mhz="24" />
+                    <frequency mhz="48" />
+                    <frequency mhz="56" />
+                    <frequency mhz="72" />
+                </clock_source>
+            </clock>
+        </family>
+        <family name="STSPIN32F0x" >
+            <mcu name="STSPIN32F0" wb_id ="9031" package="VFQFPN48" define="STSPIN32F0" used_in_drive_number="1"/>
+            <mcu name="STSPIN32F0A" wb_id ="9131" package="VFQFPN48" define="STSPIN32F0A" used_in_drive_number="1"/>
+            <clock default_source_m1="internal_osc">
+                <clock_source ck_id="8_crystal" >
+                    <frequency mhz="48" />
+                </clock_source>
+                <clock_source ck_id="internal_osc">
+                    <frequency mhz="48" />
+                </clock_source>
+            </clock>
+        </family>
+      <family name="STSPIN32F025x" >
+        <mcu name="STSPIN32F0251" wb_id ="9251" package="TQFP48" define="STSPIN32F0251" used_in_drive_number="1"/>
+        <mcu name="STSPIN32F0252" wb_id ="9252" package="TQFP48" define="STSPIN32F0252" used_in_drive_number="1"/>
+        <clock default_source_m1="internal_osc">
+          <clock_source ck_id="8_crystal" >
+            <frequency mhz="48" />
+          </clock_source>
+          <clock_source ck_id="internal_osc">
+            <frequency mhz="48" />
+          </clock_source>
+        </clock>
+      </family>
+      <family name="STSPIN32F060x" >
+        <mcu name="STSPIN32F0601" wb_id ="9601" package="TQFP48" define="STSPIN32F0601" used_in_drive_number="1"/>
+        <mcu name="STSPIN32F0602" wb_id ="9602" package="TQFP48" define="STSPIN32F0602" used_in_drive_number="1"/>
+        <clock default_source_m1="internal_osc">
+          <clock_source ck_id="8_crystal" >
+            <frequency mhz="48" />
+          </clock_source>
+          <clock_source ck_id="internal_osc">
+            <frequency mhz="48" />
+          </clock_source>
+        </clock>
+      </family>
+      <family name="STM32F7">
+            <sub_family name="STM32F746">
+                <mcu name="STM32F746ZG" wb_id ="17000" package="LQFP144" define="STM32F746XX" used_in_drive_number="1">
+                    <clock>
+                        <clock_source ck_id="8_bypass">
+                            <frequency mhz="216" />
+                        </clock_source>
+                    </clock>
+                </mcu>
+            </sub_family>
+            <sub_family name="STM32F769">
+                <mcu name="STM32F769NI" wb_id ="17600" package="TFBGA216" define="STM32F769XX" used_in_drive_number="1">
+                    <clock>
+                        <clock_source ck_id="25_crystal">
+                            <frequency mhz="216" />
+                        </clock_source>
+                    </clock>
+                </mcu>
+            </sub_family>
+        </family>
+        <family name="STM32H7">
+            <sub_family name="STM32H745">
+                <mcu name="STM32H745ZI" wb_id ="27000" package="LQFP144" define="STM32H745XX" used_in_drive_number="1">
+                    <clock>
+                        <clock_source ck_id="8_crystal">
+                            <frequency mhz="480" />
+                        </clock_source>
+                    </clock>
+                </mcu>
+            </sub_family>
+        </family>
+        <!--<family name="STM32F2">
+            <mcu name="STM32F207IG" wb_id ="2000" package="UFBGA176" define="STM32F2xx" used_in_drive_number="1,2">
+                <clock default_source_m1="25_crystal" default_source_m2="8_crystal">
+                    <clock_source ck_id="8_crystal" >
+                        <frequency mhz="120" />
+                    </clock_source>
+                    <clock_source ck_id="25_crystal">
+                        <frequency mhz="120" />
+                    </clock_source>
+                </clock>
+            </mcu>
+        </family>-->
+        <family name="STM32L4">
+            <sub_family name="STM32L476">
+                <mcu name="STM32L476ZG" wb_id ="14000" package="LQFP144" define="STM32L476XX" used_in_drive_number="1"/>
+                <mcu name="STM32L476RG" wb_id ="14000" package="LQFP64"  define="STM32L476XX" used_in_drive_number="1"/>
+            </sub_family>
+            <sub_family name="STM32L452">
+                <mcu name="STM32L452VE" wb_id ="14500" package="LQFP100" define="STM32L452XX" used_in_drive_number="1"/>
+                <mcu name="STM32L452RE" wb_id ="14500" package="LQFP64"  define="STM32L452XX" used_in_drive_number="1"/>
+            </sub_family>
+            <clock >
+                <clock_source ck_id="8_crystal" >
+                    <frequency mhz="80" />
+                </clock_source>
+            </clock>
+        </family>
+        <family name="STM32F0">
+            <sub_family name="STM32F030">
+                <mcu name ="STM32F030RC" wb_id ="30"    package="LQFP64"   define="STM32F030x"     used_in_drive_number="1"  />
+                <mcu name ="STM32F030R8" wb_id ="30"    package="LQFP64"   define="STM32F030x"     used_in_drive_number="1"  />
+            </sub_family>
+            <sub_family name="STM32F031">
+                <mcu name ="STM32F031C6" wb_id ="31"    package="LQFP48"   define="STM32F031x"     used_in_drive_number="1"  />
+            </sub_family>
+            <sub_family name="STM32F051">
+                <mcu name ="STM32F051R8" wb_id ="51"    package="LQFP64"   define="STM32F051x"     used_in_drive_number="1"  />
+            </sub_family>
+            <sub_family name="STM32F072">
+                <mcu name ="STM32F072VB" wb_id ="70"    package="LQFP100"  define="STM32F072x"     used_in_drive_number="1"  />
+                <mcu name ="STM32F072RB" wb_id ="70"    package="LQFP64"   define="STM32F072x"     used_in_drive_number="1"  />
+            </sub_family>
+            <clock >
+                <clock_source ck_id="8_crystal" >
+                    <frequency mhz="48" />
+                </clock_source>
+            </clock>
+        </family>
+        <family name="STM32G0">
+            <sub_family name="STM32G071">
+                <mcu name ="STM32G071RB" wb_id ="700"    package="LQFP64"   define="STM32G071XX"     used_in_drive_number="1"  />
+            </sub_family>
+            <sub_family name="STM32G081">
+                <mcu name ="STM32G081RB" wb_id ="800"    package="LQFP64"   define="STM32G081XX"     used_in_drive_number="1"  />
+            </sub_family>
+            <clock>
+                <clock_source ck_id="8_crystal" >
+                    <frequency mhz="64" />
+                </clock_source>
+              <clock_source ck_id="internal_osc">
+                <frequency mhz="64" />
+              </clock_source>
+            </clock>
+        </family>
+        <family name="STM32G4">
+            <sub_family name="STM32G431">
+              <mcu name ="STM32G431RB" wb_id ="40310"    package="LQFP64"   define="STM32G431RB"     used_in_drive_number="1" >
+                <clock>
+                  <clock_source ck_id="24_crystal" >
+                    <frequency mhz="170" />
+                  </clock_source>
+                  <clock_source ck_id="internal_osc">
+                    <frequency mhz="170" />
+                  </clock_source>
+                </clock>
+              </mcu>
+              <mcu name ="STM32G431CB" wb_id ="40311"    package="UFQFPN48" define="STM32G431CB"     used_in_drive_number="1" >
+                <clock>
+                  <clock_source ck_id="8_crystal" > 
+                    <frequency mhz="170" />  
+                  </clock_source>
+                  <clock_source ck_id="internal_osc">
+                    <frequency mhz="170" />
+                  </clock_source>
+                </clock>
+              </mcu>
+            </sub_family>
+            <sub_family name="STM32G474">
+                <mcu name ="STM32G474QE" wb_id ="40312"    package="LQFP128" define="STM32G474QE"     used_in_drive_number="1,2" >
+                  <clock>
+                    <clock_source ck_id="24_crystal" >
+                      <frequency mhz="170" />
+                    </clock_source>
+                    <clock_source ck_id="internal_osc">
+                      <frequency mhz="170" />
+                    </clock_source>
+                  </clock>
+                </mcu>
+            </sub_family>
+        </family>
+    </mcus>
+</mcus_info>

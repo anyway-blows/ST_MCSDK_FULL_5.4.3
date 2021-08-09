@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pn name="STSPIN32F0601">
+    <xi:include href="STSPIN32F0251.xml" xmlns:xi="http://www.w3.org/2003/XInclude" xpointer="xpointer(//peripherals)"/>
+</pn>

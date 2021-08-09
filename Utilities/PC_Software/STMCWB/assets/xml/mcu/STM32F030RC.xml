@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pn name="STM32F030RC">
+  <xi:include href="STM32F030R8.xml" xmlns:xi="http://www.w3.org/2003/XInclude" xpointer="xpointer(//peripherals)"/>
+</pn>

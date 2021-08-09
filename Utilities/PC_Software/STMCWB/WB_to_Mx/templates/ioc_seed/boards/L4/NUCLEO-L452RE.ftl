@@ -1,0 +1,1 @@
+<#include "NUCLEO-L452RE/NUCLEO-L452RE - 80 MHz.ftl" >

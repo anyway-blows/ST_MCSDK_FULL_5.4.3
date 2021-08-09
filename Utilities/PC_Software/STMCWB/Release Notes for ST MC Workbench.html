@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Release Notes for ST MC Workbench</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:first-child { margin-top: -20px; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+html, body, #write { background: rgb(255, 255, 255); font-family: arial, sans-serif; font-weight: 400; }
+h1, h2, h3, h4, h5, h6 { font-family: arial, sans-serif; }
+html { font-family: arial, sans-serif; font-size: 14px; }
+#write { max-width: 914px; }
+#write > h1:first-child { margin-top: 2.75rem; }
+#write > h2:first-child { margin-top: 1.75rem; }
+#write > h3:first-child { margin-top: 1rem; }
+#write > h4:first-child { margin-top: 0.5rem; }
+h1 { font-size: 2rem; font-weight: bold; line-height: 4rem; margin: 0px 0px 1rem; padding: 20px 30px; text-align: center; color: rgb(51, 102, 255); }
+h2 { font-size: 1rem; font-weight: bold; font-style: italic; margin: 3rem 0px 1rem; padding-left: 0.2rem; text-align: left; color: white; background-color: blue; }
+h3 { font-size: 1rem; font-weight: bold; text-align: left; color: black; }
+h3 em { color: white; background-color: blue; padding-left: 0.2rem; padding-right: 5rem; font-style: normal; }
+h4 { font-size: 1rem; font-weight: bold; text-decoration: underline; text-align: left; color: black; }
+h5 { font-size: 1rem; font-weight: normal; text-decoration: underline; text-align: left; color: black; }
+h6 { font-size: 1rem; font-weight: normal; text-align: center; }
+p { color: black; font-size: 1rem; margin: 0px 0px 1rem; }
+li > p > em { font-style: normal; text-decoration: underline; }
+#write > h3.md-focus::before { left: -1.875rem; top: 0.5rem; padding: 2px; }
+#write > h4.md-focus::before { left: -1.875rem; top: 0.3125rem; padding: 2px; }
+#write > h5.md-focus::before { left: -1.875rem; top: 0.25rem; padding: 2px; }
+#write > h6.md-focus::before { left: -1.875rem; top: 0.125rem; padding: 2px; }
+ul { list-style-type: square; }
+a, .md-def-url { text-decoration: none; }
+a:hover { text-decoration: underline; }
+table { margin-bottom: 20px; }
+table th, table td { padding: 8px; line-height: 1.25rem; vertical-align: top; border: 1px solid rgb(91, 155, 213); }
+table thead { background-color: rgb(91, 155, 213); color: white; }
+table th { font-weight: bold; }
+table thead th { vertical-align: bottom; }
+table caption + thead tr:first-child th, table caption + thead tr:first-child td, table colgroup + thead tr:first-child th, table colgroup + thead tr:first-child td, table thead:first-child tr:first-child th, table thead:first-child tr:first-child td { border-top: 0px; }
+table tbody + tbody { border-top: 2px solid rgb(221, 221, 221); }
+table tbody tr:nth-child(2n+1) { background: rgb(222, 234, 246); }
+code { font-family: consolas, monospace; color: rgb(0, 112, 192); font-size: 0.9em; }
+.md-fences { border: 1px solid rgb(204, 204, 204); margin: 0px 0px 20px; font-size: 1em; padding: 0.4em 1em 0.3em; }
+.task-list { padding-left: 0px; }
+.task-list-item { padding-left: 2.125rem; }
+.task-list-item input { top: 3px; }
+.task-list-item input::before { content: ""; display: inline-block; width: 1rem; height: 1rem; vertical-align: middle; text-align: center; border: 1px solid gray; background-color: rgb(253, 253, 253); margin-left: 0px; margin-top: -0.5rem; }
+.task-list-item input:checked::before, .task-list-item input[checked]::before { content: "◼"; font-size: 0.8125rem; line-height: 0.9375rem; margin-top: -1rem; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .task-list-item input::before { margin-top: -0.2rem; }
+  .task-list-item input:checked::before, .task-list-item input[checked]::before { margin-top: -0.2rem; }
+}
+blockquote { margin: 0px 0px 1.11111rem; padding: 0.5rem 1.11111rem 0px 1.05556rem; border-left: 1px solid gray; }
+blockquote, blockquote p { line-height: 1; color: rgb(111, 111, 111); }
+#write pre.md-meta-block { min-height: 30px; background: rgb(248, 248, 248); padding: 3em 1.5em 1.5em; font-weight: 300; font-size: 1em; margin: -1.5em -1000px 2em; color: rgb(153, 153, 153); border-left: 1000px solid rgb(248, 248, 248); border-right: 1000px solid rgb(248, 248, 248); }
+.MathJax_Display { font-size: 0.9em; margin-top: 0.5em; margin-bottom: 0px; }
+p.mathjax-block, .mathjax-block { padding-bottom: 0px; }
+.mathjax-block > .code-tooltip { bottom: 5px; box-shadow: none; }
+.md-image > .md-meta { padding-left: 0.5em; padding-right: 0.5em; }
+.md-image > img { margin-top: 2px; }
+.md-image > .md-meta:first-of-type::before { padding-left: 4px; }
+#typora-source { color: rgb(85, 85, 85); }
+#md-searchpanel { border-bottom: 1px solid rgb(204, 204, 204); }
+#md-searchpanel .btn { border: 1px solid rgb(204, 204, 204); }
+#md-notification::before { top: 14px; }
+#md-notification { background: rgb(238, 238, 238); }
+.megamenu-menu-panel .btn { border: 1px solid rgb(204, 204, 204); }
+
+
+
+
+
+ .typora-export p, .typora-export .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name='header-n0' class='md-header-anchor '></a>Release Notes for ST MC Workbench</h1><p><img src='../../../_htmresc/STlogo.png' alt='STlogo' referrerPolicy='no-referrer' /></p><h6><a name='header-n3' class='md-header-anchor '></a>Copyright © 2019 STMicroelectronics</h6><p>The ST Motor Control Workbench software tool provides the following features:</p><ul><li><p>Graphical User Interface (GUI) to configure a Motor Control application:</p><ul><li>Features &amp; Algorithms are configured graphically;</li><li>Boards are configured from provided ST database: Control board, Power Board, motor parameters;</li><li>Custom power board and motor can be specified;</li><li>Generates .IOC file to interface STM32CubeMX PC software tool.</li></ul></li><li><p>Easy parameters tuning:</p><ul><li>PMSM FOC Library;</li><li>MCU board;</li><li>Power board;</li><li>Motor.</li></ul></li></ul><h2><a name='header-n28' class='md-header-anchor '></a>Supported devices and boards</h2><ul><li><p><strong>Supported Devices</strong>:</p><ul><li>STM32F0xx Family:
+STM32F030RC / STM32F030R8 / STM32F031C6 / STM32F051R8 / STM32F051C8 / STM32F072VB / STM32F072RB</li><li>STSPIN32 Family:
+STSPIN32F0601 / STSPIN32F0602 / STSPIN32F0251 / STSPIN32F0252 / STSPIN32F0B</li><li>STM32F1xx Family:
+STM32F103 High, Medium and Low Densities</li><li>STM32F3xx Family:
+STM32F302VB / STM32F302VC / STM32F302R8 / STM32F303VB / STM32F303VC / STM32F303ZE / STM32F303VE / STM32F303RE</li><li>STM32F4xx Family: 
+STM32F417IG / STM32F415ZG / STM32F407IG / STM32F446ZE / STM32F446RE / STM32F401RE</li><li>STM32F7xx Family:
+STM32F746ZG / STM32F769NI</li><li>STM32L4xx Family:
+STM32L452RE / STM32L476RG</li><li>STM32G0xx Family:
+STM32G081</li><li>STM32G4xx Family:
+STM32G431CB / STM32G431RB / STM32G474QE </li><li>STM32H7xx Family: partially supported with examples
+STM32H745ZI</li></ul></li><li><p><strong>Control Boards</strong></p><ul><li><p><em>STM32F0xxFamily:</em></p><ul><li>NUCLEO-F030R8</li><li>NUCLEO-F072RB</li><li>STM32072B-EVAL</li></ul></li><li><p><em>STM32F1xx Family</em> :</p><ul><li>NUCLEO-F103RB</li><li>STM3210E-Eval</li></ul></li><li><p><em>STM32F3xx Family:</em></p><ul><li>NUCLEO-F302R8</li><li>NUCLEO-F303RE/NUCLEO-F303RB</li><li>STM32303E-EVAL</li></ul></li><li><p><em>STM32F4xx Family:</em></p><ul><li>NUCLEO-F446RE</li><li>NUCLEO-F401RE</li><li>STM3240G-EVAL</li><li>STM3241G-EVAL</li><li>STM32446E-EVAL</li><li>STEVAL-IHM039V1</li></ul></li><li><p><em>STM32F7xx Family</em>:</p><ul><li>NUCLEO-F746ZG</li><li>STM32F769I-EVAL</li></ul></li><li><p><em>STM32L4xx Family:</em></p><ul><li>NUCLEO-L452RE</li><li>NUCLEO-L476RG</li><li>STM32L476G-EVAL</li></ul></li><li><p><em>STM32G0xx Family:</em></p><ul><li>STM32G081B-EVAL</li></ul></li><li><p><em>STM32G4xx Family:</em></p><ul><li>NUCLEO-G431RB</li><li>STM32G474E-EVAL</li></ul></li><li><p><em>STM32H7xx Family:</em></p><ul><li>NUCLEO-H745ZI-Q</li></ul></li></ul></li><li><p><strong>Power Boards:</strong></p><ul><li>STEVAL-IHM023V3</li><li>STEVAL-IHM025V1</li><li>STEVAL-IHM028V2</li><li>STEVAL-IHM045V1</li><li>STEVAL-IPM05F</li><li>STEVAL-IPM07F</li><li>STEVAL-IPM08B</li><li>STEVAL-IPM10B</li><li>STEVAL-IPM10F</li><li>STEVAL-IPM15B</li><li>STEVAL-IPMNG3Q</li><li>STEVAL-IPMNG3S</li><li>STEVAL-IPMNG5Q</li><li>STEVAL-IPMNG8Q</li><li>STEVAL-IPMNM1N</li><li>STEVAL-IPMNM2N</li><li>STEVAL-IPMNM1S</li><li>STEVAL-CTM009V1</li><li>X-NUCLEO-IHM07M1</li><li>X-NUCLEO-IHM08M1</li><li>X-NUCLEO-IHM11M1</li><li>X-NUCLEO-IHM16M1</li></ul></li><li><p><strong>Inverter Boards</strong></p><ul><li>STEVAL-IHM034V2 (STM32F1)</li><li>STEVAL-IHM042V1</li><li>STEVAL-SPIN3201</li><li>STEVAL-SPIN3202</li><li>X-NUCLEO-IHM16 + NUCLEO-F303RE bundle</li><li>STEVAL-ESC001V1</li><li>B-G431B-ESC1</li><li>STSPIN32F0601S1</li><li>EVSPIN32F0601S3 </li><li>EVSPIN32F0251S1 </li><li>EVSPIN32F0602S1 </li><li>STEVAL-HKI001V2</li></ul></li></ul><h2><a name='header-n203' class='md-header-anchor '></a>Known Limitations</h2><ul><li>The MC SDK installer, the ST Motor Profiler and the ST Motor Control Workbench software tools are running only on a PC system, and have been tested using a Windows 7 Operating System.</li><li>LCD on EVAL boards are not yet supported;</li><li>Ac6 System Workbench for STM32 (SW4STM32) toolchain is not yet supported;</li><li>F030x usage with Encoder or Hall sensor configurations are not yet supported;</li><li>During the STM32CubeMX generation, the F303x usage pops-up an error window while generation is still OK (only true with version 4.24.0, the issue disappears with version 4.25.0).</li><li>With Keil MDK-ARM toolchain, using an STM32F3 MCU, packs STM32F3xx_DFP version 2.0.0 and 2.0.1 are not supported by CubeMx. Version 1.4.0 of the pack is the last version known to work well.</li></ul><h2><a name='header-n217' class='md-header-anchor '></a>Update History</h2><h3><a name='header-n218' class='md-header-anchor '></a><em>V5.4.3.19514-1.0.6.template-19-11-14 / 18-Nov-2019</em></h3><h4><a name='header-n219' class='md-header-anchor '></a>Main Changes</h4><ul><li>Fixed an issue with the Workbench that prevented the user from saving complex firmware examples. 
+Complex firmware examples are Motor Control configuration examples that consist in more than an *.stmcx file. These usually are examples that add extra code to the projects generated  by the Workbench.</li><li>Fixed incorrect HSE clock setting for STM32G431CB devices. Selecting 8 MHz as the oscillator frequency in the Workbench would actually result in HSE being set to 24 MHz. This impacts the <a href='https://my.st.com/content/my_st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-discovery-kits/b-g431b-esc1.html'>B-G431B-ESC1</a> board.</li><li>Fixed an issue the support of STM32CubeIDE for firmware examples.</li><li>Listed the Position Control example in workbench.</li></ul><h4><a name='header-n229' class='md-header-anchor '></a>Using STM32CubeIDE with the Motor Control SDK</h4><p>It is now possible to generate Motor Control application projects for STM32CubeIDE. These projects come with two build configuration, <code>Release</code> and <code>Debug</code>. </p><p>The <code>Release</code> configuration builds the application with the highest level of optimization, geared towards speed (<code>-Ofast</code>) but does not provide any debug capability. This configuration is meant for production firmware.</p><p>The <code>Debug</code> configuration, on the contrary, will provide the highest level of debug capability (<code>-g3</code>) but no optimization (<code>-O0</code>). Unfortunately, this configuration may not work out of the box with Motor Control Application:</p><ul><li>The absence of any optimization may result in a binary that is too large to fit in the target MCU. When this occurs, the build fails at the link step;</li><li>Without any optimization, it is very likely that the application will emit a &quot;FOC duration&quot; fault immediately when the motor is started.</li></ul><p>To be able to debug the application, the <code>Debug</code>build configuration needs to be modified to add optimization. This can be done in the Project properties dialog, section C/C++ Build, selecting the <code>Debug</code> configuration and selecting <em>Optimize for Speed</em> for the MCU GCC Compiler / Optimization item.</p><h4><a name='header-n239' class='md-header-anchor '></a>STM32Cube Environment</h4><ul><li>STM32CubeMX  v5.4.0</li><li>STM32Cube_FW_F0_V1.11.0</li><li>STM32Cube_FW_F1_V1.8.0</li><li>STM32Cube_FW_F3_V1.11.0</li><li>STM32Cube_FW_F4_V1.24.1</li><li>STM32Cube_FW_F7_V1.15.0</li><li>STM32Cube_FW_G0_V1.3.0</li><li>STM32Cube_FW_G4_V1.1.0</li><li>STM32Cube_FW_L4_V1.14.0</li><li>STM32Cube_FW_H7_V1.5.0</li></ul><h4><a name='header-n261' class='md-header-anchor '></a>Development Toolchains</h4><ul><li>IAR Embedded Workbench for ARM (IAR Systems AB) v7.80.4 and v8.20.2.</li><li>μVision® IDE for Arm® (Keil® MDK) v5.24.2</li><li>Atollic TrueSTUDIO for STM32 version 9.3.0</li><li>STM32CubeIDE v1.1.0</li><li>ST-LINK/V2 v4.2.0</li></ul><p>&nbsp;</p><h3><a name='header-n274' class='md-header-anchor '></a><em>V5.4.2.19506-1.0.6.template-19-10-28 / 04-Nov-2019</em></h3><h4><a name='header-n275' class='md-header-anchor '></a>Main Changes</h4><ul><li><p>Added support for the following features to configurations based on <a href='https://www.st.com/en/microcontrollers-microprocessors/stm32g4-series.html'>STM32G4xx</a> devices:</p><ul><li>The embedded <a href='https://www.st.com/resource/en/application_note/dm00614795.pdf'>CORDIC math coprocessor</a>;</li><li>Insulated Current Sensing;</li><li>Dual motors drive</li></ul></li><li><p>Introduction of the Position Control feature for configurations using a Quadrature Encoder as speed and position feedback. See the section <a href='#header-n313'>Using the Position Control feature</a> below for more details.</p></li><li><p>Projects can now be generated for the <a href='https://www.st.com/en/development-tools/stm32cubeide.html'>STM32CubeIDE</a> IDE.</p></li><li><p>Introduced the support of STGAP1S drives family.</p></li><li><p>Added support for the <a href='https://www.st.com/en/motor-drivers/stspin32f0b.html'>STSPIN32F0B</a> device.</p></li><li><p>Added support for HSI on STM32G0 based Nucleo boards.</p></li><li><p>Enabling the use of the fastest available timer clock source on STM32F3 (144 MHz) and STM32G0 (128 MHz).</p></li><li><p>The following issues have been fixed:</p><ul><li>ADC not enabled in Single Shunt configuration with STM32F3 devices when ADC clock is set to 18 MHz</li><li>DAC channels 1 and 2 cannot be set independently with STM32F4 configurations. If one is used for Debug the other one cannot be used to generate a voltage reference.</li><li>Wrong ADC channel selection when ICS is used.</li><li>STMCX files with space in file name right before the file extension prevent project generation</li><li>TIM3 can be selected for debug in Single Shunt configurations though it is used as auxiliary timer. This leads to non functional configurations.</li><li>Internal PGA gain parameter missing from Workbench for STM32G4xx devices.</li></ul></li></ul><h4><a name='header-n313' class='md-header-anchor '></a>Using the Position Control feature</h4><p>The position control feature can be activated on any configuration that uses an Encoder for speed and position feedback. To activate it, open the Drive Settings dialog from the main configuration panel of the workbench, and select the Position Control item from the Control mode combo box. Dual drive configurations are also supported; the position control can then be activated on any motor equipped with an Encoder.</p><h3><a name='header-n315' class='md-header-anchor '></a><em>V5.4.1.19301.1.0.3.template-19-06-27 / 05-July-2019</em></h3><h4><a name='header-n316' class='md-header-anchor '></a>Main Changes</h4><ul><li><p>Added support for the following STSPIN MCUs: STSPIN32F0601 / STSPIN32F0602 / STSPIN32F0251 / STSPIN32F0252</p></li><li><p>Added support for the following STSPIN and boards:</p><ul><li>STSPIN32F0601S1</li><li>EVSPIN32F0601S3 </li><li>EVSPIN32F0251S1 </li><li>EVSPIN32F0602S1 </li></ul></li></ul><h3><a name='header-n331' class='md-header-anchor '></a><em>V5.4.0.19215-1.0.2.template-19-05-15 / 27-May-2019</em></h3><h4><a name='header-n332' class='md-header-anchor '></a>Main Changes</h4><ul><li><p>Added support for the <strong>STM32G4 family</strong>.</p></li><li><p>Added <strong>FreeRTOS</strong> support  for F1, F43, F4, F7, L4 and G4 families.</p></li><li><p>Added support for <strong>negative amplifying network gains</strong> in Power stage - Current sensing.</p></li><li><p>Support arbitrary Timer peripherals for the Virtual DAC feature.</p></li><li><p>Support for the following boards has been added:</p><ul><li><code>STEVAL-CTM009V1</code> power board configured in ICS topology in Workbench</li><li><code>STEVAL-IPMNG3S</code> for 3Sh and 1Sh topology in Workbench</li><li><code>STEVAL-IPMNM1S</code> for 3Sh and 1Sh topology in Workbench</li><li><code>STEVAL-IPMNM2S</code> for 3Sh and 1Sh topology in Workbench</li></ul></li><li><p>The following issues have been fixed:</p><ul><li>IOC clocks frequencies definitions for G0 MCUs.</li><li>Shunt resistor(S) value can’t be set less than 1 milliohm </li><li>Expected over-current can’t be set more than 99.99A </li><li>Changed the Shunt Resistor minimum value to 0.0001 </li></ul></li></ul><h4><a name='header-n364' class='md-header-anchor '></a>Working with STM32CubeIDE for Motor Control projects</h4><p>Motor Control projects generated with STM32 Motor Control Workbench fail to build. Before a solution can be developed for this issue, a work around exists that allows to use ST&#39;s new IDE with Motor Control projects by following the procedure described in this section and by respecting a few rules.</p><ol start='' ><li>In STM32 Motor Control Workbench, when generating or updating a project, choose either <code>ST SW4 STM32</code> or <code>ST TrueSTUDIO</code> as the Target Toolchain. 
+<strong>Note</strong>: STM32G4 based projects cannot be generated with <code>TrueSTUDIO</code>.</li><li>Open <code>STM32CubeIDE</code>, go to the File menu and select the &quot;Open Projects from File System...&quot; item.</li><li>In the dialog that opens, click the &quot;Directory...&quot; button on the &quot;Import source&quot; line. Navigate to the directory that contains the generated project and select it.</li><li>The Dialog should now propose two projects for import. Select only the one that has the &quot;Convert &#39;TrueSTUDIO...&quot; or &quot;Convert &#39;System Workbench...&quot; mention in the &quot;Import as column&quot;. The other one must not be selected.</li><li>the imported project should build and run as expected.</li></ol><p>It is important to follow a few rules when working with such imported projects:</p><ul><li>Do not edit the project&#39;s IOC file from the STM32CubeMx perspective embedded in STM32CubeIDE. A standalone version of STM32CubeMx should be used instead.</li><li>Do not generate the sources of the project from the STM32CubeMx perspective embedded in STM32CubeIDE. A standalone version of STM32CubeMx should be used instead.</li><li>Each time the project is (re)generated (wether from CubeMx or from MC Workbench), it needs to be imported again in STM32CubeIDE.</li></ul><h4><a name='header-n385' class='md-header-anchor '></a>STM32Cube Environment</h4><ul><li>STM32CubeMX  v5.2.0</li><li>STM32Cube_FW_F0_V1.10.0</li><li>STM32Cube_FW_F1_V1.7.0</li><li>STM32Cube_FW_F3_V1.10.0</li><li>STM32Cube_FW_F4_V1.24.1</li><li>STM32Cube_FW_F7_V1.15.0</li><li>STM32Cube_FW_G0_V1.2.0</li><li>STM32Cube_FW_G4_V1.0.0</li><li>STM32Cube_FW_L4_V1.14.0</li></ul><h4><a name='header-n405' class='md-header-anchor '></a>Development Toolchains</h4><ul><li>IAR Embedded Workbench for ARM (IAR Systems AB) v7.80.4 and v8.20.2.</li><li>μVision® IDE for Arm® (Keil® MDK) v5.24.2</li><li>Atollic TrueSTUDIO for STM32 version 9.2.0</li><li>ST-LINK/V2 v4.2.0</li></ul><h3><a name='header-n415' class='md-header-anchor '></a><em>V5.3.2.18569-0.15.6.template-19-01-16 / 18-Jan-2018</em></h3><h4><a name='header-n416' class='md-header-anchor '></a>Main Changes</h4><ul><li>Fixed an issue with the building of projects generated for devices of the STM32G0 family.</li><li>Fixed an issue that prevented the use of the DAC peripheral for some STM32F0 MCUs like the STM32F051xxx.</li><li>Complex firmware examples are now accessible directly from Workbench.</li></ul><h4><a name='header-n424' class='md-header-anchor '></a>STM32Cube Environment</h4><ul><li>STM32CubeMX  v5.0.1</li><li>STM32Cube_FW_F0_V1.9.0</li><li>STM32Cube_FW_F1_V1.7.0</li><li>STM32Cube_FW_F3_V1.10.0</li><li>STM32Cube_FW_F4_V1.22.0</li><li>STM32Cube_FW_F7_V1.13.0</li><li>STM32Cube_FW_G0_V1.0.0</li><li>STM32Cube_FW_L4_V1.13.0</li></ul><h4><a name='header-n442' class='md-header-anchor '></a>Development Toolchains</h4><ul><li>IAR Embedded Workbench for ARM (IAR Systems AB) v7.80.4 and v8.20.2.</li><li>μVision® IDE for Arm® (Keil® MDK) v5.24.2</li><li>Atollic TrueSTUDIO for STM32 version 9.2.0</li><li>ST-LINK/V2 v4.2.0</li></ul><h3><a name='header-n452' class='md-header-anchor '></a><em>V5.3.2.18569-0.15.6.template-18-12-06 / 21-Dec-2018</em></h3><h4><a name='header-n453' class='md-header-anchor '></a>Main Changes</h4><ul><li>Reintroduced some example projects that had been removed in previous version</li><li>Fixed the incorrect configuration of HSE value with STM3240G-EVAL and STM3241G-EVAL control boards when converting projects from older Workbench versions</li><li>Fixed pinning configuration issues when creating projects based on IHM042V1, NUCLEO-F302R8 + IHM08M1, F4 and some F3 boards.</li></ul><h4><a name='header-n461' class='md-header-anchor '></a>STM32Cube Environment</h4><ul><li>STM32CubeMX  v5.0.0</li><li>STM32Cube_FW_F0_V1.9.0</li><li>STM32Cube_FW_F1_V1.7.0</li><li>STM32Cube_FW_F3_V1.10.0</li><li>STM32Cube_FW_F4_V1.22.0</li><li>STM32Cube_FW_F7_V1.13.0</li><li>STM32Cube_FW_G0_V1.0.0</li><li>STM32Cube_FW_L4_V1.13.0</li></ul><h4><a name='header-n479' class='md-header-anchor '></a>Development Toolchains</h4><ul><li>IAR Embedded Workbench for ARM (IAR Systems AB) v7.80.4 and v8.20.2.</li><li>μVision® IDE for Arm® (Keil® MDK) v5.24.2</li><li>Atollic TrueSTUDIO for STM32 version 9.1.0</li><li>ST-LINK/V2 v4.2.0</li></ul><p>&nbsp;</p><h3><a name='header-n491' class='md-header-anchor '></a><em>V5.3.0.18528-0.15.6.template-18-12-06 / 10-Dec-2018</em></h3><h4><a name='header-n492' class='md-header-anchor '></a>Main Changes</h4><ul><li>Added support for the STM32G0 family (See <a href='#header-n28'>Supported devices and boards</a> above). Note that this support does not include Atollic TrueSTUDIO yet.</li><li>The Workbench now lets the user selects the LL/HAL version to use. </li></ul><h4><a name='header-n498' class='md-header-anchor '></a>STM32Cube Environment</h4><ul><li>STM32CubeMX  v5.0.0</li><li>STM32Cube_FW_F0_V1.9.0</li><li>STM32Cube_FW_F1_V1.7.0</li><li>STM32Cube_FW_F3_V1.10.0</li><li>STM32Cube_FW_F4_V1.22.0</li><li>STM32Cube_FW_F7_V1.13.0</li><li>STM32Cube_FW_G0_V1.0.0</li><li>STM32Cube_FW_L4_V1.13.0</li></ul><h4><a name='header-n516' class='md-header-anchor '></a>Development Toolchains</h4><ul><li>IAR Embedded Workbench for ARM (IAR Systems AB) v7.80.4 and v8.20.2.</li><li>μVision® IDE for Arm® (Keil® MDK) v5.24.2</li><li>Atollic TrueSTUDIO for STM32 version 9.1.0</li><li>ST-LINK/V2 v4.2.0</li></ul><h3><a name='header-n526' class='md-header-anchor '></a><em>V5.2.0.18501-0.13.2.template-18-08-02</em></h3><h4><a name='header-n527' class='md-header-anchor '></a>Main Changes</h4><ul><li>Added support for the STM32F7 family (See <a href='#header-n28'>Supported devices and boards</a> above)</li><li>Added support for the STM32L4 family (See <a href='#header-n28'>Supported devices and boards</a> above)</li><li>Added support for the STM32F401 device and the NUCLEO-F401RE board</li><li>Display Firmware version used by ST MotorControl Workbench in &quot;About&quot; dialog of the Workbench</li><li>Fixed an issue in workbench where the list of proposed ADC channels would not match the selected ADC peripheral for STM32F4 devices.</li><li>Fixed an issue in workbench that only allowed for selecting TIM3 and TIM4 for Hall Sensors and Encoder handling for F4 Series. Now, TIM2 and TIM5 can also be selected.</li></ul><h4><a name='header-n541' class='md-header-anchor '></a>STM32Cube Environment</h4><ul><li>STM32CubeMX  v4.25.1 / STM32CubeMX  v4.26.1</li><li>STM32Cube_FW_F0_V1.9.0</li><li>STM32Cube_FW_F1_V1.6.1</li><li>STM32Cube_FW_F3_V1.10.0</li><li>STM32Cube_FW_F4_V1.21.0</li><li>STM32Cube_FW_F7_V1.11.0 / STM32Cube_FW_F7_V1.12.0</li><li>STM32Cube_FW_L4_V1.11.0</li></ul><h4><a name='header-n557' class='md-header-anchor '></a>Development Toolchains</h4><ul><li>IAR Embedded Workbench for ARM (IAR Systems AB) v7.80.4 and v8.20.2.</li><li>μVision® IDE for Arm® (Keil® MDK) v5.25</li><li>Atollic TrueSTUDIO for STM32 version 9.0.0</li><li>ST-LINK/V2 v4.2.0</li></ul><h3><a name='header-n567' class='md-header-anchor '></a><em>V5.1.2.18276-0.11.6.template-18-06-25 / 06-Jul-2018</em> </h3><p>This release is a bug fix release.</p><h4><a name='header-n569' class='md-header-anchor '></a>Main Changes</h4><ul><li>Added support for STM32F1 based Nucleo board</li><li>Added support for the STM32F3 based ESC inverter board</li></ul><h4><a name='header-n575' class='md-header-anchor '></a>Development Toolchains</h4><ul><li>IAR Embedded Workbench for ARM (IAR Systems AB) v7.80.4 and v8.20.2.</li><li>μVision® IDE for Arm® (Keil® MDK) v5.25</li><li>Atollic TrueSTUDIO for STM32 version 9.0.0</li><li>ST-LINK/V2 v4.2.0</li></ul><h4><a name='header-n585' class='md-header-anchor '></a>STM32Cube Environment</h4><ul><li>STM32CubeMX  v4.25.1 / STM32CubeMX  v4.26</li><li>STM32Cube_FW_F0_V1.9.0</li><li>STM32Cube_FW_F1_V1.6.1</li><li>STM32Cube_FW_F3_V1.9.0 / STM32Cube_FW_F3_V1.9.1</li><li>STM32Cube_FW_F4_V1.19.0</li></ul><h3><a name='header-n597' class='md-header-anchor '></a><em>V5.1.0.18254C+WB_to_Mx_0.11.5.template-18-06-05 / 07-Jun-2018</em></h3><p>This release is a bug fix release.</p><h4><a name='header-n599' class='md-header-anchor '></a>Main Changes</h4><ul><li>Fixed the handling of Low sides Idle state for all families. Setting it to a different value than that the High sides is now has the expected effect. </li><li>Fixed the handling of the High sides Polarity and Idle state for STM32F1 and STM32F4 families. Setting them to values that differ from the defaults now has the expected effect.</li></ul><h4><a name='header-n606' class='md-header-anchor '></a>Development Toolchains</h4><ul><li>IAR Embedded Workbench for ARM (IAR Systems AB) v7.80.4 and v8.20.2.</li><li>μVision® IDE for Arm® (Keil® MDK) v5.25</li><li>Atollic TrueSTUDIO for STM32 version 9.0.0</li><li>ST-LINK/V2 v4.2.0</li></ul><h4><a name='header-n616' class='md-header-anchor '></a>STM32Cube Environment</h4><ul><li>STM32CubeMX  v4.25.1 / STM32CubeMX  v4.26</li><li>STM32Cube_FW_F0_V1.9.0</li><li>STM32Cube_FW_F1_V1.6.1</li><li>STM32Cube_FW_F3_V1.9.0 / STM32Cube_FW_F3_V1.9.1</li><li>STM32Cube_FW_F4_V1.19.0</li></ul><h3><a name='header-n628' class='md-header-anchor '></a><em>V5.1.0.18254C+WB_to_Mx_0.11.5.template-18-06-04 / 05-Jun-2018</em></h3><h4><a name='header-n629' class='md-header-anchor '></a>Main Changes</h4><ul><li><p>Added support for the STM32F1 High Density series (See <a href='#header-n28'>Supported devices and boards</a> below);</p></li><li><p>Added support for STEVAL-SPIN devices (See <a href='#header-n28'>Supported devices and boards</a> below);</p></li><li><p>Added a set of power boards (See <a href='#header-n28'>Supported devices and boards</a> below);</p></li><li><p>Added support for Atollic® TrueSTUDIO® IDE on STM32F3 Family;</p></li><li><p>Added the possibility for the user to choose the version of STM32CubeMx to use;</p></li><li><p>Added support for IP initialization with LL libraries (except for STM32F1 family)</p></li><li><p>Bug fixes, among which:</p><ul><li>Restored support for IAR 7.x versions</li></ul></li></ul><h4><a name='header-n648' class='md-header-anchor '></a>Development Toolchains</h4><ul><li>IAR Embedded Workbench for ARM (IAR Systems AB) v7.80.4 and v8.20.2.</li><li>μVision® IDE for Arm® (Keil® MDK) v5.24.2.0</li><li>Atollic TrueStudio for STM32, version 9.0.0. Note that, though the Workbench can generate TrueStudio projects, version 5.0.2 of the Motor Control Firmware does not support this toolchain. </li><li>ST-LINK/V2 v4.2.0.</li></ul><h4><a name='header-n658' class='md-header-anchor '></a>STM32CubeMX Environment</h4><ul><li>STM32CubeMX     v4.25.1</li><li>STM32Cube_FW_F0_V1.9.0 / STM32Cube_FW_F0_V1.9.1</li><li>STM32Cube_FW_F3_V1.9.0</li><li>STM32Cube_FW_F4_V1.19.0</li></ul><h3><a name='header-n668' class='md-header-anchor '></a><em>V5.0.2+WB_to_Mx_0.9.9.templates-18-03-22B / 17-Apr-2018</em></h3><h4><a name='header-n669' class='md-header-anchor '></a>Main Changes</h4><ul><li>Fixed the detection of the latest STM32CubeMx versions by ST Motor Control Workbench</li></ul><h4><a name='header-n673' class='md-header-anchor '></a>Development Toolchains</h4><ul><li>IAR Embedded Workbench for ARM (IAR Systems AB) v7.80.4 and v8.20.2.</li><li>μVision® IDE for Arm® (Keil® MDK) v5.24.2.0</li><li>Atollic TrueStudio for STM32, version 9.0.0. Note that, though the Workbench can generate TrueStudio projects, version 5.0.2 of the Motor Control Firmware does not support this toolchain. </li><li>ST-LINK/V2 v4.2.0.</li></ul><h4><a name='header-n683' class='md-header-anchor '></a>STM32CubeMX Environment</h4><ul><li>STM32CubeMX     v4.25.0</li><li>STM32Cube_FW_F0_V1.9.0</li><li>STM32Cube_FW_F3_V1.9.0</li><li>STM32Cube_FW_F4_V1.19.0</li></ul><h3><a name='header-n693' class='md-header-anchor '></a><em>V5.0.2 / 04-Apr-2018</em></h3><h4><a name='header-n694' class='md-header-anchor '></a>Main Changes</h4><ul><li>Version 5.0.2, bug fix release of ST Motor Control Workbench v5.0</li><li>Support for several, parallel versions of the Motor Control SDK (See below)</li><li>Access to the documentation from the GUI.</li><li>Removal of projects targeting obsolete boards.</li></ul><h4><a name='header-n704' class='md-header-anchor '></a>Parallel Motor Control SDKversions support</h4><p>Several versions of the Motor Control SDK can be installed in parallel on the same PC.Version 5.0.1 of the Motor Control Workbench would install the Motor Control Firmware in the user’s STM32Cube repository in the <code>MotorControl</code> folder (typically in <code>C:\Users\&lt;username&gt;\STM32Cube\Repository\MotorControl</code>). With version 5.0.2 onwards, the firmware is installed in the <code>MCSDK_vX.Y.Z\MotorControl</code> subfolder of the user’s STM32Cube repository where <code>X.Y.Z</code> is the version of the SDK (for instance <code>C:\Users\JohnDoe\STM32Cube\Repository\MCSDK_v5.0.2\MotorControl</code>). This allows for keeping several versions of the SDK and so to keep on working on application projects developed with different versions of the SDK.</p><p>The version of the SDK used on a given project is that of the Motor Control Workbench used to generate that project. Put in other words, Motor Control Workbench generates projects for the SDK version it is delivered with. </p><p>The version of the SDK to use is not stated in the <code>.stmcx</code> file. It is in the <code>.ioc</code> file generated by the workbench. So, when a project has been generated with a given version of the workbench is sticks to it. Unless it is generated again or updated with another version of the Workbench. In that latter case, it is recommended to erase the <code>MCSDK_vX.Y.Z</code> folder from the previous version…</p><h3><a name='header-n708' class='md-header-anchor '></a><em>V5.0.1 / 08-Mar-2018</em></h3><h4><a name='header-n709' class='md-header-anchor '></a>Main Changes</h4><ul><li>First release of the ST Motor Control Workbench v5.0.</li></ul><h4><a name='header-n713' class='md-header-anchor '></a>Development Toolchains</h4><ul><li>IAR Embedded Workbench for ARM (IAR Systems AB) v7.80.4.</li><li>μVision® IDE for Arm® (Keil® MDK) v5.24.2.0</li><li>ST-LINK/V2 v4.2.0</li></ul><h4><a name='header-n721' class='md-header-anchor '></a>STM32CubeMX Environment</h4><ul><li>STM32CubeMX     v4.25.0</li><li>STM32Cube_FW_F0_V1.9.0</li><li>STM32Cube_FW_F3_V1.9.0</li><li>STM32Cube_FW_F4_V1.19.0</li></ul><h2><a name='header-n731' class='md-header-anchor '></a>License</h2><p>This software package is licensed by ST under ST license SLA0048, the &quot;License&quot;; You may not use this package except in compliance with the License. You may obtain a copy of the License at:</p><div style="text-align: center"><http: www.st.com="" sla0048=""></http:></div><div style="text-align: center">For a complete documentation on STM32 Microcontrollers, please visit us at [http://www.st.com/STM32](http://www.st.com/internet/mcu/family/141.jsp)</div></div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+<#include "NUCLEO-L476RG/NUCLEO-L476RG - 80 MHz.ftl" >

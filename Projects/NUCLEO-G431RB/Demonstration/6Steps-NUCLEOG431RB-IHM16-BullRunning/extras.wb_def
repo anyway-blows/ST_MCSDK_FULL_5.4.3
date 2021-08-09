@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<STWorkBench>
+	<defines>
+    <define key="DRIVE_TYPE" value="SIX_STEP" />
+    <define key="SIX_STEP_SENSING" value="SENSORS_LESS" />
+    <define key="SIX_STEP_CONTROL_MODE" value="VOLTAGE" />
+    <define key="SIX_STEP_SET_POINT_RAMPING" value="false" />
+    <define key="SIX_STEP_SPEED_LOOP" value="true" />
+    <define key="SIX_STEP_THREE_PWM" value="true" />
+    <define key="SIX_STEP_POWER_BOARD" value="IHM16M1" />
+    <define key="SERIAL_COMMUNICATION" value="true" />
+    <define key="MOTOR_REF" value="BR2804-1700kv" />
+	</defines>
+</STWorkBench>

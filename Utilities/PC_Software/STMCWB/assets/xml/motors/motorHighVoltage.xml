@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<motor id="motorHighVoltage" label="Generic High voltage &gt; 50V" img="" description="Motor high voltage ">
+      <system type="motor 1">
+        <motor version="1.0">
+            <name>Motor</name>
+            <uid>M</uid>
+            <type>M</type>
+            <handler_name>M</handler_name>
+            <info>PMSM motor</info>
+            <board_name>Custom</board_name>
+            <mp_supported>true</mp_supported>
+            <vars>
+                <var version="1.0" type="MC_List" name="I/SM-PMSM" title="Magnetic structure" text="Magnetic structure" unit="" enable="true" visible="true" readonly="false" default="1" value="1" prev_value="1">
+                    <items>
+                        <item tag="1" text="Internal PMSM" />
+                        <item tag="0" text="Surface Mounted PMSM" />
+                    </items>
+                </var>
+                <var version="1.0" type="MC_Int" name="Pole Pairs" title="" text="" unit="" enable="true" visible="true" readonly="false" resolution="1" increment="1" minimum="1" maximum="99" default="2" value="4" prev_value="2" />
+                <var version="1.0" type="MC_Int" name="Max Rated Speed" title="" text="" unit="rpm" enable="true" visible="true" readonly="false" resolution="1" increment="1" minimum="1" maximum="200000" default="4000" value="4000" prev_value="4000" />
+                <var version="1.0" type="MC_Int" name="Nominal Speed" title="" text="" unit="rpm" enable="true" visible="false" readonly="false" resolution="1" increment="1" minimum="1" maximum="200000" default="3000" value="3000" prev_value="3000" />
+                <var version="1.0" type="MC_Double" name="Nominal Current" title="" text="" unit="A (0 to peak)" enable="true" visible="true" readonly="false" resolution="0.01" decimal_places="2" increment="1" minimum="0.1" maximum="999.9" default="2.1" value="4" prev_value="2.1" />
+                <var version="1.0" type="MC_Double" name="Nominal DC Voltage" title="" text="" unit="V" enable="true" visible="true" readonly="false" resolution="0.1" decimal_places="1" increment="1" minimum="0.1" maximum="1500" default="24" value="320" prev_value="24" />
+                <var version="1.0" type="MC_Double" name="Rs" title="" text="" unit="Ohm" enable="true" visible="true" readonly="false" resolution="0.01" decimal_places="2" increment="0.05" minimum="0.01" maximum="500" default="0.35" value="2.85" prev_value="0.35000000000000003" />
+                <var version="1.0" type="MC_Double" name="Ld" title="" text="" unit="mH" enable="true" visible="true" readonly="false" resolution="0.001" decimal_places="3" increment="1" minimum="0.01" maximum="9999.9" default="0.6" value="0.6" prev_value="0.6" />
+                <var version="1.0" type="MC_Double" name="Lq" title="" text="" unit="mH" enable="false" visible="true" readonly="false" resolution="0.001" decimal_places="3" increment="1" minimum="0.01" maximum="9999.9" default="0.6" value="0.6" prev_value="0.6" />
+                <var version="1.0" type="MC_Double" name="Ls" title="" text="" unit="mH" enable="true" visible="true" readonly="false" resolution="0.001" decimal_places="3" increment="1" minimum="0.01" maximum="9999.9" default="0.6" value="15" prev_value="0.6" />
+                <var version="1.0" type="MC_Double" name="ld_lq_ratio" title="Ld/Lq ratio" text="" unit="" enable="true" visible="true" readonly="false" resolution="0.1" decimal_places="1" increment="0.1" minimum="0.1" maximum="10" default="1" value="1" prev_value="1" />
+                <var version="1.0" type="MC_Bool" name="Demagnetizing Current Autochanged" title="" text="" unit="" enable="true" visible="true" readonly="false" default="true" value="true" prev_value="true" />
+                <var version="1.0" type="MC_Double" name="Demagnetizing Current" title="" text="" unit="A" enable="true" visible="true" readonly="true" resolution="0.1" decimal_places="1" increment="1" minimum="0.1" maximum="999.90000000000009" default="2.1" value="4" prev_value="4" />
+                <var version="1.0" type="MC_Double" name="B-EmfConstant" title="" text="" unit="Vrms/Krpm" enable="true" visible="true" readonly="false" resolution="0.1" decimal_places="1" increment="1" minimum="0.1" maximum="999.90000000000009" default="4" value="50" prev_value="4" />
+                <var version="1.0" type="MC_Bool" name="motor_profiler" title="" text="" unit="" enable="true" visible="true" readonly="false" default="false" value="true" prev_value="false" />
+                <var version="1.0" type="MC_List" name="one_touch_tuning" title="One Touch Tuning " text="One Touch Tuning " unit="" enable="true" visible="true" readonly="false" default="0" value="0" prev_value="0">
+                    <items>
+                        <item tag="30" text="No Load" />
+                        <item tag="10" text="Medium Load" />
+                        <item tag="1" text="Big Load" />
+                    </items>
+                </var>
+                <var version="1.0" type="MC_Bool" name="Hall sensors" title="" text="" unit="" enable="true" visible="true" readonly="false" default="true" value="false" prev_value="true" />
+                <var version="1.0" type="MC_List" name="Sensors displacement" title="" text="" unit="deg" enable="false" visible="true" readonly="false" default="1" value="1" prev_value="1">
+                    <items>
+                        <item tag="60" text="60" />
+                        <item tag="120" text="120" />
+                    </items>
+                </var>
+                <var version="1.0" type="MC_Int" name="Placement electrical angle" title="" text="" unit="deg" enable="false" visible="true" readonly="false" resolution="1" increment="1" minimum="0" maximum="359" default="300" value="300" prev_value="300" />
+                <var version="1.0" type="MC_Bool" name="Quadrature encoder" title="" text="" unit="" enable="true" visible="true" readonly="false" default="true" value="false" prev_value="true" />
+                <var version="1.0" type="MC_Int" name="Pulses per mechanical revolution" title="" text="" unit="" enable="false" visible="true" readonly="false" resolution="1" increment="1" minimum="1" maximum="65535" default="400" value="400" prev_value="400" />
+            </vars>
+        </motor>
+      </system>
+  </motor>

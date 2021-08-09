@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<examples>
+    <simple_examples dir ="ExampleProjects">
+        <file name="P-NUCLEO-IHM001-BullRunning.stmcx"                     label="P-NUCLEO-IHM001 kit, 3-Shunt, Sensorless" section="PMSM"/>
+        <file name="NUCLEO-F303RE-X-NUCLEO-IHM07M1-BullRunning.stmcx"      label="NUCLEO-F303RE + IHM07M1 + BullRunning motor, 3-Shunt, Sensorless"          section="PMSM"/>
+        <file name="NUCLEO-F303RE-X-NUCLEO-IHM08M1-Shinano.stmcx"          label="NUCLEO-F303RE + IHM08M1 + Shinano motor, 3-Shunt, Sensorless"              section="PMSM"/>
+        <file name="STEVAL-IHM042V1-DualDrive-Shinano.stmcx"               label="STEVAL-IHM042V1 inverter + 2 Shinano motors"          section="PMSM"/>
+    </simple_examples>-
+    <mcsdk_examples dir="../../../Projects">
+        <file name="STEVAL-HKI001V2/Demonstration/MAGTEC/SDK54x-GAPDrive_MAGTEC_ACEPACK_F303_560V.stmcx"  label ="STEVAL-HKI001v2 project with STGAP1AS"                  section="PMSM" copy_all_files="true" />    
+        <file name="NUCLEO-F303RE/Demonstration/PositionControl/PositionControl.stmcx" label="PositionControl on NUCLEO-F303 with Maxon motor" section="PMSM" cpoy_all_files="true" />
+        <file name ="NUCLEO-H745ZI/Demonstration/IHM07-3Shunts-ShinanoMotor/NUCLEO-H745ZI_IHM07_3S.stmcx"                label ="NUCLEO-H745ZI- CortexM4 Motor Control application example"                  section="PMSM" copy_all_files="true" />
+        <file name="P-NUCLEO-IHM003/Demonstration/Potentiometer/Potentiometer.stmcx"                label ="Speed ramp with Potentiometer on P-NUCLEO-IHM003 kit"                  section="PMSM" copy_all_files="true" />
+        <file name="P-NUCLEO-IHM001/Demonstration/Potentiometer/Potentiometer.stmcx"                label ="Speed ramp with Potentiometer on P-NUCLEO-IHM001 kit"                  section="PMSM" copy_all_files="true" />
+        <file name="P-NUCLEO-IHM001/Demonstration/PotentiometerAdvance/PotentiometerAdvance.stmcx"  label ="Speed ramp with Potentiometer on P-NUCLEO-IHM001 kit -- Advanced"           section="PMSM" copy_all_files="true" />
+        <file name="P-NUCLEO-IHM001/Demonstration/Freertos/Freertos.stmcx"                          label ="Free RTOS on P-NUCLEO-IHM001 kit"                  section="PMSM" copy_all_files="true" />
+        <file name="B-G431B-ESC1/Demonstration/ElectronicSpeedControl/ElectronicSpeedControl.stmcx" label="B-G431B-ESC1 electronic speed control" section="PMSM" copy_all_files="true"/>
+        <file name="STEVAL-ESC001V1/Demonstration/ElectronicSpeedControl/ElectronicSpeedControl.stmcx" label="STEVAL-ESC001V1 electronic speed control" section="PMSM" copy_all_files="true"/>
+        <file name="NUCLEO-F303RE/Demonstration/NUCLEO-F303RE-X-NUCLEO-IHM16M1-GimBal/NUCLEO-F303RE-X-NUCLEO-IHM16M1-GimBal.stmcx" label ="Gimbal motor" />
+        <file name="NUCLEO-F303RE/Demonstration/SawToothRamp/SawToothRamp.stmcx"                    label ="Saw tooth speed ramp"                   section="PMSM" copy_all_files="true" />
+        <file name="NUCLEO-F303RE/Demonstration/RampCCMRAM/RampCCMRAM.stmcx"                        label ="Speed ramp and CCMRAM"                     section="PMSM" copy_all_files="true" />
+        <file name="STM32303E-EVAL/Demonstration/DualDriveCCMRAM/DualDriveCCMRAM.stmcx"             label ="Dual Drive and CCMRAM"                section="PMSM" copy_all_files="true" />
+        <file name="STEVAL-IHM034V2/Demonstration/PFC/PFC.stmcx"                                    label ="Power Factor Correction"                            section="PMSM" copy_all_files="true" />
+        <file name="STM32G081B-EVAL/Demonstration/EvalG0_SingleShunt_IHM023V3_HAL/EvalG0_SingleShunt_IHM023V3_HAL.stmcx"                label ="STM32G081 based, Single-Shunt configuration using HAL"                  section="PMSM" copy_all_files="true" />
+        <file name="STM32G081B-EVAL/Demonstration/EvalG0_SingleShunt_IHM023V3_LL/EvalG0_SingleShunt_IHM023V3_LL.stmcx"                label ="STM32G081, Single-Shunt configuration using LL"                  section="PMSM" copy_all_files="true" />
+        <file name="P-NUCLEO-IHM003/Demonstration/6Steps_P-NUCLEO-IHM003/6Steps_P-NUCLEO-IHM003.stmcx" label="Six-Step drive with P-NUCLEO-IHM003 kit" section="6-Steps PMSM" copy_all_files="true" />
+        <file name="NUCLEO-G431RB/Demonstration/6Steps-NUCLEOG431RB-IHM07-BullRunning/6Steps-NUCLEOG431RB-IHM07-BullRunning.stmcx" label="Six-Step drive with NUCLEO-G431RB, IHM07M1 and BullRunning motor" section="6-Steps PMSM" copy_all_files="true" />
+        <file name="NUCLEO-G431RB/Demonstration/6Steps-NUCLEOG431RB-IHM08-Shinano/6Steps-NUCLEOG431RB-IHM08-Shinano.stmcx" label="Six-Step drive with NUCLEO-G431RB, IHM08M1 and Shinano motor" section="6-Steps PMSM" copy_all_files="true" />
+        <file name="NUCLEO-G431RB/Demonstration/6Steps-NUCLEOG431RB-IHM16-BullRunning/6Steps-NUCLEOG431RB-IHM16-BullRunning.stmcx" label="Six-Step drive with NUCLEO-G431RB, IHM16M1 and BullRunning motor" section="6-Steps PMSM" copy_all_files="true" />
+        <file name="NUCLEO-F401RE\Demonstration\6Steps-NUCLEOF401RETx-IHM07-BullRunning/6Steps-NUCLEOF401RETx-IHM07-BullRunning.stmcx" label="Six-Step drive with NUCLEO-F401RE, IHM07M1 and BullRunning motor" section="6-Steps PMSM" copy_all_files="true" />
+        <file name="STEVAL-SPIN3204/Demonstration/6Steps_STEVAL-SPIN3204/6Steps_STEVAL-SPIN3204.stmcx"                        label ="Six-Step drive with STSPIN3204"                     section="6-Steps PMSM" copy_all_files="true" />
+   </mcsdk_examples>
+</examples>

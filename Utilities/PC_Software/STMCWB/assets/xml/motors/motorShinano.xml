@@ -1,0 +1,70 @@
+<motor id="motorShinano" label="Shinano LA052-080E3NL1" description="Inner rotor type - 2 poles pairs - brushless DC motor with encoder">
+  <Mp>
+    <user_data>
+      <ctrl_board name="NUCLEO-F302R8"/>
+      <pwr_board name="X-NUCLEO-IHM07M1 3Sh"/>
+      <motors>
+        <pole_pairs>2</pole_pairs>
+        <max_speed>4000</max_speed>
+        <max_current>2.1</max_current>
+        <v_bus>24</v_bus>
+        <ld_lq_ratio>1</ld_lq_ratio>
+        <sm_pmsm>true</sm_pmsm>
+        <i_pmsm>false</i_pmsm>
+      </motors>
+    </user_data>
+    <profile_data>
+      <motors>
+        <!--binaryFile name="NUCLEO-F302R8#X-NUCLEO-IHM07M1 3Sh#(4.3.0)#(005).bin"/-->
+        <electrical>
+          <max_current>1.6</max_current>
+          <v_bus>24</v_bus>
+          <ls>0.000600000000000000000</ls>
+          <rs>0.350000000000000000</rs>
+          <ke>4.000000000000000000</ke>
+        </electrical>
+        <mechanical>
+          <friction>0.000014</friction>
+          <inertia>0.000005</inertia>
+          <max_speed>4000</max_speed>
+          <max_speed_startup>1600</max_speed_startup>
+          <acceleration>1000</acceleration>
+        </mechanical>
+      </motors>
+      <operation_condition>
+        <pwm_frequency>20000</pwm_frequency>
+        <foc_rate>1</foc_rate>
+        <cutoff_frequency>6000</cutoff_frequency>
+      </operation_condition>
+    </profile_data>
+  </Mp>
+  <system type="motor 1">
+    <motor version="1.0">
+      <name>Motor</name>
+      <uid>M</uid>
+      <type>M</type>
+      <handler_name>M</handler_name>
+      <board_name>Shinano LA052-080E3NL1</board_name>
+      <vars>
+        <var version="1.0" type="MC_List" name="I/SM-PMSM" value="1">
+          <items>
+            <item tag="1" text="Internal PMSM"/>
+            <item tag="0" text="Surface Mounted PMSM"/>
+          </items>
+        </var>
+        <var version="1.0" type="MC_Int" name="Pole Pairs" value="2"/>
+        <var version="1.0" type="MC_Int" name="Max Rated Speed" value="4000"/>
+        <var version="1.0" type="MC_Double" name="Nominal Current" value="1.6000000000000000"/>
+        <var version="1.0" type="MC_Double" name="Nominal DC Voltage" value="24.000000000000"/>
+        <var version="1.0" type="MC_Double" name="Rs" value="0.350000000000000000"/>
+        <var version="1.0" type="MC_Double" name="Ld" value="0.600000000000000000"/>
+        <var version="1.0" type="MC_Double" name="Lq" value="0.600000000000000000"/>
+        <var version="1.0" type="MC_Double" name="Ls" value="0.600000000000000000"/>
+        <var version="1.0" type="MC_Double" name="ld_lq_ratio" value="1"/>
+        <var version="1.0" type="MC_Double" name="B-EmfConstant" value="4.00000000000"/>
+        <var version="1.0" type="MC_Double" name="inertia" value="5.0"/>
+        <var version="1.0" type="MC_Double" name="friction" value="14.0"/>
+      </vars>
+    </motor>
+  </system>
+</motor>

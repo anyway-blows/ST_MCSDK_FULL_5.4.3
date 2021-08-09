@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xi="http://www.w3.org/2003/XInclude">
+    <customSupport href="http://www.st.com/web/en/support/online_support.html" />
+    <license href="http://www.st.com/content/ccc/resource/legal/legal_agreement/license_agreement/group0/39/50/32/6c/e0/a8/45/2d/DM00218346/files/DM00218346.pdf/jcr:content/translations/en.DM00218346.pdf" />
+
+    <mruRegKey href="SOFTWARE\\STMicroelectronics\\STMCWB\\MRUList" />
+
+    <assets_path           href="assets" />
+    <user_assets_path      href=".st_motor_control" />
+
+    <user_motorsPath       href="user_motors" />
+
+    <!--is the user directory containing updates of boards and motors for each version-->
+    <update_path           href="updates/5_4_3" />
+    <update_examples_file href="xml/examples.xml" />
+
+    <xml_systems           href="xml/systems.xml" />
+    <xml_apps              href="xml/applications.xml" />
+    <xml_base_imgUrl       href="xml/board" />
+
+    <mp_tool href="..\STMotorProfiler\STMotorProfiler.exe"></mp_tool>
+    <path_mp_version_file href="../STMotorProfiler/resource/info/version" />
+
+  <notSupported>
+        <item id="LCD" msg="The 'LCD' is not supported in the FW for SDK5.x. All parameters will be disabled."/>
+        <item id="PFC" msg="The 'PFC' is not supported in the FW for SDK5.x excepted for SDK for 'STM32F103 High Density'. All parameters will be disabled."/>
+        <item id="HFI" msg="The 'Sensor-less (HFI+Observer)' is not supported in the FW for SDK5.x. All parameters will be disabled."/>
+
+        <item id="F2" msg="F2 mcus are not supported in the FW for SDK5.x"/>
+        <item id="F103_hd_dual" msg="F103 High Density in dual Motor mcus are not supported in the FW for SDK5.x"/>
+
+        <featureComment>
+            <![CDATA[This features is not supported in the FW for SDK5.x]]>
+        </featureComment>
+    </notSupported>
+    
+    <noOVP>true</noOVP>
+
+    <generator_path href="./WB_to_Mx/WB_to_Mx.exe"/>
+    <path_motorcontrol_configs href="../../../Middlewares/ST/MotorControl/MotorControl_Configs.xml" />
+    <xml_user_interface href="assets/xml/reserved_MCU_pin_user_interface.xml" />
+
+    <xi:include href="docs.xml" />
+    <xi:include href="examples.xml" />
+
+    <baudrates>
+        <baudrate>921600</baudrate>
+        <baudrate>460800</baudrate>
+        <baudrate>115200</baudrate>
+        <baudrate>57600</baudrate>
+        <baudrate>38400</baudrate>
+        <baudrate>19200</baudrate>
+        <baudrate>9600</baudrate>
+    </baudrates>
+
+    <!-- old -->
+    <xml_user_motors_4_2    href="STMCWB_Asset/motors/users.xml" />
+
+    <mc_version value="5.4.3.0"/>
+
+    <library text="PMSM FOC SDK v5.0">
+        <section value="PMSM">
+            <project_type type="SINGLE"/>
+            <project_type type="DUAL"/>
+
+            <toolchains>
+                <toolchain key="EWARM"      label="EWARM"      />
+                <toolchain key="MDK-ARM V4" label="MDK-ARM V4" />
+                <toolchain key="MDK-ARM V5" label="MDK-ARM V5" />
+                <toolchain key="TrueSTUDIO" label="TrueSTUDIO" />
+                <toolchain key="SW4STM32"   label="SW4STM32"  />
+            </toolchains>
+        </section>
+    </library>
+
+    <sections>
+        <section value="PMSM">
+            <project_type type="SINGLE" uid="P0" description="PMSM - Single FOC" />
+            <project_type type="DUAL" uid="P1" description="PMSM - Dual FOC" />
+        </section>
+    </sections>
+
+</config>

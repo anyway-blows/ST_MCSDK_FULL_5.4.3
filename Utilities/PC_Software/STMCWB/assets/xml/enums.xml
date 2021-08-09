@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<enums>
+    <enum name="usart">
+        <item name=""       id ="0"/>
+        <item name="USART1" id ="1"/>
+        <item name="USART2" id ="2"/>
+        <item name="USART3" id ="3"/>
+        <item name="USART4" id ="4"/>
+        <item name="USART5" id ="5"/>
+        <item name="USART6" id ="6"/>
+        <item name="USART7" id ="7"/>
+        <item name="USART8" id ="8"/>
+    </enum>
+    <enum name="remap">
+        <item name="NOT_APPLICABLE"     id ="-2" description="Not applicable"       define=""                 define_pwm=""                     define_pfc="" />
+        <item name="UNDEFINED"          id ="-1" description="Undefined"            define="UNDEFINED"        define_pwm="PWM_UNDEFINED"        define_pfc="GPIO_UndefinedRemap" />
+        <item name="NO_REMAP"           id ="0"  description="No remap"             define="NO_REMAP"         define_pwm="PWM_NO_REMAP"         define_pfc="GPIO_NoRemap"        />
+        <item name="REMAP"              id ="1"  description="Remap"                define="REMAP"            define_pwm="PWM_REMAP"            define_pfc="GPIO_Remap"          /> 
+        <item name="PARTIAL_REMAP"      id ="2"  description="Partial re-map"       define="PARTIAL_REMAP"    define_pwm="PWM_PARTIAL_REMAP"    define_pfc="GPIO_PartialRemap"   />
+        <item name="FULL_REMAP"         id ="3"  description="Full re-map"          define="FULL_REMAP"       define_pwm="PWM_FULL_REMAP"       define_pfc="GPIO_FullRemap"      />
+        <item name="PARTIAL_REMAP_01"   id ="4"  description="Partial re-map '01'"  define="PARTIAL_REMAP_01" define_pwm="PWM_PARTIAL_REMAP_01" define_pfc="GPIO_PartialRemap01" />
+        <item name="PARTIAL_REMAP_10"   id ="5"  description="Partial re-map '10'"  define="PARTIAL_REMAP_10" define_pwm="PWM_PARTIAL_REMAP_10" define_pfc="GPIO_PartialRemap10" />
+    </enum>
+
+    <enum name="timer">
+        <item name=""      id ="0"/>
+        <item name="TIM1"  id ="1"/>
+        <item name="TIM2"  id ="2"/>
+        <item name="TIM3"  id ="3"/>
+        <item name="TIM4"  id ="4"/>
+        <item name="TIM5"  id ="5"/>
+        <item name="TIM6"  id ="6"/>
+        <item name="TIM7"  id ="7"/>
+        <item name="TIM8"  id ="8"/>
+        <item name="TIM16" id ="16"/>
+    </enum>
+
+</enums>

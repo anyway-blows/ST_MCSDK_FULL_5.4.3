@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<reserved_pin_user_interface  xmlns:xi="http://www.w3.org/2003/XInclude">
+  <single>
+    <board name="STM32100B-EVAL">
+      <pin>PB2</pin>
+      <pin>PB9</pin>
+      <pin>PB13-PB15</pin>
+      <pin>PD7</pin>
+      <pin>PD8</pin>
+      <pin>PD12</pin>
+      <pin>PD14</pin>
+      <pin>PD15</pin>
+      <pin>PE0</pin>
+      <pin>PE1</pin>
+    </board>
+
+    <board name="STM3210B-EVAL">
+      <pin>PB2</pin>
+      <pin>PB9</pin>
+      <pin>PB13-PB15</pin>
+      <pin>PD7</pin>
+      <pin>PD8</pin>
+      <pin>PD12</pin>
+      <pin>PD14</pin>
+      <pin>PD15</pin>
+      <pin>PE0</pin>
+      <pin>PE1</pin>
+    </board>
+
+    <board name="STM3210E-EVAL">
+      <pin>PD0</pin>
+      <pin>PD1</pin>
+      <pin>PD3-PD5</pin>
+      <pin>PD8-PD10</pin>
+      <pin>PD14</pin>
+      <pin>PD15</pin>
+      <pin>PE7-PE15</pin>
+      <pin>PF0</pin>
+      <pin>PG7</pin>
+      <pin>PG8</pin>
+      <pin>PG12-PG15</pin>
+    </board>
+
+    <board name="STM322xG-EVAL">
+      <pin>PA0</pin>
+      <pin>PB6</pin>
+      <pin>PB9</pin>
+      <pin>PC10</pin>
+      <pin>PC11</pin>
+      <pin>PD0-PD15</pin>
+      <pin>PF8</pin>
+      <pin>PG10</pin>
+      <pin>PG12</pin>
+      <pin>PG15</pin>
+      <pin>PI2</pin>
+      <pin>PI8</pin>
+    </board>
+
+    <board name="STM324xG-EVAL">
+      <pin>PA0</pin>
+      <pin>PB6</pin>
+      <pin>PB9</pin>
+      <pin>PC10</pin>
+      <pin>PC11</pin>
+      <pin>PD0-PD15</pin>
+      <pin>PF8</pin>
+      <pin>PG10</pin>
+      <pin>PG12</pin>
+      <pin>PG15</pin>
+      <pin>PI2</pin>
+      <pin>PI8</pin>
+    </board>
+
+    <board name="STM320518-EVAL">
+      <pin>PA0</pin>
+      <pin>PA5</pin>
+      <pin>PA7</pin>
+      <pin>PB4</pin>
+      <pin>PB8</pin>
+      <pin>PC6-PC9</pin>
+      <pin>PF4</pin>
+    </board>
+    <board name="STM32303C-EVAL">
+      <pin>PB5</pin>
+      <pin>PB14</pin>
+      <pin>PB15</pin>
+      <pin>PC13</pin>
+      <pin>PD5</pin>
+      <pin>PD6</pin>
+      <pin>PE0</pin>
+      <pin>PE6</pin>
+      <pin>PE7</pin>
+      <pin>PF9</pin>
+    </board>
+
+    <board name="STEVAL-IHM022V1">
+      <pin>PB2</pin>
+      <pin>PB13-PB15</pin>
+      <pin>PD7</pin>
+      <pin>PD15</pin>
+      <pin>PG7</pin>
+      <pin>PG8</pin>
+      <pin>PG12</pin>
+      <pin>PG13</pin>
+      <pin>PG15</pin>
+    </board>
+    <board name="STEVAL-IHM039V1">
+      <pin>PB2</pin>
+      <pin>PC10-PC12</pin>
+      <pin>PD7</pin>
+      <pin>PD11</pin>
+      <pin>PG0-PG7</pin>
+    </board>
+  </single>
+  <dual>
+    <board name="STM32303C-EVAL">
+      <pin>PB5</pin>
+      <pin>PB14</pin>
+      <pin>PB15</pin>
+      <pin>PC13</pin>
+      <pin>PD5</pin>
+      <pin>PD6</pin>
+      <pin>PE0</pin>
+      <pin>PE6</pin>
+      <pin>PE7</pin>
+      <pin>PF9</pin>
+    </board>
+    <board name="STEVAL-IHM022V1">
+      <pin>PB2</pin>
+      <pin>PB13-PB15</pin>
+      <pin>PD7</pin>
+      <pin>PD15</pin>
+      <pin>PG7</pin>
+      <pin>PG8</pin>
+      <pin>PG12</pin>
+      <pin>PG13</pin>
+      <pin>PG15</pin>
+    </board>
+    <board name="STEVAL-IHM039V1">
+      <pin>PB2</pin>
+      <pin>PC10-PC12</pin>
+      <pin>PD7</pin>
+      <pin>PD11</pin>
+      <pin>PG0-PG7</pin>
+    </board>
+  </dual>
+</reserved_pin_user_interface>
+

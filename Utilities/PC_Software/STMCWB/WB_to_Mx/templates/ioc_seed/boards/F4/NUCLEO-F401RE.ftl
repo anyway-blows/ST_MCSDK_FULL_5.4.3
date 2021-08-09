@@ -1,0 +1,1 @@
+<#include "../F4/NUCLEO-F401RE/STM32F401RE - 84 MHz - Ext_8 MHz.ftl" >

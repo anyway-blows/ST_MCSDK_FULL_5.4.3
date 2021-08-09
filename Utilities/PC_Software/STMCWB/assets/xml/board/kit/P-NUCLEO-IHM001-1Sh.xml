@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<kit id="P-NUCLEO-IHM001-1Sh" label="P-NUCLEO-IHM001/002 1Sh" img="" description="STM32 Nucleo Pack FOC and 6-step control for Low voltage 3-ph motors" default_motor1="BR2804-1700kv">
+    <single>
+        <power>X-NUCLEO-IHM07M1-1Sh</power>
+        <control>NUCLEO-F302R8</control>
+    </single>
+    <applications>
+      <single>
+        <application>generic</application>
+        <application>pumps</application>
+        <application>fans</application>
+        <application>drone</application>
+      </single>
+    </applications>
+  </kit>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<usage>
+    <args>
+        <![CDATA[[-update] [-Q] [-no_mx] [-mx_timeout <second>] [-driver <driver>] ]]>
+    </args>
+    <lst_arg>
+        <arg>
+            <![CDATA[-update                       update the existing ioc file during the generation]]>
+        </arg>
+        <arg>
+            <![CDATA[-Q                            Quiet mode. No GUI, use only stdout and stderr ]]>
+        </arg>
+        <arg>
+            <![CDATA[-no_mx                        No call CubeMx after .ioc file generation ]]>
+        </arg>
+        <arg>
+            <![CDATA[-mx_timeout <second>          max number of seconds to wait for Mx (then it kills the process) ]]>
+        </arg>
+        <arg>
+            <![CDATA[-driver <driver>              driver selection [HAL/LL] ]]>
+        </arg>
+        <arg>
+            <![CDATA[-ccmram                       Adds `Define=CCRAM` in the `.extSettings` file ]]>
+        </arg>
+    </lst_arg>
+</usage>

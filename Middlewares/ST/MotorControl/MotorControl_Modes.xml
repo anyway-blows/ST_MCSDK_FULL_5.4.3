@@ -1,0 +1,1576 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<IP xmlns="http://mcd.rou.st.com/modules.php?name=mcu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DBVersion="V4.0" IPType="middleware" IpGroup="Middleware" Name="MotorControl" Version="MCSDK_v5.4.3-Full" xsi:schemaLocation="http://mcd.rou.st.com/modules.php?name=mcu ../../../../../../../doc/V4/Development/Specifications/db/IP_Modes.xsd">
+	<RefParameter Comment="AUX_ENCODER" DefaultValue="false" Name="AUX_ENCODER" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_ENCODER" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="AUX_ENCODER2" DefaultValue="false" Name="AUX_ENCODER2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_ENCODER" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="AUX_HALL_SENSORS" DefaultValue="false" Name="AUX_HALL_SENSORS" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_HALL_SENSORS" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="AUX_HALL_SENSORS2" DefaultValue="false" Name="AUX_HALL_SENSORS2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_HALL_SENSORS" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="AUX_STATE_OBSERVER_CORDIC" DefaultValue="false" Name="AUX_STATE_OBSERVER_CORDIC" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_STATE_OBSERVER_CORDIC" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="AUX_STATE_OBSERVER_CORDIC2" DefaultValue="false" Name="AUX_STATE_OBSERVER_CORDIC2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_STATE_OBSERVER_CORDIC" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="AUX_STATE_OBSERVER_PLL" DefaultValue="false" Name="AUX_STATE_OBSERVER_PLL" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_STATE_OBSERVER_PLL" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="AUX_STATE_OBSERVER_PLL2" DefaultValue="false" Name="AUX_STATE_OBSERVER_PLL2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_STATE_OBSERVER_PLL" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="BUS_VOLTAGE_READING" DefaultValue="false" Name="BUS_VOLTAGE_READING" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_BUS_VOLTAGE_READING" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="BUS_VOLTAGE_READING2" DefaultValue="false" Name="BUS_VOLTAGE_READING2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_BUS_VOLTAGE_READING2" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="CURRENT_READING_TOPOLOGY" DefaultValue="THREE_SHUNT" Name="CURRENT_READING_TOPOLOGY" Type="list" Visible="false">
+		<PossibleValue Comment="3 shunt" Value="THREE_SHUNT" />
+		<PossibleValue Comment="3 shunt (indep)" Value="THREE_SHUNT_INDEPENDENT_RESOURCES" />
+		<PossibleValue Comment="3 shunt (shared)" Value="THREE_SHUNT_SHARED_RESOURCES" />
+		<PossibleValue Comment="1 shunt" Value="SINGLE_SHUNT" />
+		<PossibleValue Comment="ICS" Value="ICS_SENSORS" />
+	</RefParameter>
+	<RefParameter Comment="CURRENT_READING_TOPOLOGY2" DefaultValue="THREE_SHUNT" Name="CURRENT_READING_TOPOLOGY2" Type="list" Visible="false">
+		<PossibleValue Comment="3 shunt" Value="THREE_SHUNT" />
+		<PossibleValue Comment="3 shunt (indep)" Value="THREE_SHUNT_INDEPENDENT_RESOURCES" />
+		<PossibleValue Comment="3 shunt (shared)" Value="THREE_SHUNT_SHARED_RESOURCES" />
+		<PossibleValue Comment="1 shunt" Value="ONE_SHUNT" />
+		<PossibleValue Comment="ICS" Value="ICS_SENSORS" />
+	</RefParameter>
+	<RefParameter Comment="RTOS" DefaultValue="NONE" Name="RTOS" Type="list" Visible="false">
+	    <PossibleValue Comment="no rtos" Value="NONE" />
+		<PossibleValue Comment="freertos" Value="FREERTOS" />
+	</RefParameter>
+	<RefParameter Comment="CUBE_MX_VER" DefaultValue="xxx" Name="CUBE_MX_VER" Type="stringRW" Visible="false" />	
+	<RefParameter Comment="DAC_FUNCTIONALITY" DefaultValue="false" Name="DAC_FUNCTIONALITY" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_DAC_FUNCTIONALITY" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+    <RefParameter Comment="DAC_EMULATED" DefaultValue="false" Name="DAC_EMULATED" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_DAC_EMULATED" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="SHARED_SIGNAL_ENABLE" DefaultValue="false" Name="SHARED_SIGNAL_ENABLE" Type="boolean" Visible="false" />
+	<RefParameter Comment="SHARED_SIGNAL_ENABLE2" DefaultValue="false" Name="SHARED_SIGNAL_ENABLE2" Type="boolean" Visible="false" />
+	<RefParameter Comment="DEBUG_DAC_CH1" DefaultValue="false" Name="DEBUG_DAC_CH1" Type="boolean" Visible="false" />
+	<RefParameter Comment="DEBUG_DAC_CH2" DefaultValue="false" Name="DEBUG_DAC_CH2" Type="boolean" Visible="false" />
+	<RefParameter Comment="DIFFERENTIAL_TERM_ENABLED" DefaultValue="false" Name="DIFFERENTIAL_TERM_ENABLED" Type="boolean" Visible="false" />
+	<RefParameter Comment="DIFFERENTIAL_TERM_ENABLED2" DefaultValue="false" Name="DIFFERENTIAL_TERM_ENABLED2" Type="boolean" Visible="false" />
+	<RefParameter Comment="DUALDRIVE" DefaultValue="false" Name="DUALDRIVE" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_DUALDRIVE" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="ENCODER" DefaultValue="false" Name="ENCODER" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_ENCODER" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="ENCODER2" DefaultValue="false" Name="ENCODER2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_ENCODER" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="EXAMPLE_SPEEDMONITOR" DefaultValue="false" Name="EXAMPLE_SPEEDMONITOR" Type="boolean" Visible="false" />
+	<RefParameter Comment="FEED_FORWARD_CURRENT_REG_ENABLING" DefaultValue="false" Name="FEED_FORWARD_CURRENT_REG_ENABLING" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_FEED_FORWARD_CURRENT_REG_ENABLING" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="FEED_FORWARD_CURRENT_REG_ENABLING2" DefaultValue="false" Name="FEED_FORWARD_CURRENT_REG_ENABLING2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_FEED_FORWARD_CURRENT_REG_ENABLING" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="FLUX_WEAKENING_ENABLING" DefaultValue="false" Name="FLUX_WEAKENING_ENABLING" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_FLUX_WEAKENING_ENABLING" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="FLUX_WEAKENING_ENABLING2" DefaultValue="false" Name="FLUX_WEAKENING_ENABLING2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_FLUX_WEAKENING_ENABLING" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="POSITION_CTRL_ENABLING" DefaultValue="false" Name="POSITION_CTRL_ENABLING" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_POSITION_CTRL_ENABLING" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="POSITION_CTRL_ENABLING2" DefaultValue="false" Name="POSITION_CTRL_ENABLING2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_POSITION_CTRL_ENABLING" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>	
+	<RefParameter Comment="HALL_SENSORS" DefaultValue="false" Name="HALL_SENSORS" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_HALL_SENSORS" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="HALL_SENSORS2" DefaultValue="false" Name="HALL_SENSORS2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_HALL_SENSORS" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="HFINJECTION" DefaultValue="false" Name="HFINJECTION" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_HFINJECTION" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="HFINJECTION2" DefaultValue="false" Name="HFINJECTION2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_HFINJECTION" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="HW_OV_CURRENT_PROT_BYPASS" DefaultValue="false" Name="HW_OV_CURRENT_PROT_BYPASS" Type="boolean" Visible="false" />
+	<RefParameter Comment="HW_OV_CURRENT_PROT_BYPASS2" DefaultValue="false" Name="HW_OV_CURRENT_PROT_BYPASS2" Type="boolean" Visible="false" />
+	<RefParameter Comment="ICS_SENSORS" DefaultValue="false" Name="ICS_SENSORS" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_ICS_SENSORS" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="ICS_SENSORS2" DefaultValue="false" Name="ICS_SENSORS2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_ICS_SENSORS" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="INRUSH_CURRLIMIT_ENABLING" DefaultValue="false" Name="INRUSH_CURRLIMIT_ENABLING" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_INRUSH_CURRLIMIT_ENABLING" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="INRUSH_CURRLIMIT_ENABLING2" DefaultValue="false" Name="INRUSH_CURRLIMIT_ENABLING2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_INRUSH_CURRLIMIT_ENABLING" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="INTERNAL_OVERCURRENTPROTECTION" DefaultValue="false" Name="INTERNAL_OVERCURRENTPROTECTION" Type="boolean" Visible="false" />
+	<RefParameter Comment="INTERNAL_OVERCURRENTPROTECTION2" DefaultValue="false" Name="INTERNAL_OVERCURRENTPROTECTION2" Type="boolean" Visible="false" />
+	<RefParameter Comment="INTERNAL_OVERVOLTAGEPROTECTION" DefaultValue="false" Name="INTERNAL_OVERVOLTAGEPROTECTION" Type="boolean" Visible="false" />
+	<RefParameter Comment="INTERNAL_OVERVOLTAGEPROTECTION2" DefaultValue="false" Name="INTERNAL_OVERVOLTAGEPROTECTION2" Type="boolean" Visible="false" />
+	<RefParameter Comment="MC_TUNING_INTERFACE" DefaultValue="true" Name="MC_TUNING_INTERFACE" Type="boolean" Visible="false" />
+	<RefParameter Comment="MOTOR_PROFILER" DefaultValue="false" Name="MOTOR_PROFILER" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_MOTOR_PROFILER" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>		
+	<RefParameter Comment="MTPA_ENABLING" DefaultValue="false" Name="MTPA_ENABLING" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_MTPA_ENABLING" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="MTPA_ENABLING2" DefaultValue="false" Name="MTPA_ENABLING2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_MTPA_ENABLING" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="ONE_TOUCH_TUNING" DefaultValue="false" Name="ONE_TOUCH_TUNING" Type="boolean" Visible="false" />
+	<RefParameter Comment="ON_OVER_VOLTAGE" DefaultValue="TURN_OFF_PWM" Name="ON_OVER_VOLTAGE" Type="list" Visible="false">
+		<PossibleValue Comment="Turn off PWM" Value="TURN_OFF_PWM" />
+		<PossibleValue Comment="Turn on resistive brake" Value="TURN_ON_R_BRAKE" />
+		<PossibleValue Comment="Turn on low side" Value="TURN_ON_LOW_SIDES" />
+    
+	</RefParameter>
+	<RefParameter Comment="ON_OVER_VOLTAGE2" DefaultValue="TURN_OFF_PWM" Name="ON_OVER_VOLTAGE2" Type="list" Visible="false">
+		<PossibleValue Comment="Turn off PWM" Value="TURN_OFF_PWM" />
+		<PossibleValue Comment="Turn on resistive brake" Value="TURN_ON_R_BRAKE" />
+		<PossibleValue Comment="Turn on low side" Value="TURN_ON_LOW_SIDES" />
+	</RefParameter>
+	<RefParameter Comment="OPEN_LOOP_FOC" DefaultValue="false" Name="OPEN_LOOP_FOC" Type="boolean" Visible="false" />
+	<RefParameter Comment="OPEN_LOOP_FOC2" DefaultValue="false" Name="OPEN_LOOP_FOC2" Type="boolean" Visible="false" />
+	<RefParameter Comment="OTF_STARTUP" DefaultValue="false" Name="OTF_STARTUP" Type="boolean" Visible="false" />
+	<RefParameter Comment="OTF_STARTUP2" DefaultValue="false" Name="OTF_STARTUP2" Type="boolean" Visible="false" />
+	<RefParameter Comment="OV_TEMPERATURE_PROT_ENABLING" DefaultValue="false" Name="OV_TEMPERATURE_PROT_ENABLING" Type="boolean" Visible="false" />
+	<RefParameter Comment="OV_TEMPERATURE_PROT_ENABLING2" DefaultValue="false" Name="OV_TEMPERATURE_PROT_ENABLING2" Type="boolean" Visible="false" />
+	<RefParameter Comment="OV_VOLTAGE_PROT_ENABLING" DefaultValue="false" Name="OV_VOLTAGE_PROT_ENABLING" Type="boolean" Visible="false" />
+	<RefParameter Comment="OV_VOLTAGE_PROT_ENABLING2" DefaultValue="false" Name="OV_VOLTAGE_PROT_ENABLING2" Type="boolean" Visible="false" />
+	<RefParameter Comment="PFC_ENABLED" DefaultValue="false" Name="PFC_ENABLED" Type="boolean" Visible="false">
+        <PossibleValue Comment="true" Semaphore="S_PFC" Value="true" />
+        <PossibleValue Comment="false" Value="false" />
+    </RefParameter>
+	<RefParameter Comment="ST MC monitor usage" DefaultValue="false" Name="SERIAL_COMMUNICATION" Type="boolean" Visible="true">
+		<PossibleValue Comment="true" Semaphore="S_SERIAL_COMMUNICATION" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="SINGLEDRIVE" DefaultValue="false" Name="SINGLEDRIVE" Type="boolean" Visible="false" />
+	<RefParameter Comment="SINGLE_SHUNT" DefaultValue="false" Name="SINGLE_SHUNT" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_SINGLE_SHUNT" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="SINGLE_SHUNT2" DefaultValue="false" Name="SINGLE_SHUNT2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_SINGLE_SHUNT" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="SMOOTH_BRAKING_ACTION_ON_OVERVOLTAGE" DefaultValue="false" Name="SMOOTH_BRAKING_ACTION_ON_OVERVOLTAGE" Type="boolean" Visible="false" />
+	<RefParameter Comment="SPEED_FEEDBACK_CHECK" DefaultValue="false" Name="SPEED_FEEDBACK_CHECK" Type="boolean" Visible="false" />
+	<RefParameter Comment="SPEED_FEEDBACK_CHECK2" DefaultValue="false" Name="SPEED_FEEDBACK_CHECK2" Type="boolean" Visible="false" />
+	<RefParameter Comment="START_STOP_BTN" DefaultValue="false" Name="START_STOP_BTN" Type="boolean" Visible="false" />	
+	<RefParameter Comment="ENC_USE_CH3" DefaultValue="false" Name="ENC_USE_CH3" Type="boolean" Visible="false" />	
+	<RefParameter Comment="ENC_USE_CH32" DefaultValue="false" Name="ENC_USE_CH32" Type="boolean" Visible="false" />	
+	<RefParameter Comment="STATE_OBSERVER_CORDIC" DefaultValue="false" Name="STATE_OBSERVER_CORDIC" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_STATE_OBSERVER_CORDIC" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="STATE_OBSERVER_CORDIC2" DefaultValue="false" Name="STATE_OBSERVER_CORDIC2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_STATE_OBSERVER_CORDIC" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="STATE_OBSERVER_PLL" DefaultValue="false" Name="STATE_OBSERVER_PLL" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_STATE_OBSERVER_PLL" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="STATE_OBSERVER_PLL2" DefaultValue="false" Name="STATE_OBSERVER_PLL2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_STATE_OBSERVER_PLL" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="STM32F103x_MD" DefaultValue="false" Name="STM32F103x_MD" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_STM32F103x_MD" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="STM32F103x_HD" DefaultValue="false" Name="STM32F103x_HD" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_STM32F103x_HD" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="STM32F103x_LD" DefaultValue="false" Name="STM32F103x_LD" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_STM32F103x_LD" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>	
+	<RefParameter Comment="STM32PERFORMANCE" DefaultValue="false" Name="STM32PERFORMANCE" Type="boolean" Visible="false" />
+	<RefParameter Comment="STM32VALUE" DefaultValue="false" Name="STM32VALUE" Type="boolean" Visible="false" />
+	<RefParameter Comment="TEMPERATURE_READING" DefaultValue="false" Name="TEMPERATURE_READING" Type="boolean" Visible="false" />
+	<RefParameter Comment="TEMPERATURE_READING2" DefaultValue="false" Name="TEMPERATURE_READING2" Type="boolean" Visible="false" />
+	<RefParameter Comment="THREE_SHUNT" DefaultValue="false" Name="THREE_SHUNT" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_THREE_SHUNT" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="THREE_SHUNT2" DefaultValue="false" Name="THREE_SHUNT2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_THREE_SHUNT" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="THREE_SHUNT_INDEPENDENT_RESOURCES" DefaultValue="false" Name="THREE_SHUNT_INDEPENDENT_RESOURCES" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_THREE_SHUNT_INDEPENDENT_RESOURCES" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="THREE_SHUNT_INDEPENDENT_RESOURCES2" DefaultValue="false" Name="THREE_SHUNT_INDEPENDENT_RESOURCES2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_THREE_SHUNT_INDEPENDENT_RESOURCES" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="THREE_SHUNT_SHARED_RESOURCES" DefaultValue="false" Name="THREE_SHUNT_SHARED_RESOURCES" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_THREE_SHUNT_SHARED_RESOURCES" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="THREE_SHUNT_SHARED_RESOURCES2" DefaultValue="false" Name="THREE_SHUNT_SHARED_RESOURCES2" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_THREE_SHUNT_SHARED_RESOURCES" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="USE_INTERNAL_OPAMP" DefaultValue="false" Name="USE_INTERNAL_OPAMP" Type="boolean" Visible="false" />
+	<RefParameter Comment="USE_INTERNAL_OPAMP2" DefaultValue="false" Name="USE_INTERNAL_OPAMP2" Type="boolean" Visible="false" />
+	<RefParameter Comment="USE_STGAP1S" DefaultValue="false" Name="USE_STGAP1S" Type="boolean" Visible="false">
+		<PossibleValue Comment="true" Semaphore="S_USE_STGAP1S" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="UV_VOLTAGE_PROT_ENABLING" DefaultValue="false" Name="UV_VOLTAGE_PROT_ENABLING" Type="boolean" Visible="false" />
+	<RefParameter Comment="UV_VOLTAGE_PROT_ENABLING2" DefaultValue="false" Name="UV_VOLTAGE_PROT_ENABLING2" Type="boolean" Visible="false" />
+	<RefParameter Comment="VIEW_ENCODER_FEEDBACK" DefaultValue="false" Name="VIEW_ENCODER_FEEDBACK" Type="boolean" Visible="false" />
+	<RefParameter Comment="VIEW_ENCODER_FEEDBACK2" DefaultValue="false" Name="VIEW_ENCODER_FEEDBACK2" Type="boolean" Visible="false" />
+	<RefParameter Comment="ADC_PERIPH" DefaultValue="xxx" Name="ADC_PERIPH" Type="stringRW" Visible="false" />
+	<RefParameter Comment="ADC_PERIPH2" DefaultValue="xxx" Name="ADC_PERIPH2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="ADC_1_PERIPH" DefaultValue="xxx" Name="ADC_1_PERIPH" Type="stringRW" Visible="false" />
+	<RefParameter Comment="ADC_1_PERIPH2" DefaultValue="xxx" Name="ADC_1_PERIPH2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="POLE_PAIR_NUM" DefaultValue="1" Max="10000000" Min="-10000000" Name="POLE_PAIR_NUM" Type="integer" Visible="false" />
+	<RefParameter Comment="POLE_PAIR_NUM2" DefaultValue="1" Max="10000000" Min="-10000000" Name="POLE_PAIR_NUM2" Type="integer" Visible="false" />
+	<RefParameter Comment="RS" DefaultValue="0.35" Name="RS" Type="double" Visible="false" />
+	<RefParameter Comment="RS2" DefaultValue="0.35" Name="RS2" Type="double" Visible="false" />
+	<RefParameter Comment="LS" DefaultValue="0.000600" Name="LS" Type="double" Visible="false" />
+	<RefParameter Comment="LS2" DefaultValue="0.000600" Name="LS2" Type="double" Visible="false" />
+	<RefParameter Comment="NOMINAL_CURRENT" DefaultValue="2160" Max="10000000" Min="-10000000" Name="NOMINAL_CURRENT" Type="integer" Visible="false" />
+	<RefParameter Comment="NOMINAL_CURRENT2" DefaultValue="2160" Max="10000000" Min="-10000000" Name="NOMINAL_CURRENT2" Type="integer" Visible="false" />
+	<RefParameter Comment="MOTOR_MAX_SPEED_RPM" DefaultValue="4000" Max="10000000" Min="-10000000" Name="MOTOR_MAX_SPEED_RPM" Type="integer" Visible="false" />
+	<RefParameter Comment="MOTOR_MAX_SPEED_RPM2" DefaultValue="4000" Max="10000000" Min="-10000000" Name="MOTOR_MAX_SPEED_RPM2" Type="integer" Visible="false" />
+	<RefParameter Comment="MOTOR_VOLTAGE_CONSTANT" DefaultValue="4.0" Name="MOTOR_VOLTAGE_CONSTANT" Type="double" Visible="false" />
+	<RefParameter Comment="MOTOR_VOLTAGE_CONSTANT2" DefaultValue="4.0" Name="MOTOR_VOLTAGE_CONSTANT2" Type="double" Visible="false" />
+	<RefParameter Comment="ID_DEMAG" DefaultValue="-2160" Max="10000000" Min="-10000000" Name="ID_DEMAG" Type="integer" Visible="false" />
+	<RefParameter Comment="ID_DEMAG2" DefaultValue="-2160" Max="10000000" Min="-10000000" Name="ID_DEMAG2" Type="integer" Visible="false" />
+	<RefParameter Comment="HALL_SENSORS_PLACEMENT" DefaultValue="DEGREES_120" Name="HALL_SENSORS_PLACEMENT" Type="list" Visible="false">
+		<PossibleValue Comment="120" Value="DEGREES_120" />
+		<PossibleValue Comment="60" Value="DEGREES_60" />
+	</RefParameter>
+	<RefParameter Comment="HALL_SENSORS_PLACEMENT2" DefaultValue="DEGREES_120" Name="HALL_SENSORS_PLACEMENT2" Type="list" Visible="false">
+		<PossibleValue Comment="120" Value="DEGREES_120" />
+		<PossibleValue Comment="60" Value="DEGREES_60" />
+	</RefParameter>
+	<RefParameter Comment="HALL_PHASE_SHIFT" DefaultValue="300" Max="10000000" Min="-10000000" Name="HALL_PHASE_SHIFT" Type="integer" Visible="false" />
+	<RefParameter Comment="HALL_PHASE_SHIFT2" DefaultValue="300" Max="10000000" Min="-10000000" Name="HALL_PHASE_SHIFT2" Type="integer" Visible="false" />
+	<RefParameter Comment="HALL_MTPA" DefaultValue="false" Name="HALL_MTPA" Type="boolean" Visible="false" />
+	<RefParameter Comment="HALL_MTPA2" DefaultValue="false" Name="HALL_MTPA2" Type="boolean" Visible="false" />  
+	<RefParameter Comment="ENCODER_PPR" DefaultValue="400" Max="10000000" Min="-10000000" Name="ENCODER_PPR" Type="integer" Visible="false" />
+	<RefParameter Comment="ENCODER_PPR2" DefaultValue="400" Max="10000000" Min="-10000000" Name="ENCODER_PPR2" Type="integer" Visible="false" />
+	<RefParameter Comment="HW_DEAD_TIME_NS" DefaultValue="500" Max="10000000" Min="-10000000" Name="HW_DEAD_TIME_NS" Type="integer" Visible="false" />
+	<RefParameter Comment="HW_DEAD_TIME_NS2" DefaultValue="500" Max="10000000" Min="-10000000" Name="HW_DEAD_TIME_NS2" Type="integer" Visible="false" />
+	<RefParameter Comment="INRUSH_CURR_LIMITER_POLARITY" DefaultValue="DOUT_ACTIVE_HIGH" Name="INRUSH_CURR_LIMITER_POLARITY" Type="list" Visible="false">
+		<PossibleValue Comment="High" Value="DOUT_ACTIVE_HIGH" />
+		<PossibleValue Comment="Low" Value="DOUT_ACTIVE_LOW" />
+	</RefParameter>
+	<RefParameter Comment="INRUSH_CURR_LIMITER_POLARITY2" DefaultValue="DOUT_ACTIVE_HIGH" Name="INRUSH_CURR_LIMITER_POLARITY2" Type="list" Visible="false">
+		<PossibleValue Comment="High" Value="DOUT_ACTIVE_HIGH" />
+		<PossibleValue Comment="Low" Value="DOUT_ACTIVE_LOW" />
+	</RefParameter>
+	<RefParameter Comment="DISSIPATIVE_BRAKE_POLARITY" DefaultValue="DOUT_ACTIVE_HIGH" Name="DISSIPATIVE_BRAKE_POLARITY" Type="list" Visible="false">
+		<PossibleValue Comment="High" Value="DOUT_ACTIVE_HIGH" />
+		<PossibleValue Comment="Low" Value="DOUT_ACTIVE_LOW" />
+	</RefParameter>
+	<RefParameter Comment="DISSIPATIVE_BRAKE_POLARITY2" DefaultValue="DOUT_ACTIVE_HIGH" Name="DISSIPATIVE_BRAKE_POLARITY2" Type="list" Visible="false">
+		<PossibleValue Comment="High" Value="DOUT_ACTIVE_HIGH" />
+		<PossibleValue Comment="Low" Value="DOUT_ACTIVE_LOW" />
+	</RefParameter>
+	<RefParameter Comment="VBUS_PARTITIONING_FACTOR" DefaultValue="0.0526" Name="VBUS_PARTITIONING_FACTOR" Type="double" Visible="false" />
+	<RefParameter Comment="VBUS_PARTITIONING_FACTOR2" DefaultValue="0.0526" Name="VBUS_PARTITIONING_FACTOR2" Type="double" Visible="false" />
+	<RefParameter Comment="NOMINAL_BUS_VOLTAGE_V" DefaultValue="12" Max="10000000" Min="-10000000" Name="NOMINAL_BUS_VOLTAGE_V" Type="integer" Visible="false" />
+	<RefParameter Comment="NOMINAL_BUS_VOLTAGE_V2" DefaultValue="12" Max="10000000" Min="-10000000" Name="NOMINAL_BUS_VOLTAGE_V2" Type="integer" Visible="false" />
+	<RefParameter Comment="RSHUNT" DefaultValue="0.010" Name="RSHUNT" Type="double" Visible="false" />
+	<RefParameter Comment="RSHUNT2" DefaultValue="0.010" Name="RSHUNT2" Type="double" Visible="false" />
+	<RefParameter Comment="AMPLIFICATION_GAIN" DefaultValue="5.18" Name="AMPLIFICATION_GAIN" Type="double" Visible="false" />
+	<RefParameter Comment="AMPLIFICATION_GAIN2" DefaultValue="5.18" Name="AMPLIFICATION_GAIN2" Type="double" Visible="false" />
+	<RefParameter Comment="TNOISE_NS" DefaultValue="1000" Max="10000000" Min="-10000000" Name="TNOISE_NS" Type="integer" Visible="false" />
+	<RefParameter Comment="TRISE_NS" DefaultValue="1000" Max="10000000" Min="-10000000" Name="TRISE_NS" Type="integer" Visible="false" />
+	<RefParameter Comment="TNOISE_NS2" DefaultValue="1000" Max="10000000" Min="-10000000" Name="TNOISE_NS2" Type="integer" Visible="false" />
+	<RefParameter Comment="TRISE_NS2" DefaultValue="1000" Max="10000000" Min="-10000000" Name="TRISE_NS2" Type="integer" Visible="false" />
+	<RefParameter Comment="OVERCURR_PROTECTION_HW_DISABLING" DefaultValue="DOUT_ACTIVE_HIGH" Name="OVERCURR_PROTECTION_HW_DISABLING" Type="list" Visible="false">
+		<PossibleValue Comment="High" Value="DOUT_ACTIVE_HIGH" />
+		<PossibleValue Comment="Low" Value="DOUT_ACTIVE_LOW" />
+	</RefParameter>
+	<RefParameter Comment="OVERCURR_PROTECTION_HW_DISABLING2" DefaultValue="DOUT_ACTIVE_HIGH" Name="OVERCURR_PROTECTION_HW_DISABLING2" Type="list" Visible="false">
+		<PossibleValue Comment="High" Value="DOUT_ACTIVE_HIGH" />
+		<PossibleValue Comment="Low" Value="DOUT_ACTIVE_LOW" />
+	</RefParameter>
+	<RefParameter Comment="V0_V" DefaultValue="0.290" Name="V0_V" Type="double" Visible="false" />
+	<RefParameter Comment="T0_C" DefaultValue="25" Max="10000000" Min="-10000000" Name="T0_C" Type="integer" Visible="false" />
+	<RefParameter Comment="V0_V2" DefaultValue="0.290" Name="V0_V2" Type="double" Visible="false" />
+	<RefParameter Comment="T0_C2" DefaultValue="25" Max="10000000" Min="-10000000" Name="T0_C2" Type="integer" Visible="false" />
+	<RefParameter Comment="dV_dT" DefaultValue="0.025" Name="dV_dT" Type="double" Visible="false" />
+	<RefParameter Comment="dV_dT2" DefaultValue="0.025" Name="dV_dT2" Type="double" Visible="false" />
+	<RefParameter Comment="T_MAX" DefaultValue="70" Max="10000000" Min="-10000000" Name="T_MAX" Type="integer" Visible="false" />
+	<RefParameter Comment="T_MAX2" DefaultValue="70" Max="10000000" Min="-10000000" Name="T_MAX2" Type="integer" Visible="false" />
+	<RefParameter Comment="PWBDID" DefaultValue="0" Max="10000000" Min="-10000000" Name="PWBDID" Type="integer" Visible="false" />
+	<RefParameter Comment="PWBDID2" DefaultValue="0" Max="10000000" Min="-10000000" Name="PWBDID2" Type="integer" Visible="false" />
+	<RefParameter Comment="UID" DefaultValue="883328122" Name="UID" Type="stringRW" Visible="false" />
+	<RefParameter Comment="SPEED_SENSOR_SELECTION" DefaultValue="STATE_OBSERVER_PLL" Name="SPEED_SENSOR_SELECTION" Type="stringRW" Visible="false">
+		<PossibleValue Comment="STO+PLL" Value="STATE_OBSERVER_PLL" />
+		<PossibleValue Comment="STO+CORDIC" Value="STATE_OBSERVER_CORDIC" />
+		<PossibleValue Comment="Quadrature Encoder" Value="ENCODER" />
+		<PossibleValue Comment="Hall Sensors" Value="HALL_SENSORS" />
+	</RefParameter>
+  <RefParameter Comment="SPEED_SENSOR_SELECTION2" DefaultValue="STATE_OBSERVER_PLL" Name="SPEED_SENSOR_SELECTION2" Type="stringRW" Visible="false">
+    <PossibleValue Comment="STO+PLL" Value="STATE_OBSERVER_PLL2" />
+    <PossibleValue Comment="STO+CORDIC" Value="STATE_OBSERVER_CORDIC2" />
+    <PossibleValue Comment="Quadrature Encoder" Value="ENCODER2" />
+    <PossibleValue Comment="Hall Sensors" Value="HALL_SENSORS2" />
+  </RefParameter>
+	<RefParameter Comment="MAX_APPLICATION_SPEED" DefaultValue="4000" Max="10000000" Min="-10000000" Name="MAX_APPLICATION_SPEED" Type="integer" Visible="false" />
+	<RefParameter Comment="MAX_APPLICATION_SPEED2" DefaultValue="4000" Max="10000000" Min="-10000000" Name="MAX_APPLICATION_SPEED2" Type="integer" Visible="false" />
+	<RefParameter Comment="MIN_APPLICATION_SPEED" DefaultValue="0" Max="10000000" Min="-10000000" Name="MIN_APPLICATION_SPEED" Type="integer" Visible="false" />
+	<RefParameter Comment="MIN_APPLICATION_SPEED2" DefaultValue="0" Max="10000000" Min="-10000000" Name="MIN_APPLICATION_SPEED2" Type="integer" Visible="false" />
+	<RefParameter Comment="MEAS_ERRORS_BEFORE_FAULTS" DefaultValue="100" Max="10000000" Min="-10000000" Name="MEAS_ERRORS_BEFORE_FAULTS" Type="integer" Visible="false" />
+	<RefParameter Comment="MEAS_ERRORS_BEFORE_FAULTS2" DefaultValue="100" Max="10000000" Min="-10000000" Name="MEAS_ERRORS_BEFORE_FAULTS2" Type="integer" Visible="false" />
+	<RefParameter Comment="ENC_MEAS_ERRORS_BEFORE_FAULTS" DefaultValue="100" Max="10000000" Min="-10000000" Name="ENC_MEAS_ERRORS_BEFORE_FAULTS" Type="integer" Visible="false" />
+	<RefParameter Comment="ENC_MEAS_ERRORS_BEFORE_FAULTS2" DefaultValue="100" Max="10000000" Min="-10000000" Name="ENC_MEAS_ERRORS_BEFORE_FAULTS2" Type="integer" Visible="false" />
+	<RefParameter Comment="ENC_ICx_FILTER" DefaultValue="50" Max="10000000" Min="-10000000" Name="ENC_ICx_FILTER" Type="integer" Visible="false" />
+	<RefParameter Comment="ENC_ICx_FILTER2" DefaultValue="50" Max="10000000" Min="-10000000" Name="ENC_ICx_FILTER2" Type="integer" Visible="false" />
+	<RefParameter Comment="ENC_AVERAGING_FIFO_DEPTH" DefaultValue="16" Max="10000000" Min="-10000000" Name="ENC_AVERAGING_FIFO_DEPTH" Type="integer" Visible="false" />
+	<RefParameter Comment="ENC_AVERAGING_FIFO_DEPTH2" DefaultValue="16" Max="10000000" Min="-10000000" Name="ENC_AVERAGING_FIFO_DEPTH2" Type="integer" Visible="false" />
+	<RefParameter Comment="HALL_MEAS_ERRORS_BEFORE_FAULTS" DefaultValue="100" Max="10000000" Min="-10000000" Name="HALL_MEAS_ERRORS_BEFORE_FAULTS" Type="integer" Visible="false" />
+	<RefParameter Comment="HALL_ICx_FILTER" DefaultValue="94" Max="10000000" Min="-10000000" Name="HALL_ICx_FILTER" Type="integer" Visible="false" />
+	<RefParameter Comment="HALL_AVERAGING_FIFO_DEPTH" DefaultValue="6" Max="10000000" Min="-10000000" Name="HALL_AVERAGING_FIFO_DEPTH" Type="integer" Visible="false" />
+	<RefParameter Comment="HALL_MEAS_ERRORS_BEFORE_FAULTS2" DefaultValue="100" Max="10000000" Min="-10000000" Name="HALL_MEAS_ERRORS_BEFORE_FAULTS2" Type="integer" Visible="false" />
+	<RefParameter Comment="HALL_ICx_FILTER2" DefaultValue="94" Max="10000000" Min="-10000000" Name="HALL_ICx_FILTER2" Type="integer" Visible="false" />
+	<RefParameter Comment="HALL_AVERAGING_FIFO_DEPTH2" DefaultValue="6" Max="10000000" Min="-10000000" Name="HALL_AVERAGING_FIFO_DEPTH2" Type="integer" Visible="false" />
+	<RefParameter Comment="VARIANCE_THRESHOLD" DefaultValue="0.1" Name="VARIANCE_THRESHOLD" Type="double" Visible="false" />
+	<RefParameter Comment="VARIANCE_THRESHOLD2" DefaultValue="0.1" Name="VARIANCE_THRESHOLD2" Type="double" Visible="false" />
+	<RefParameter Comment="F1" DefaultValue="16384" Max="10000000" Min="-10000000" Name="F1" Type="integer" Visible="false" />
+	<RefParameter Comment="F2" DefaultValue="1024" Max="10000000" Min="-10000000" Name="F2" Type="integer" Visible="false" />
+	<RefParameter Comment="GAIN1" DefaultValue="-24337" Max="10000000" Min="-10000000" Name="GAIN1" Type="integer" Visible="false" />
+	<RefParameter Comment="GAIN2" DefaultValue="25569" Max="10000000" Min="-10000000" Name="GAIN2" Type="integer" Visible="false" />
+	<RefParameter Comment="F12" DefaultValue="16384" Max="10000000" Min="-10000000" Name="F12" Type="integer" Visible="false" />
+	<RefParameter Comment="F22" DefaultValue="1024" Max="10000000" Min="-10000000" Name="F22" Type="integer" Visible="false" />
+	<RefParameter Comment="GAIN12" DefaultValue="-24337" Max="10000000" Min="-10000000" Name="GAIN12" Type="integer" Visible="false" />
+	<RefParameter Comment="GAIN22" DefaultValue="25569" Max="10000000" Min="-10000000" Name="GAIN22" Type="integer" Visible="false" />
+	<RefParameter Comment="PLL_KP_GAIN" DefaultValue="142" Max="10000000" Min="-10000000" Name="PLL_KP_GAIN" Type="integer" Visible="false" />
+	<RefParameter Comment="PLL_KI_GAIN" DefaultValue="3" Max="10000000" Min="-10000000" Name="PLL_KI_GAIN" Type="integer" Visible="false" />
+	<RefParameter Comment="PLL_KP_GAIN2" DefaultValue="142" Max="10000000" Min="-10000000" Name="PLL_KP_GAIN2" Type="integer" Visible="false" />
+	<RefParameter Comment="PLL_KI_GAIN2" DefaultValue="3" Max="10000000" Min="-10000000" Name="PLL_KI_GAIN2" Type="integer" Visible="false" />
+	<RefParameter Comment="OBS_MEAS_ERRORS_BEFORE_FAULTS" DefaultValue="100" Max="10000000" Min="-10000000" Name="OBS_MEAS_ERRORS_BEFORE_FAULTS" Type="integer" Visible="false" />
+	<RefParameter Comment="OBS_MEAS_ERRORS_BEFORE_FAULTS2" DefaultValue="100" Max="10000000" Min="-10000000" Name="OBS_MEAS_ERRORS_BEFORE_FAULTS2" Type="integer" Visible="false" />
+	<RefParameter Comment="STO_FIFO_DEPTH_DPP" DefaultValue="64" Max="10000000" Min="-10000000" Name="STO_FIFO_DEPTH_DPP" Type="integer" Visible="false" />
+	<RefParameter Comment="STO_FIFO_DEPTH_01HZ" DefaultValue="64" Max="10000000" Min="-10000000" Name="STO_FIFO_DEPTH_01HZ" Type="integer" Visible="false" />
+	<RefParameter Comment="STO_FIFO_DEPTH_DPP2" DefaultValue="64" Max="10000000" Min="-10000000" Name="STO_FIFO_DEPTH_DPP2" Type="integer" Visible="false" />
+	<RefParameter Comment="STO_FIFO_DEPTH_01HZ2" DefaultValue="64" Max="10000000" Min="-10000000" Name="STO_FIFO_DEPTH_01HZ2" Type="integer" Visible="false" />
+	<RefParameter Comment="BEMF_CONSISTENCY_TOL" DefaultValue="64" Max="10000000" Min="-10000000" Name="BEMF_CONSISTENCY_TOL" Type="integer" Visible="false" />
+	<RefParameter Comment="BEMF_CONSISTENCY_TOL2" DefaultValue="64" Max="10000000" Min="-10000000" Name="BEMF_CONSISTENCY_TOL2" Type="integer" Visible="false" />
+	<RefParameter Comment="BEMF_CONSISTENCY_GAIN2" DefaultValue="64" Max="10000000" Min="-10000000" Name="BEMF_CONSISTENCY_GAIN2" Type="integer" Visible="false" />
+	<RefParameter Comment="BEMF_CONSISTENCY_GAIN" DefaultValue="64" Max="10000000" Min="-10000000" Name="BEMF_CONSISTENCY_GAIN" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_VARIANCE_THRESHOLD" DefaultValue="4" Max="10000000" Min="-10000000" Name="CORD_VARIANCE_THRESHOLD" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_VARIANCE_THRESHOLD2" DefaultValue="4" Max="10000000" Min="-10000000" Name="CORD_VARIANCE_THRESHOLD2" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_BEMF_CONSISTENCY_TOL" DefaultValue="64" Max="10000000" Min="-10000000" Name="CORD_BEMF_CONSISTENCY_TOL" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_BEMF_CONSISTENCY_TOL2" DefaultValue="64" Max="10000000" Min="-10000000" Name="CORD_BEMF_CONSISTENCY_TOL2" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_BEMF_CONSISTENCY_GAIN" DefaultValue="64" Max="10000000" Min="-10000000" Name="CORD_BEMF_CONSISTENCY_GAIN" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_BEMF_CONSISTENCY_GAIN2" DefaultValue="64" Max="10000000" Min="-10000000" Name="CORD_BEMF_CONSISTENCY_GAIN2" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_F1" DefaultValue="16384" Max="10000000" Min="-10000000" Name="CORD_F1" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_F2" DefaultValue="1024" Max="10000000" Min="-10000000" Name="CORD_F2" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_F12" DefaultValue="16384" Max="10000000" Min="-10000000" Name="CORD_F12" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_F22" DefaultValue="1024" Max="10000000" Min="-10000000" Name="CORD_F22" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_GAIN1" DefaultValue="-24337" Max="10000000" Min="-10000000" Name="CORD_GAIN1" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_GAIN2" DefaultValue="25569" Max="10000000" Min="-10000000" Name="CORD_GAIN2" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_GAIN12" DefaultValue="-24337" Max="10000000" Min="-10000000" Name="CORD_GAIN12" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_GAIN22" DefaultValue="25569" Max="10000000" Min="-10000000" Name="CORD_GAIN22" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_MEAS_ERRORS_BEFORE_FAULTS" DefaultValue="100" Max="10000000" Min="-10000000" Name="CORD_MEAS_ERRORS_BEFORE_FAULTS" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_MEAS_ERRORS_BEFORE_FAULTS2" DefaultValue="100" Max="10000000" Min="-10000000" Name="CORD_MEAS_ERRORS_BEFORE_FAULTS2" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_FIFO_DEPTH_DPP" DefaultValue="64" Max="10000000" Min="-10000000" Name="CORD_FIFO_DEPTH_DPP" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_FIFO_DEPTH_DPP2" DefaultValue="64" Max="10000000" Min="-10000000" Name="CORD_FIFO_DEPTH_DPP2" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_FIFO_DEPTH_01HZ" DefaultValue="64" Max="10000000" Min="-10000000" Name="CORD_FIFO_DEPTH_01HZ" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_FIFO_DEPTH_01HZ2" DefaultValue="64" Max="10000000" Min="-10000000" Name="CORD_FIFO_DEPTH_01HZ2" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_MAX_ACCEL_DPPP" DefaultValue="9" Max="10000000" Min="-10000000" Name="CORD_MAX_ACCEL_DPPP" Type="integer" Visible="false" />
+	<RefParameter Comment="CORD_MAX_ACCEL_DPPP2" DefaultValue="9" Max="10000000" Min="-10000000" Name="CORD_MAX_ACCEL_DPPP2" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_FREQUENCY" DefaultValue="400" Max="10000000" Min="-10000000" Name="HFI_FREQUENCY" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_AMPLITUDE" DefaultValue="25" Max="10000000" Min="-10000000" Name="HFI_AMPLITUDE" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_PID_KP_DEFAULT" DefaultValue="800" Max="10000000" Min="-10000000" Name="HFI_PID_KP_DEFAULT" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_PID_KI_DEFAULT" DefaultValue="400" Max="10000000" Min="-10000000" Name="HFI_PID_KI_DEFAULT" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_PID_KPDIV" DefaultValue="16384" Max="10000000" Min="-10000000" Name="HFI_PID_KPDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_PID_KIDIV" DefaultValue="32768" Max="10000000" Min="-10000000" Name="HFI_PID_KIDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_PLL_KP_DEFAULT" DefaultValue="0.00060" Name="HFI_PLL_KP_DEFAULT" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_PLL_KI_DEFAULT" DefaultValue="0.00400" Name="HFI_PLL_KI_DEFAULT" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_MINIMUM_SPEED_RPM" DefaultValue="402" Max="10000000" Min="-10000000" Name="HFI_MINIMUM_SPEED_RPM" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_SPD_BUFFER_DEPTH_01HZ" DefaultValue="64" Max="10000000" Min="-10000000" Name="HFI_SPD_BUFFER_DEPTH_01HZ" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_LOCKFREQ" DefaultValue="22" Max="10000000" Min="-10000000" Name="HFI_LOCKFREQ" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_SCANROTATIONSNO" DefaultValue="3" Max="10000000" Min="-10000000" Name="HFI_SCANROTATIONSNO" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_WAITBEFORESN" DefaultValue="6" Max="10000000" Min="-10000000" Name="HFI_WAITBEFORESN" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_WAITAFTERNS" DefaultValue="4" Max="10000000" Min="-10000000" Name="HFI_WAITAFTERNS" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_HIFRAMPLSCAN" DefaultValue="25" Max="10000000" Min="-10000000" Name="HFI_HIFRAMPLSCAN" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_NSMAXDETPOINTS" DefaultValue="20" Max="10000000" Min="-10000000" Name="HFI_NSMAXDETPOINTS" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_NSDETPOINTSSKIP" DefaultValue="10" Max="10000000" Min="-10000000" Name="HFI_NSDETPOINTSSKIP" Type="integer" Visible="false" />
+	<RefParameter Comment="STO_HFI_RPM_TH" DefaultValue="460" Max="10000000" Min="-10000000" Name="STO_HFI_RPM_TH" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_NS_MIN_SAT_DIFF" DefaultValue="0" Max="10000000" Min="-10000000" Name="HFI_NS_MIN_SAT_DIFF" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_NOTCH_IQD_0_COEFF" DefaultValue="0.979509" Name="HFI_NOTCH_IQD_0_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_NOTCH_IQD_1_COEFF" DefaultValue="-1.952148" Name="HFI_NOTCH_IQD_1_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_NOTCH_IQD_2_COEFF" DefaultValue="0.979509" Name="HFI_NOTCH_IQD_2_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_NOTCH_IQD_3_COEFF" DefaultValue="1.952148" Name="HFI_NOTCH_IQD_3_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_NOTCH_IQD_4_COEFF" DefaultValue="-0.959018" Name="HFI_NOTCH_IQD_4_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_LP_ID_0_COEFF" DefaultValue="0.002751" Name="HFI_LP_ID_0_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_LP_ID_1_COEFF" DefaultValue="0.005502" Name="HFI_LP_ID_1_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_LP_ID_2_COEFF" DefaultValue="0.002751" Name="HFI_LP_ID_2_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_LP_ID_3_COEFF" DefaultValue="1.846252" Name="HFI_LP_ID_3_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_LP_ID_4_COEFF" DefaultValue="-0.857255" Name="HFI_LP_ID_4_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_HP_ID_0_COEFF" DefaultValue="0.959381" Name="HFI_HP_ID_0_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_HP_ID_1_COEFF" DefaultValue="-1.918761" Name="HFI_HP_ID_1_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_HP_ID_2_COEFF" DefaultValue="0.959381" Name="HFI_HP_ID_2_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_HP_ID_3_COEFF" DefaultValue="1.917111" Name="HFI_HP_ID_3_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_HP_ID_4_COEFF" DefaultValue="-0.920412" Name="HFI_HP_ID_4_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_DC_0_COEFF" DefaultValue="0.00146" Name="HFI_DC_0_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_DC_1_COEFF" DefaultValue="0.002921" Name="HFI_DC_1_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_DC_2_COEFF" DefaultValue="0.00146" Name="HFI_DC_2_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_DC_3_COEFF" DefaultValue="1.889033" Name="HFI_DC_3_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_DC_4_COEFF" DefaultValue="-0.894874" Name="HFI_DC_4_COEFF" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_FREQUENCY2" DefaultValue="400" Max="10000000" Min="-10000000" Name="HFI_FREQUENCY2" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_AMPLITUDE2" DefaultValue="25" Max="10000000" Min="-10000000" Name="HFI_AMPLITUDE2" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_PID_KP_DEFAULT2" DefaultValue="800" Max="10000000" Min="-10000000" Name="HFI_PID_KP_DEFAULT2" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_PID_KI_DEFAULT2" DefaultValue="400" Max="10000000" Min="-10000000" Name="HFI_PID_KI_DEFAULT2" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_PID_KPDIV2" DefaultValue="16384" Max="10000000" Min="-10000000" Name="HFI_PID_KPDIV2" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_PID_KIDIV2" DefaultValue="32768" Max="10000000" Min="-10000000" Name="HFI_PID_KIDIV2" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_PLL_KP_DEFAULT2" DefaultValue="0.00060" Name="HFI_PLL_KP_DEFAULT2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_PLL_KI_DEFAULT2" DefaultValue="0.00400" Name="HFI_PLL_KI_DEFAULT2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_MINIMUM_SPEED_RPM2" DefaultValue="402" Max="10000000" Min="-10000000" Name="HFI_MINIMUM_SPEED_RPM2" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_SPD_BUFFER_DEPTH_01HZ2" DefaultValue="64" Max="10000000" Min="-10000000" Name="HFI_SPD_BUFFER_DEPTH_01HZ2" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_LOCKFREQ2" DefaultValue="22" Max="10000000" Min="-10000000" Name="HFI_LOCKFREQ2" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_SCANROTATIONSNO2" DefaultValue="3" Max="10000000" Min="-10000000" Name="HFI_SCANROTATIONSNO2" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_WAITBEFORESN2" DefaultValue="6" Max="10000000" Min="-10000000" Name="HFI_WAITBEFORESN2" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_WAITAFTERNS2" DefaultValue="4" Max="10000000" Min="-10000000" Name="HFI_WAITAFTERNS2" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_HIFRAMPLSCAN2" DefaultValue="25" Max="10000000" Min="-10000000" Name="HFI_HIFRAMPLSCAN2" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_NSMAXDETPOINTS2" DefaultValue="20" Max="10000000" Min="-10000000" Name="HFI_NSMAXDETPOINTS2" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_NSDETPOINTSSKIP2" DefaultValue="10" Max="10000000" Min="-10000000" Name="HFI_NSDETPOINTSSKIP2" Type="integer" Visible="false" />
+	<RefParameter Comment="STO_HFI_RPM_TH2" DefaultValue="460" Max="10000000" Min="-10000000" Name="STO_HFI_RPM_TH2" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_NS_MIN_SAT_DIFF2" DefaultValue="0" Max="10000000" Min="-10000000" Name="HFI_NS_MIN_SAT_DIFF2" Type="integer" Visible="false" />
+	<RefParameter Comment="HFI_NOTCH_IQD_0_COEFF2" DefaultValue="0.979509" Name="HFI_NOTCH_IQD_0_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_NOTCH_IQD_1_COEFF2" DefaultValue="-1.952148" Name="HFI_NOTCH_IQD_1_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_NOTCH_IQD_2_COEFF2" DefaultValue="0.979509" Name="HFI_NOTCH_IQD_2_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_NOTCH_IQD_3_COEFF2" DefaultValue="1.952148" Name="HFI_NOTCH_IQD_3_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_NOTCH_IQD_4_COEFF2" DefaultValue="-0.959018" Name="HFI_NOTCH_IQD_4_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_LP_ID_0_COEFF2" DefaultValue="0.002751" Name="HFI_LP_ID_0_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_LP_ID_1_COEFF2" DefaultValue="0.005502" Name="HFI_LP_ID_1_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_LP_ID_2_COEFF2" DefaultValue="0.002751" Name="HFI_LP_ID_2_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_LP_ID_3_COEFF2" DefaultValue="1.846252" Name="HFI_LP_ID_3_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_LP_ID_4_COEFF2" DefaultValue="-0.857255" Name="HFI_LP_ID_4_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_HP_ID_0_COEFF2" DefaultValue="0.959381" Name="HFI_HP_ID_0_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_HP_ID_1_COEFF2" DefaultValue="-1.918761" Name="HFI_HP_ID_1_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_HP_ID_2_COEFF2" DefaultValue="0.959381" Name="HFI_HP_ID_2_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_HP_ID_3_COEFF2" DefaultValue="1.917111" Name="HFI_HP_ID_3_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_HP_ID_4_COEFF2" DefaultValue="-0.920412" Name="HFI_HP_ID_4_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_DC_0_COEFF2" DefaultValue="0.00146" Name="HFI_DC_0_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_DC_1_COEFF2" DefaultValue="0.002921" Name="HFI_DC_1_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_DC_2_COEFF2" DefaultValue="0.00146" Name="HFI_DC_2_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_DC_3_COEFF2" DefaultValue="1.889033" Name="HFI_DC_3_COEFF2" Type="double" Visible="false" />
+	<RefParameter Comment="HFI_DC_4_COEFF2" DefaultValue="-0.894874" Name="HFI_DC_4_COEFF2" Type="double" Visible="false" /> 
+	<RefParameter Comment="PWM_FREQ_SCALING" DefaultValue="16" Max="32" Min="1" Name="PWM_FREQ_SCALING" Type="integer" Visible="false" />  
+	<RefParameter Comment="PWM_FREQ_SCALING2" DefaultValue="16" Max="32" Min="1" Name="PWM_FREQ_SCALING2" Type="integer" Visible="false" />  
+	<RefParameter Comment="PWM_FREQUENCY" DefaultValue="30000" Max="10000000" Min="-10000000" Name="PWM_FREQUENCY" Type="integer" Visible="false" />
+	<RefParameter Comment="PWM_FREQUENCY2" DefaultValue="30000" Max="10000000" Min="-10000000" Name="PWM_FREQUENCY2" Type="integer" Visible="false" />
+	<RefParameter Comment="SW_DEADTIME_NS" DefaultValue="800" Max="10000000" Min="-10000000" Name="SW_DEADTIME_NS" Type="integer" Visible="false" />
+	<RefParameter Comment="SW_DEADTIME_NS2" DefaultValue="800" Max="10000000" Min="-10000000" Name="SW_DEADTIME_NS2" Type="integer" Visible="false" />
+	<RefParameter Comment="HIGH_SIDE_IDLE_STATE" DefaultValue="false" Name="HIGH_SIDE_IDLE_STATE" Type="boolean" Visible="false">
+		
+	</RefParameter>
+	<RefParameter Comment="LOW_SIDE_IDLE_STATE" DefaultValue="false" Name="LOW_SIDE_IDLE_STATE" Type="boolean" Visible="false">
+		
+	</RefParameter>
+	<RefParameter Comment="HIGH_SIDE_IDLE_STATE2" DefaultValue="false" Name="HIGH_SIDE_IDLE_STATE2" Type="boolean" Visible="false">
+		
+	</RefParameter>
+	<RefParameter Comment="LOW_SIDE_IDLE_STATE2" DefaultValue="false" Name="LOW_SIDE_IDLE_STATE2" Type="boolean" Visible="false">
+		
+	</RefParameter>
+	<RefParameter Comment="REGULATION_EXECUTION_RATE" DefaultValue="1" Max="10000000" Min="-10000000" Name="REGULATION_EXECUTION_RATE" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_TORQUE_KP_DEFAULT" DefaultValue="2446" Max="10000000" Min="-10000000" Name="PID_TORQUE_KP_DEFAULT" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_TORQUE_KI_DEFAULT" DefaultValue="3044" Max="10000000" Min="-10000000" Name="PID_TORQUE_KI_DEFAULT" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_TORQUE_KD_DEFAULT" DefaultValue="100" Max="10000000" Min="-10000000" Name="PID_TORQUE_KD_DEFAULT" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_FLUX_KP_DEFAULT" DefaultValue="2446" Max="10000000" Min="-10000000" Name="PID_FLUX_KP_DEFAULT" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_FLUX_KI_DEFAULT" DefaultValue="3044" Max="10000000" Min="-10000000" Name="PID_FLUX_KI_DEFAULT" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_FLUX_KD_DEFAULT" DefaultValue="100" Max="10000000" Min="-10000000" Name="PID_FLUX_KD_DEFAULT" Type="integer" Visible="false" />
+	<RefParameter Comment="TF_KPDIV" DefaultValue="128" Max="10000000" Min="-10000000" Name="TF_KPDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="TF_KIDIV" DefaultValue="8192" Max="10000000" Min="-10000000" Name="TF_KIDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="TF_KDDIV" DefaultValue="8192" Max="10000000" Min="-10000000" Name="TF_KDDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="SPEED_LOOP_FREQUENCY_HZ" DefaultValue="1000" Max="10000000" Min="-10000000" Name="SPEED_LOOP_FREQUENCY_HZ" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_SPEED_KP_DEFAULT" DefaultValue="1000" Max="10000000" Min="-10000000" Name="PID_SPEED_KP_DEFAULT" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_SPEED_KI_DEFAULT" DefaultValue="600" Max="10000000" Min="-10000000" Name="PID_SPEED_KI_DEFAULT" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_SPEED_KD_DEFAULT" DefaultValue="0" Max="10000000" Min="-10000000" Name="PID_SPEED_KD_DEFAULT" Type="integer" Visible="false" />
+	<RefParameter Comment="SP_KPDIV" DefaultValue="16" Max="10000000" Min="-10000000" Name="SP_KPDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="SP_KIDIV" DefaultValue="256" Max="10000000" Min="-10000000" Name="SP_KIDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="SP_KDDIV" DefaultValue="16" Max="10000000" Min="-10000000" Name="SP_KDDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="REGULATION_EXECUTION_RATE2" DefaultValue="1" Max="10000000" Min="-10000000" Name="REGULATION_EXECUTION_RATE2" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_TORQUE_KP_DEFAULT2" DefaultValue="2446" Max="10000000" Min="-10000000" Name="PID_TORQUE_KP_DEFAULT2" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_TORQUE_KI_DEFAULT2" DefaultValue="3044" Max="10000000" Min="-10000000" Name="PID_TORQUE_KI_DEFAULT2" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_TORQUE_KD_DEFAULT2" DefaultValue="100" Max="10000000" Min="-10000000" Name="PID_TORQUE_KD_DEFAULT2" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_FLUX_KP_DEFAULT2" DefaultValue="2446" Max="10000000" Min="-10000000" Name="PID_FLUX_KP_DEFAULT2" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_FLUX_KI_DEFAULT2" DefaultValue="3044" Max="10000000" Min="-10000000" Name="PID_FLUX_KI_DEFAULT2" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_FLUX_KD_DEFAULT2" DefaultValue="100" Max="10000000" Min="-10000000" Name="PID_FLUX_KD_DEFAULT2" Type="integer" Visible="false" />
+	<RefParameter Comment="TF_KPDIV2" DefaultValue="128" Max="10000000" Min="-10000000" Name="TF_KPDIV2" Type="integer" Visible="false" />
+	<RefParameter Comment="TF_KIDIV2" DefaultValue="8192" Max="10000000" Min="-10000000" Name="TF_KIDIV2" Type="integer" Visible="false" />
+	<RefParameter Comment="TF_KDDIV2" DefaultValue="8192" Max="10000000" Min="-10000000" Name="TF_KDDIV2" Type="integer" Visible="false" />
+	<RefParameter Comment="SPEED_LOOP_FREQUENCY_HZ2" DefaultValue="1000" Max="10000000" Min="-10000000" Name="SPEED_LOOP_FREQUENCY_HZ2" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_SPEED_KP_DEFAULT2" DefaultValue="1000" Max="10000000" Min="-10000000" Name="PID_SPEED_KP_DEFAULT2" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_SPEED_KI_DEFAULT2" DefaultValue="600" Max="10000000" Min="-10000000" Name="PID_SPEED_KI_DEFAULT2" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_SPEED_KD_DEFAULT2" DefaultValue="0" Max="10000000" Min="-10000000" Name="PID_SPEED_KD_DEFAULT2" Type="integer" Visible="false" />
+	<RefParameter Comment="SP_KPDIV2" DefaultValue="16" Max="10000000" Min="-10000000" Name="SP_KPDIV2" Type="integer" Visible="false" />
+	<RefParameter Comment="SP_KIDIV2" DefaultValue="256" Max="10000000" Min="-10000000" Name="SP_KIDIV2" Type="integer" Visible="false" />
+	<RefParameter Comment="SP_KDDIV2" DefaultValue="16" Max="10000000" Min="-10000000" Name="SP_KDDIV2" Type="integer" Visible="false" />
+	<RefParameter Comment="DEFAULT_CONTROL_MODE" DefaultValue="STC_SPEED_MODE" Name="DEFAULT_CONTROL_MODE" Type="list" Visible="false">
+		<PossibleValue Comment="Speed" Value="STC_SPEED_MODE" />
+		<PossibleValue Comment="Torque" Value="STC_TORQUE_MODE" />
+	</RefParameter>
+	<RefParameter Comment="DEFAULT_CONTROL_MODE2" DefaultValue="STC_SPEED_MODE" Name="DEFAULT_CONTROL_MODE2" Type="list" Visible="false">
+		<PossibleValue Comment="Speed" Value="STC_SPEED_MODE" />
+		<PossibleValue Comment="Torque" Value="STC_TORQUE_MODE" />
+	</RefParameter>
+	<RefParameter Comment="DEFAULT_TARGET_SPEED_RPM" DefaultValue="3000" Max="10000000" Min="-10000000" Name="DEFAULT_TARGET_SPEED_RPM" Type="integer" Visible="false" />
+	<RefParameter Comment="DEFAULT_TARGET_SPEED_RPM2" DefaultValue="3000" Max="10000000" Min="-10000000" Name="DEFAULT_TARGET_SPEED_RPM2" Type="integer" Visible="false" />
+	<RefParameter Comment="DEFAULT_TORQUE_COMPONENT" DefaultValue="0" Max="10000000" Min="-10000000" Name="DEFAULT_TORQUE_COMPONENT" Type="integer" Visible="false" />
+	<RefParameter Comment="DEFAULT_TORQUE_COMPONENT2" DefaultValue="0" Max="10000000" Min="-10000000" Name="DEFAULT_TORQUE_COMPONENT2" Type="integer" Visible="false" />
+	<RefParameter Comment="DEFAULT_FLUX_COMPONENT" DefaultValue="0" Max="10000000" Min="-10000000" Name="DEFAULT_FLUX_COMPONENT" Type="integer" Visible="false" />
+	<RefParameter Comment="DEFAULT_FLUX_COMPONENT2" DefaultValue="0" Max="10000000" Min="-10000000" Name="DEFAULT_FLUX_COMPONENT2" Type="integer" Visible="false" />
+	<RefParameter Comment="OV_VOLTAGE_THRESHOLD_V" DefaultValue="50" Max="10000000" Min="-10000000" Name="OV_VOLTAGE_THRESHOLD_V" Type="integer" Visible="false" />
+	<RefParameter Comment="UD_VOLTAGE_THRESHOLD_V" DefaultValue="8" Max="10000000" Min="-10000000" Name="UD_VOLTAGE_THRESHOLD_V" Type="integer" Visible="false" />
+	<RefParameter Comment="OV_VOLTAGE_THRESHOLD_V2" DefaultValue="50" Max="10000000" Min="-10000000" Name="OV_VOLTAGE_THRESHOLD_V2" Type="integer" Visible="false" />
+	<RefParameter Comment="UD_VOLTAGE_THRESHOLD_V2" DefaultValue="8" Max="10000000" Min="-10000000" Name="UD_VOLTAGE_THRESHOLD_V2" Type="integer" Visible="false" />
+	<RefParameter Comment="R_BRAKE_SWITCH_OFF_THRES_V" DefaultValue="40" Max="10000000" Min="-10000000" Name="R_BRAKE_SWITCH_OFF_THRES_V" Type="integer" Visible="false" />
+	<RefParameter Comment="R_BRAKE_SWITCH_OFF_THRES_V2" DefaultValue="40" Max="10000000" Min="-10000000" Name="R_BRAKE_SWITCH_OFF_THRES_V2" Type="integer" Visible="false" />
+	<RefParameter Comment="OV_TEMPERATURE_THRESHOLD_C" DefaultValue="70" Max="10000000" Min="-10000000" Name="OV_TEMPERATURE_THRESHOLD_C" Type="integer" Visible="false" />
+	<RefParameter Comment="OV_TEMPERATURE_THRESHOLD_C2" DefaultValue="70" Max="10000000" Min="-10000000" Name="OV_TEMPERATURE_THRESHOLD_C2" Type="integer" Visible="false" />
+	<RefParameter Comment="OV_TEMPERATURE_HYSTERESIS_C" DefaultValue="10" Max="10000000" Min="-10000000" Name="OV_TEMPERATURE_HYSTERESIS_C" Type="integer" Visible="false" />
+	<RefParameter Comment="OV_TEMPERATURE_HYSTERESIS_C2" DefaultValue="10" Max="10000000" Min="-10000000" Name="OV_TEMPERATURE_HYSTERESIS_C2" Type="integer" Visible="false" />
+	<RefParameter Comment="ALIGNMENT_DURATION" DefaultValue="700" Max="10000000" Min="-10000000" Name="ALIGNMENT_DURATION" Type="integer" Visible="false" />
+	<RefParameter Comment="ALIGNMENT_DURATION2" DefaultValue="700" Max="10000000" Min="-10000000" Name="ALIGNMENT_DURATION2" Type="integer" Visible="false" />
+	<RefParameter Comment="ALIGNMENT_ANGLE_DEG" DefaultValue="90" Max="10000000" Min="-10000000" Name="ALIGNMENT_ANGLE_DEG" Type="integer" Visible="false" />
+	<RefParameter Comment="ALIGNMENT_ANGLE_DEG2" DefaultValue="90" Max="10000000" Min="-10000000" Name="ALIGNMENT_ANGLE_DEG2" Type="integer" Visible="false" />
+	<RefParameter Comment="FINAL_I_ALIGNMENT" DefaultValue="2005" Max="10000000" Min="-10000000" Name="FINAL_I_ALIGNMENT" Type="integer" Visible="false" />
+	<RefParameter Comment="FINAL_I_ALIGNMENT2" DefaultValue="2005" Max="10000000" Min="-10000000" Name="FINAL_I_ALIGNMENT2" Type="integer" Visible="false" />
+	<RefParameter Comment="STARTING_ANGLE_DEG" DefaultValue="90" Max="10000000" Min="-10000000" Name="STARTING_ANGLE_DEG" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE1_DURATION" DefaultValue="0" Max="10000000" Min="-10000000" Name="PHASE1_DURATION" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE1_FINAL_SPEED_RPM" DefaultValue="0" Max="10000000" Min="-10000000" Name="PHASE1_FINAL_SPEED_RPM" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE1_FINAL_CURRENT" DefaultValue="0" Max="10000000" Min="-10000000" Name="PHASE1_FINAL_CURRENT" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE2_DURATION" DefaultValue="300" Max="10000000" Min="-10000000" Name="PHASE2_DURATION" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE2_FINAL_SPEED_RPM" DefaultValue="0" Max="10000000" Min="-10000000" Name="PHASE2_FINAL_SPEED_RPM" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE2_FINAL_CURRENT" DefaultValue="720" Max="10000000" Min="-10000000" Name="PHASE2_FINAL_CURRENT" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE3_DURATION" DefaultValue="100" Max="10000000" Min="-10000000" Name="PHASE3_DURATION" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE3_FINAL_SPEED_RPM" DefaultValue="133" Max="10000000" Min="-10000000" Name="PHASE3_FINAL_SPEED_RPM" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE3_FINAL_CURRENT" DefaultValue="720" Max="10000000" Min="-10000000" Name="PHASE3_FINAL_CURRENT" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE4_DURATION" DefaultValue="2900" Max="10000000" Min="-10000000" Name="PHASE4_DURATION" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE4_FINAL_SPEED_RPM" DefaultValue="4000" Max="10000000" Min="-10000000" Name="PHASE4_FINAL_SPEED_RPM" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE4_FINAL_CURRENT" DefaultValue="720" Max="10000000" Min="-10000000" Name="PHASE4_FINAL_CURRENT" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE5_DURATION" DefaultValue="0" Max="10000000" Min="-10000000" Name="PHASE5_DURATION" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE5_FINAL_SPEED_RPM" DefaultValue="4000" Max="10000000" Min="-10000000" Name="PHASE5_FINAL_SPEED_RPM" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE5_FINAL_CURRENT" DefaultValue="720" Max="10000000" Min="-10000000" Name="PHASE5_FINAL_CURRENT" Type="integer" Visible="false" />
+	<RefParameter Comment="STARTING_ANGLE_DEG2" DefaultValue="90" Max="10000000" Min="-10000000" Name="STARTING_ANGLE_DEG2" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE1_DURATION2" DefaultValue="0" Max="10000000" Min="-10000000" Name="PHASE1_DURATION2" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE1_FINAL_SPEED_RPM2" DefaultValue="0" Max="10000000" Min="-10000000" Name="PHASE1_FINAL_SPEED_RPM2" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE1_FINAL_CURRENT2" DefaultValue="0" Max="10000000" Min="-10000000" Name="PHASE1_FINAL_CURRENT2" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE2_DURATION2" DefaultValue="300" Max="10000000" Min="-10000000" Name="PHASE2_DURATION2" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE2_FINAL_SPEED_RPM2" DefaultValue="0" Max="10000000" Min="-10000000" Name="PHASE2_FINAL_SPEED_RPM2" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE2_FINAL_CURRENT2" DefaultValue="720" Max="10000000" Min="-10000000" Name="PHASE2_FINAL_CURRENT2" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE3_DURATION2" DefaultValue="100" Max="10000000" Min="-10000000" Name="PHASE3_DURATION2" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE3_FINAL_SPEED_RPM2" DefaultValue="133" Max="10000000" Min="-10000000" Name="PHASE3_FINAL_SPEED_RPM2" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE3_FINAL_CURRENT2" DefaultValue="720" Max="10000000" Min="-10000000" Name="PHASE3_FINAL_CURRENT2" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE4_DURATION2" DefaultValue="2900" Max="10000000" Min="-10000000" Name="PHASE4_DURATION2" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE4_FINAL_SPEED_RPM2" DefaultValue="4000" Max="10000000" Min="-10000000" Name="PHASE4_FINAL_SPEED_RPM2" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE4_FINAL_CURRENT2" DefaultValue="720" Max="10000000" Min="-10000000" Name="PHASE4_FINAL_CURRENT2" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE5_DURATION2" DefaultValue="0" Max="10000000" Min="-10000000" Name="PHASE5_DURATION2" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE5_FINAL_SPEED_RPM2" DefaultValue="4000" Max="10000000" Min="-10000000" Name="PHASE5_FINAL_SPEED_RPM2" Type="integer" Visible="false" />
+	<RefParameter Comment="PHASE5_FINAL_CURRENT2" DefaultValue="720" Max="10000000" Min="-10000000" Name="PHASE5_FINAL_CURRENT2" Type="integer" Visible="false" />
+	<RefParameter Comment="ENABLE_SL_ALGO_FROM_PHASE" DefaultValue="3" Max="10000000" Min="-10000000" Name="ENABLE_SL_ALGO_FROM_PHASE" Type="integer" Visible="false" />
+	<RefParameter Comment="ENABLE_SL_ALGO_FROM_PHASE2" DefaultValue="3" Max="10000000" Min="-10000000" Name="ENABLE_SL_ALGO_FROM_PHASE2" Type="integer" Visible="false" />
+	<RefParameter Comment="TRANSITION_DURATION" DefaultValue="25" Max="10000000" Min="-10000000" Name="TRANSITION_DURATION" Type="integer" Visible="false" />
+	<RefParameter Comment="TRANSITION_DURATION2" DefaultValue="25" Max="10000000" Min="-10000000" Name="TRANSITION_DURATION2" Type="integer" Visible="false" />
+	<RefParameter Comment="OBS_MINIMUM_SPEED_RPM" DefaultValue="1000" Max="10000000" Min="-10000000" Name="OBS_MINIMUM_SPEED_RPM" Type="integer" Visible="false" />
+	<RefParameter Comment="OBS_MINIMUM_SPEED_RPM2" DefaultValue="1000" Max="10000000" Min="-10000000" Name="OBS_MINIMUM_SPEED_RPM2" Type="integer" Visible="false" />
+	<RefParameter Comment="NB_CONSECUTIVE_TESTS" DefaultValue="2" Max="10000000" Min="-10000000" Name="NB_CONSECUTIVE_TESTS" Type="integer" Visible="false" />
+	<RefParameter Comment="NB_CONSECUTIVE_TESTS2" DefaultValue="2" Max="10000000" Min="-10000000" Name="NB_CONSECUTIVE_TESTS2" Type="integer" Visible="false" />
+	<RefParameter Comment="SPEED_BAND_UPPER_LIMIT" DefaultValue="17" Max="10000000" Min="-10000000" Name="SPEED_BAND_UPPER_LIMIT" Type="integer" Visible="false" />
+	<RefParameter Comment="SPEED_BAND_LOWER_LIMIT" DefaultValue="15" Max="10000000" Min="-10000000" Name="SPEED_BAND_LOWER_LIMIT" Type="integer" Visible="false" />
+	<RefParameter Comment="SPEED_BAND_UPPER_LIMIT2" DefaultValue="17" Max="10000000" Min="-10000000" Name="SPEED_BAND_UPPER_LIMIT2" Type="integer" Visible="false" />
+	<RefParameter Comment="SPEED_BAND_LOWER_LIMIT2" DefaultValue="15" Max="10000000" Min="-10000000" Name="SPEED_BAND_LOWER_LIMIT2" Type="integer" Visible="false" />
+	<RefParameter Comment="FW_VOLTAGE_REF" DefaultValue="985" Max="10000000" Min="-10000000" Name="FW_VOLTAGE_REF" Type="integer" Visible="false" />
+	<RefParameter Comment="FW_KP_GAIN" DefaultValue="3000" Max="10000000" Min="-10000000" Name="FW_KP_GAIN" Type="integer" Visible="false" />
+	<RefParameter Comment="FW_KI_GAIN" DefaultValue="5000" Max="10000000" Min="-10000000" Name="FW_KI_GAIN" Type="integer" Visible="false" />
+	<RefParameter Comment="FW_KPDIV" DefaultValue="32768" Max="10000000" Min="-10000000" Name="FW_KPDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="FW_KIDIV" DefaultValue="32768" Max="10000000" Min="-10000000" Name="FW_KIDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="FW_VOLTAGE_REF2" DefaultValue="985" Max="10000000" Min="-10000000" Name="FW_VOLTAGE_REF2" Type="integer" Visible="false" />
+	<RefParameter Comment="FW_KP_GAIN2" DefaultValue="3000" Max="10000000" Min="-10000000" Name="FW_KP_GAIN2" Type="integer" Visible="false" />
+	<RefParameter Comment="FW_KI_GAIN2" DefaultValue="5000" Max="10000000" Min="-10000000" Name="FW_KI_GAIN2" Type="integer" Visible="false" />
+	<RefParameter Comment="FW_KPDIV2" DefaultValue="32768" Max="10000000" Min="-10000000" Name="FW_KPDIV2" Type="integer" Visible="false" />
+	<RefParameter Comment="FW_KIDIV2" DefaultValue="32768" Max="10000000" Min="-10000000" Name="FW_KIDIV2" Type="integer" Visible="false" />
+	<RefParameter Comment="POSITION_LOOP_FREQUENCY_HZ" DefaultValue="1000" Max="10000000" Min="-10000000" Name="POSITION_LOOP_FREQUENCY_HZ" Type="integer" Visible="false" />	
+	<RefParameter Comment="POSITION_CTRL_ANGLE_STEP" DefaultValue="10.0" Max="10000000" Min="-10000000" Name="POSITION_CTRL_ANGLE_STEP" Type="double" Visible="false" />
+	<RefParameter Comment="POSITION_CTRL_MOV_DURATION" DefaultValue="10.0" Max="10000000" Min="-10000000" Name="POSITION_CTRL_MOV_DURATION" Type="double" Visible="false" />
+	<RefParameter Comment="POSITION_CTRL_HOLD_TIME" DefaultValue="10.0" Max="10000000" Min="-10000000" Name="POSITION_CTRL_HOLD_TIME" Type="double" Visible="false" />
+	<RefParameter Comment="POSITION_CTRL_KP_GAIN" DefaultValue="5000" Max="10000000" Min="-10000000" Name="POSITION_CTRL_KP_GAIN" Type="integer" Visible="false" />
+	<RefParameter Comment="POSITION_CTRL_KI_GAIN" DefaultValue="5000" Max="10000000" Min="-10000000" Name="POSITION_CTRL_KI_GAIN" Type="integer" Visible="false" />
+	<RefParameter Comment="POSITION_CTRL_KD_GAIN" DefaultValue="5000" Max="10000000" Min="-10000000" Name="POSITION_CTRL_KD_GAIN" Type="integer" Visible="false" />
+	<RefParameter Comment="POSITION_CTRL_KPDIV" DefaultValue="5000" Max="10000000" Min="-10000000" Name="POSITION_CTRL_KPDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="POSITION_CTRL_KIDIV" DefaultValue="5000" Max="10000000" Min="-10000000" Name="POSITION_CTRL_KIDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="POSITION_CTRL_KDDIV" DefaultValue="5000" Max="10000000" Min="-10000000" Name="POSITION_CTRL_KDDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="POSITION_LOOP_FREQUENCY_HZ2" DefaultValue="1000" Max="10000000" Min="-10000000" Name="POSITION_LOOP_FREQUENCY_HZ2" Type="integer" Visible="false" />	
+	<RefParameter Comment="POSITION_CTRL_ANGLE_STEP2" DefaultValue="10.0" Max="10000000" Min="-10000000" Name="POSITION_CTRL_ANGLE_STEP2" Type="double" Visible="false" />
+	<RefParameter Comment="POSITION_CTRL_MOV_DURATION2" DefaultValue="10.0" Max="10000000" Min="-10000000" Name="POSITION_CTRL_MOV_DURATION2" Type="double" Visible="false" />
+	<RefParameter Comment="POSITION_CTRL_HOLD_TIME2" DefaultValue="10.0" Max="10000000" Min="-10000000" Name="POSITION_CTRL_HOLD_TIME2" Type="double" Visible="false" />
+	<RefParameter Comment="POSITION_CTRL_KP_GAIN2" DefaultValue="5000" Max="10000000" Min="-10000000" Name="POSITION_CTRL_KP_GAIN2" Type="integer" Visible="false" />
+	<RefParameter Comment="POSITION_CTRL_KI_GAIN2" DefaultValue="5000" Max="10000000" Min="-10000000" Name="POSITION_CTRL_KI_GAIN2" Type="integer" Visible="false" />
+	<RefParameter Comment="POSITION_CTRL_KD_GAIN2" DefaultValue="5000" Max="10000000" Min="-10000000" Name="POSITION_CTRL_KD_GAIN2" Type="integer" Visible="false" />
+	<RefParameter Comment="POSITION_CTRL_KPDIV2" DefaultValue="5000" Max="10000000" Min="-10000000" Name="POSITION_CTRL_KPDIV2" Type="integer" Visible="false" />
+	<RefParameter Comment="POSITION_CTRL_KIDIV2" DefaultValue="5000" Max="10000000" Min="-10000000" Name="POSITION_CTRL_KIDIV2" Type="integer" Visible="false" />
+	<RefParameter Comment="POSITION_CTRL_KDDIV2" DefaultValue="5000" Max="10000000" Min="-10000000" Name="POSITION_CTRL_KDDIV2" Type="integer" Visible="false" />
+	<RefParameter Comment="CONSTANT1_Q" DefaultValue="941366" Max="10000000" Min="-10000000" Name="CONSTANT1_Q" Type="integer" Visible="false" />
+	<RefParameter Comment="CONSTANT1_Q2" DefaultValue="941366" Max="10000000" Min="-10000000" Name="CONSTANT1_Q2" Type="integer" Visible="false" />
+	<RefParameter Comment="CONSTANT1_D" DefaultValue="941366" Max="10000000" Min="-10000000" Name="CONSTANT1_D" Type="integer" Visible="false" />
+	<RefParameter Comment="CONSTANT1_D2" DefaultValue="941366" Max="10000000" Min="-10000000" Name="CONSTANT1_D2" Type="integer" Visible="false" />
+	<RefParameter Comment="CONSTANT2_QD" DefaultValue="96010" Max="10000000" Min="-10000000" Name="CONSTANT2_QD" Type="integer" Visible="false" />
+	<RefParameter Comment="CONSTANT2_QD2" DefaultValue="96010" Max="10000000" Min="-10000000" Name="CONSTANT2_QD2" Type="integer" Visible="false" />
+	<RefParameter Comment="IQMAX" DefaultValue="2160" Max="10000000" Min="-10000000" Name="IQMAX" Type="integer" Visible="false" />
+	<RefParameter Comment="IQMAX2" DefaultValue="2160" Max="10000000" Min="-10000000" Name="IQMAX2" Type="integer" Visible="false" />
+	<RefParameter Comment="SEGDIV" DefaultValue="0" Max="10000000" Min="-10000000" Name="SEGDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="SEGDIV2" DefaultValue="0" Max="10000000" Min="-10000000" Name="SEGDIV2" Type="integer" Visible="false" />
+	<RefParameter Comment="ANGC" DefaultValue="{0,0,0,0,0,0,0,0}" Name="ANGC" Type="stringRW" Visible="false" />
+	<RefParameter Comment="ANGC2" DefaultValue="{0,0,0,0,0,0,0,0}" Name="ANGC2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OFST" DefaultValue="{0,0,0,0,0,0,0,0}" Name="OFST" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OFST2" DefaultValue="{0,0,0,0,0,0,0,0}" Name="OFST2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="INRUSH_CURRLIMIT_AT_POWER_ON" DefaultValue="INACTIVE" Name="INRUSH_CURRLIMIT_AT_POWER_ON" Type="list" Visible="false">
+		<PossibleValue Comment="Inactive" Value="INACTIVE" />
+		<PossibleValue Comment="Active" Value="ACTIVE" />
+	</RefParameter>
+	<RefParameter Comment="INRUSH_CURRLIMIT_AT_POWER_ON2" DefaultValue="INACTIVE" Name="INRUSH_CURRLIMIT_AT_POWER_ON2" Type="list" Visible="false">
+		<PossibleValue Comment="Inactive" Value="INACTIVE" />
+		<PossibleValue Comment="Active" Value="ACTIVE" />
+	</RefParameter>
+	<RefParameter Comment="INRUSH_CURRLIMIT_CHANGE_AFTER_MS" DefaultValue="1000" Max="10000000" Min="-10000000" Name="INRUSH_CURRLIMIT_CHANGE_AFTER_MS" Type="integer" Visible="false" />
+	<RefParameter Comment="INRUSH_CURRLIMIT_CHANGE_AFTER_MS2" DefaultValue="1000" Max="10000000" Min="-10000000" Name="INRUSH_CURRLIMIT_CHANGE_AFTER_MS2" Type="integer" Visible="false" />
+	<RefParameter Comment="SERIAL_COM_MODE" DefaultValue="COM_BIDIRECTIONAL" Name="SERIAL_COM_MODE" Type="list" Visible="false">
+		<PossibleValue Comment="Bi-directional" Semaphore="S_SERIAL_COMMUNICATION_BIDIRECTIONAL" Value="COM_BIDIRECTIONAL" />
+		<PossibleValue Comment="Uni-directional" Value="COM_UNIIRECTIONAL" />
+	</RefParameter>
+	<RefParameter Comment="SERIAL_COM_CHANNEL1" DefaultValue="MC_PROTOCOL_REG_I_A" Name="SERIAL_COM_CHANNEL1" Type="stringRW" Visible="false" />
+	<RefParameter Comment="SERIAL_COM_CHANNEL2" DefaultValue="MC_PROTOCOL_REG_I_A" Name="SERIAL_COM_CHANNEL2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="SERIAL_COM_MOTOR" DefaultValue="0" Max="10000000" Min="-10000000" Name="SERIAL_COM_MOTOR" Type="integer" Visible="false" />
+	<RefParameter Comment="LOW_SIDE_SIGNALS_ENABLING" DefaultValue="LS_PWM_TIMER" Name="LOW_SIDE_SIGNALS_ENABLING" Type="list" Visible="false">
+		<PossibleValue Comment="PWM timer" Value="LS_PWM_TIMER" />
+		<PossibleValue Comment="Disabled" Value="LS_DISABLED" />
+		<PossibleValue Comment="GPIO" Value="ES_GPIO" />
+	</RefParameter>
+	<RefParameter Comment="LOW_SIDE_SIGNALS_ENABLING2" DefaultValue="LS_PWM_TIMER" Name="LOW_SIDE_SIGNALS_ENABLING2" Type="list" Visible="false">
+		<PossibleValue Comment="PWM timer" Value="LS_PWM_TIMER" />
+		<PossibleValue Comment="Disabled" Value="LS_DISABLED" />
+		<PossibleValue Comment="GPIO" Value="ES_GPIO" />
+	</RefParameter>
+	<RefParameter Comment="HFI_STO_RPM_TH" DefaultValue="OBS_MINIMUM_SPEED_RPM" Name="HFI_STO_RPM_TH" Type="stringRW" Visible="false" />
+	<RefParameter Comment="ADC_REFERENCE_VOLTAGE" DefaultValue="3.30" Name="ADC_REFERENCE_VOLTAGE" Type="double" Visible="false" />
+  
+	<RefParameter Comment="PWM_TIMER_SELECTION" DefaultValue="PWM_TIM1" Name="PWM_TIMER_SELECTION" Type="stringRW" Visible="false" />
+	<RefParameter Comment="PWM_TIMER_SELECTION2" DefaultValue="PWM_TIM1" Name="PWM_TIMER_SELECTION2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="HALL_TIMER_SELECTION" DefaultValue="HALL_TIM2" Name="HALL_TIMER_SELECTION" Type="stringRW" Visible="false" />
+	<RefParameter Comment="HALL_TIMER_SELECTION2" DefaultValue="HALL_TIM2" Name="HALL_TIMER_SELECTION2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="ENC_TIMER_SELECTION" DefaultValue="ENC_TIM2" Name="ENC_TIMER_SELECTION" Type="stringRW" Visible="false" />
+	<RefParameter Comment="ENC_TIMER_SELECTION2" DefaultValue="ENC_TIM2" Name="ENC_TIMER_SELECTION2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="PHASE_U_CURR_CHANNEL" DefaultValue="ADC_Channel_1" Name="PHASE_U_CURR_CHANNEL" Type="stringRW" Visible="false" />
+	<RefParameter Comment="PHASE_V_CURR_CHANNEL" DefaultValue="ADC_Channel_7" Name="PHASE_V_CURR_CHANNEL" Type="stringRW" Visible="false" />
+	<RefParameter Comment="PHASE_W_CURR_CHANNEL" DefaultValue="ADC_Channel_6" Name="PHASE_W_CURR_CHANNEL" Type="stringRW" Visible="false" />
+	<RefParameter Comment="PHASE_CURRENTS_CHANNEL" DefaultValue="ADC_Channel_9" Name="PHASE_CURRENTS_CHANNEL" Type="stringRW" Visible="false" />
+	<RefParameter Comment="PHASE_U_CURR_CHANNEL2" DefaultValue="ADC_Channel_1" Name="PHASE_U_CURR_CHANNEL2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="PHASE_V_CURR_CHANNEL2" DefaultValue="ADC_Channel_7" Name="PHASE_V_CURR_CHANNEL2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="PHASE_W_CURR_CHANNEL2" DefaultValue="ADC_Channel_6" Name="PHASE_W_CURR_CHANNEL2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="PHASE_CURRENTS_CHANNEL2" DefaultValue="ADC_Channel_9" Name="PHASE_CURRENTS_CHANNEL2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="PHASE_CURRENTS_ADC" DefaultValue="ADC1_2" Name="PHASE_CURRENTS_ADC" Type="stringRW" Visible="false" />	
+	<RefParameter Comment="PHASE_CURRENTS_ADC2" DefaultValue="ADC3" Name="PHASE_CURRENTS_ADC2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="VBUS_ADC" DefaultValue="ADC1" Name="VBUS_ADC" Type="stringRW" Visible="false" />
+	<RefParameter Comment="VBUS_CHANNEL" DefaultValue="ADC_Channel_2" Name="VBUS_CHANNEL" Type="stringRW" Visible="false" />
+	<RefParameter Comment="VBUS_ADC2" DefaultValue="ADC1" Name="VBUS_ADC2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="VBUS_CHANNEL2" DefaultValue="ADC_Channel_2" Name="VBUS_CHANNEL2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="TEMP_FDBK_ADC" DefaultValue="ADC1" Name="TEMP_FDBK_ADC" Type="stringRW" Visible="false" />
+	<RefParameter Comment="TEMP_FDBK_CHANNEL" DefaultValue="ADC_Channel_8" Name="TEMP_FDBK_CHANNEL" Type="stringRW" Visible="false" />
+	<RefParameter Comment="TEMP_FDBK_ADC2" DefaultValue="ADC1" Name="TEMP_FDBK_ADC2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="TEMP_FDBK_CHANNEL2" DefaultValue="ADC_Channel_8" Name="TEMP_FDBK_CHANNEL2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="USART_SELECTION" DefaultValue="USE_USART2" Name="USART_SELECTION" Type="stringRW" Visible="false" />
+	<RefParameter Comment="START_STOP_GPIO_PORT" DefaultValue="GPIOC" Name="START_STOP_GPIO_PORT" Type="stringRW" Visible="false" />
+	<RefParameter Comment="START_STOP_GPIO_PIN" DefaultValue="GPIO_Pin_13" Name="START_STOP_GPIO_PIN" Type="stringRW" Visible="false" />
+	<RefParameter Comment="ENC_Z_GPIO_PORT" DefaultValue="GPIOB" Name="ENC_Z_GPIO_PORT" Type="stringRW" Visible="false" />
+	<RefParameter Comment="ENC_Z_GPIO_PIN" DefaultValue="GPIO_Pin_10" Name="ENC_Z_GPIO_PIN" Type="stringRW" Visible="false" />
+	<RefParameter Comment="ENC_Z_GPIO_PORT2" DefaultValue="GPIOB" Name="ENC_Z_GPIO_PORT2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="ENC_Z_GPIO_PIN2" DefaultValue="GPIO_Pin_10" Name="ENC_Z_GPIO_PIN2" Type="stringRW" Visible="false" />	
+	<RefParameter Comment="BKIN_MODE" DefaultValue="EXT_MODE" Name="BKIN_MODE" Type="list" Visible="false">
+		<PossibleValue Comment="None" Value="NONE" />
+		<PossibleValue Comment="Internal" Value="INT_MODE" />
+		<PossibleValue Comment="External" Value="EXT_MODE" />
+	</RefParameter>
+	<RefParameter Comment="BKIN_MODE2" DefaultValue="EXT_MODE" Name="BKIN_MODE2" Type="list" Visible="false">
+		<PossibleValue Comment="None" Value="NONE" />
+		<PossibleValue Comment="Internal" Value="INT_MODE" />
+		<PossibleValue Comment="External" Value="EXT_MODE" />
+	</RefParameter>
+	<RefParameter Comment="BKIN2_MODE" DefaultValue="EXT_MODE" Name="BKIN2_MODE" Type="list" Visible="false">
+		<PossibleValue Comment="None" Value="NONE" />
+		<PossibleValue Comment="Internal" Value="INT_MODE" />
+		<PossibleValue Comment="External" Value="EXT_MODE" />
+	</RefParameter>
+	<RefParameter Comment="BKIN2_MODE2" DefaultValue="EXT_MODE" Name="BKIN2_MODE2" Type="list" Visible="false">
+		<PossibleValue Comment="None" Value="NONE" />
+		<PossibleValue Comment="Internal" Value="INT_MODE" />
+		<PossibleValue Comment="External" Value="EXT_MODE" />
+	</RefParameter>
+	<RefParameter Comment="ADC_2_PERIPH" DefaultValue="ADC2" Name="ADC_2_PERIPH" Type="stringRW" Visible="false" />
+	<RefParameter Comment="ADC_2_PERIPH2" DefaultValue="ADC2" Name="ADC_2_PERIPH2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="ADC_CLOCK_WB_DIV" DefaultValue="1" Max="10000000" Min="-10000000" Name="ADC_CLOCK_WB_DIV" Type="integer" Visible="false" />
+	<RefParameter Comment="ADC_CLOCK_WB_DIV2" DefaultValue="1" Max="10000000" Min="-10000000" Name="ADC_CLOCK_WB_DIV2" Type="integer" Visible="false" />
+	<RefParameter Comment="REGCONVADC" DefaultValue="ADC1" Name="REGCONVADC" Type="stringRW" Visible="false" />
+	<RefParameter Comment="REGCONVADC2" DefaultValue="ADC1" Name="REGCONVADC2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP1_SELECTION" DefaultValue="OPAMP_Selection_OPAMP1" Name="OPAMP1_SELECTION" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP2_SELECTION" DefaultValue="OPAMP_Selection_OPAMP2" Name="OPAMP2_SELECTION" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP_SELECTION" DefaultValue="OPAMP_Selection_OPAMP1" Name="OPAMP_SELECTION" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP1_SELECTION2" DefaultValue="OPAMP_Selection_OPAMP1" Name="OPAMP1_SELECTION2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP2_SELECTION2" DefaultValue="OPAMP_Selection_OPAMP2" Name="OPAMP2_SELECTION2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP_SELECTION2" DefaultValue="OPAMP_Selection_OPAMP1" Name="OPAMP_SELECTION2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP1_INVERTINGINPUT" DefaultValue="OPAMP1_InvertingInput_PGA" Name="OPAMP1_INVERTINGINPUT" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP2_INVERTINGINPUT" DefaultValue="OPAMP2_InvertingInput_PGA" Name="OPAMP2_INVERTINGINPUT" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP1_NONINVERTINGINPUT_PHA" DefaultValue="No_Input" Name="OPAMP1_NONINVERTINGINPUT_PHA" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP1_NONINVERTINGINPUT_PHB" DefaultValue="No_Input" Name="OPAMP1_NONINVERTINGINPUT_PHB" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP1_NONINVERTINGINPUT_PHC" DefaultValue="No_Input" Name="OPAMP1_NONINVERTINGINPUT_PHC" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP2_NONINVERTINGINPUT_PHA" DefaultValue="No_Input" Name="OPAMP2_NONINVERTINGINPUT_PHA" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP2_NONINVERTINGINPUT_PHB" DefaultValue="No_Input" Name="OPAMP2_NONINVERTINGINPUT_PHB" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP2_NONINVERTINGINPUT_PHC" DefaultValue="No_Input" Name="OPAMP2_NONINVERTINGINPUT_PHC" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP1_INVERTINGINPUT2" DefaultValue="OPAMP1_InvertingInput_PGA" Name="OPAMP1_INVERTINGINPUT2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP2_INVERTINGINPUT2" DefaultValue="OPAMP2_InvertingInput_PGA" Name="OPAMP2_INVERTINGINPUT2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP1_NONINVERTINGINPUT_PHA2" DefaultValue="No_Input" Name="OPAMP1_NONINVERTINGINPUT_PHA2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP1_NONINVERTINGINPUT_PHB2" DefaultValue="No_Input" Name="OPAMP1_NONINVERTINGINPUT_PHB2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP1_NONINVERTINGINPUT_PHC2" DefaultValue="No_Input" Name="OPAMP1_NONINVERTINGINPUT_PHC2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP2_NONINVERTINGINPUT_PHA2" DefaultValue="No_Input" Name="OPAMP2_NONINVERTINGINPUT_PHA2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP2_NONINVERTINGINPUT_PHB2" DefaultValue="No_Input" Name="OPAMP2_NONINVERTINGINPUT_PHB2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OPAMP2_NONINVERTINGINPUT_PHC2" DefaultValue="No_Input" Name="OPAMP2_NONINVERTINGINPUT_PHC2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OCPREF" DefaultValue="23830" Max="10000000" Min="-10000000" Name="OCPREF" Type="integer" Visible="false" />
+	<RefParameter Comment="OCPREF2" DefaultValue="23830" Max="10000000" Min="-10000000" Name="OCPREF2" Type="integer" Visible="false" />
+	<RefParameter Comment="OVPREF" DefaultValue="23830" Max="10000000" Min="-10000000" Name="OVPREF" Type="integer" Visible="false" />
+	<RefParameter Comment="OVPREF2" DefaultValue="23830" Max="10000000" Min="-10000000" Name="OVPREF2" Type="integer" Visible="false" />
+	<RefParameter Comment="OCPA_SELECTION" DefaultValue="COMP_Selection_COMP1" Name="OCPA_SELECTION" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OCPA_SELECTION2" DefaultValue="COMP_Selection_COMP1" Name="OCPA_SELECTION2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OCPB_SELECTION" DefaultValue="COMP_Selection_COMP2" Name="OCPB_SELECTION" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OCPB_SELECTION2" DefaultValue="COMP_Selection_COMP2" Name="OCPB_SELECTION2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OCPC_SELECTION" DefaultValue="COMP_Selection_COMP3" Name="OCPC_SELECTION" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OCPC_SELECTION2" DefaultValue="COMP_Selection_COMP3" Name="OCPC_SELECTION2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OCP_SELECTION" DefaultValue="COMP_Selection_COMP2" Name="OCP_SELECTION" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OCP_SELECTION2" DefaultValue="COMP_Selection_COMP2" Name="OCP_SELECTION2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="OCPA_INVERTINGINPUT_MODE" DefaultValue="INT_MODE" Name="OCPA_INVERTINGINPUT_MODE" Type="list" Visible="false">
+		<PossibleValue Comment="DAC" Value="DAC" />
+		<PossibleValue Comment="Internal" Value="INT_MODE" />
+		<PossibleValue Comment="External" Value="EXT_MODE" />
+	</RefParameter>
+	<RefParameter Comment="OCPA_INVERTINGINPUT_MODE2" DefaultValue="INT_MODE" Name="OCPA_INVERTINGINPUT_MODE2" Type="list" Visible="false">
+		<PossibleValue Comment="DAC" Value="DAC" />
+		<PossibleValue Comment="Internal" Value="INT_MODE" />
+		<PossibleValue Comment="External" Value="EXT_MODE" />
+	</RefParameter>
+	<RefParameter Comment="OCPB_INVERTINGINPUT_MODE" DefaultValue="INT_MODE" Name="OCPB_INVERTINGINPUT_MODE" Type="list" Visible="false">
+		<PossibleValue Comment="DAC" Value="DAC" />
+		<PossibleValue Comment="Internal" Value="INT_MODE" />
+		<PossibleValue Comment="External" Value="EXT_MODE" />
+	</RefParameter>
+	<RefParameter Comment="OCPB_INVERTINGINPUT_MODE2" DefaultValue="INT_MODE" Name="OCPB_INVERTINGINPUT_MODE2" Type="list" Visible="false">
+		<PossibleValue Comment="DAC" Value="DAC" />
+		<PossibleValue Comment="Internal" Value="INT_MODE" />
+		<PossibleValue Comment="External" Value="EXT_MODE" />
+	</RefParameter>
+	<RefParameter Comment="OCPC_INVERTINGINPUT_MODE" DefaultValue="INT_MODE" Name="OCPC_INVERTINGINPUT_MODE" Type="list" Visible="false">
+		<PossibleValue Comment="DAC" Value="DAC" />
+		<PossibleValue Comment="Internal" Value="INT_MODE" />
+		<PossibleValue Comment="External" Value="EXT_MODE" />
+	</RefParameter>
+	<RefParameter Comment="OCPC_INVERTINGINPUT_MODE2" DefaultValue="INT_MODE" Name="OCPC_INVERTINGINPUT_MODE2" Type="list" Visible="false">
+		<PossibleValue Comment="DAC" Value="DAC" />
+		<PossibleValue Comment="Internal" Value="INT_MODE" />
+		<PossibleValue Comment="External" Value="EXT_MODE" />
+	</RefParameter>
+	<RefParameter Comment="OCP_INVERTINGINPUT_MODE" DefaultValue="INT_MODE" Name="OCP_INVERTINGINPUT_MODE" Type="list" Visible="false">
+		<PossibleValue Comment="DAC" Value="DAC" />
+		<PossibleValue Comment="Internal" Value="INT_MODE" />
+		<PossibleValue Comment="External" Value="EXT_MODE" />
+	</RefParameter>
+	<RefParameter Comment="OCP_INVERTINGINPUT_MODE2" DefaultValue="INT_MODE" Name="OCP_INVERTINGINPUT_MODE2" Type="list" Visible="false">
+		<PossibleValue Comment="DAC" Value="DAC" />
+		<PossibleValue Comment="Internal" Value="INT_MODE" />
+		<PossibleValue Comment="External" Value="EXT_MODE" />
+	</RefParameter>
+	<RefParameter Comment="MAX_MODULATION_INDEX" DefaultValue="MAX_MODULATION_89_PER_CENT" Name="MAX_MODULATION_INDEX" Type="stringRW" Visible="false" />
+	<RefParameter Comment="MAX_MODULATION_INDEX2" DefaultValue="MAX_MODULATION_89_PER_CENT2" Name="MAX_MODULATION_INDEX2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="CURR_SAMPLING_TIME" DefaultValue="19" Max="10000000" Min="-10000000" Name="CURR_SAMPLING_TIME" Type="integer" Visible="false" />
+	<RefParameter Comment="CURR_SAMPLING_TIME2" DefaultValue="19" Max="10000000" Min="-10000000" Name="CURR_SAMPLING_TIME2" Type="integer" Visible="false" />
+	<RefParameter Comment="VBUS_ADC_SAMPLING_TIME" DefaultValue="61" Max="10000000" Min="-10000000" Name="VBUS_ADC_SAMPLING_TIME" Type="integer" Visible="false" />
+	<RefParameter Comment="TEMP_ADC_SAMPLING_TIME" DefaultValue="61" Max="10000000" Min="-10000000" Name="TEMP_ADC_SAMPLING_TIME" Type="integer" Visible="false" />
+	<RefParameter Comment="VBUS_ADC_SAMPLING_TIME2" DefaultValue="61" Max="10000000" Min="-10000000" Name="VBUS_ADC_SAMPLING_TIME2" Type="integer" Visible="false" />
+	<RefParameter Comment="TEMP_ADC_SAMPLING_TIME2" DefaultValue="61" Max="10000000" Min="-10000000" Name="TEMP_ADC_SAMPLING_TIME2" Type="integer" Visible="false" />
+	<RefParameter Comment="DEFAULT_DAC_CHANNEL_1" DefaultValue="MC_PROTOCOL_REG_I_A" Name="DEFAULT_DAC_CHANNEL_1" Type="stringRW" Visible="false" />
+	<RefParameter Comment="DEFAULT_DAC_CHANNEL_2" DefaultValue="MC_PROTOCOL_REG_I_B" Name="DEFAULT_DAC_CHANNEL_2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="DAC_TIMER_SELECTION" DefaultValue="TIM3" Name="DAC_TIMER_SELECTION" Type="stringRW" Visible="false" />
+	<RefParameter Comment="DAC_TIMER_CH1_GPIO_PORT" DefaultValue="GPIOA" Name="DAC_TIMER_CH1_GPIO_PORT" Type="stringRW" Visible="false" />
+	<RefParameter Comment="DAC_TIMER_CH1_GPIO_PIN" DefaultValue="GPIO_Pin_4" Name="DAC_TIMER_CH1_GPIO_PIN" Type="stringRW" Visible="false" />
+	<RefParameter Comment="DAC_TIMER_CH2_GPIO_PORT" DefaultValue="GPIOA" Name="DAC_TIMER_CH2_GPIO_PORT" Type="stringRW" Visible="false" />
+	<RefParameter Comment="DAC_TIMER_CH2_GPIO_PIN" DefaultValue="GPIO_Pin_0" Name="DAC_TIMER_CH2_GPIO_PIN" Type="stringRW" Visible="false" />
+	<RefParameter Comment="DAC_EMULATED_1" DefaultValue="NOT_USED" Name="DAC_EMULATED_1" Type="stringRW" Visible="false" />
+	<RefParameter Comment="DAC_EMULATED_2" DefaultValue="NOT_USED" Name="DAC_EMULATED_2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="DAC_OCP_A_M1" DefaultValue="NOT_USED" Name="DAC_OCP_A_M1" Type="stringRW" Visible="false" />
+	<RefParameter Comment="DAC_OCP_B_M1" DefaultValue="NOT_USED" Name="DAC_OCP_B_M1" Type="stringRW" Visible="false" />
+    <RefParameter Comment="DAC_OCP_C_M1" DefaultValue="NOT_USED" Name="DAC_OCP_C_M1" Type="stringRW" Visible="false" />
+    <RefParameter Comment="DAC_OCP_C_M1" DefaultValue="NOT_USED" Name="DAC_OCP_M1" Type="stringRW" Visible="false" />
+	<RefParameter Comment="DAC_OVP_M1" DefaultValue="NOT_USED" Name="DAC_OVP_M1" Type="stringRW" Visible="false" />    
+	<RefParameter Comment="DAC_OCP_A_M2" DefaultValue="NOT_USED" Name="DAC_OCP_A_M2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="DAC_OCP_B_M2" DefaultValue="NOT_USED" Name="DAC_OCP_B_M2" Type="stringRW" Visible="false" />
+    <RefParameter Comment="DAC_OCP_C_M2" DefaultValue="NOT_USED" Name="DAC_OCP_C_M2" Type="stringRW" Visible="false" />
+    <RefParameter Comment="DAC_OCP_C_M2" DefaultValue="NOT_USED" Name="DAC_OCP_M2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="DAC_OVP_M2" DefaultValue="NOT_USED" Name="DAC_OVP_M2" Type="stringRW" Visible="false" />
+	<RefParameter Comment="CTRBDID" DefaultValue="0" Name="CTRBDID" Type="stringRW" Visible="false" />
+	<RefParameter Comment="SW_OV_CURRENT_PROT_ENABLING" DefaultValue="false" Name="SW_OV_CURRENT_PROT_ENABLING" Type="boolean" Visible="false" />
+	<RefParameter Comment="SW_OV_CURRENT_PROT_ENABLING2" DefaultValue="false" Name="SW_OV_CURRENT_PROT_ENABLING2" Type="boolean" Visible="false" />
+	<RefParameter Comment="FREQ_RATIO" DefaultValue="1" Max="10000000" Min="-10000000" Name="FREQ_RATIO" Type="integer" Visible="false" />
+	<RefParameter Comment="FREQ_RELATION" DefaultValue="HIGHEST_FREQ" Name="FREQ_RELATION" Type="list" Visible="false">
+		<PossibleValue Comment="Highest Frequency" Value="HIGHEST_FREQ" />
+		<PossibleValue Comment="Lowest Frequency" Value="LOWEST_FREQ" />
+	</RefParameter>
+	<RefParameter Comment="FREQ_RELATION2" DefaultValue="LOWEST_FREQ" Name="FREQ_RELATION2" Type="list" Visible="false">
+		<PossibleValue Comment="Highest Frequency" Value="HIGHEST_FREQ" />
+		<PossibleValue Comment="Lowest Frequency" Value="LOWEST_FREQ" />
+	</RefParameter>
+	<RefParameter Comment="PLLTUNING" DefaultValue="false" Name="PLLTUNING" Type="boolean" Visible="false" />
+	
+	<RefParameter Comment="CURRCTRLFREQUENCY" DefaultValue="0" Max="10000000" Min="-10000000" Name="CURRCTRLFREQUENCY" Type="integer" Visible="false" />
+	<RefParameter Comment="CURR_KIDIV" DefaultValue="0" Max="10000000" Min="-10000000" Name="CURR_KIDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="CURR_KPDIV" DefaultValue="0" Max="10000000" Min="-10000000" Name="CURR_KPDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="ETRFILTER" DefaultValue="0" Max="10000000" Min="-10000000" Name="ETRFILTER" Type="integer" Visible="false" />
+	<RefParameter Comment="FAULTPIN" DefaultValue="GPIO_Pin_2" Name="FAULTPIN" Type="stringRW" Visible="false" />
+	<RefParameter Comment="FAULTPOLARITY" DefaultValue="1" Name="FAULTPOLARITY" Type="list" Visible="false">
+		<PossibleValue Comment="Inverted Polarity" Value="0" />
+		<PossibleValue Comment="Not Inverted Polarity" Value="1" />
+	</RefParameter>
+	<RefParameter Comment="FAULTPORT" DefaultValue="GPIOD" Name="FAULTPORT" Type="stringRW" Visible="false" />
+	<RefParameter Comment="ISAMPLINGTIMEREAL" DefaultValue="1.5" Name="ISAMPLINGTIMEREAL" Type="double" Visible="false" />
+	<RefParameter Comment="MAINSFREQ" DefaultValue="0" Max="10000000" Min="-10000000" Name="MAINSFREQ" Type="integer" Visible="false" />
+	<RefParameter Comment="OUTPUTPOWERACTIVATION" DefaultValue="0" Max="10000000" Min="-10000000" Name="OUTPUTPOWERACTIVATION" Type="integer" Visible="false" />
+	<RefParameter Comment="OUTPUTPOWERDEACTIVATION" DefaultValue="0" Max="10000000" Min="-10000000" Name="OUTPUTPOWERDEACTIVATION" Type="integer" Visible="false" />
+	<RefParameter Comment="PFCAMPLGAIN" DefaultValue="11.0" Name="PFCAMPLGAIN" Type="double" Visible="false" />
+	<RefParameter Comment="PFCSHUNTRESISTOR" DefaultValue="0.017" Name="PFCSHUNTRESISTOR" Type="double" Visible="false" />
+	<RefParameter Comment="PID_CURR_KI_DEFAULT" DefaultValue="0" Max="10000000" Min="-10000000" Name="PID_CURR_KI_DEFAULT" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_CURR_KP_DEFAULT" DefaultValue="0" Max="10000000" Min="-10000000" Name="PID_CURR_KP_DEFAULT" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_VOLT_KI_DEFAULT" DefaultValue="0" Max="10000000" Min="-10000000" Name="PID_VOLT_KI_DEFAULT" Type="integer" Visible="false" />
+	<RefParameter Comment="PID_VOLT_KP_DEFAULT" DefaultValue="0" Max="10000000" Min="-10000000" Name="PID_VOLT_KP_DEFAULT" Type="integer" Visible="false" />
+	<RefParameter Comment="PROPDELAYOFF" DefaultValue="0" Max="10000000" Min="-10000000" Name="PROPDELAYOFF" Type="integer" Visible="false" />
+	<RefParameter Comment="PROPDELAYON" DefaultValue="0" Max="10000000" Min="-10000000" Name="PROPDELAYON" Type="integer" Visible="false" />
+	<RefParameter Comment="PWMFREQ" DefaultValue="0" Max="10000000" Min="-10000000" Name="PWMFREQ" Type="integer" Visible="false" />
+	<RefParameter Comment="STARTUPDURATION" DefaultValue="0" Max="10000000" Min="-10000000" Name="STARTUPDURATION" Type="integer" Visible="false" />
+	<RefParameter Comment="SWOVERVOLTAGETH" DefaultValue="0" Max="10000000" Min="-10000000" Name="SWOVERVOLTAGETH" Type="integer" Visible="false" />
+	<RefParameter Comment="SYNCFILTER" DefaultValue="0" Max="10000000" Min="-10000000" Name="SYNCFILTER" Type="integer" Visible="false" />
+	<RefParameter Comment="VMAINS_PARTITIONING_FACTOR" DefaultValue="0" Max="10000000" Min="-10000000" Name="VMAINS_PARTITIONING_FACTOR" Type="integer" Visible="false" />
+	<RefParameter Comment="VOLTAGEREFERENCE" DefaultValue="0" Max="10000000" Min="-10000000" Name="VOLTAGEREFERENCE" Type="integer" Visible="false" />
+	<RefParameter Comment="VOLTCTRLFREQUENCY" DefaultValue="0" Max="10000000" Min="-10000000" Name="VOLTCTRLFREQUENCY" Type="integer" Visible="false" />
+	<RefParameter Comment="VOLT_KIDIV" DefaultValue="0" Max="10000000" Min="-10000000" Name="VOLT_KIDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="VOLT_KPDIV" DefaultValue="0" Max="10000000" Min="-10000000" Name="VOLT_KPDIV" Type="integer" Visible="false" />
+	<RefParameter Comment="TESTENV" DefaultValue="false" Name="TESTENV" Type="boolean" Visible="false" />
+	<RefParameter Comment="BOARD" DefaultValue="NO_BOARD" Name="BOARD" Type="stringRW" Visible="false" />
+	<RefParameter Comment="INVERTERBOARD" DefaultValue="NO_INVERTERBOARD" Name="INVERTERBOARD" Type="stringRW" Visible="false" />
+	<RefParameter Comment="DRIVE_TYPE" DefaultValue="FOC" Name="DRIVE_TYPE" Type="list" Visible="false">
+		<PossibleValue Comment="FOC" Semaphore="S_DRIVE_TYPE_FOC" Value="FOC" />
+		<PossibleValue Comment="SIX_STEP" Value="SIX_STEP" />
+	</RefParameter>
+	<RefParameter Comment="SIX_STEP_SENSING" DefaultValue="SENSORS_LESS" Name="SIX_STEP_SENSING" Type="list" Visible="true">
+		<PossibleValue Comment="SENSORS_LESS" Semaphore="S_SIX_STEP_SENSING_SENSORS_LESS" Value="SENSORS_LESS" />
+		<PossibleValue Comment="HALL_SENSORS" Semaphore="S_SIX_STEP_SENSING_HALL_SENSORS" Value="HALL_SENSORS" />
+		<PossibleValue Comment="COMPARATORS" Semaphore="S_SIX_STEP_SENSING_COMPARATORS" Value="COMPARATORS" />
+	</RefParameter>
+	<RefParameter Comment="SIX_STEP_CONTROL_MODE" DefaultValue="CURRENT" Name="SIX_STEP_CONTROL_MODE" Type="list" Visible="true">
+		<PossibleValue Comment="CURRENT" Semaphore="S_SIX_STEP_CONTROL_MODE_CURRENT" Value="CURRENT" />
+		<PossibleValue Comment="VOLTAGE" Semaphore="S_SIX_STEP_CONTROL_MODE_VOLTAGE" Value="VOLTAGE" />
+	</RefParameter>  
+	<RefParameter Comment="SIX_STEP_SPEED_LOOP" DefaultValue="false" Name="SIX_STEP_SPEED_LOOP" Type="boolean" Visible="true">
+		<PossibleValue Comment="true" Semaphore="S_SIX_STEP_SPEED_LOOP" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>  
+	<RefParameter Comment="SIX_STEP_SET_POINT_RAMPING" DefaultValue="false" Name="SIX_STEP_SET_POINT_RAMPING" Type="boolean" Visible="true">
+		<PossibleValue Comment="true" Semaphore="S_SIX_STEP_SET_POINT_RAMPING" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>  
+	<RefParameter Comment="SIX_STEP_THREE_PWM" DefaultValue="false" Name="SIX_STEP_THREE_PWM" Type="boolean" Visible="true">
+		<PossibleValue Comment="true" Semaphore="S_SIX_STEP_THREE_PWM" Value="true" />
+		<PossibleValue Comment="false" Value="false" />
+	</RefParameter>
+	<RefParameter Comment="SIX_STEP_POWER_BOARD" DefaultValue="IHM07M1" Name="SIX_STEP_POWER_BOARD" Type="list" Visible="true">
+		<PossibleValue Comment="IHM07M1" Semaphore="S_SIX_STEP_POWER_BOARD_IHM07M1" Value="IHM07M1" />
+		<PossibleValue Comment="IHM08M1" Semaphore="S_SIX_STEP_POWER_BOARD_IHM08M1" Value="IHM08M1" />
+		<PossibleValue Comment="IHM16M1" Semaphore="S_SIX_STEP_POWER_BOARD_IHM16M1" Value="IHM16M1" />
+		<PossibleValue Comment="STSPIN-3202" Semaphore="S_SIX_STEP_POWER_BOARD_SPIN_3202" Value="STSPIN3202" />
+		<PossibleValue Comment="STSPIN-3204" Semaphore="S_SIX_STEP_POWER_BOARD_SPIN_3204" Value="STSPIN3204" />
+	</RefParameter>
+	<RefParameter Comment="MOTOR_REF" DefaultValue="GBM2804H-100T" Name="MOTOR_REF" Type="list" Visible="true">
+		<PossibleValue Comment="GIMBAL: GBM2804H-100T" Semaphore="S_MOTOR_GBM2804H_100T" Value="GBM2804H-100T" />
+		<PossibleValue Comment="BULL RUNNING: BR2804-1700kv" Semaphore="S_MOTOR_BR2804_1700kv" Value="BR2804-1700kv" />
+		<PossibleValue Comment="SHINANO: LA052-080E3NL1-3202" Semaphore="S_MOTOR_LA052_080E3NL1_3202" Value="LA052-080E3NL1-3202" />
+	</RefParameter>
+	<RefMode Name="Enabled">
+		<ConfigForMode>MC_FOC</ConfigForMode>
+		<Parameter Name="ADC_1_PERIPH" />
+		<Parameter Name="ADC_1_PERIPH2" />
+		<Parameter Name="ADC_2_PERIPH" />
+		<Parameter Name="ADC_2_PERIPH2" />
+		<Parameter Name="ADC_CLOCK_WB_DIV" />
+		<Parameter Name="ADC_CLOCK_WB_DIV2" />
+		<Parameter Name="ADC_PERIPH" />
+		<Parameter Name="ADC_PERIPH2" />
+		<Parameter Name="ALIGNMENT_ANGLE_DEG" />
+		<Parameter Name="ALIGNMENT_ANGLE_DEG2" />
+		<Parameter Name="ALIGNMENT_DURATION" />
+		<Parameter Name="ALIGNMENT_DURATION2" />
+		<Parameter Name="AMPLIFICATION_GAIN" />
+		<Parameter Name="AMPLIFICATION_GAIN2" />
+		<Parameter Name="ANGC" />
+		<Parameter Name="ANGC2" />
+		<Parameter Name="AUX_ENCODER" />
+		<Parameter Name="AUX_ENCODER2" />
+		<Parameter Name="AUX_HALL_SENSORS" />
+		<Parameter Name="AUX_HALL_SENSORS2" />
+		<Parameter Name="AUX_STATE_OBSERVER_CORDIC" />
+		<Parameter Name="AUX_STATE_OBSERVER_CORDIC2" />
+		<Parameter Name="AUX_STATE_OBSERVER_PLL" />
+		<Parameter Name="AUX_STATE_OBSERVER_PLL2" />
+		<Parameter Name="BEMF_CONSISTENCY_GAIN" />
+		<Parameter Name="BEMF_CONSISTENCY_GAIN2" />
+		<Parameter Name="BEMF_CONSISTENCY_TOL" />
+		<Parameter Name="BEMF_CONSISTENCY_TOL2" />
+		<Parameter Name="BKIN_MODE" />
+		<Parameter Name="BKIN_MODE2" />
+		<Parameter Name="BKIN2_MODE" />
+		<Parameter Name="BKIN2_MODE2" />
+		<Parameter Name="BOARD" />
+		<Parameter Name="BUS_VOLTAGE_READING" />
+		<Parameter Name="BUS_VOLTAGE_READING2" />
+		<Parameter Name="CONSTANT1_D" />
+		<Parameter Name="CONSTANT1_D2" />
+		<Parameter Name="CONSTANT1_Q" />
+		<Parameter Name="CONSTANT1_Q2" />
+		<Parameter Name="CONSTANT2_QD" />
+		<Parameter Name="CONSTANT2_QD2" />
+		<Parameter Name="CORD_BEMF_CONSISTENCY_GAIN" />
+		<Parameter Name="CORD_BEMF_CONSISTENCY_GAIN2" />
+		<Parameter Name="CORD_BEMF_CONSISTENCY_TOL" />
+		<Parameter Name="CORD_BEMF_CONSISTENCY_TOL2" />
+		<Parameter Name="CORD_F1" />
+		<Parameter Name="CORD_F12" />
+		<Parameter Name="CORD_F2" />
+		<Parameter Name="CORD_F22" />
+		<Parameter Name="CORD_FIFO_DEPTH_01HZ" />
+		<Parameter Name="CORD_FIFO_DEPTH_01HZ2" />
+		<Parameter Name="CORD_FIFO_DEPTH_DPP" />
+		<Parameter Name="CORD_FIFO_DEPTH_DPP2" />
+		<Parameter Name="CORD_GAIN1" />
+		<Parameter Name="CORD_GAIN12" />
+		<Parameter Name="CORD_GAIN2" />
+		<Parameter Name="CORD_GAIN22" />
+		<Parameter Name="CORD_MAX_ACCEL_DPPP" />
+		<Parameter Name="CORD_MAX_ACCEL_DPPP2" />
+		<Parameter Name="CORD_MEAS_ERRORS_BEFORE_FAULTS" />
+		<Parameter Name="CORD_MEAS_ERRORS_BEFORE_FAULTS2" />
+		<Parameter Name="CORD_VARIANCE_THRESHOLD" />
+		<Parameter Name="CORD_VARIANCE_THRESHOLD2" />
+		<Parameter Name="CTRBDID" />
+		<Parameter Name="CURR_SAMPLING_TIME" />
+		<Parameter Name="CURR_SAMPLING_TIME2" />
+		<Parameter Name="CURRENT_READING_TOPOLOGY" />
+		<Parameter Name="CURRENT_READING_TOPOLOGY2" />
+		<Parameter Name="DAC_FUNCTIONALITY" />
+		<Parameter Name="DAC_EMULATED" />    
+		<Parameter Name="DAC_TIMER_CH1_GPIO_PIN" />
+		<Parameter Name="DAC_TIMER_CH1_GPIO_PORT" />
+		<Parameter Name="DAC_TIMER_CH2_GPIO_PIN" />
+		<Parameter Name="DAC_TIMER_CH2_GPIO_PORT" />
+		<Parameter Name="DAC_TIMER_SELECTION" />
+		<Parameter Name="DEBUG_DAC_CH1" />
+		<Parameter Name="DEBUG_DAC_CH2" />
+		<Parameter Name="DEFAULT_CONTROL_MODE" />
+		<Parameter Name="DEFAULT_CONTROL_MODE2" />
+		<Parameter Name="DEFAULT_DAC_CHANNEL_1" />
+		<Parameter Name="DEFAULT_DAC_CHANNEL_2" />
+		<Parameter Name="DEFAULT_FLUX_COMPONENT" />
+		<Parameter Name="DEFAULT_FLUX_COMPONENT2" />
+		<Parameter Name="DEFAULT_TARGET_SPEED_RPM" />
+		<Parameter Name="DEFAULT_TARGET_SPEED_RPM2" />
+		<Parameter Name="DEFAULT_TORQUE_COMPONENT" />
+		<Parameter Name="DEFAULT_TORQUE_COMPONENT2" />
+		<Parameter Name="DIFFERENTIAL_TERM_ENABLED" />
+		<Parameter Name="DIFFERENTIAL_TERM_ENABLED2" />
+		<Parameter Name="DISSIPATIVE_BRAKE_POLARITY" />
+		<Parameter Name="DISSIPATIVE_BRAKE_POLARITY2" />
+		<Parameter Name="DUALDRIVE" />
+		<Parameter Name="dV_dT" />
+		<Parameter Name="dV_dT2" />
+		<Parameter Name="ENABLE_SL_ALGO_FROM_PHASE" />
+		<Parameter Name="ENABLE_SL_ALGO_FROM_PHASE2" />
+		<Parameter Name="ENC_AVERAGING_FIFO_DEPTH" />
+		<Parameter Name="ENC_AVERAGING_FIFO_DEPTH2" />
+		<Parameter Name="ENC_ICx_FILTER" />
+		<Parameter Name="ENC_ICx_FILTER2" />
+		<Parameter Name="ENC_MEAS_ERRORS_BEFORE_FAULTS" />
+		<Parameter Name="ENC_MEAS_ERRORS_BEFORE_FAULTS2" />
+		<Parameter Name="ENC_TIMER_SELECTION" />
+		<Parameter Name="ENC_TIMER_SELECTION2" />
+		<Parameter Name="ENCODER" />
+		<Parameter Name="ENCODER_PPR" />
+		<Parameter Name="ENCODER_PPR2" />
+		<Parameter Name="ENCODER2" />
+		<Parameter Name="ETRFILTER" />
+		<Parameter Name="EXAMPLE_SPEEDMONITOR" />
+		<Parameter Name="F1" />
+		<Parameter Name="F12" />
+		<Parameter Name="F2" />
+		<Parameter Name="F22" />
+		<Parameter Name="FEED_FORWARD_CURRENT_REG_ENABLING" />
+		<Parameter Name="FEED_FORWARD_CURRENT_REG_ENABLING2" />
+		<Parameter Name="FINAL_I_ALIGNMENT" />
+		<Parameter Name="FINAL_I_ALIGNMENT2" />
+		<Parameter Name="FLUX_WEAKENING_ENABLING" />
+		<Parameter Name="FLUX_WEAKENING_ENABLING2" />
+		<Parameter Name="POSITION_CTRL_ENABLING" />
+		<Parameter Name="POSITION_CTRL_ENABLING2" />
+		<Parameter Name="FREQ_RATIO" />
+		<Parameter Name="FREQ_RELATION" />
+		<Parameter Name="FREQ_RELATION2" />
+		<Parameter Name="FW_KI_GAIN" />
+		<Parameter Name="FW_KI_GAIN2" />
+		<Parameter Name="FW_KIDIV" />
+		<Parameter Name="FW_KIDIV2" />
+		<Parameter Name="FW_KP_GAIN" />
+		<Parameter Name="FW_KP_GAIN2" />
+		<Parameter Name="FW_KPDIV" />
+		<Parameter Name="FW_KPDIV2" />
+		<Parameter Name="FW_VOLTAGE_REF" />
+		<Parameter Name="FW_VOLTAGE_REF2" />
+		<Parameter Name="GAIN1" />
+		<Parameter Name="GAIN12" />
+		<Parameter Name="GAIN2" />
+		<Parameter Name="GAIN22" />
+		<Parameter Name="HALL_AVERAGING_FIFO_DEPTH" />
+		<Parameter Name="HALL_AVERAGING_FIFO_DEPTH2" />
+		<Parameter Name="HALL_ICx_FILTER" />
+		<Parameter Name="HALL_ICx_FILTER2" />
+		<Parameter Name="HALL_MEAS_ERRORS_BEFORE_FAULTS" />
+		<Parameter Name="HALL_MEAS_ERRORS_BEFORE_FAULTS2" />
+		<Parameter Name="HALL_PHASE_SHIFT" />
+		<Parameter Name="HALL_PHASE_SHIFT2" />
+		<Parameter Name="HALL_SENSORS" />
+		<Parameter Name="HALL_SENSORS_PLACEMENT" />
+		<Parameter Name="HALL_SENSORS_PLACEMENT2" />
+		<Parameter Name="HALL_SENSORS2" />
+		<Parameter Name="HALL_TIMER_SELECTION" />
+		<Parameter Name="HALL_TIMER_SELECTION2" />
+		<Parameter Name="HFI_AMPLITUDE" />
+		<Parameter Name="HFI_AMPLITUDE2" />
+		<Parameter Name="HFI_DC_0_COEFF" />
+		<Parameter Name="HFI_DC_0_COEFF2" />
+		<Parameter Name="HFI_DC_1_COEFF" />
+		<Parameter Name="HFI_DC_1_COEFF2" />
+		<Parameter Name="HFI_DC_2_COEFF" />
+		<Parameter Name="HFI_DC_2_COEFF2" />
+		<Parameter Name="HFI_DC_3_COEFF" />
+		<Parameter Name="HFI_DC_3_COEFF2" />
+		<Parameter Name="HFI_DC_4_COEFF" />
+		<Parameter Name="HFI_DC_4_COEFF2" />
+		<Parameter Name="HFI_FREQUENCY" />
+		<Parameter Name="HFI_FREQUENCY2" />
+		<Parameter Name="HFI_HIFRAMPLSCAN" />
+		<Parameter Name="HFI_HIFRAMPLSCAN2" />
+		<Parameter Name="HFI_HP_ID_0_COEFF" />
+		<Parameter Name="HFI_HP_ID_0_COEFF2" />
+		<Parameter Name="HFI_HP_ID_1_COEFF" />
+		<Parameter Name="HFI_HP_ID_1_COEFF2" />
+		<Parameter Name="HFI_HP_ID_2_COEFF" />
+		<Parameter Name="HFI_HP_ID_2_COEFF2" />
+		<Parameter Name="HFI_HP_ID_3_COEFF" />
+		<Parameter Name="HFI_HP_ID_3_COEFF2" />
+		<Parameter Name="HFI_HP_ID_4_COEFF" />
+		<Parameter Name="HFI_HP_ID_4_COEFF2" />
+		<Parameter Name="HFI_LOCKFREQ" />
+		<Parameter Name="HFI_LOCKFREQ2" />
+		<Parameter Name="HFI_LP_ID_0_COEFF" />
+		<Parameter Name="HFI_LP_ID_0_COEFF2" />
+		<Parameter Name="HFI_LP_ID_1_COEFF" />
+		<Parameter Name="HFI_LP_ID_1_COEFF2" />
+		<Parameter Name="HFI_LP_ID_2_COEFF" />
+		<Parameter Name="HFI_LP_ID_2_COEFF2" />
+		<Parameter Name="HFI_LP_ID_3_COEFF" />
+		<Parameter Name="HFI_LP_ID_3_COEFF2" />
+		<Parameter Name="HFI_LP_ID_4_COEFF" />
+		<Parameter Name="HFI_LP_ID_4_COEFF2" />
+		<Parameter Name="HFI_MINIMUM_SPEED_RPM" />
+		<Parameter Name="HFI_MINIMUM_SPEED_RPM2" />
+		<Parameter Name="HFI_NOTCH_IQD_0_COEFF" />
+		<Parameter Name="HFI_NOTCH_IQD_0_COEFF2" />
+		<Parameter Name="HFI_NOTCH_IQD_1_COEFF" />
+		<Parameter Name="HFI_NOTCH_IQD_1_COEFF2" />
+		<Parameter Name="HFI_NOTCH_IQD_2_COEFF" />
+		<Parameter Name="HFI_NOTCH_IQD_2_COEFF2" />
+		<Parameter Name="HFI_NOTCH_IQD_3_COEFF" />
+		<Parameter Name="HFI_NOTCH_IQD_3_COEFF2" />
+		<Parameter Name="HFI_NOTCH_IQD_4_COEFF" />
+		<Parameter Name="HFI_NOTCH_IQD_4_COEFF2" />
+		<Parameter Name="HFI_NS_MIN_SAT_DIFF" />
+		<Parameter Name="HFI_NS_MIN_SAT_DIFF2" />
+		<Parameter Name="HFI_NSDETPOINTSSKIP" />
+		<Parameter Name="HFI_NSDETPOINTSSKIP2" />
+		<Parameter Name="HFI_NSMAXDETPOINTS" />
+		<Parameter Name="HFI_NSMAXDETPOINTS2" />
+		<Parameter Name="HFI_PID_KI_DEFAULT" />
+		<Parameter Name="HFI_PID_KI_DEFAULT2" />
+		<Parameter Name="HFI_PID_KIDIV" />
+		<Parameter Name="HFI_PID_KIDIV2" />
+		<Parameter Name="HFI_PID_KP_DEFAULT" />
+		<Parameter Name="HFI_PID_KP_DEFAULT2" />
+		<Parameter Name="HFI_PID_KPDIV" />
+		<Parameter Name="HFI_PID_KPDIV2" />
+		<Parameter Name="HFI_PLL_KI_DEFAULT" />
+		<Parameter Name="HFI_PLL_KI_DEFAULT2" />
+		<Parameter Name="HFI_PLL_KP_DEFAULT" />
+		<Parameter Name="HFI_PLL_KP_DEFAULT2" />
+		<Parameter Name="HFI_SCANROTATIONSNO" />
+		<Parameter Name="HFI_SCANROTATIONSNO2" />
+		<Parameter Name="HFI_SPD_BUFFER_DEPTH_01HZ" />
+		<Parameter Name="HFI_SPD_BUFFER_DEPTH_01HZ2" />
+		<Parameter Name="HFI_STO_RPM_TH" />
+		<Parameter Name="HFI_WAITAFTERNS" />
+		<Parameter Name="HFI_WAITAFTERNS2" />
+		<Parameter Name="HFI_WAITBEFORESN" />
+		<Parameter Name="HFI_WAITBEFORESN2" />
+		<Parameter Name="HFINJECTION" />
+		<Parameter Name="HFINJECTION2" />
+		<Parameter Name="HIGH_SIDE_IDLE_STATE" />
+		<Parameter Name="HIGH_SIDE_IDLE_STATE2" />
+		<Parameter Name="HW_DEAD_TIME_NS" />
+		<Parameter Name="HW_DEAD_TIME_NS2" />
+		<Parameter Name="HW_OV_CURRENT_PROT_BYPASS" />
+		<Parameter Name="HW_OV_CURRENT_PROT_BYPASS2" />
+		<Parameter Name="ICS_SENSORS" />
+		<Parameter Name="ICS_SENSORS2" />
+		<Parameter Name="ID_DEMAG" />
+		<Parameter Name="ID_DEMAG2" />
+		<Parameter Name="INRUSH_CURR_LIMITER_POLARITY" />
+		<Parameter Name="INRUSH_CURR_LIMITER_POLARITY2" />
+		<Parameter Name="INRUSH_CURRLIMIT_AT_POWER_ON" />
+		<Parameter Name="INRUSH_CURRLIMIT_AT_POWER_ON2" />
+		<Parameter Name="INRUSH_CURRLIMIT_CHANGE_AFTER_MS" />
+		<Parameter Name="INRUSH_CURRLIMIT_CHANGE_AFTER_MS2" />
+		<Parameter Name="INRUSH_CURRLIMIT_ENABLING" />
+		<Parameter Name="INRUSH_CURRLIMIT_ENABLING2" />
+		<Parameter Name="INTERNAL_OVERCURRENTPROTECTION" />
+		<Parameter Name="INTERNAL_OVERCURRENTPROTECTION2" />
+		<Parameter Name="INTERNAL_OVERVOLTAGEPROTECTION" />
+		<Parameter Name="INTERNAL_OVERVOLTAGEPROTECTION2" />
+		<Parameter Name="INVERTERBOARD" />
+		<Parameter Name="IQMAX" />
+		<Parameter Name="IQMAX2" />
+		<Parameter Name="LOW_SIDE_IDLE_STATE" />
+		<Parameter Name="LOW_SIDE_IDLE_STATE2" />
+		<Parameter Name="LOW_SIDE_SIGNALS_ENABLING" />
+		<Parameter Name="LOW_SIDE_SIGNALS_ENABLING2" />
+		<Parameter Name="LS" />
+		<Parameter Name="LS2" />
+		<Parameter Name="MAX_APPLICATION_SPEED" />
+		<Parameter Name="MAX_APPLICATION_SPEED2" />
+		<Parameter Name="MAX_MODULATION_INDEX" />
+		<Parameter Name="MAX_MODULATION_INDEX2" />
+		<Parameter Name="MC_TUNING_INTERFACE" />
+		<Parameter Name="ADC_REFERENCE_VOLTAGE" />
+		<Parameter Name="MEAS_ERRORS_BEFORE_FAULTS" />
+		<Parameter Name="MEAS_ERRORS_BEFORE_FAULTS2" />
+		<Parameter Name="MIN_APPLICATION_SPEED" />
+		<Parameter Name="MIN_APPLICATION_SPEED2" />
+		<Parameter Name="MOTOR_MAX_SPEED_RPM" />
+		<Parameter Name="MOTOR_MAX_SPEED_RPM2" />
+		<Parameter Name="MOTOR_PROFILER" />
+		<Parameter Name="MOTOR_VOLTAGE_CONSTANT" />
+		<Parameter Name="MOTOR_VOLTAGE_CONSTANT2" />
+		<Parameter Name="MTPA_ENABLING" />
+		<Parameter Name="MTPA_ENABLING2" />
+		<Parameter Name="NB_CONSECUTIVE_TESTS" />
+		<Parameter Name="NB_CONSECUTIVE_TESTS2" />
+		<Parameter Name="NOMINAL_BUS_VOLTAGE_V" />
+		<Parameter Name="NOMINAL_BUS_VOLTAGE_V2" />
+		<Parameter Name="NOMINAL_CURRENT" />
+		<Parameter Name="NOMINAL_CURRENT2" />
+		<Parameter Name="OBS_MEAS_ERRORS_BEFORE_FAULTS" />
+		<Parameter Name="OBS_MEAS_ERRORS_BEFORE_FAULTS2" />
+		<Parameter Name="OBS_MINIMUM_SPEED_RPM" />
+		<Parameter Name="OBS_MINIMUM_SPEED_RPM2" />
+		<Parameter Name="OCP_INVERTINGINPUT_MODE" />
+		<Parameter Name="OCP_INVERTINGINPUT_MODE2" />
+		<Parameter Name="OCP_SELECTION" />
+		<Parameter Name="OCP_SELECTION2" />
+		<Parameter Name="OCPA_INVERTINGINPUT_MODE" />
+		<Parameter Name="OCPA_INVERTINGINPUT_MODE2" />
+		<Parameter Name="OCPA_SELECTION" />
+		<Parameter Name="OCPA_SELECTION2" />
+		<Parameter Name="OCPB_INVERTINGINPUT_MODE" />
+		<Parameter Name="OCPB_INVERTINGINPUT_MODE2" />
+		<Parameter Name="OCPB_SELECTION" />
+		<Parameter Name="OCPB_SELECTION2" />
+		<Parameter Name="OCPC_INVERTINGINPUT_MODE" />
+		<Parameter Name="OCPC_INVERTINGINPUT_MODE2" />
+		<Parameter Name="OCPC_SELECTION" />
+		<Parameter Name="OCPC_SELECTION2" />
+		<Parameter Name="OCPREF" />
+		<Parameter Name="OCPREF2" />
+		<Parameter Name="OFST" />
+		<Parameter Name="OFST2" />
+		<Parameter Name="ON_OVER_VOLTAGE" />
+		<Parameter Name="ON_OVER_VOLTAGE2" />
+		<Parameter Name="ONE_TOUCH_TUNING" />
+		<Parameter Name="OPAMP_SELECTION" />
+		<Parameter Name="OPAMP_SELECTION2" />
+		<Parameter Name="OPAMP1_INVERTINGINPUT" />
+		<Parameter Name="OPAMP1_INVERTINGINPUT2" />
+		<Parameter Name="OPAMP1_NONINVERTINGINPUT_PHA" />
+		<Parameter Name="OPAMP1_NONINVERTINGINPUT_PHA2" />
+		<Parameter Name="OPAMP1_NONINVERTINGINPUT_PHB" />
+		<Parameter Name="OPAMP1_NONINVERTINGINPUT_PHB2" />
+		<Parameter Name="OPAMP1_NONINVERTINGINPUT_PHC" /> 
+		<Parameter Name="OPAMP1_NONINVERTINGINPUT_PHC2" />
+		<Parameter Name="OPAMP1_SELECTION" />
+		<Parameter Name="OPAMP1_SELECTION2" />
+		<Parameter Name="OPAMP2_INVERTINGINPUT" />
+		<Parameter Name="OPAMP2_INVERTINGINPUT2" />
+		<Parameter Name="OPAMP2_NONINVERTINGINPUT_PHA" />
+		<Parameter Name="OPAMP2_NONINVERTINGINPUT_PHA2" />
+		<Parameter Name="OPAMP2_NONINVERTINGINPUT_PHB" />
+		<Parameter Name="OPAMP2_NONINVERTINGINPUT_PHB2" />
+		<Parameter Name="OPAMP2_NONINVERTINGINPUT_PHC" />
+		<Parameter Name="OPAMP2_NONINVERTINGINPUT_PHC2" />
+		<Parameter Name="OPAMP2_SELECTION" />
+		<Parameter Name="OPAMP2_SELECTION2" />
+		<Parameter Name="OPEN_LOOP_FOC" />
+		<Parameter Name="OPEN_LOOP_FOC2" />
+		<Parameter Name="OTF_STARTUP" />
+		<Parameter Name="OTF_STARTUP2" />
+		<Parameter Name="OV_TEMPERATURE_HYSTERESIS_C" />
+		<Parameter Name="OV_TEMPERATURE_HYSTERESIS_C2" />
+		<Parameter Name="OV_TEMPERATURE_PROT_ENABLING" />
+		<Parameter Name="OV_TEMPERATURE_PROT_ENABLING2" />
+		<Parameter Name="OV_TEMPERATURE_THRESHOLD_C" />
+		<Parameter Name="OV_TEMPERATURE_THRESHOLD_C2" />
+		<Parameter Name="OV_VOLTAGE_PROT_ENABLING" />
+		<Parameter Name="OV_VOLTAGE_PROT_ENABLING2" />
+		<Parameter Name="OV_VOLTAGE_THRESHOLD_V" />
+		<Parameter Name="OV_VOLTAGE_THRESHOLD_V2" />
+		<Parameter Name="OVERCURR_PROTECTION_HW_DISABLING" />
+		<Parameter Name="OVERCURR_PROTECTION_HW_DISABLING2" />
+		<Parameter Name="OVPREF" />
+		<Parameter Name="OVPREF2" />
+		<Parameter Name="PFC_ENABLED" />
+		<Parameter Name="PHASE_CURRENTS_CHANNEL" />
+		<Parameter Name="PHASE_CURRENTS_CHANNEL2" />
+		<Parameter Name="PHASE_U_CURR_CHANNEL" />
+		<Parameter Name="PHASE_U_CURR_CHANNEL2" />
+		<Parameter Name="PHASE_V_CURR_CHANNEL" />
+		<Parameter Name="PHASE_V_CURR_CHANNEL2" />
+		<Parameter Name="PHASE_W_CURR_CHANNEL" />
+		<Parameter Name="PHASE_W_CURR_CHANNEL2" />
+		<Parameter Name="PHASE1_DURATION" />
+		<Parameter Name="PHASE1_DURATION2" />
+		<Parameter Name="PHASE1_FINAL_CURRENT" />
+		<Parameter Name="PHASE1_FINAL_CURRENT2" />
+		<Parameter Name="PHASE1_FINAL_SPEED_RPM" />
+		<Parameter Name="PHASE1_FINAL_SPEED_RPM2" />
+		<Parameter Name="PHASE2_DURATION" />
+		<Parameter Name="PHASE2_DURATION2" />
+		<Parameter Name="PHASE2_FINAL_CURRENT" />
+		<Parameter Name="PHASE2_FINAL_CURRENT2" />
+		<Parameter Name="PHASE2_FINAL_SPEED_RPM" />
+		<Parameter Name="PHASE2_FINAL_SPEED_RPM2" />
+		<Parameter Name="PHASE3_DURATION" />
+		<Parameter Name="PHASE3_DURATION2" />
+		<Parameter Name="PHASE3_FINAL_CURRENT" />
+		<Parameter Name="PHASE3_FINAL_CURRENT2" />
+		<Parameter Name="PHASE3_FINAL_SPEED_RPM" />
+		<Parameter Name="PHASE3_FINAL_SPEED_RPM2" />
+		<Parameter Name="PHASE4_DURATION" />
+		<Parameter Name="PHASE4_DURATION2" />
+		<Parameter Name="PHASE4_FINAL_CURRENT" />
+		<Parameter Name="PHASE4_FINAL_CURRENT2" />
+		<Parameter Name="PHASE4_FINAL_SPEED_RPM" />
+		<Parameter Name="PHASE4_FINAL_SPEED_RPM2" />
+		<Parameter Name="PHASE5_DURATION" />
+		<Parameter Name="PHASE5_DURATION2" />
+		<Parameter Name="PHASE5_FINAL_CURRENT" />
+		<Parameter Name="PHASE5_FINAL_CURRENT2" />
+		<Parameter Name="PHASE5_FINAL_SPEED_RPM" />
+		<Parameter Name="PHASE5_FINAL_SPEED_RPM2" />
+		<Parameter Name="PID_FLUX_KD_DEFAULT" />
+		<Parameter Name="PID_FLUX_KD_DEFAULT2" />
+		<Parameter Name="PID_FLUX_KI_DEFAULT" />
+		<Parameter Name="PID_FLUX_KI_DEFAULT2" />
+		<Parameter Name="PID_FLUX_KP_DEFAULT" />
+		<Parameter Name="PID_FLUX_KP_DEFAULT2" />
+		<Parameter Name="PID_SPEED_KD_DEFAULT" />
+		<Parameter Name="PID_SPEED_KD_DEFAULT2" />
+		<Parameter Name="PID_SPEED_KI_DEFAULT" />
+		<Parameter Name="PID_SPEED_KI_DEFAULT2" />
+		<Parameter Name="PID_SPEED_KP_DEFAULT" />
+		<Parameter Name="PID_SPEED_KP_DEFAULT2" />
+		<Parameter Name="PID_TORQUE_KD_DEFAULT" />
+		<Parameter Name="PID_TORQUE_KD_DEFAULT2" />
+		<Parameter Name="PID_TORQUE_KI_DEFAULT" />
+		<Parameter Name="PID_TORQUE_KI_DEFAULT2" />
+		<Parameter Name="PID_TORQUE_KP_DEFAULT" />
+		<Parameter Name="PID_TORQUE_KP_DEFAULT2" />
+		<Parameter Name="PLL_KI_GAIN" />
+		<Parameter Name="PLL_KI_GAIN2" />
+		<Parameter Name="PLL_KP_GAIN" />
+		<Parameter Name="PLL_KP_GAIN2" />
+		<Parameter Name="PLLTUNING" />
+		<Parameter Name="POLE_PAIR_NUM" />
+		<Parameter Name="POLE_PAIR_NUM2" />
+		<Parameter Name="PWBDID" />
+		<Parameter Name="PWBDID2" />
+ 		<Parameter Name="PWM_FREQ_SCALING" />
+		<Parameter Name="PWM_FREQUENCY" />
+		<Parameter Name="PWM_FREQUENCY2" />
+		<Parameter Name="PWM_TIMER_SELECTION" />
+		<Parameter Name="PWM_TIMER_SELECTION2" />
+		<Parameter Name="R_BRAKE_SWITCH_OFF_THRES_V" />
+		<Parameter Name="R_BRAKE_SWITCH_OFF_THRES_V2" />
+		<Parameter Name="REGCONVADC" />
+		<Parameter Name="REGCONVADC2" />
+		<Parameter Name="REGULATION_EXECUTION_RATE" />
+		<Parameter Name="REGULATION_EXECUTION_RATE2" />
+		<Parameter Name="RS" />
+		<Parameter Name="RS2" />
+		<Parameter Name="RSHUNT" />
+		<Parameter Name="RSHUNT2" />
+		<Parameter Name="RTOS" />
+		<Parameter Name="SEGDIV" />
+		<Parameter Name="SEGDIV2" />
+		<Parameter Name="SERIAL_COM_CHANNEL1" />
+		<Parameter Name="SERIAL_COM_CHANNEL2" />
+		<Parameter Name="SERIAL_COM_MODE" />
+		<Parameter Name="SERIAL_COM_MOTOR" />
+		<Parameter Name="SERIAL_COMMUNICATION" />
+		<Parameter Name="SINGLE_SHUNT" />
+		<Parameter Name="SINGLE_SHUNT2" />
+		<Parameter Name="SINGLEDRIVE" />
+		<Parameter Name="SMOOTH_BRAKING_ACTION_ON_OVERVOLTAGE" />
+		<Parameter Name="SP_KDDIV" />
+		<Parameter Name="SP_KDDIV2" />
+		<Parameter Name="SP_KIDIV" />
+		<Parameter Name="SP_KIDIV2" />
+		<Parameter Name="SP_KPDIV" />
+		<Parameter Name="SP_KPDIV2" />
+		<Parameter Name="SPEED_BAND_LOWER_LIMIT" />
+		<Parameter Name="SPEED_BAND_LOWER_LIMIT2" />
+		<Parameter Name="SPEED_BAND_UPPER_LIMIT" />
+		<Parameter Name="SPEED_BAND_UPPER_LIMIT2" />
+		<Parameter Name="SPEED_FEEDBACK_CHECK" />
+		<Parameter Name="SPEED_FEEDBACK_CHECK2" />
+		<Parameter Name="SPEED_LOOP_FREQUENCY_HZ" />
+		<Parameter Name="SPEED_LOOP_FREQUENCY_HZ2" />
+		<Parameter Name="POSITION_LOOP_FREQUENCY_HZ" />
+		<Parameter Name="POSITION_LOOP_FREQUENCY_HZ2" />		
+		<Parameter Name="SPEED_SENSOR_SELECTION" />
+		<Parameter Name="SPEED_SENSOR_SELECTION2" />
+		<Parameter Name="START_STOP_BTN" />
+		<Parameter Name="START_STOP_GPIO_PIN" />
+		<Parameter Name="START_STOP_GPIO_PORT" />
+		<Parameter Name="ENC_USE_CH3" />
+		<Parameter Name="ENC_Z_GPIO_PIN" />
+		<Parameter Name="ENC_Z_GPIO_PORT" />
+		<Parameter Name="ENC_USE_CH32" />
+		<Parameter Name="ENC_Z_GPIO_PIN2" />
+		<Parameter Name="ENC_Z_GPIO_PORT2" />
+		<Parameter Name="STARTING_ANGLE_DEG" />
+		<Parameter Name="STARTING_ANGLE_DEG2" />
+		<Parameter Name="STATE_OBSERVER_CORDIC" />
+		<Parameter Name="STATE_OBSERVER_CORDIC2" />
+		<Parameter Name="STATE_OBSERVER_PLL" />
+		<Parameter Name="STATE_OBSERVER_PLL2" />
+		<Parameter Name="STM32F103x_HD" />
+		<Parameter Name="STM32F103x_LD" />
+		<Parameter Name="STM32F103x_MD" />
+		<Parameter Name="STM32PERFORMANCE" />
+		<Parameter Name="STM32VALUE" />
+		<Parameter Name="STO_FIFO_DEPTH_01HZ" />
+		<Parameter Name="STO_FIFO_DEPTH_01HZ2" />
+		<Parameter Name="STO_FIFO_DEPTH_DPP" />
+		<Parameter Name="STO_FIFO_DEPTH_DPP2" />
+		<Parameter Name="STO_HFI_RPM_TH" />
+		<Parameter Name="STO_HFI_RPM_TH2" />
+		<Parameter Name="SW_DEADTIME_NS" />
+		<Parameter Name="SW_DEADTIME_NS2" />
+		<Parameter Name="SW_OV_CURRENT_PROT_ENABLING" />
+		<Parameter Name="SW_OV_CURRENT_PROT_ENABLING2" />
+		<Parameter Name="T_MAX" />
+		<Parameter Name="T_MAX2" />
+		<Parameter Name="T0_C" />
+		<Parameter Name="T0_C2" />
+		<Parameter Name="TEMP_ADC_SAMPLING_TIME" />
+		<Parameter Name="TEMP_ADC_SAMPLING_TIME2" />
+		<Parameter Name="TEMP_FDBK_ADC" />
+		<Parameter Name="TEMP_FDBK_ADC2" />
+		<Parameter Name="TEMP_FDBK_CHANNEL" />
+		<Parameter Name="TEMP_FDBK_CHANNEL2" />
+		<Parameter Name="TEMPERATURE_READING" />
+		<Parameter Name="TEMPERATURE_READING2" />
+		<Parameter Name="TF_KDDIV" />
+		<Parameter Name="TF_KDDIV2" />
+		<Parameter Name="TF_KIDIV" />
+		<Parameter Name="TF_KIDIV2" />
+		<Parameter Name="TF_KPDIV" />
+		<Parameter Name="TF_KPDIV2" />
+		<Parameter Name="THREE_SHUNT" />
+		<Parameter Name="THREE_SHUNT_INDEPENDENT_RESOURCES" />
+		<Parameter Name="THREE_SHUNT_INDEPENDENT_RESOURCES2" />
+		<Parameter Name="THREE_SHUNT_SHARED_RESOURCES" />
+		<Parameter Name="THREE_SHUNT_SHARED_RESOURCES2" />
+		<Parameter Name="THREE_SHUNT2" />
+		<Parameter Name="TNOISE_NS" />
+		<Parameter Name="TNOISE_NS2" />
+		<Parameter Name="TRANSITION_DURATION" />
+		<Parameter Name="TRANSITION_DURATION2" />
+		<Parameter Name="TRISE_NS" />
+		<Parameter Name="TRISE_NS2" />
+		<Parameter Name="UD_VOLTAGE_THRESHOLD_V" />
+		<Parameter Name="UD_VOLTAGE_THRESHOLD_V2" />
+		<Parameter Name="UID" />
+		<Parameter Name="USART_SELECTION" />
+		<Parameter Name="USE_INTERNAL_OPAMP" />
+		<Parameter Name="USE_INTERNAL_OPAMP2" />
+		<Parameter Name="USE_STGAP1S" />
+		<Parameter Name="UV_VOLTAGE_PROT_ENABLING" />
+		<Parameter Name="UV_VOLTAGE_PROT_ENABLING2" />
+		<Parameter Name="V0_V" />
+		<Parameter Name="V0_V2" />
+		<Parameter Name="VARIANCE_THRESHOLD" />
+		<Parameter Name="VARIANCE_THRESHOLD2" />
+		<Parameter Name="VBUS_ADC" />
+		<Parameter Name="VBUS_ADC_SAMPLING_TIME" />
+		<Parameter Name="VBUS_ADC_SAMPLING_TIME2" />
+		<Parameter Name="VBUS_ADC2" />
+		<Parameter Name="VBUS_CHANNEL" />
+		<Parameter Name="VBUS_CHANNEL2" />
+		<Parameter Name="VBUS_PARTITIONING_FACTOR" />
+		<Parameter Name="VBUS_PARTITIONING_FACTOR2" />
+		<Parameter Name="VIEW_ENCODER_FEEDBACK" />
+		<Parameter Name="VIEW_ENCODER_FEEDBACK2" />
+		<Parameter Name="CURRCTRLFREQUENCY" />
+		<Parameter Name="CURR_KIDIV" />
+		<Parameter Name="CURR_KPDIV" />
+		<Parameter Name="FAULTPIN" />
+		<Parameter Name="FAULTPOLARITY" />
+		<Parameter Name="FAULTPORT" />
+		<Parameter Name="ISAMPLINGTIMEREAL" />
+		<Parameter Name="MAINSFREQ" />
+		<Parameter Name="OUTPUTPOWERACTIVATION" />
+		<Parameter Name="OUTPUTPOWERDEACTIVATION" />
+		<Parameter Name="PFCAMPLGAIN" />
+		<Parameter Name="PFCSHUNTRESISTOR" />
+		<Parameter Name="PID_CURR_KI_DEFAULT" />
+		<Parameter Name="PID_CURR_KP_DEFAULT" />
+		<Parameter Name="PID_VOLT_KI_DEFAULT" />
+		<Parameter Name="PID_VOLT_KP_DEFAULT" />
+		<Parameter Name="PROPDELAYOFF" />
+		<Parameter Name="PROPDELAYON" />
+		<Parameter Name="PWMFREQ" />
+		<Parameter Name="SHARED_SIGNAL_ENABLE" />
+		<Parameter Name="SHARED_SIGNAL_ENABLE2" />
+		<Parameter Name="STARTUPDURATION" />
+		<Parameter Name="SWOVERVOLTAGETH" />
+		<Parameter Name="SYNCFILTER" />
+		<Parameter Name="TESTENV" />
+		<Parameter Name="VMAINS_PARTITIONING_FACTOR" />
+		<Parameter Name="VOLTAGEREFERENCE" />
+		<Parameter Name="VOLTCTRLFREQUENCY" />
+		<Parameter Name="VOLT_KIDIV" />
+		<Parameter Name="VOLT_KPDIV" />
+		<Parameter Name="DRIVE_TYPE" />
+	</RefMode>
+	<RefMode Name="SixStep">
+		<ConfigForMode>MC_SixStep</ConfigForMode>
+		<Parameter Name="DEFAULT_TARGET_SPEED_RPM" />
+		<Parameter Name="PID_SPEED_KP_DEFAULT" />
+		<Parameter Name="PID_SPEED_KI_DEFAULT" />
+		<Parameter Name="PID_SPEED_KD_DEFAULT" />
+		<Parameter Name="SP_KPDIV" />
+		<Parameter Name="VBUS_PARTITIONING_FACTOR" />
+		<Parameter Name="RSHUNT" />
+		<Parameter Name="DRIVE_TYPE" />
+		<Parameter Name="SINGLEDRIVE" />
+		<Parameter Name="DUALDRIVE" />
+		<Parameter Name="MOTOR_REF" />
+		<Parameter Name="SIX_STEP_SENSING" />
+		<Parameter Name="SIX_STEP_CONTROL_MODE" />
+		<Parameter Name="SIX_STEP_SPEED_LOOP" />
+		<Parameter Name="SIX_STEP_SET_POINT_RAMPING" />
+		<Parameter Name="SIX_STEP_THREE_PWM" />
+		<Parameter Name="SIX_STEP_POWER_BOARD" />
+		<Parameter Name="SERIAL_COMMUNICATION" />
+	</RefMode>
+	<ModeLogicOperator Name="XOR">
+		<Mode Name="Enabled">
+			<ModeLogicOperator Name="XOR">
+				<Mode Name="Enabled">
+					<SignalLogicalOp Name="AND">
+						<Signal IOMode="" Name="MC_ENABLED" />
+					</SignalLogicalOp>
+					<Semaphore>S_MOTORCONTROL</Semaphore>
+				</Mode>
+			</ModeLogicOperator>
+		</Mode>
+		<Mode Name="SixStep">
+			<ModeLogicOperator Name="XOR">
+				<Mode Name="SixStep">
+					<SignalLogicalOp Name="AND">
+						<Signal IOMode="" Name="MC_ENABLED" />
+					</SignalLogicalOp>
+					<Semaphore>S_MOTORCONTROL</Semaphore>
+				</Mode>
+			</ModeLogicOperator>
+		</Mode>
+	</ModeLogicOperator>
+	<RefSignal Name="MC_ENABLED" Virtual="true" />
+</IP>

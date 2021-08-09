@@ -1,0 +1,80 @@
+<motor id="BR2804-1700kv" label="Bull Running BR2804-1700kv" img="" description="External rotor type - 7 poles pairs brushless - DC motor">
+  <Mp>
+    <user_data> 
+      <ctrl_board name="NUCLEO-F302R8"/>
+      <pwr_board name="X-NUCLEO-IHM07M1 3Sh"/>
+      <motors>
+        <pole_pairs>7</pole_pairs>
+        <max_speed>15000</max_speed>
+        <max_current>2.8</max_current>
+        <v_bus>48</v_bus>
+        <ld_lq_ratio>1</ld_lq_ratio>
+        <sm_pmsm>true</sm_pmsm>
+        <i_pmsm>false</i_pmsm>
+      </motors>
+    </user_data>
+    <profile_data>
+      <motors>
+        <binaryFile name="C:\VSS\MC\3PH\0051.15\SOFTWARE\PC\STMotorProfiler 0.9.0\resources\assets\fws\NUCLEO-F302R8#X-NUCLEO-IHM07M1 3Sh#(4.3.0)#(312754AD).hex"/>
+        <electrical>
+          <max_current>1.20</max_current>
+          <v_bus>12.0</v_bus>
+          <ls>0.000018</ls>
+          <rs>0.11</rs>
+          <ke>0.4</ke>
+        </electrical>
+        <mechanical>
+          <friction>4.372922433049098e-7</friction>
+          <inertia>3.4808465443347814e-7</inertia>
+          <max_speed>15000</max_speed>
+          <max_speed_startup>3333</max_speed_startup>
+          <acceleration>1000</acceleration>
+        </mechanical>
+      </motors>
+      <operation_condition>
+        <pwm_frequency>30000</pwm_frequency>
+        <foc_rate>1</foc_rate>
+        <cutoff_frequency>6000</cutoff_frequency>
+      </operation_condition>
+    </profile_data>
+  </Mp>
+  <system type="motor 1">
+    <motor version="1.0">
+      <name>Motor</name>
+      <uid>M</uid>
+      <type>M</type>
+      <handler_name>M</handler_name>
+      <board_name>Bull Running BR2804-1700kv</board_name>
+      <vars>
+        <var version="1.0" type="MC_List" name="I/SM-PMSM" value="1">
+          <items>
+            <item tag="1" text="Internal PMSM"/>
+            <item tag="0" text="Surface Mounted PMSM"/>
+          </items>
+        </var>
+        <var version="1.0" type="MC_Int" name="Pole Pairs" value="7"/>
+        <var version="1.0" type="MC_Int" name="Max Rated Speed" value="15000"/>
+        <var version="1.0" type="MC_Double" name="Nominal Current" value="1.20"/>
+        <var version="1.0" type="MC_Double" name="Nominal DC Voltage" value="12.0"/>
+        <var version="1.0" type="MC_Double" name="Rs" value="0.11"/>
+        <var version="1.0" type="MC_Double" name="Ld" value="0.018"/>
+        <var version="1.0" type="MC_Double" name="Lq" value="0.018"/>
+        <var version="1.0" type="MC_Double" name="Ls" value="0.018"/>
+        <var version="1.0" type="MC_Double" name="ld_lq_ratio" value="1"/>
+        <var version="1.0" type="MC_Double" name="B-EmfConstant" value="0.4"/>
+        <var version="1.0" type="MC_Double" name="inertia" value="0.34808465443347814"/>
+        <var version="1.0" type="MC_Double" name="friction" value="0.4372922433049098"/>
+				<var version="1.0" type="MC_Bool" name="Hall sensors" value="false" />
+				<var version="1.0" type="MC_List" name="Sensors displacement" value="1">
+					<items>
+						<item tag="60" text="60" />
+						<item tag="120" text="120" />
+					</items>
+				</var>
+				<var version="1.0" type="MC_Int" name="Placement electrical angle" value="300" />
+				<var version="1.0" type="MC_Bool" name="Quadrature encoder" value="false" />
+				<var version="1.0" type="MC_Int" name="Pulses per mechanical revolution" value="400" />
+      </vars>
+    </motor>
+  </system>
+</motor>

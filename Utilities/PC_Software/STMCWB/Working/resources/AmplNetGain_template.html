@@ -1,0 +1,165 @@
+<html>
+<head>
+<title>Amplifying Network Gain</title>
+<style>
+.main_div {
+	background-color:white;
+	text-align:center;
+	--border: 1px dotted #aaaaaa;
+	width:950px;
+	padding:10px;
+	font-family:arial;
+	font-size: 20px;
+}
+.title {
+	margin-top:20px;
+	font-family:arial;
+	font-size: 30px;
+	font-weight: bold;
+	color:#000099;
+}
+.description {
+	font-family:arial;
+	font-size: 18px;
+	text-align:justify;
+	margin-top:40px;
+	margin-bottom:40px;
+}
+.tab_params {
+	margin-top:40px;
+	width:700px;
+}
+.tab_params td {
+	font-family:arial;
+	font-size: 12px;
+	font-weight: normal;
+	vertical-align: text-top;
+	border:1px dotted #bbbbbb;
+}
+.tab_td1 {
+	text-align: left;
+	width:250px;
+}
+.tab_td2 {
+	text-align: right;
+	padding-right:50px;
+	width:80px;
+}
+.tab_td3 {
+	text-align: center;
+	width:70px;
+}
+.tab_td4 {
+	text-align: justify;
+	width:300px;
+}
+.tab_col1 {
+}
+.tab_col2 {
+	font-weight: bold;
+}
+.tab_col3 {
+}
+.tab_col4 {
+}
+
+
+.tab_title {
+	font-family:arial;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: bold;
+	color:#000099;
+}
+.tab_header {
+	text-align: center;
+	font-family: arial;
+	font-size: 14px;
+	font-weight: bold;
+	color:#990000;
+}
+
+/* START Footer */
+.footer_container {
+  color: #828283;
+  width:950px;
+  text-align:center;
+
+  padding-top: 10px;
+  padding-bottom: 5px;
+  line-height: 15px;
+  margin: 30 auto 0 auto;
+
+}
+.footer_warranty {
+	margin-top: 10px;
+	margin-bottom: 10px;
+  color: gray;
+  font-size: 10px;
+  text-align: justify;
+}
+
+.footer_container ul {
+  display: inline-block;
+  overflow:hidden;
+  text-align: center;
+  margin:0 auto 0 auto;
+  padding:0;
+  list-style:none;
+}
+.footer_container ul li{
+  float:left;
+  padding:0 3px 0 4px;
+  margin:0 1px 0 -1px;
+}
+/* END Footer */
+</style>
+</head>
+<body style="background-color:#eeeeee;">
+<center>
+<div class="main_div">
+<div class="title"><img src="@@FILES_PATH@@header.png" BORDER="0" ALT="Amplying Network Gain"  width="938" height="100"/></div>
+<div class="description"></div>
+<img src="@@FILES_PATH@@@@IMG@@" BORDER="0" ALT="Network Gain"  width="400" height="260" /><br />
+<table class="tab_params" border="0" cellpadding="4" cellspacing="0" align="center">
+<tr><td colspan="4"><span class="tab_title">Parameters</td></tr>
+<tr>
+	<td class="tab_header">Name</td>
+    <td class="tab_header">Value</td>
+    <td class="tab_header">Unit</td>
+    <td class="tab_header">Description</td>
+</tr>
+@@IN_TAB@@
+</table>
+<br /><br /> 
+<table class="tab_params" border="0" cellpadding="4" cellspacing="0" align="center">
+<tr><td colspan="4"><span class="tab_title">Results</td></tr>
+<tr>
+	<td class="tab_header">Name</td>
+    <td class="tab_header">Value</td>
+    <td class="tab_header">Unit</td>
+    <td class="tab_header">Description</td>
+</tr>
+@@OUT_TAB@@
+</table>
+
+<!-- FOOTER -->
+    <div class="footer_container" style="z-order: 0">
+        <ul class="footer_font">
+            <li>All rights reserved &copy;2016
+                <a target="_blank" href="http://www.st.com">STMicroelectronics</a></li>
+        </ul>
+        <br /><br />
+		<div class="footer_warranty">
+STMicroelectronics and/or its licensors do not warrant the accuracy or completeness of this specification or any information contained therein.
+STMicroelectronics and/or its licensors do not warrant that this design will meet the specifications, will be suitable for your application or fit for any particular purpose, or will operate in an implementation.
+STMicroelectronics and/or its licensors do not warrant that the design is production worthy.
+You should completely validate and test your design implementation to confirm the system functionality for your application.
+		</div>
+    </div>
+	
+</div>
+
+</center>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<motor id="motorLowVoltage" label="Generic Low voltage &lt;= 50V" img="" description="Motor low voltage ">
+  <system type="motor 1">
+    <motor version="1.0">
+      <name>Motor</name>
+      <uid>M</uid>
+      <type>M</type>
+      <handler_name>M</handler_name>
+      <board_name>Generic Low voltage &lt;= 50V</board_name>
+      <vars>
+        <var version="1.0" type="MC_List" name="I/SM-PMSM" value="1">
+          <items>
+            <item tag="1" text="Internal PMSM"/>
+            <item tag="0" text="Surface Mounted PMSM"/>
+          </items>
+        </var>
+        <var version="1.0" type="MC_Int" name="Pole Pairs" value="2"/>
+        <var version="1.0" type="MC_Int" name="Max Rated Speed" value="4000"/>
+        <var version="1.0" type="MC_Double" name="Nominal Current" value="1.8000000000000000"/>
+        <var version="1.0" type="MC_Double" name="Nominal DC Voltage" value="24.000000000000"/>
+        <var version="1.0" type="MC_Double" name="Rs" value="0.350000000000000000"/>
+        <var version="1.0" type="MC_Double" name="Ld" value="0.600000000000000000"/>
+        <var version="1.0" type="MC_Double" name="Lq" value="0.600000000000000000"/>
+        <var version="1.0" type="MC_Double" name="Ls" value="0.600000000000000000"/>
+        <var version="1.0" type="MC_Double" name="ld_lq_ratio" value="1"/>
+        <var version="1.0" type="MC_Double" name="B-EmfConstant" value="4.00000000000"/>
+        <var version="1.0" type="MC_Double" name="inertia" value="5.0"/>
+        <var version="1.0" type="MC_Double" name="friction" value="14.0"/>
+      </vars>
+    </motor>
+  </system>
+</motor>

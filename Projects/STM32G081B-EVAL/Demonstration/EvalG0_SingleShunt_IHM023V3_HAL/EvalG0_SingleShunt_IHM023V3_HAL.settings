@@ -1,0 +1,6 @@
+#
+#Thu Dec 20 11:02:24 CET 2018
+selected.firmware_ver=1.0.0
+selected.cubemx=5.0.0
+selected.toolchain=IAR EWARM
+selected.driver=HAL - Hardware Abstraction Layer

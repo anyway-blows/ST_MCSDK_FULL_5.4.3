@@ -1,0 +1,80 @@
+<motor id="GBM2804H-100T" label="GimBal GBM2804H-100T" img="" description="iPower GBM2804H-100T Brushless Gimbal Motor">
+  <Mp>
+    <user_data>
+      <ctrl_board name="NUCLEO-F303RE"/>
+      <pwr_board name="X-NUCLEO-IHM16M1 3Sh"/>
+      <motors>
+        <pole_pairs>7</pole_pairs>
+        <max_speed>1600</max_speed>
+        <max_current>0.15</max_current>
+        <v_bus>45</v_bus>
+        <ld_lq_ratio>1</ld_lq_ratio>
+        <sm_pmsm>true</sm_pmsm>
+        <i_pmsm>false</i_pmsm>
+      </motors>
+    </user_data>
+    <profile_data>
+      <motors>
+        <binaryFile name="C:\Program Files (x86)\STMicroelectronics\MC_SDK_5.2.0\Utilities\PC_Software\STMotorProfiler\resources\assets\fws\NUCLEO-F303RE#X-NUCLEO-IHM16M1 3Sh#(4.3.0)#(31FA2B79).hex"/>
+        <electrical>
+          <max_current>0.15000000596046448</max_current>
+          <v_bus>12.05434513092041</v_bus>
+          <ls>0.0010584115516394377</ls>
+          <rs>5.29205846786499</rs>
+          <ke>4.963876247406006</ke>
+        </electrical>
+        <mechanical>
+          <friction>9.371463534080249e-7</friction>
+          <inertia>2.9145252256057574e-7</inertia>
+          <max_speed>1572</max_speed>
+          <max_speed_startup>582</max_speed_startup>
+          <acceleration>500</acceleration>
+        </mechanical>
+      </motors>
+      <operation_condition>
+        <pwm_frequency>30000</pwm_frequency>
+        <foc_rate>1</foc_rate>
+        <cutoff_frequency>6000</cutoff_frequency>
+      </operation_condition>
+    </profile_data>
+  </Mp>
+  <system type="motor 1">
+    <motor version="1.0">
+      <name>Motor</name>
+      <uid>M</uid>
+      <type>M</type>
+      <handler_name>M</handler_name>
+      <board_name>GimBal GBM2804H-100T</board_name>
+      <vars>
+        <var version="1.0" type="MC_List" name="I/SM-PMSM" value="1">
+          <items>
+            <item tag="1" text="Internal PMSM"/>
+            <item tag="0" text="Surface Mounted PMSM"/>
+          </items>
+        </var>
+        <var version="1.0" type="MC_Int" name="Pole Pairs" value="7"/>
+        <var version="1.0" type="MC_Int" name="Max Rated Speed" value="1572"/>
+        <var version="1.0" type="MC_Double" name="Nominal Current" value="0.15000000596046448"/>
+        <var version="1.0" type="MC_Double" name="Nominal DC Voltage" value="12.05434513092041"/>
+        <var version="1.0" type="MC_Double" name="Rs" value="5.29205846786499"/>
+        <var version="1.0" type="MC_Double" name="Ld" value="1.0584115516394377"/>
+        <var version="1.0" type="MC_Double" name="Lq" value="1.0584115516394377"/>
+        <var version="1.0" type="MC_Double" name="Ls" value="1.0584115516394377"/>
+        <var version="1.0" type="MC_Double" name="ld_lq_ratio" value="1"/>
+        <var version="1.0" type="MC_Double" name="B-EmfConstant" value="4.963876247406006"/>
+        <var version="1.0" type="MC_Double" name="inertia" value="0.29145252256057574"/>
+        <var version="1.0" type="MC_Double" name="friction" value="0.9371463534080249"/>
+        <var version="1.0" type="MC_Bool" name="Hall sensors" value="false"/>
+        <var version="1.0" type="MC_List" name="Sensors displacement" value="1">
+          <items>
+            <item tag="60" text="60"/>
+            <item tag="120" text="120"/>
+          </items>
+        </var>
+        <var version="1.0" type="MC_Int" name="Placement electrical angle" value="300"/>
+        <var version="1.0" type="MC_Bool" name="Quadrature encoder" value="false"/>
+        <var version="1.0" type="MC_Int" name="Pulses per mechanical revolution" value="400"/>
+      </vars>
+    </motor>
+  </system>
+</motor>

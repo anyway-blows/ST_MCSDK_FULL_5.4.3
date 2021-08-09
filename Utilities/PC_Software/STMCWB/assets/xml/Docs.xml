@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<info_links>
+    <docItems>
+        <docItem docType="HTML" href="https://www.st.com/en/embedded-software/x-cube-mcsdk.html" toolTipText="Navigate on STM32 MCSDK Web Page for the latest updates" >STM32 MCSDK Web page</docItem>
+        <separator/>
+        <docItem docType="PDF" href="../../../Documentation\en.DM00505156.pdf" toolTipText="Application Note AN5166" >Guidelines for control and customization of power boards</docItem>
+        <docItem docType="PDF" href="../../../Documentation\en.DM00477952.pdf" toolTipText="Application Note AN5143" >How to migrate MC application from SDK v4.3 to v5.x</docItem>
+        <docItem docType="PDF" href="../../../Documentation\en.DM00486148.pdf" toolTipText="User's Manual UM2380" >STM32 motor control SDK v5.x - Tools</docItem>
+        <docItem docType="PDF" href="../../../Documentation\en.DM00490980.pdf" toolTipText="User's Manual UM2392" >STM32 motor control SDK5.x - Firmware</docItem>
+        <docItem docType="PDF" href="../../../Documentation\en.DM00484271.pdf" toolTipText="Getting Started UM2374" >Getting started with STM32 motor control SDK v5.x</docItem>
+        <separator/>
+        <docItem docType="CHM" href="../../../Documentation\MotorControlSDKFirmware.chm" toolTipText="Firmware reference documentation" >Firmware reference documentation</docItem>
+        <separator/>
+        <docItem docType="HTML" href="../../../Release Notes for X-Cube-MCSDK.html" toolTipText="Release Notes for X-Cube-MCSDK" >Release Note</docItem>
+    </docItems>
+    <helpItems>
+      <separator/>
+      <helpItem docType="HTML" href="https://community.st.com/s/" toolTipText="Navigate on ST Community" >ST Community</helpItem>
+
+      <helpBtnItem docType="PDF" href="../../../Documentation\en.DM00486148.pdf" toolTipText="User's Manual UM2380">help_Button</helpBtnItem>
+    </helpItems>
+</info_links>

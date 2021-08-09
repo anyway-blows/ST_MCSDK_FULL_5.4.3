@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<examples>
+    <simple_examples dir ="ExampleProjects">
+        <!--<file name ="P-NUCLEO-IHM001-BullRunning.stmcx"                     label ="P-NUCLEO-IHM001-BullRunning"                        section="PMSM"/>
+        <file name ="NUCLEO_L452RE_IHM07M1_SHINANO_1S_PLL.stmcx"            label ="NUCLEO_L452RE_IHM07M1_SHINANO_1S_PLL"               section="PMSM"/>
+        <file name ="NUCLEO_L452RE_IHM07M1_SHINANO_3S_PLL.stmcx"            label ="NUCLEO_L452RE_IHM07M1_SHINANO_3S_PLL"               section="PMSM"/>
+        <file name ="NUCLEO_L476RG_IHM07M1_SHINANO_3S_PLL.stmcx"            label ="NUCLEO_L476RG_IHM07M1_SHINANO_3S_PLL"               section="PMSM"/>
+        <file name ="NUCLEO-F746ZG_IHM07M1_SHINANO_3S_PLL.stmcx"            label ="NUCLEO-F746ZG_IHM07M1_SHINANO_3S_PLL"               section="PMSM"/>
+        <file name ="STM32F476_IHM07M1_1S_SHINANO_PLL.stmcx"                label ="STM32F476_IHM07M1_1S_SHINANO_PLL"                   section="PMSM"/>
+        <file name ="STM32F476_IHM023V3_3S_SHINANO_PLL.stmcx="              label ="STM32F476_IHM023V3_3S_SHINANO_PLL"                  section="PMSM"/>
+        <file name ="NUCLEO-F303RE-X-NUCLEO-IHM16M1-GimBal.stmcx"           label ="NUCLEO-F303RE-X-NUCLEO-IHM16M1-GimBal"              section="PMSM"/>
+        <file name ="NUCLEO-F446RE_IHM07M1_BULLRUNNING_3S_PLL.stmcx"        label ="NUCLEO-F446RE_IHM07M1_BULLRUNNING_3S_PLL"           section="PMSM"/>
+        <file name ="NUCLEO-F446RE_IHM07M1_SHINANO_1S_CORDIC.stmcx"         label ="NUCLEO-F446RE_IHM07M1_SHINANO_1S_CORDIC"            section="PMSM"/>
+        <file name ="NUCLEO-F446RE_IHM07M1_SHINANO_3S_CORDIC.stmcx"         label ="NUCLEO-F446RE_IHM07M1_SHINANO_3S_CORDIC"            section="PMSM"/>
+        <file name ="NUCLEO_F103RB_LD_IHM07M1_SHINANO_1S_STO_PLL.stmcx"     label ="NUCLEO_F103RB_LD_IHM07M1_SHINANO_1S_STO_PLL"        section="PMSM"/>
+        <file name ="NUCLEO_F103RB_MD_IHM07M1_SHINANO_3S_STO_PLL.stmcx"     label ="NUCLEO_F103RB_MD_IHM07M1_SHINANO_3S_STO_PLL"        section="PMSM"/>
+        <file name ="STM3210E-EVAL_IHM07M1_SHINANO_1S_ENC.stmcx"            label ="STM3210E-EVAL_IHM07M1_SHINANO_1S_ENC"               section="PMSM"/>
+        <file name ="STM3210E-EVAL_IHM07M1_SHINANO_1S_HALL.stmcx"           label ="STM3210E-EVAL_IHM07M1_SHINANO_1S_HALL"              section="PMSM"/>
+        <file name ="STM3210E-EVAL_IHM07M1_SHINANO_3S_ENC_FF.stmcx"         label ="STM3210E-EVAL_IHM07M1_SHINANO_3S_ENC_FF"            section="PMSM"/>
+        <file name ="STM3210E-EVAL_IHM07M1_SHINANO_3S_HALL.stmcx"           label ="STM3210E-EVAL_IHM07M1_SHINANO_3S_HALL"              section="PMSM"/>
+        <file name ="NUCLEO-F303RE-X-NUCLEO-IHM07M1-BullRunning.stmcx"      label ="NUCLEO-F303RE-X-NUCLEO-IHM07M1-BullRunning"         section="PMSM"/>
+        <file name ="NUCLEO-F303RE-X-NUCLEO-IHM08M1-Shinano.stmcx"          label ="NUCLEO-F303RE-X-NUCLEO-IHM08M1-Shinano"             section="PMSM"/>
+        <file name ="NUCLEO-F302R8-X-NUCLEO-IHM08M1-Shinano.stmcx"          label ="NUCLEO-F302R8-X-NUCLEO-IHM08M1-Shinano"             section="PMSM"/>
+        <file name ="P-NUCLEO-IHM001-Shinano.stmcx"                         label ="P-NUCLEO-IHM001-Shinano"                            section="PMSM"/>
+        <file name ="STM32303E-EVAL-IHM045V1-Shinano-SINGLE-DRIVE.stmcx"	label ="STM32303E-EVAL-IHM045V1-Shinano-SINGLE-DRIVE"       section="PMSM"/>
+        <file name ="STM32303E-EVAL-IHM045V1-Shinano-DUAL-DRIVE.stmcx"      label ="STM32303E-EVAL-IHM045V1-Shinano-DUAL-DRIVE"         section="PMSM"/>
+        <file name ="STEVAL-SPIN3201-Shinano.stmcx"                         label ="STEVAL-SPIN3201-Shinano-SINGLE-DRIVE"               section="PMSM"/>
+        <file name ="STEVAL-SPIN3201 - BullRunning.stmcx"                   label ="STEVAL-SPIN3201-BullRunning-SINGLE-DRIVE"           section="PMSM"/>
+        <file name ="STEVAL-SPIN3202 - BullRunning.stmcx"                   label ="STEVAL-SPIN3202-BullRunning-SINGLE-DRIVE"           section="PMSM"/>
+        <file name ="NUCLEO-F303RE-IPM05F-Shinano.stmcx"                    label ="NUCLEO-F303RE-IPM05F-Shinano"                       section="PMSM"/>
+        <file name ="NUCLEO-F303RE-IPM10B-Shinano.stmcx"                    label ="NUCLEO-F303RE-IPM10B-Shinano"                       section="PMSM"/>
+        <file name ="NUCLEO-F303RE-IPM15B-Shinano.stmcx"                    label ="NUCLEO-F303RE-IPM15B-Shinano"                       section="PMSM"/>
+        <file name ="STM3240G-EVAL-IHM023V3-Shinano.stmcx"                  label ="STM3240G-EVAL-IHM023V3-Shinano"                     section="PMSM"/>-->
+    </simple_examples>
+    <mcsdk_examples dir="../../../Projects">
+        <file name ="P-NUCLEO-IHM001/Demonstration/Potentiometer/Potentiometer.stmcx"                label ="Speed ramp with Potentiometer on P-NUCLEO-IHM001 kit"                  section="PMSM" copy_all_files="true" />
+        <file name ="P-NUCLEO-IHM001/Demonstration/PotentiometerAdvance/PotentiometerAdvance.stmcx"  label ="Speed ramp with Potentiometer on P-NUCLEO-IHM001 kit -- Advanced"           section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F303RE/Demonstration/NUCLEO-F303RE-X-NUCLEO-IHM16M1-GimBal/NUCLEO-F303RE-X-NUCLEO-IHM16M1-GimBal.stmcx" label ="Gimbal motor" />
+        <file name ="NUCLEO-F303RE/Demonstration/SawToothRamp/SawToothRamp.stmcx"                    label ="Saw tooth speed ramp"                   section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F303RE/Demonstration/RampCCMRAM/RampCCMRAM.stmcx"                        label ="Speed ramp and CCMRAM"                     section="PMSM" copy_all_files="true" />
+        <file name ="STM32303E-EVAL/Demonstration/DualDriveCCMRAM/DualDriveCCMRAM.stmcx"             label ="Dual Drive and CCMRAM"                section="PMSM" copy_all_files="true" />
+        <file name ="P-NUCLEO-IHM001/Demonstration/Freertos/Freertos.stmcx"                          label ="Free RTOS on P-NUCLEO-IHM001 kit"                  section="PMSM" copy_all_files="true" />
+        <file name ="STEVAL-IHM034V2/Demonstration/PFC/PFC.stmcx"                                    label ="Power Factor Correction"                            section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F072RB/Demonstration/ST_NUCLEO_F072_IHM07_SHINANO_A/ST_NUCLEO_F072_IHM07_SHINANO_A.stmcx" label="ST_NUCLEO_F072_IHM07_SHINANO_A" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F072RB/Demonstration/ST_NUCLEO_F072_IHM07_SHINANO_B/ST_NUCLEO_F072_IHM07_SHINANO_B.stmcx" label="ST_NUCLEO_F072_IHM07_SHINANO_B" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F072RB/Demonstration/ST_NUCLEO_F072_IHM07_SHINANO_C/ST_NUCLEO_F072_IHM07_SHINANO_C.stmcx" label="ST_NUCLEO_F072_IHM07_SHINANO_C" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F072RB/Demonstration/ST_NUCLEO_F072_IHM07_SHINANO_D/ST_NUCLEO_F072_IHM07_SHINANO_D.stmcx" label="ST_NUCLEO_F072_IHM07_SHINANO_D" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F072RB/Demonstration/ST_NUCLEO_F072_IHM07_SHINANO_E/ST_NUCLEO_F072_IHM07_SHINANO_E.stmcx" label="ST_NUCLEO_F072_IHM07_SHINANO_E" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F302R8/Demonstration/ST_NUCLEO_F302_IHM07_SHINANO_A/ST_NUCLEO_F302_IHM07_SHINANO_A.stmcx" label="ST_NUCLEO_F302_IHM07_SHINANO_A" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F302R8/Demonstration/ST_NUCLEO_F302_IHM07_SHINANO_B/ST_NUCLEO_F302_IHM07_SHINANO_B.stmcx" label="ST_NUCLEO_F302_IHM07_SHINANO_B" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F302R8/Demonstration/ST_NUCLEO_F302_IHM07_SHINANO_C/ST_NUCLEO_F302_IHM07_SHINANO_C.stmcx" label="ST_NUCLEO_F302_IHM07_SHINANO_C" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F302R8/Demonstration/ST_NUCLEO_F302_IHM07_SHINANO_D/ST_NUCLEO_F302_IHM07_SHINANO_D.stmcx" label="ST_NUCLEO_F302_IHM07_SHINANO_D" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F302R8/Demonstration/ST_NUCLEO_F302_IHM07_SHINANO_E/ST_NUCLEO_F302_IHM07_SHINANO_E.stmcx" label="ST_NUCLEO_F302_IHM07_SHINANO_E" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F401RE/Demonstration/ST_NUCLEO_F401RE_IHM07_SHINANO_A/ST_NUCLEO_F401RE_IHM07_SHINANO_A.stmcx" label="ST_NUCLEO_F401RE_IHM07_SHINANO_A" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F401RE/Demonstration/ST_NUCLEO_F401RE_IHM07_SHINANO_B/ST_NUCLEO_F401RE_IHM07_SHINANO_B.stmcx" label="ST_NUCLEO_F401RE_IHM07_SHINANO_B" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F401RE/Demonstration/ST_NUCLEO_F401RE_IHM07_SHINANO_C/ST_NUCLEO_F401RE_IHM07_SHINANO_C.stmcx" label="ST_NUCLEO_F401RE_IHM07_SHINANO_C" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F401RE/Demonstration/ST_NUCLEO_F401RE_IHM07_SHINANO_D/ST_NUCLEO_F401RE_IHM07_SHINANO_D.stmcx" label="ST_NUCLEO_F401RE_IHM07_SHINANO_D" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F401RE/Demonstration/ST_NUCLEO_F401RE_IHM07_SHINANO_E/ST_NUCLEO_F401RE_IHM07_SHINANO_E.stmcx" label="ST_NUCLEO_F401RE_IHM07_SHINANO_E" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F746ZG/Demonstration/ST_NUCLEO_F746_IHM07_SHINANO_A/ST_NUCLEO_F746_IHM07_SHINANO_A.stmcx" label="ST_NUCLEO_F746_IHM07_SHINANO_A" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F746ZG/Demonstration/ST_NUCLEO_F746_IHM07_SHINANO_B/ST_NUCLEO_F746_IHM07_SHINANO_B.stmcx" label="ST_NUCLEO_F746_IHM07_SHINANO_B" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F746ZG/Demonstration/ST_NUCLEO_F746_IHM07_SHINANO_C/ST_NUCLEO_F746_IHM07_SHINANO_C.stmcx" label="ST_NUCLEO_F746_IHM07_SHINANO_C" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F746ZG/Demonstration/ST_NUCLEO_F746_IHM07_SHINANO_D/ST_NUCLEO_F746_IHM07_SHINANO_D.stmcx" label="ST_NUCLEO_F746_IHM07_SHINANO_D" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F746ZG/Demonstration/ST_NUCLEO_F746_IHM07_SHINANO_E/ST_NUCLEO_F746_IHM07_SHINANO_E.stmcx" label="ST_NUCLEO_F746_IHM07_SHINANO_E" section="PMSM" copy_all_files="true" />
+        <file name ="NUCLEO-F746ZG/Demonstration/ST_NUCLEO_F746_IHM07_SHINANO_F/ST_NUCLEO_F746_IHM07_SHINANO_F.stmcx" label="ST_NUCLEO_F746_IHM07_SHINANO_F" section="PMSM" copy_all_files="true" />
+        <file name ="STEVAL-IHM039V1/Demonstration/ST_EVAL_IHM039_IHM07_SHINANO_A/ST_EVAL_IHM039_IHM07_SHINANO_A.stmcx" label="ST_EVAL_IHM039_IHM07_SHINANO_A" section="PMSM" copy_all_files="true" />
+        <file name ="STEVAL-IHM039V1/Demonstration/ST_EVAL_IHM039_IHM07_SHINANO_B/ST_EVAL_IHM039_IHM07_SHINANO_B.stmcx" label="ST_EVAL_IHM039_IHM07_SHINANO_B" section="PMSM" copy_all_files="true" />
+        <file name ="STEVAL-IHM039V1/Demonstration/ST_EVAL_IHM039_IHM07_SHINANO_C/ST_EVAL_IHM039_IHM07_SHINANO_C.stmcx" label="ST_EVAL_IHM039_IHM07_SHINANO_C" section="PMSM" copy_all_files="true" />
+        <file name ="STEVAL-IHM039V1/Demonstration/ST_EVAL_IHM039_IHM07_SHINANO_D/ST_EVAL_IHM039_IHM07_SHINANO_D.stmcx" label="ST_EVAL_IHM039_IHM07_SHINANO_D" section="PMSM" copy_all_files="true" />
+        <file name ="STM3210E-EVAL/Demonstration/ST_STM3210E-EVAL_IHM07_SHINANO_A/ST_STM3210E-EVAL_IHM07_SHINANO_A.stmcx" label="ST_STM3210E-EVAL_IHM07_SHINANO_A" section="PMSM" copy_all_files="true" />
+        <file name ="STM3210E-EVAL/Demonstration/ST_STM3210E-EVAL_IHM07_SHINANO_B/ST_STM3210E-EVAL_IHM07_SHINANO_B.stmcx" label="ST_STM3210E-EVAL_IHM07_SHINANO_B" section="PMSM" copy_all_files="true" />
+        <file name ="STM3210E-EVAL/Demonstration/ST_STM3210E-EVAL_IHM07_SHINANO_C/ST_STM3210E-EVAL_IHM07_SHINANO_C.stmcx" label="ST_STM3210E-EVAL_IHM07_SHINANO_C" section="PMSM" copy_all_files="true" />
+        <file name ="STM3210E-EVAL/Demonstration/ST_STM3210E-EVAL_IHM07_SHINANO_D/ST_STM3210E-EVAL_IHM07_SHINANO_D.stmcx" label="ST_STM3210E-EVAL_IHM07_SHINANO_D" section="PMSM" copy_all_files="true" />
+        <file name ="STM3210E-EVAL/Demonstration/ST_STM3210E-EVAL_IHM07_SHINANO_E/ST_STM3210E-EVAL_IHM07_SHINANO_E.stmcx" label="ST_STM3210E-EVAL_IHM07_SHINANO_E" section="PMSM" copy_all_files="true" />
+        <file name ="STM32303E-EVAL/Demonstration/ST_STM32303E_EVAL_IHM045_SHINANO_A/ST_STM32303E_EVAL_IHM045_SHINANO_A.stmcx" label="ST_STM32303E_EVAL_IHM045_SHINANO_A" section="PMSM" copy_all_files="true" />
+        <file name ="STM32303E-EVAL/Demonstration/ST_STM32303E_EVAL_IHM045_SHINANO_B/ST_STM32303E_EVAL_IHM045_SHINANO_B.stmcx" label="ST_STM32303E_EVAL_IHM045_SHINANO_B" section="PMSM" copy_all_files="true" />
+        <file name ="STM32303E-EVAL/Demonstration/ST_STM32303E_EVAL_IHM045_SHINANO_C/ST_STM32303E_EVAL_IHM045_SHINANO_C.stmcx" label="ST_STM32303E_EVAL_IHM045_SHINANO_C" section="PMSM" copy_all_files="true" />
+        <file name ="STM32303E-EVAL/Demonstration/ST_STM32303E_EVAL_IHM07_SHINANO_A/ST_STM32303E_EVAL_IHM07_SHINANO_A.stmcx" label="ST_STM32303E_EVAL_IHM07_SHINANO_A" section="PMSM" copy_all_files="true" />
+        <file name ="STM32303E-EVAL/Demonstration/ST_STM32303E_EVAL_IHM07_SHINANO_B/ST_STM32303E_EVAL_IHM07_SHINANO_B.stmcx" label="ST_STM32303E_EVAL_IHM07_SHINANO_B" section="PMSM" copy_all_files="true" />
+        <file name ="STM32303E-EVAL/Demonstration/ST_STM32303E_EVAL_IHM07_SHINANO_C/ST_STM32303E_EVAL_IHM07_SHINANO_C.stmcx" label="ST_STM32303E_EVAL_IHM07_SHINANO_C" section="PMSM" copy_all_files="true" />
+        <file name ="STM32303E-EVAL/Demonstration/ST_STM32303E_EVAL_IHM07_SHINANO_D/ST_STM32303E_EVAL_IHM07_SHINANO_D.stmcx" label="ST_STM32303E_EVAL_IHM07_SHINANO_D" section="PMSM" copy_all_files="true" />
+        <file name ="STM32G081B-EVAL/Demonstration/ST_STM32G081_EVAL_IHM07_SHINANO_A/ST_STM32G081_EVAL_IHM07_SHINANO_A.stmcx" label="ST_STM32G081_EVAL_IHM07_SHINANO_A" section="PMSM" copy_all_files="true" />
+        <file name ="STM32G081B-EVAL/Demonstration/ST_STM32G081_EVAL_IHM07_SHINANO_B/ST_STM32G081_EVAL_IHM07_SHINANO_B.stmcx" label="ST_STM32G081_EVAL_IHM07_SHINANO_B" section="PMSM" copy_all_files="true" />
+        <file name ="STM32G081B-EVAL/Demonstration/ST_STM32G081_EVAL_IHM07_SHINANO_C/ST_STM32G081_EVAL_IHM07_SHINANO_C.stmcx" label="ST_STM32G081_EVAL_IHM07_SHINANO_C" section="PMSM" copy_all_files="true" />
+        <file name ="STM32G081B-EVAL/Demonstration/ST_STM32G081_EVAL_IHM07_SHINANO_D/ST_STM32G081_EVAL_IHM07_SHINANO_D.stmcx" label="ST_STM32G081_EVAL_IHM07_SHINANO_D" section="PMSM" copy_all_files="true" />
+        <file name ="STM32G081B-EVAL/Demonstration/ST_STM32G081_EVAL_IHM07_SHINANO_E/ST_STM32G081_EVAL_IHM07_SHINANO_E.stmcx" label="ST_STM32G081_EVAL_IHM07_SHINANO_E" section="PMSM" copy_all_files="true" />
+    </mcsdk_examples>
+</examples>

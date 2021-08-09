@@ -1,0 +1,1490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<board description="Evaluation board with STM32F769NI MCU" img="img/image_stm32f769i-eval.png" id="STM32F769I-EVAL" label="STM32F769I-EVAL" based_on="STM32F769NI" cpn="STM32F769NI" package="TFBGA216">
+	<features>
+		<mc_connector>One MC-connector</mc_connector>
+		<st_link>ST-LINK/V2 Embedded</st_link>
+	</features>
+	<single>
+		<system type="common">
+			<control_stage version="4.0">
+				<code_id>25</code_id>
+				<name>Control Stage</name>
+				<uid>CS</uid>
+				<type>CS</type>
+				<board_name>STM32F769I-EVAL</board_name>
+				<original_board_name>STM32F769I-EVAL</original_board_name>
+				<vars>
+					<var version="1.0" type="MC_List" name="DIO - MCT - Timer" enable="true" visible="true" readonly="false" value="1">
+						<items>
+							<item tag="1" text="TIM1" />
+							<item tag="8" text="TIM8" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - MCT - Remap" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="0" text="No remap" />
+							<item tag="2" text="Partial re-map" />
+							<item tag="3" text="Full re-map" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - MCT - Pin - CH1" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="306" text="C6" />
+							<item tag="905" text="I5" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - MCT - Pin - CH2" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="307" text="C7" />
+							<item tag="906" text="I6" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - MCT - Pin - CH3" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="308" text="C8" />
+							<item tag="907" text="I7" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - MCT - Pin - CH1N" enable="true" visible="true" readonly="false" value="1">
+						<items>
+							<item tag="105" text="A5" />
+							<item tag="107" text="A7" />
+							<item tag="813" text="H13" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - MCT - Pin - CH2N" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="200" text="B0" />
+							<item tag="214" text="B14" />
+							<item tag="814" text="H14" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - MCT - Pin - CH3N" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="201" text="B1" />
+							<item tag="215" text="B15" />
+							<item tag="815" text="H15" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - MCT - Pin - BKIN" enable="true" visible="true" readonly="false" value="1">
+						<items>
+							<item tag="106" text="A6" />
+							<item tag="904" text="I4" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - MCT - Enb - CH1 - Port" enable="false" visible="true" readonly="false" value="2">
+						<items>
+							<item tag="65" text="GPIOA" />
+							<item tag="66" text="GPIOB" />
+							<item tag="67" text="GPIOC" />
+							<item tag="68" text="GPIOD" />
+							<item tag="69" text="GPIOE" />
+							<item tag="70" text="GPIOF" />
+							<item tag="71" text="GPIOG" />
+							<item tag="72" text="GPIOH" />
+							<item tag="73" text="GPIOI" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - MCT - Enb - CH1 - Pin" enable="false" visible="true" readonly="false" value="13">
+						<items>
+							<item tag="300" text="C0" />
+							<item tag="301" text="C1" />
+							<item tag="302" text="C2" />
+							<item tag="303" text="C3" />
+							<item tag="304" text="C4" />
+							<item tag="305" text="C5" />
+							<item tag="306" text="C6" />
+							<item tag="307" text="C7" />
+							<item tag="308" text="C8" />
+							<item tag="309" text="C9" />
+							<item tag="310" text="C10" />
+							<item tag="311" text="C11" />
+							<item tag="312" text="C12" />
+							<item tag="313" text="C13" />
+							<item tag="314" text="C14" />
+							<item tag="315" text="C15" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - MCT - Enb - CH2 - Port" enable="false" visible="true" readonly="false" value="2">
+						<items>
+							<item tag="65" text="GPIOA" />
+							<item tag="66" text="GPIOB" />
+							<item tag="67" text="GPIOC" />
+							<item tag="68" text="GPIOD" />
+							<item tag="69" text="GPIOE" />
+							<item tag="70" text="GPIOF" />
+							<item tag="71" text="GPIOG" />
+							<item tag="72" text="GPIOH" />
+							<item tag="73" text="GPIOI" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - MCT - Enb - CH2 - Pin" enable="false" visible="true" readonly="false" value="13">
+						<items>
+							<item tag="300" text="C0" />
+							<item tag="301" text="C1" />
+							<item tag="302" text="C2" />
+							<item tag="303" text="C3" />
+							<item tag="304" text="C4" />
+							<item tag="305" text="C5" />
+							<item tag="306" text="C6" />
+							<item tag="307" text="C7" />
+							<item tag="308" text="C8" />
+							<item tag="309" text="C9" />
+							<item tag="310" text="C10" />
+							<item tag="311" text="C11" />
+							<item tag="312" text="C12" />
+							<item tag="313" text="C13" />
+							<item tag="314" text="C14" />
+							<item tag="315" text="C15" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - MCT - Enb - CH3 - Port" enable="false" visible="true" readonly="false" value="2">
+						<items>
+							<item tag="65" text="GPIOA" />
+							<item tag="66" text="GPIOB" />
+							<item tag="67" text="GPIOC" />
+							<item tag="68" text="GPIOD" />
+							<item tag="69" text="GPIOE" />
+							<item tag="70" text="GPIOF" />
+							<item tag="71" text="GPIOG" />
+							<item tag="72" text="GPIOH" />
+							<item tag="73" text="GPIOI" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - MCT - Enb - CH3 - Pin" enable="false" visible="true" readonly="false" value="13">
+						<items>
+							<item tag="300" text="C0" />
+							<item tag="301" text="C1" />
+							<item tag="302" text="C2" />
+							<item tag="303" text="C3" />
+							<item tag="304" text="C4" />
+							<item tag="305" text="C5" />
+							<item tag="306" text="C6" />
+							<item tag="307" text="C7" />
+							<item tag="308" text="C8" />
+							<item tag="309" text="C9" />
+							<item tag="310" text="C10" />
+							<item tag="311" text="C11" />
+							<item tag="312" text="C12" />
+							<item tag="313" text="C13" />
+							<item tag="314" text="C14" />
+							<item tag="315" text="C15" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - EIT - Timer" enable="true" visible="true" readonly="false" value="3">
+						<items>
+							<item tag="2" text="TIM2" />
+							<item tag="3" text="TIM3" />
+							<item tag="4" text="TIM4" />
+							<item tag="5" text="TIM5" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - EIT - Remap" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="0" text="No remap" />
+							<item tag="4" text="Partial re-map '01'" />
+							<item tag="5" text="Partial re-map '10'" />
+							<item tag="3" text="Full re-map" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - EIT - Pin - CH1" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="100" text="A0" />
+							<item tag="810" text="H10" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - EIT - Pin - CH2" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="101" text="A1" />
+							<item tag="811" text="H11" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - HIT - Timer" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="2" text="TIM2" />
+							<item tag="3" text="TIM3" />
+							<item tag="4" text="TIM4" />
+							<item tag="5" text="TIM5" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - HIT - Remap" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="0" text="No remap" />
+							<item tag="4" text="Partial re-map '01'" />
+							<item tag="5" text="Partial re-map '10'" />
+							<item tag="3" text="Full re-map" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - HIT - Pin - CH1" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="100" text="A0" />
+							<item tag="105" text="A5" />
+							<item tag="115" text="A15" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - HIT - Pin - CH2" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="101" text="A1" />
+							<item tag="203" text="B3" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - HIT - Pin - CH3" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="102" text="A2" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - DBO - Port" enable="true" visible="true" readonly="false" value="7">
+						<items>
+							<item tag="65" text="GPIOA" />
+							<item tag="66" text="GPIOB" />
+							<item tag="67" text="GPIOC" />
+							<item tag="68" text="GPIOD" />
+							<item tag="69" text="GPIOE" />
+							<item tag="70" text="GPIOF" />
+							<item tag="71" text="GPIOG" />
+							<item tag="72" text="GPIOH" />
+							<item tag="73" text="GPIOI" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - DBO - Pin" enable="true" visible="true" readonly="false" value="6">
+						<items>
+							<item tag="800" text="H0" />
+							<item tag="801" text="H1" />
+							<item tag="802" text="H2" />
+							<item tag="803" text="H3" />
+							<item tag="804" text="H4" />
+							<item tag="805" text="H5" />
+							<item tag="806" text="H6" />
+							<item tag="807" text="H7" />
+							<item tag="808" text="H8" />
+							<item tag="809" text="H9" />
+							<item tag="810" text="H10" />
+							<item tag="811" text="H11" />
+							<item tag="812" text="H12" />
+							<item tag="813" text="H13" />
+							<item tag="814" text="H14" />
+							<item tag="815" text="H15" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - ICL - Port" enable="false" visible="true" readonly="false" value="6">
+						<items>
+							<item tag="65" text="GPIOA" />
+							<item tag="66" text="GPIOB" />
+							<item tag="67" text="GPIOC" />
+							<item tag="68" text="GPIOD" />
+							<item tag="69" text="GPIOE" />
+							<item tag="70" text="GPIOF" />
+							<item tag="71" text="GPIOG" />
+							<item tag="72" text="GPIOH" />
+							<item tag="73" text="GPIOI" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - ICL - Pin" enable="false" visible="true" readonly="false" value="11">
+						<items>
+							<item tag="700" text="G0" />
+							<item tag="701" text="G1" />
+							<item tag="702" text="G2" />
+							<item tag="703" text="G3" />
+							<item tag="704" text="G4" />
+							<item tag="705" text="G5" />
+							<item tag="706" text="G6" />
+							<item tag="707" text="G7" />
+							<item tag="708" text="G8" />
+							<item tag="709" text="G9" />
+							<item tag="710" text="G10" />
+							<item tag="711" text="G11" />
+							<item tag="712" text="G12" />
+							<item tag="713" text="G13" />
+							<item tag="714" text="G14" />
+							<item tag="715" text="G15" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - OCPD - Port" enable="false" visible="true" readonly="false" value="7">
+						<items>
+							<item tag="65" text="GPIOA" />
+							<item tag="66" text="GPIOB" />
+							<item tag="67" text="GPIOC" />
+							<item tag="68" text="GPIOD" />
+							<item tag="69" text="GPIOE" />
+							<item tag="70" text="GPIOF" />
+							<item tag="71" text="GPIOG" />
+							<item tag="72" text="GPIOH" />
+							<item tag="73" text="GPIOI" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - OCPD - Pin" enable="false" visible="true" readonly="false" value="6">
+						<items>
+							<item tag="800" text="H0" />
+							<item tag="801" text="H1" />
+							<item tag="802" text="H2" />
+							<item tag="803" text="H3" />
+							<item tag="804" text="H4" />
+							<item tag="805" text="H5" />
+							<item tag="806" text="H6" />
+							<item tag="807" text="H7" />
+							<item tag="808" text="H8" />
+							<item tag="809" text="H9" />
+							<item tag="810" text="H10" />
+							<item tag="811" text="H11" />
+							<item tag="812" text="H12" />
+							<item tag="813" text="H13" />
+							<item tag="814" text="H14" />
+							<item tag="815" text="H15" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - PFC - Timer" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="16" text="TIM16" />
+							<item tag="4" text="TIM4" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - PFC - Remap" enable="false" visible="false" readonly="false" value="0">
+						<items>
+							<item tag="0" text="No remap" />
+							<item tag="2" text="Partial re-map" />
+							<item tag="3" text="Full re-map" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - PFC - F303TimerAux" enable="false" visible="false" readonly="false" value="0">
+						<items>
+							<item tag="4" text="TIM4" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - PFC - Pin - PWMOutput" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="0" text="--" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - PFC - Pin - ACMainsSynch" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="0" text="--" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - PFC - Pin - OvercurrentSignal" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="0" text="--" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - Comm - USART" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="1" text="USART1" />
+							<item tag="2" text="USART2" />
+							<item tag="3" text="USART3" />
+							<item tag="4" text="USART4" />
+							<item tag="5" text="USART5" />
+							<item tag="6" text="USART6" />
+							<item tag="7" text="USART7" />
+							<item tag="8" text="USART8" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - Comm - USART - Remap" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="0" text="No remap" />
+							<item tag="1" text="Remap" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - Comm - USART - Baudrate" enable="true" visible="true" readonly="false" value="2">
+						<items>
+							<item tag="921600" text="921600" />
+							<item tag="460800" text="460800" />
+							<item tag="115200" text="115200" />
+							<item tag="57800" text="57800" />
+							<item tag="38400" text="38400" />
+							<item tag="19200" text="19200" />
+							<item tag="9600" text="9600" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - Comm - USART - Pin - TX" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="109" text="A9" />
+							<item tag="206" text="B6" />
+							<item tag="214" text="B14" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="DIO - Comm - USART - Pin - RX" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="110" text="A10" />
+							<item tag="207" text="B7" />
+							<item tag="215" text="B15" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_Bool" name="AI - PCF - PGA" enable="false" visible="true" readonly="false" value="false" />
+					<var version="1.0" type="MC_Bool" name="AI - PCF - HW OCP" enable="false" visible="true" readonly="false" value="false" />
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - Setting - Sampling Time" enable="true" visible="true" readonly="false" value="1">
+						<items>
+							<item tag="30" text="3.0" />
+							<item tag="150" text="15.0" />
+							<item tag="280" text="28.0" />
+							<item tag="560" text="56.0" />
+							<item tag="840" text="84.0" />
+							<item tag="1120" text="112.0" />
+							<item tag="1440" text="144.0" />
+							<item tag="4800" text="480.0" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_Int" name="AI - PCF - Sens - Setting - MMI" enable="true" visible="true" readonly="true" value="92" />
+					<var version="1.0" type="MC_Int" name="AI - PCF - Sens - Setting - Sampling Time Converted" enable="true" visible="true" readonly="true" value="278" />
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - Setting - ADC Peripheral selection" enable="true" visible="true" readonly="false" value="2">
+						<items>
+							<item tag="1" text="ADC1" />
+							<item tag="2" text="ADC2" />
+							<item tag="3" text="ADC1/ADC2" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - Pin - ADC Ch - phase U" enable="true" visible="true" readonly="false" value="13">
+						<items>
+							<item tag="772" text="ADC12_IN4 (A4)" />
+							<item tag="773" text="ADC12_IN5 (A5)" />
+							<item tag="774" text="ADC12_IN6 (A6)" />
+							<item tag="775" text="ADC12_IN7 (A7)" />
+							<item tag="776" text="ADC12_IN8 (B0)" />
+							<item tag="777" text="ADC12_IN9 (B1)" />
+							<item tag="782" text="ADC12_IN14 (C4)" />
+							<item tag="783" text="ADC12_IN15 (C5)" />
+							<item tag="1792" text="ADC123_IN0 (A0)" />
+							<item tag="1793" text="ADC123_IN1 (A1)" />
+							<item tag="1794" text="ADC123_IN2 (A2)" />
+							<item tag="1795" text="ADC123_IN3 (A3)" />
+							<item tag="1802" text="ADC123_IN10 (C0)" />
+							<item tag="1803" text="ADC123_IN11 (C1)" />
+							<item tag="1804" text="ADC123_IN12 (C2)" />
+							<item tag="1805" text="ADC123_IN13 (C3)" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - Pin - ADC Ch - phase V" enable="true" visible="true" readonly="false" value="14">
+						<items>
+							<item tag="772" text="ADC12_IN4 (A4)" />
+							<item tag="773" text="ADC12_IN5 (A5)" />
+							<item tag="774" text="ADC12_IN6 (A6)" />
+							<item tag="775" text="ADC12_IN7 (A7)" />
+							<item tag="776" text="ADC12_IN8 (B0)" />
+							<item tag="777" text="ADC12_IN9 (B1)" />
+							<item tag="782" text="ADC12_IN14 (C4)" />
+							<item tag="783" text="ADC12_IN15 (C5)" />
+							<item tag="1792" text="ADC123_IN0 (A0)" />
+							<item tag="1793" text="ADC123_IN1 (A1)" />
+							<item tag="1794" text="ADC123_IN2 (A2)" />
+							<item tag="1795" text="ADC123_IN3 (A3)" />
+							<item tag="1802" text="ADC123_IN10 (C0)" />
+							<item tag="1803" text="ADC123_IN11 (C1)" />
+							<item tag="1804" text="ADC123_IN12 (C2)" />
+							<item tag="1805" text="ADC123_IN13 (C3)" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - Pin - ADC Ch - phase W" enable="true" visible="true" readonly="false" value="15">
+						<items>
+							<item tag="772" text="ADC12_IN4 (A4)" />
+							<item tag="773" text="ADC12_IN5 (A5)" />
+							<item tag="774" text="ADC12_IN6 (A6)" />
+							<item tag="775" text="ADC12_IN7 (A7)" />
+							<item tag="776" text="ADC12_IN8 (B0)" />
+							<item tag="777" text="ADC12_IN9 (B1)" />
+							<item tag="782" text="ADC12_IN14 (C4)" />
+							<item tag="783" text="ADC12_IN15 (C5)" />
+							<item tag="1792" text="ADC123_IN0 (A0)" />
+							<item tag="1793" text="ADC123_IN1 (A1)" />
+							<item tag="1794" text="ADC123_IN2 (A2)" />
+							<item tag="1795" text="ADC123_IN3 (A3)" />
+							<item tag="1802" text="ADC123_IN10 (C0)" />
+							<item tag="1803" text="ADC123_IN11 (C1)" />
+							<item tag="1804" text="ADC123_IN12 (C2)" />
+							<item tag="1805" text="ADC123_IN13 (C3)" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - Pin - ADC Ch - single" enable="false" visible="true" readonly="false" value="14">
+						<items>
+							<item tag="772" text="ADC12_IN4 (A4)" />
+							<item tag="773" text="ADC12_IN5 (A5)" />
+							<item tag="774" text="ADC12_IN6 (A6)" />
+							<item tag="775" text="ADC12_IN7 (A7)" />
+							<item tag="776" text="ADC12_IN8 (B0)" />
+							<item tag="777" text="ADC12_IN9 (B1)" />
+							<item tag="782" text="ADC12_IN14 (C4)" />
+							<item tag="783" text="ADC12_IN15 (C5)" />
+							<item tag="1792" text="ADC123_IN0 (A0)" />
+							<item tag="1793" text="ADC123_IN1 (A1)" />
+							<item tag="1794" text="ADC123_IN2 (A2)" />
+							<item tag="1795" text="ADC123_IN3 (A3)" />
+							<item tag="1802" text="ADC123_IN10 (C0)" />
+							<item tag="1803" text="ADC123_IN11 (C1)" />
+							<item tag="1804" text="ADC123_IN12 (C2)" />
+							<item tag="1805" text="ADC123_IN13 (C3)" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - OPAMP - Setting - Selection" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="3" text="OPAMP1/OPAMP2" />
+							<item tag="12" text="OPAMP3/OPAMP4" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - OPAMP - Setting - Type Gain" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="1" text="Internal" />
+							<item tag="0" text="External" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - OPAMP - Setting - Internal gain factor" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="2" text="2" />
+							<item tag="4" text="4" />
+							<item tag="8" text="8" />
+							<item tag="16" text="16" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_Bool" name="AI - PCF - Sens - OPAMP - Setting - Feedback net filtering" enable="false" visible="true" readonly="false" value="false" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - Setting - Overall network gain" enable="false" visible="true" readonly="true" value="1.44" />
+					<var version="1.0" type="MC_Int" name="AI - PCF - Sens - OPAMP - Setting - Trise" enable="false" visible="true" readonly="false" value="2550" />
+					<var version="1.0" type="MC_Bool" name="AI - PCF - Sens - OPAMP - SettParamGain - Validity" enable="false" visible="true" readonly="true" value="true" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - SettParamGain - Input - Imax" enable="false" visible="true" readonly="true" value="2.1" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - SettParamGain - Input - Vm" enable="false" visible="true" readonly="true" value="5" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - SettParamGain - Input - Rshunt" enable="false" visible="true" readonly="true" value="0.22" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - SettParamGain - Input - Prating" enable="false" visible="true" readonly="true" value="0.5" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - SettParamGain - Input - Vmcu" enable="false" visible="true" readonly="true" value="3.3000000000000003" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - SettParamGain - Input - R1" enable="false" visible="true" readonly="true" value="660" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - SettParamGain - Input - R2" enable="false" visible="true" readonly="true" value="4700" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - SettParamGain - Input - R3" enable="false" visible="true" readonly="true" value="560" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - SettParamGain - Input - R4" enable="false" visible="true" readonly="true" value="1000" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - SettParamGain - Input - R5" enable="false" visible="true" readonly="true" value="5400" />
+					<var version="1.0" type="MC_Bool" name="AI - PCF - Sens - OPAMP - SettParamGain - Input - R3using" enable="false" visible="true" readonly="true" value="true" />
+					<var version="1.0" type="MC_Bool" name="AI - PCF - Sens - OPAMP - SettParamGain - Input - R4R5fixed" enable="false" visible="true" readonly="true" value="false" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - SettParamGain - Output - OverallGain" enable="false" visible="true" readonly="true" value="2.7600000000000002" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - SettParamGain - Output - OffsetNetworkAttenuation" enable="false" visible="true" readonly="true" value="0.431" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - SettParamGain - Output - OpampGain" enable="false" visible="true" readonly="true" value="6.4" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - SettParamGain - Output - Vout_pol" enable="false" visible="true" readonly="true" value="1.938" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - SettParamGain - Output - Vout_min" enable="false" visible="true" readonly="true" value="0.663" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - SettParamGain - Output - Vout_max" enable="false" visible="true" readonly="true" value="3.213" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Sens - OPAMP - SettParamGain - Output - Pdissipated" enable="false" visible="true" readonly="true" value="0.243" />
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - OPAMP - Pin - phase U - No inverting" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="101" text="A1" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - OPAMP - Pin - phase V - No inverting" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="107" text="A7" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - OPAMP - Pin - phase W - No inverting" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="214" text="B14" />
+							<item tag="200" text="B0" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - OPAMP - Pin - phase X - Inverting" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="103" text="A3" />
+							<item tag="305" text="C5" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - OPAMP - Pin - phase Y - Inverting" enable="false" visible="true" readonly="false" value="1">
+						<items>
+							<item tag="105" text="A5" />
+							<item tag="305" text="C5" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - OPAMP - Pin - phase X - Output" enable="false" visible="true" readonly="true" value="0">
+						<items>
+							<item tag="102" text="A2" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - OPAMP - Pin - phase Y - Output" enable="false" visible="true" readonly="true" value="0">
+						<items>
+							<item tag="106" text="A6" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - OPAMP - Pin - single - No inverting" enable="false" visible="true" readonly="false" value="1">
+						<items>
+							<item tag="101" text="A1" />
+							<item tag="107" text="A7" />
+							<item tag="103" text="A3" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - OPAMP - Pin - single - Inverting" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="103" text="A3" />
+							<item tag="305" text="C5" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Sens - OPAMP - Pin - single - Output" enable="false" visible="true" readonly="true" value="0">
+						<items>
+							<item tag="102" text="A2" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_Bool" name="AI - PCF - Protection - Over current using" enable="true" visible="true" readonly="false" value="true" />
+					<var version="1.0" type="MC_List" name="AI - PCF - Protection - Digital filter duration" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="0" text="0" />
+							<item tag="1" text="2" />
+							<item tag="2" text="4" />
+							<item tag="3" text="8" />
+							<item tag="4" text="24" />
+							<item tag="5" text="32" />
+							<item tag="6" text="48" />
+							<item tag="7" text="64" />
+							<item tag="8" text="96" />
+							<item tag="9" text="128" />
+							<item tag="10" text="160" />
+							<item tag="11" text="192" />
+							<item tag="12" text="256" />
+							<item tag="13" text="320" />
+							<item tag="14" text="384" />
+							<item tag="15" text="512" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Protection - COMP_EMB - Setting - Inverting input" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="1" text="Internal" />
+							<item tag="0" text="External" />
+							<item tag="2" text="DAC" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_Double" name="AI - PCF - Protection - COMP_EMB - Setting - Current threshold" enable="false" visible="true" readonly="false" value="5" />
+					<var version="1.0" type="MC_Double" name="AI - PCF - Protection - COMP_EMB - Setting - Comparator input threshold" enable="false" visible="true" readonly="false" value="1.2" />
+					<var version="1.0" type="MC_Bool" name="AI - PCF - Protection - COMP_EMB - Setting - Output enable" enable="false" visible="true" readonly="false" value="false" />
+					<var version="1.0" type="MC_List" name="AI - PCF - Protection - COMP_EMB - Pin - phase U - Comp" enable="false" visible="true" readonly="true" value="1">
+						<items>
+							<item tag="0" text="NONE" />
+							<item tag="1" text="COMP1" />
+							<item tag="2" text="COMP2" />
+							<item tag="4" text="COMP3" />
+							<item tag="8" text="COMP4" />
+							<item tag="16" text="COMP5" />
+							<item tag="32" text="COMP6" />
+							<item tag="64" text="COMP7" />
+							<item tag="0" text="NONE" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Protection - COMP_EMB - Pin - phase V - Comp" enable="false" visible="true" readonly="true" value="2">
+						<items>
+							<item tag="0" text="NONE" />
+							<item tag="1" text="COMP1" />
+							<item tag="2" text="COMP2" />
+							<item tag="4" text="COMP3" />
+							<item tag="8" text="COMP4" />
+							<item tag="16" text="COMP5" />
+							<item tag="32" text="COMP6" />
+							<item tag="64" text="COMP7" />
+							<item tag="0" text="NONE" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Protection - COMP_EMB - Pin - phase W - Comp" enable="false" visible="true" readonly="true" value="3">
+						<items>
+							<item tag="0" text="NONE" />
+							<item tag="1" text="COMP1" />
+							<item tag="2" text="COMP2" />
+							<item tag="4" text="COMP3" />
+							<item tag="8" text="COMP4" />
+							<item tag="16" text="COMP5" />
+							<item tag="32" text="COMP6" />
+							<item tag="64" text="COMP7" />
+							<item tag="0" text="NONE" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Protection - COMP_EMB - Pin - Inverting input" enable="false" visible="true" readonly="true" value="0">
+						<items>
+							<item tag="0" text="none" />
+							<item tag="104" text="A4" />
+							<item tag="1000" text="DAC" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Protection - COMP_EMB - Pin - phase U - No inverting" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="101" text="A1" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Protection - COMP_EMB - Pin - phase V - No inverting" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="107" text="A7" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Protection - COMP_EMB - Pin - phase W - No inverting" enable="false" visible="true" readonly="false" value="2">
+						<items>
+							<item tag="214" text="B14" />
+							<item tag="200" text="B0" />
+							<item tag="414" text="D14" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Protection - COMP_EMB - Pin - phase U - Output" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="100" text="A0" />
+							<item tag="604" text="F4" />
+							<item tag="106" text="A6" />
+							<item tag="111" text="A11" />
+							<item tag="208" text="B8" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Protection - COMP_EMB - Pin - phase V - Output" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="102" text="A2" />
+							<item tag="107" text="A7" />
+							<item tag="112" text="A12" />
+							<item tag="209" text="B9" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Protection - COMP_EMB - Pin - phase W - Output" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="308" text="C8" />
+							<item tag="108" text="A8" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Protection - COMP_EMB - Pin - single - Comp" enable="false" visible="true" readonly="true" value="2">
+						<items>
+							<item tag="0" text="NONE" />
+							<item tag="1" text="COMP1" />
+							<item tag="2" text="COMP2" />
+							<item tag="4" text="COMP3" />
+							<item tag="8" text="COMP4" />
+							<item tag="16" text="COMP5" />
+							<item tag="32" text="COMP6" />
+							<item tag="64" text="COMP7" />
+							<item tag="0" text="NONE" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Protection - COMP_EMB - Pin - single - No inverting" enable="false" visible="true" readonly="false" value="1">
+						<items>
+							<item tag="101" text="A1" />
+							<item tag="107" text="A7" />
+							<item tag="103" text="A3" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PCF - Protection - COMP_EMB - Pin - single - Output" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="102" text="A2" />
+							<item tag="107" text="A7" />
+							<item tag="112" text="A12" />
+							<item tag="209" text="B9" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - BVF - Sens - Setting - Sampling Time" enable="true" visible="true" readonly="false" value="2">
+						<items>
+							<item tag="30" text="3.0" />
+							<item tag="150" text="15.0" />
+							<item tag="280" text="28.0" />
+							<item tag="560" text="56.0" />
+							<item tag="840" text="84.0" />
+							<item tag="1120" text="112.0" />
+							<item tag="1440" text="144.0" />
+							<item tag="4800" text="480.0" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - BVF - Sens - Setting - ADC Peripheral selection" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="1" text="ADC1" />
+							<item tag="2" text="ADC2" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - BVF - Sens - Pin - ADC Channel" enable="true" visible="true" readonly="false" value="6">
+						<items>
+							<item tag="772" text="ADC12_IN4 (A4)" />
+							<item tag="773" text="ADC12_IN5 (A5)" />
+							<item tag="774" text="ADC12_IN6 (A6)" />
+							<item tag="775" text="ADC12_IN7 (A7)" />
+							<item tag="776" text="ADC12_IN8 (B0)" />
+							<item tag="777" text="ADC12_IN9 (B1)" />
+							<item tag="782" text="ADC12_IN14 (C4)" />
+							<item tag="783" text="ADC12_IN15 (C5)" />
+							<item tag="1792" text="ADC123_IN0 (A0)" />
+							<item tag="1793" text="ADC123_IN1 (A1)" />
+							<item tag="1794" text="ADC123_IN2 (A2)" />
+							<item tag="1795" text="ADC123_IN3 (A3)" />
+							<item tag="1802" text="ADC123_IN10 (C0)" />
+							<item tag="1803" text="ADC123_IN11 (C1)" />
+							<item tag="1804" text="ADC123_IN12 (C2)" />
+							<item tag="1805" text="ADC123_IN13 (C3)" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_Bool" name="AI - BVF - Protection - OVP" enable="false" visible="true" readonly="false" value="false" />
+					<var version="1.0" type="MC_List" name="AI - BVF - Protection - Setting - Inverting input" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="1" text="Internal" />
+							<item tag="0" text="External" />
+							<item tag="2" text="DAC" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_Double" name="AI - BVF - Protection - Setting - Voltage threshold" enable="false" visible="true" readonly="true" value="138.76097560975606" />
+					<var version="1.0" type="MC_Double" name="AI - BVF - Protection - Setting - Comparator input threshold" enable="false" visible="true" readonly="true" value="1.2" />
+					<var version="1.0" type="MC_List" name="AI - BVF - Protection - Setting - On over voltage" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="0" text="Disable PWM generation" />
+							<item tag="1" text="Turn on low side switches" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_Bool" name="AI - BVF - Protection - Setting - Output enable" enable="false" visible="true" readonly="false" value="false" />
+					<var version="1.0" type="MC_List" name="AI - BVF - Protection - COMP_EMB - Pin - Inverting input" enable="false" visible="true" readonly="true" value="0">
+						<items>
+							<item tag="0" text="none" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - BVF - Protection - COMP_EMB - Pin - Comp" enable="false" visible="true" readonly="true" value="7">
+						<items>
+							<item tag="0" text="NONE" />
+							<item tag="1" text="COMP1" />
+							<item tag="2" text="COMP2" />
+							<item tag="4" text="COMP3" />
+							<item tag="8" text="COMP4" />
+							<item tag="16" text="COMP5" />
+							<item tag="32" text="COMP6" />
+							<item tag="64" text="COMP7" />
+							<item tag="0" text="NONE" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - BVF - Protection - COMP_EMB - Pin - No inverting" enable="false" visible="true" readonly="false" value="12">
+						<items>
+							<item tag="101" text="A1" />
+							<item tag="103" text="A3" />
+							<item tag="107" text="A7" />
+							<item tag="214" text="B14" />
+							<item tag="414" text="D14" />
+							<item tag="200" text="B0" />
+							<item tag="507" text="E7" />
+							<item tag="213" text="B13" />
+							<item tag="412" text="D12" />
+							<item tag="211" text="B11" />
+							<item tag="411" text="D11" />
+							<item tag="301" text="C1" />
+							<item tag="100" text="A0" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - BVF - Protection - COMP_EMB - Pin - Output" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="302" text="C2" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_Bool" name="AI_BVF_useR3" enable="true" visible="true" readonly="false" value="true" />
+					<var version="1.0" type="MC_Double" name="AI_BVF_R3" enable="true" visible="true" readonly="false" value="100" />
+					<var version="1.0" type="MC_List" name="AI - TF - Sens - Setting - Sampling Time" enable="true" visible="true" readonly="false" value="2">
+						<items>
+							<item tag="30" text="3.0" />
+							<item tag="150" text="15.0" />
+							<item tag="280" text="28.0" />
+							<item tag="560" text="56.0" />
+							<item tag="840" text="84.0" />
+							<item tag="1120" text="112.0" />
+							<item tag="1440" text="144.0" />
+							<item tag="4800" text="480.0" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - TF - Sens - Setting - ADC Peripheral selection" enable="true" visible="true" readonly="true" value="0">
+						<items>
+							<item tag="1" text="ADC1" />
+							<item tag="2" text="ADC2" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - TF - Sens - Pin - ADC Channel" enable="true" visible="true" readonly="false" value="7">
+						<items>
+							<item tag="772" text="ADC12_IN4 (A4)" />
+							<item tag="773" text="ADC12_IN5 (A5)" />
+							<item tag="774" text="ADC12_IN6 (A6)" />
+							<item tag="775" text="ADC12_IN7 (A7)" />
+							<item tag="776" text="ADC12_IN8 (B0)" />
+							<item tag="777" text="ADC12_IN9 (B1)" />
+							<item tag="782" text="ADC12_IN14 (C4)" />
+							<item tag="783" text="ADC12_IN15 (C5)" />
+							<item tag="1792" text="ADC123_IN0 (A0)" />
+							<item tag="1793" text="ADC123_IN1 (A1)" />
+							<item tag="1794" text="ADC123_IN2 (A2)" />
+							<item tag="1795" text="ADC123_IN3 (A3)" />
+							<item tag="1802" text="ADC123_IN10 (C0)" />
+							<item tag="1803" text="ADC123_IN11 (C1)" />
+							<item tag="1804" text="ADC123_IN12 (C2)" />
+							<item tag="1805" text="ADC123_IN13 (C3)" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PFC - CurrSens - Setting - Sampling Time" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="15" text="1.5" />
+							<item tag="75" text="7.5" />
+							<item tag="135" text="13.5" />
+							<item tag="285" text="28.5" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PFC - CurrSens - Setting - ADC Peripheral selection" enable="false" visible="true" readonly="true" value="0">
+						<items>
+							<item tag="2" text="ADC2" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PFC - CurrSens - Pin - ADC Channel" enable="false" visible="true" readonly="false" value="13">
+						<items>
+							<item tag="768" text="ADC12_IN0 (A0)" />
+							<item tag="769" text="ADC12_IN1 (A1)" />
+							<item tag="770" text="ADC12_IN2 (A2)" />
+							<item tag="771" text="ADC12_IN3 (A3)" />
+							<item tag="772" text="ADC12_IN4 (A4)" />
+							<item tag="773" text="ADC12_IN5 (A5)" />
+							<item tag="774" text="ADC12_IN6 (A6)" />
+							<item tag="775" text="ADC12_IN7 (A7)" />
+							<item tag="776" text="ADC12_IN8 (B0)" />
+							<item tag="777" text="ADC12_IN9 (B1)" />
+							<item tag="778" text="ADC12_IN10 (C0)" />
+							<item tag="779" text="ADC12_IN11 (C1)" />
+							<item tag="780" text="ADC12_IN12 (C2)" />
+							<item tag="781" text="ADC12_IN13 (C3)" />
+							<item tag="782" text="ADC12_IN14 (C4)" />
+							<item tag="783" text="ADC12_IN15 (C5)" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PFC - ACVoltSens - Setting - Sampling Time" enable="false" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="15" text="1.5" />
+							<item tag="75" text="7.5" />
+							<item tag="135" text="13.5" />
+							<item tag="285" text="28.5" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PFC - ACVoltSens - Setting - ADC Peripheral selection" enable="false" visible="true" readonly="true" value="0">
+						<items>
+							<item tag="2" text="ADC2" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI - PFC - ACVoltSens - Pin - ADC Channel" enable="false" visible="true" readonly="false" value="3">
+						<items>
+							<item tag="768" text="ADC12_IN0 (A0)" />
+							<item tag="769" text="ADC12_IN1 (A1)" />
+							<item tag="770" text="ADC12_IN2 (A2)" />
+							<item tag="771" text="ADC12_IN3 (A3)" />
+							<item tag="772" text="ADC12_IN4 (A4)" />
+							<item tag="773" text="ADC12_IN5 (A5)" />
+							<item tag="774" text="ADC12_IN6 (A6)" />
+							<item tag="775" text="ADC12_IN7 (A7)" />
+							<item tag="776" text="ADC12_IN8 (B0)" />
+							<item tag="777" text="ADC12_IN9 (B1)" />
+							<item tag="778" text="ADC12_IN10 (C0)" />
+							<item tag="779" text="ADC12_IN11 (C1)" />
+							<item tag="780" text="ADC12_IN12 (C2)" />
+							<item tag="781" text="ADC12_IN13 (C3)" />
+							<item tag="782" text="ADC12_IN14 (C4)" />
+							<item tag="783" text="ADC12_IN15 (C5)" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_Bool" name="AI_PFC_CST_PGA" enable="true" visible="true" readonly="false" value="false" />
+					<var version="1.0" type="MC_Bool" name="AI_PFC_OCP_Embedded_HW" enable="true" visible="true" readonly="false" value="false" />
+					<var version="1.0" type="MC_Bool" name="AI_PFC_OCP_ExternalProtection" enable="true" visible="true" readonly="false" value="true" />
+					<var version="1.0" type="MC_Bool" name="AI_PFC_OCP_NoProtection" enable="true" visible="true" readonly="false" value="false" />
+					<var version="1.0" type="MC_List" name="AI_PFC_CS_Sampling_Time" enable="true" visible="true" readonly="false" value="3">
+						<items>
+							<item tag="15" text="1.5" />
+							<item tag="25" text="2.5" />
+							<item tag="45" text="4.5" />
+							<item tag="75" text="7.5" />
+							<item tag="195" text="19.5" />
+							<item tag="615" text="61.5" />
+							<item tag="1815" text="181.5" />
+							<item tag="6015" text="601.5" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI_PFC_CS_ADC" enable="true" visible="true" readonly="false" value="1">
+						<items>
+							<item tag="4" text="ADC3" />
+							<item tag="8" text="ADC4" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI_PFC_CS_Pin_ADC_Channel" enable="true" visible="true" readonly="false" value="2">
+						<items>
+							<item tag="2049" text="ADC4_IN1 (E14)" />
+							<item tag="2050" text="ADC4_IN2 (E15)" />
+							<item tag="2051" text="ADC4_IN3 (B12)" />
+							<item tag="2052" text="ADC4_IN4 (B14)" />
+							<item tag="2053" text="ADC4_IN5 (B15)" />
+							<item tag="2060" text="ADC4_IN12 (D8)" />
+							<item tag="2061" text="ADC4_IN13 (D9)" />
+							<item tag="3078" text="ADC34_IN6 (E8)" />
+							<item tag="3079" text="ADC34_IN7 (D10)" />
+							<item tag="3080" text="ADC34_IN8 (D11)" />
+							<item tag="3081" text="ADC34_IN9 (D12)" />
+							<item tag="3082" text="ADC34_IN10 (D13)" />
+							<item tag="3083" text="ADC34_IN11 (D14)" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI_PFC_Sens_OPAMP_Selection" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="1" text="OPAMP1" />
+							<item tag="2" text="OPAMP2" />
+							<item tag="4" text="OPAMP3" />
+							<item tag="8" text="OPAMP4" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI_PFC_Sens_OPAMP_Gain" enable="true" visible="true" readonly="false" value="1">
+						<items>
+							<item tag="1" text="Internal" />
+							<item tag="0" text="External" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI_PFC_Sens_OPAMP_Internal_gain_factor" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="2" text="2" />
+							<item tag="4" text="4" />
+							<item tag="8" text="8" />
+							<item tag="16" text="16" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_Double" name="AI_PFC_Sens_OPAMP_Overall_NetworkGain" enable="true" visible="true" readonly="false" value="2.7600000000000002" />
+					<var version="1.0" type="MC_List" name="AI_PFC_Sens_OPAMP_Pin_NoInv" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="101" text="A1" />
+							<item tag="107" text="A7" />
+							<item tag="103" text="A3" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI_PFC_Sens_OPAMP_Pin_Inv" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="103" text="A3" />
+							<item tag="305" text="C5" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI_PFC_Sens_OPAMP_Pin_Out" enable="true" visible="true" readonly="true" value="0">
+						<items>
+							<item tag="102" text="A2" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI_PFC_Protection_DigitalFilter" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="0" text="0" />
+							<item tag="1" text="2" />
+							<item tag="2" text="4" />
+							<item tag="3" text="8" />
+							<item tag="4" text="24" />
+							<item tag="5" text="32" />
+							<item tag="6" text="48" />
+							<item tag="7" text="64" />
+							<item tag="8" text="96" />
+							<item tag="9" text="128" />
+							<item tag="10" text="160" />
+							<item tag="11" text="192" />
+							<item tag="12" text="256" />
+							<item tag="13" text="320" />
+							<item tag="14" text="384" />
+							<item tag="15" text="512" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI_PFC_Protection_InvertingInput" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="1" text="Internal" />
+							<item tag="0" text="External" />
+							<item tag="2" text="DAC" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_Double" name="AI_PFC_Protection_CurrentThreshold" enable="true" visible="true" readonly="false" value="5" />
+					<var version="1.0" type="MC_Double" name="AI_PFC_Protection_Comparator_Input_Threshold" enable="true" visible="true" readonly="false" value="1.2" />
+					<var version="1.0" type="MC_Bool" name="AI_PFC_Protection_Output_Enable" enable="true" visible="true" readonly="false" value="false" />
+					<var version="1.0" type="MC_List" name="AI_PFC_Protection_Pin_NoInv" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="213" text="B13" />
+							<item tag="411" text="D11" />
+							<item tag="211" text="B11" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI_PFC_Protection_Pin_Inv" enable="true" visible="true" readonly="true" value="0">
+						<items>
+							<item tag="0" text="none" />
+							<item tag="104" text="A4" />
+							<item tag="1000" text="DAC" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI_PFC_Protection_Pin_Out" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="307" text="C7" />
+							<item tag="109" text="A9" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI_PFC_Protection_Pin_Comp" enable="true" visible="true" readonly="true" value="5">
+						<items>
+							<item tag="0" text="NONE" />
+							<item tag="1" text="COMP1" />
+							<item tag="2" text="COMP2" />
+							<item tag="4" text="COMP3" />
+							<item tag="8" text="COMP4" />
+							<item tag="16" text="COMP5" />
+							<item tag="32" text="COMP6" />
+							<item tag="64" text="COMP7" />
+							<item tag="0" text="NONE" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI_PFC_ACVoltage_Sampling_Time" enable="true" visible="true" readonly="false" value="3">
+						<items>
+							<item tag="15" text="1.5" />
+							<item tag="25" text="2.5" />
+							<item tag="45" text="4.5" />
+							<item tag="75" text="7.5" />
+							<item tag="195" text="19.5" />
+							<item tag="615" text="61.5" />
+							<item tag="1815" text="181.5" />
+							<item tag="6015" text="601.5" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI_PFC_ACVoltage_ADC" enable="true" visible="true" readonly="true" value="3">
+						<items>
+							<item tag="1" text="ADC1" />
+							<item tag="2" text="ADC2" />
+							<item tag="4" text="ADC3" />
+							<item tag="8" text="ADC4" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AI_PFC_ACVoltage_Pin_ADC_Channel" enable="true" visible="true" readonly="false" value="3">
+						<items>
+							<item tag="2049" text="ADC4_IN1 (E14)" />
+							<item tag="2050" text="ADC4_IN2 (E15)" />
+							<item tag="2051" text="ADC4_IN3 (B12)" />
+							<item tag="2052" text="ADC4_IN4 (B14)" />
+							<item tag="2053" text="ADC4_IN5 (B15)" />
+							<item tag="2060" text="ADC4_IN12 (D8)" />
+							<item tag="2061" text="ADC4_IN13 (D9)" />
+							<item tag="3078" text="ADC34_IN6 (E8)" />
+							<item tag="3079" text="ADC34_IN7 (D10)" />
+							<item tag="3080" text="ADC34_IN8 (D11)" />
+							<item tag="3081" text="ADC34_IN9 (D12)" />
+							<item tag="3082" text="ADC34_IN10 (D13)" />
+							<item tag="3083" text="ADC34_IN11 (D14)" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AO - DAC_CH1 - Function" enable="true" visible="true" readonly="false" value="1">
+						<items>
+							<item tag="0" text="Not used" />
+							<item tag="1" text="Debug" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AO - DAC_CH1 - Motor" enable="true" visible="true" readonly="true" value="0">
+						<items>
+							<item tag="1" text="M1" />
+							<item tag="2" text="M2" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AO - DAC_CH1 - Variable" enable="true" visible="true" readonly="false" value="0">
+						<items>
+							<item tag="35" text="Ia" />
+							<item tag="36" text="Ib" />
+							<item tag="37" text="Ialpha" />
+							<item tag="38" text="Ibeta" />
+							<item tag="39" text="Iq" />
+							<item tag="40" text="Id" />
+							<item tag="41" text="Iq reference" />
+							<item tag="42" text="Id reference" />
+							<item tag="43" text="Vq" />
+							<item tag="44" text="Vd" />
+							<item tag="45" text="Valpha" />
+							<item tag="46" text="Vbeta" />
+							<item tag="47" text="Measured electrical angle" />
+							<item tag="48" text="Measured rotor speed" />
+							<item tag="49" text="Observer electrical angle (PLL)" />
+							<item tag="50" text="Observer rotor speed (PLL)" />
+							<item tag="51" text="Observer Ialpha (PLL)" />
+							<item tag="52" text="Observer Ibeta (PLL)" />
+							<item tag="53" text="Observer BEMF alpha (PLL)" />
+							<item tag="54" text="Observer BEMF beta (PLL)" />
+							<item tag="55" text="Observer electrical angle (CORDIC)" />
+							<item tag="56" text="Observer rotor speed (CORDIC)" />
+							<item tag="57" text="Observer Ialpha (CORDIC)" />
+							<item tag="58" text="Observer Ibeta (CORDIC)" />
+							<item tag="59" text="Observer BEMF alpha (CORDIC)" />
+							<item tag="60" text="Observer BEMF beta (CORDIC)" />
+							<item tag="61" text="User defined DAC 1" />
+							<item tag="62" text="User defined DAC 2" />
+							<item tag="93" text="HFI electrical angle" />
+							<item tag="94" text="HFI rotor speed" />
+							<item tag="95" text="HFI debug current" />
+							<item tag="96" text="HFI debug angle" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AO - DAC_CH1 - Pin" enable="true" visible="true" readonly="true" value="0">
+						<items>
+							<item tag="104" text="A4" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AO - DAC_CH2 - Function" enable="true" visible="true" readonly="true" value="1">
+						<items>
+							<item tag="0" text="Not used" />
+							<item tag="1" text="Debug" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AO - DAC_CH2 - Motor" enable="true" visible="true" readonly="true" value="0">
+						<items>
+							<item tag="1" text="M1" />
+							<item tag="2" text="M2" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AO - DAC_CH2 - Variable" enable="true" visible="true" readonly="false" value="1">
+						<items>
+							<item tag="35" text="Ia" />
+							<item tag="36" text="Ib" />
+							<item tag="37" text="Ialpha" />
+							<item tag="38" text="Ibeta" />
+							<item tag="39" text="Iq" />
+							<item tag="40" text="Id" />
+							<item tag="41" text="Iq reference" />
+							<item tag="42" text="Id reference" />
+							<item tag="43" text="Vq" />
+							<item tag="44" text="Vd" />
+							<item tag="45" text="Valpha" />
+							<item tag="46" text="Vbeta" />
+							<item tag="47" text="Measured electrical angle" />
+							<item tag="48" text="Measured rotor speed" />
+							<item tag="49" text="Observer electrical angle (PLL)" />
+							<item tag="50" text="Observer rotor speed (PLL)" />
+							<item tag="51" text="Observer Ialpha (PLL)" />
+							<item tag="52" text="Observer Ibeta (PLL)" />
+							<item tag="53" text="Observer BEMF alpha (PLL)" />
+							<item tag="54" text="Observer BEMF beta (PLL)" />
+							<item tag="55" text="Observer electrical angle (CORDIC)" />
+							<item tag="56" text="Observer rotor speed (CORDIC)" />
+							<item tag="57" text="Observer Ialpha (CORDIC)" />
+							<item tag="58" text="Observer Ibeta (CORDIC)" />
+							<item tag="59" text="Observer BEMF alpha (CORDIC)" />
+							<item tag="60" text="Observer BEMF beta (CORDIC)" />
+							<item tag="61" text="User defined DAC 1" />
+							<item tag="62" text="User defined DAC 2" />
+							<item tag="93" text="HFI electrical angle" />
+							<item tag="94" text="HFI rotor speed" />
+							<item tag="95" text="HFI debug current" />
+							<item tag="96" text="HFI debug angle" />
+						</items>
+					</var>
+					<var version="1.0" type="MC_List" name="AO - DAC_CH2 - Pin" enable="true" visible="true" readonly="true" value="0">
+						<items>
+							<item tag="105" text="A5" />
+						</items>
+					</var>
+				</vars>
+				<joystic_lcd version="1.0">
+					<vars>
+						<var version="1.0" type="MC_Bool" name="LCD_implemented" enable="true" visible="true" readonly="false" value="false" />
+					</vars>
+				</joystic_lcd>
+				<start_stop_button version="1.0">
+					<vars>
+						<var version="1.0" type="MC_Bool" name="start_stop_btn_implemented" enable="true" visible="true" readonly="false" value="true" />
+                        <var version="1.0" type="MC_List" name="DIO - BTN - polarity" enable="true" visible="true" readonly="false" value="0">
+                            <items>
+                                <item tag="0" text="Falling Edge" />
+                                <item tag="1" text="Rising Edge" />
+                            </items>
+                        </var>
+                        <var version="1.0" type="MC_List" name="start_stop_polarity_edge" enable="true" visible="true" readonly="false" value="0">
+                            <items>
+                                <item tag="0" text="No Pull up - No Pull down" />
+                                <item tag="1" text="Pull up" />
+                                <item tag="2" text="Pull down" />
+                            </items>
+                        </var>
+                    </vars>
+					<gpio_start_stop version="1.0">
+						<item name="pin" value="C13" />
+					</gpio_start_stop>
+				</start_stop_button>
+				<serial_communication version="1.0">
+					<vars>
+						<var version="1.0" type="MC_Bool" name="serial_communication_onBoard" enable="true" visible="true" readonly="false" value="true" />
+					</vars>
+				</serial_communication>
+				<mcu_info version="1.0">
+					<item name="pn" value="STM32F769NI" />
+					<item name="supply_voltage" value="3.3000000000000003" />
+					<item name="ccm_ram" value="false" />
+					<clock_source>
+						<item name="clk_src" value="25_crystal" />
+						<item name="frequency" value="216" />
+					</clock_source>
+				</mcu_info>
+			</control_stage>
+		</system>
+        <description version="1.0">
+            <m1>
+                <one_sh>
+                    <current_sensing>
+                        <mct_ch1>C6</mct_ch1>
+                        <mct_ch2>C7</mct_ch2>
+                        <mct_ch3>C8</mct_ch3>
+                        <mct_bkin>I4</mct_bkin>
+                    </current_sensing>
+                    <current_sensing_no_enabler>
+                        <mct_ch1n>A7</mct_ch1n>
+                        <mct_ch2n>B0</mct_ch2n>
+                        <mct_ch3n>B1</mct_ch3n>
+                    </current_sensing_no_enabler>
+                    <current_sensing_enabler>
+                        <mct_enabler_ch1_pin>C13</mct_enabler_ch1_pin>
+                        <mct_enabler_ch2_pin>C13</mct_enabler_ch2_pin>
+                        <mct_enabler_ch3_pin>C13</mct_enabler_ch3_pin>
+                    </current_sensing_enabler>
+                    <dbo>
+                        <dbo_pin>H6</dbo_pin>
+                    </dbo>
+                    <encoder>
+                        <eit_ch1>A0</eit_ch1>
+                        <eit_ch2>A1</eit_ch2>
+                    </encoder>
+                    <hall>
+                        <hall_ch1>A0</hall_ch1>
+                        <hall_ch2>A1</hall_ch2>
+                        <hall_ch3>A2</hall_ch3>
+                    </hall>
+                    <icl>
+                        <icl_pin>G11</icl_pin>
+                    </icl>
+                    <mcu>
+                        <pn>STM32F769NI</pn>
+                        <mcu_clk_src>25_crystal</mcu_clk_src>
+                        <mcu_freq>216</mcu_freq>
+                        <supply_voltage>3.30</supply_voltage>
+                    </mcu>
+                    <ocp_disabling>
+                        <ocpd_pin>H6</ocpd_pin>
+                    </ocp_disabling>
+                    <serial_communication>
+                        <sc_on_board>True</sc_on_board>
+                        <sc_usart_baudrate>115200</sc_usart_baudrate>
+                        <sc_usart_tx>A9</sc_usart_tx>
+                        <sc_usart_rx>A10</sc_usart_rx>
+                    </serial_communication>
+                    <start_stop>
+                        <btn_on_board>True</btn_on_board>
+                        <btn>C13</btn>
+                        <btn_polarity>Falling Edge</btn_polarity>
+                        <btn_polarity_edge>No Pull up - No Pull down</btn_polarity_edge>
+                    </start_stop>
+                    <ai_bus_voltage>
+                        <ai_bvf_ch>C4</ai_bvf_ch>
+                        <ai_bvf_use_r3>True</ai_bvf_use_r3>
+                        <ai_bvf_r3>100.0</ai_bvf_r3>
+                    </ai_bus_voltage>
+                    <ai_current_sensing>
+                        <ai_pcf_ch_s>C2</ai_pcf_ch_s>
+                    </ai_current_sensing>
+                    <ai_temperature>
+                        <ai_tf_ch>C5</ai_tf_ch>
+                    </ai_temperature>
+                    <ai_opamp>
+                        <ai_opamp_gain>Internal</ai_opamp_gain>
+                        <ai_opamp_gain_factor>2</ai_opamp_gain_factor>
+                        <ai_opamp_feedback>False</ai_opamp_feedback>
+                        <ai_opamp_single_no_inv>A7</ai_opamp_single_no_inv>
+                        <ai_opamp_single_inv>A3</ai_opamp_single_inv>
+                        <ai_opamp_single_out>A2</ai_opamp_single_out>
+                    </ai_opamp>
+                    <ai_protection>
+                        <ai_protection_inv_input>Internal</ai_protection_inv_input>
+                        <ai_protection_inv_input_pin>none</ai_protection_inv_input_pin>
+                        <ai_protection_output>False</ai_protection_output>
+                        <ai_protection_single_comp>COMP2</ai_protection_single_comp>
+                        <ai_protection_single_no_inv>A7</ai_protection_single_no_inv>
+                        <ai_protection_single_out>A2</ai_protection_single_out>
+                    </ai_protection>
+                    <pfc>
+                        <pfc_pwm>--</pfc_pwm>
+                        <pfc_main>--</pfc_main>
+                        <pfc_ocs>--</pfc_ocs>
+                        <ai_pfc_f103_current_adc_ch>C3</ai_pfc_f103_current_adc_ch>
+                        <ai_pfc_f103_voltage_adc_ch>A3</ai_pfc_f103_voltage_adc_ch>
+                    </pfc>
+                </one_sh>
+                <three_sh>
+                    <current_sensing>
+                        <mct_ch1>C6</mct_ch1>
+                        <mct_ch2>C7</mct_ch2>
+                        <mct_ch3>C8</mct_ch3>
+                        <mct_bkin>I4</mct_bkin>
+                    </current_sensing>
+                    <current_sensing_no_enabler>
+                        <mct_ch1n>A7</mct_ch1n>
+                        <mct_ch2n>B0</mct_ch2n>
+                        <mct_ch3n>B1</mct_ch3n>
+                    </current_sensing_no_enabler>
+                    <current_sensing_enabler>
+                        <mct_enabler_ch1_pin>C13</mct_enabler_ch1_pin>
+                        <mct_enabler_ch2_pin>C13</mct_enabler_ch2_pin>
+                        <mct_enabler_ch3_pin>C13</mct_enabler_ch3_pin>
+                    </current_sensing_enabler>
+                    <dbo>
+                        <dbo_pin>H6</dbo_pin>
+                    </dbo>
+                    <encoder>
+                        <eit_ch1>A0</eit_ch1>
+                        <eit_ch2>A1</eit_ch2>
+                    </encoder>
+                    <hall>
+                        <hall_ch1>A0</hall_ch1>
+                        <hall_ch2>A1</hall_ch2>
+                        <hall_ch3>A2</hall_ch3>
+                    </hall>
+                    <icl>
+                        <icl_pin>G11</icl_pin>
+                    </icl>
+                    <mcu>
+                        <pn>STM32F769NI</pn>
+                        <mcu_clk_src>25_crystal</mcu_clk_src>
+                        <mcu_freq>216</mcu_freq>
+                        <supply_voltage>3.30</supply_voltage>
+                    </mcu>
+                    <ocp_disabling>
+                        <ocpd_pin>H6</ocpd_pin>
+                    </ocp_disabling>
+                    <serial_communication>
+                        <sc_on_board>True</sc_on_board>
+                        <sc_usart_baudrate>115200</sc_usart_baudrate>
+                        <sc_usart_tx>A9</sc_usart_tx>
+                        <sc_usart_rx>A10</sc_usart_rx>
+                    </serial_communication>
+                    <start_stop>
+                        <btn_on_board>True</btn_on_board>
+                        <btn>C13</btn>
+                        <btn_polarity>Falling Edge</btn_polarity>
+                        <btn_polarity_edge>No Pull up - No Pull down</btn_polarity_edge>
+                    </start_stop>
+                    <ai_bus_voltage>
+                        <ai_bvf_ch>C4</ai_bvf_ch>
+                        <ai_bvf_use_r3>True</ai_bvf_use_r3>
+                        <ai_bvf_r3>100.0</ai_bvf_r3>
+                    </ai_bus_voltage>
+                    <ai_current_sensing>
+                        <ai_pcf_ch_u>C1</ai_pcf_ch_u>
+                        <ai_pcf_ch_v>C2</ai_pcf_ch_v>
+                        <ai_pcf_ch_w>C3</ai_pcf_ch_w>
+                    </ai_current_sensing>
+                    <ai_temperature>
+                        <ai_tf_ch>C5</ai_tf_ch>
+                    </ai_temperature>
+                    <ai_opamp>
+                        <ai_opamp_gain>Internal</ai_opamp_gain>
+                        <ai_opamp_gain_factor>2</ai_opamp_gain_factor>
+                        <ai_opamp_feedback>False</ai_opamp_feedback>
+                        <ai_opamp_ph_u_no_inv>A1</ai_opamp_ph_u_no_inv>
+                        <ai_opamp_ph_v_no_inv>A7</ai_opamp_ph_v_no_inv>
+                        <ai_opamp_ph_w_no_inv>B14</ai_opamp_ph_w_no_inv>
+                        <ai_opamp_ph_x_inv>A3</ai_opamp_ph_x_inv>
+                        <ai_opamp_ph_y_inv>C5</ai_opamp_ph_y_inv>
+                        <ai_opamp_ph_z_inv>--</ai_opamp_ph_z_inv>
+                        <ai_opamp_ph_x_out>A2</ai_opamp_ph_x_out>
+                        <ai_opamp_ph_y_out>A6</ai_opamp_ph_y_out>
+                        <ai_opamp_ph_z_out>--</ai_opamp_ph_z_out>
+                    </ai_opamp>
+                    <ai_protection>
+                        <ai_protection_inv_input>Internal</ai_protection_inv_input>
+                        <ai_protection_inv_input_pin>none</ai_protection_inv_input_pin>
+                        <ai_protection_output>False</ai_protection_output>
+                        <ai_protection_ph_u_no_inv>A1</ai_protection_ph_u_no_inv>
+                        <ai_protection_ph_v_no_inv>A7</ai_protection_ph_v_no_inv>
+                        <ai_protection_ph_w_no_inv>D14</ai_protection_ph_w_no_inv>
+                        <ai_protection_ph_u_out>A0</ai_protection_ph_u_out>
+                        <ai_protection_ph_v_out>A2</ai_protection_ph_v_out>
+                        <ai_protection_ph_w_out>C8</ai_protection_ph_w_out>
+                    </ai_protection>
+                    <pfc>
+                        <pfc_pwm>--</pfc_pwm>
+                        <pfc_main>--</pfc_main>
+                        <pfc_ocs>--</pfc_ocs>
+                        <ai_pfc_f103_current_adc_ch>C3</ai_pfc_f103_current_adc_ch>
+                        <ai_pfc_f103_voltage_adc_ch>A3</ai_pfc_f103_voltage_adc_ch>
+                    </pfc>
+                </three_sh>
+            </m1>
+        </description>
+    </single>
+	<applications>
+		<single>
+            <application>generic</application>
+            <application>pumps</application>
+            <application>compressor</application>
+            <application>air conditioning</application>
+            <application>dish washer</application>
+            <application>fans</application>
+        </single>
+	</applications>
+</board>

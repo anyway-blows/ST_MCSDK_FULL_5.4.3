@@ -1,0 +1,1 @@
+<#include "../F1/NUCLEO-F103RB/NUCLEO-F103RB - 72 MHz.ftl" >

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<motor id="Allen Bradley" label="Allen Bradley TL-A220P-HJ32AN" img=""  description=" TL-A220P-HJ32AN" byuser="false">
+  <Mp>
+    <user_data>
+      <ctrl_board name="STM32303E-EVAL"/>
+      <pwr_board name="STEVAL-IPM05F 3Sh"/>
+      <motors>
+        <pole_pairs>4</pole_pairs>
+        <max_speed>5000</max_speed>
+        <max_current>2.95</max_current>
+        <v_bus>325</v_bus>
+        <ld_lq_ratio>1</ld_lq_ratio>
+        <sm_pmsm>true</sm_pmsm>
+        <i_pmsm>false</i_pmsm>
+      </motors>
+    </user_data>
+    <profile_data>
+      <motors>
+        <binaryFile name="NUCLEO-F302R8#X-NUCLEO-IHM07M1 3Sh#(4.3.0)#(005).bin"/>
+        <electrical>
+          <max_current>2.950000047683716</max_current>
+          <v_bus>325.84619140625</v_bus>
+          <ls>0.008448909036815166</ls>
+          <rs>2.703650712966919</rs>
+          <ke>24.707189559936523</ke>
+        </electrical>
+        <mechanical>
+          <friction>0.000012129706192354206</friction>
+          <inertia>0.000005118735771247884</inertia>
+          <max_speed>5000</max_speed>
+          <max_speed_startup>1998</max_speed_startup>
+          <acceleration>500</acceleration>
+        </mechanical>
+      </motors>
+      <operation_condition>
+        <pwm_frequency>16000</pwm_frequency>
+        <foc_rate>1</foc_rate>
+        <cutoff_frequency>3000</cutoff_frequency>
+      </operation_condition>
+    </profile_data>
+  </Mp>
+  <system type="motor 1">
+    <motor version="1.0">
+      <name>Motor</name>
+      <uid>M</uid>
+      <type>M</type>
+      <handler_name>M</handler_name>
+      <board_name>Allen Bradley TL-A220P-HJ32AN</board_name>
+      <vars>
+        <var version="1.0" type="MC_List" name="I/SM-PMSM" value="1">
+          <items>
+            <item tag="1" text="Internal PMSM"/>
+            <item tag="0" text="Surface Mounted PMSM"/>
+          </items>
+        </var>
+        <var version="1.0" type="MC_Int" name="Pole Pairs" value="4"/>
+        <var version="1.0" type="MC_Int" name="Max Rated Speed" value="5000"/>
+        <var version="1.0" type="MC_Double" name="Nominal Current" value="2.950000047683716"/>
+        <var version="1.0" type="MC_Double" name="Nominal DC Voltage" value="325"/>
+        <var version="1.0" type="MC_Double" name="Rs" value="2.703650712966919"/>
+        <var version="1.0" type="MC_Double" name="Ld" value="8.448909036815166"/>
+        <var version="1.0" type="MC_Double" name="Lq" value="8.448909036815166"/>
+        <var version="1.0" type="MC_Double" name="Ls" value="8.448909036815166"/>
+        <var version="1.0" type="MC_Double" name="ld_lq_ratio" value="1"/>
+        <var version="1.0" type="MC_Double" name="B-EmfConstant" value="24.707189559936523"/>
+        <var version="1.0" type="MC_Double" name="inertia" value="5.118735771247884"/>
+        <var version="1.0" type="MC_Double" name="friction" value="12.129706192354206"/>
+      </vars>
+    </motor>
+  </system>
+</motor>

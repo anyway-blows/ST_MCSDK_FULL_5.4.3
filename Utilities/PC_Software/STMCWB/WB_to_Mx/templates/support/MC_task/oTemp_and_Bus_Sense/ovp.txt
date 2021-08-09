@@ -1,0 +1,60 @@
+<#--
+<define key="INTERNAL_OVERVOLTAGEPROTECTION"  value="ENABLE" />
+<define key="INTERNAL_OVERVOLTAGEPROTECTION2" value="ENABLE" />
+
+&lt;#&ndash; When the OPV uses internal HW, it will use an internal Comparator: &ndash;&gt;
+<define key="OVP_SELECTION"                   value="COMP_Selection_COMP7" />
+
+
+<define key="OVP_OUTPUTPOL"                   value="COMP_OutputPol_NonInverted" />
+<define key="OCP_FILTER"                      value="COMP_Mode_HighSpeed" />
+<define key="OVP_FILTER"                      value="COMP_Mode_HighSpeed" />
+
+
+   &lt;#&ndash;+
+   |   |
++--+   +---+
+|          |
++--+   +---+
+   |   |
+   +-&ndash;&gt;
+<define key="M1_OVP_NONINVERTINGINPUT_GPIO" value="PC1" />
+&lt;#&ndash;
+           <define key="OVP_NONINVERTINGINPUT"           value="COMP7_NonInvertingInput_PC1" />
+           <define key="OVP_NONINVERTINGINPUT_GPIO_PORT" value="GPIOC" />
+           <define key="OVP_NONINVERTINGINPUT_GPIO_PIN"  value="GPIO_Pin_1" />
+&ndash;&gt;
+
+
+&lt;#&ndash;-------+
+|          |
++--------&ndash;&gt;
+<define key="M1_OVP_INVERTINGINPUT_GPIO"    value="PA4" />
+&lt;#&ndash;
+            <define key="OVP_INVERTINGINPUT_GPIO_PORT"    value="GPIOA" />
+            <define key="OVP_INVERTINGINPUT_GPIO_PIN"     value="GPIO_Pin_4" />
+&ndash;&gt;
+<define key="OVP_INVERTINGINPUT_MODE"         value="INT_MODE" />
+<define key="OVP_INVERTINGINPUT"              value="COMPX_InvertingInput_VREF" />
+
+<define key="OVP_INVERTINGINPUT_MODE"         value="EXT_MODE" />
+<define key="OVP_INVERTINGINPUT" value="COMP7_InvertingInput_PC0" />
+
+<define key="OVP_INVERTINGINPUT_MODE"         value="INT_MODE" />
+<define key="OVP_INVERTINGINPUT"              value="COMPX_InvertingInput_VREF" />
+
+
+<define key="M1_OVP_OUTPUT_GPIO"               value="PC2" />
+&lt;#&ndash;
+            <define key="OVP_OUTPUT"                      value="COMP_Output_TIM1BKIN" />
+            <define key="OVP_OUTPUT_GPIO_PORT"            value="GPIOC" />
+            <define key="OVP_OUTPUT_GPIO_PIN"             value="GPIO_Pin_2" />
+            <define key="OVP_OUTPUT_GPIO_AF"              value="GPIO_AF_3" />
+&ndash;&gt;
+<define key="OVP_OUTPUT_MODE"               value="INT_MODE" />
+
+
+<define key="BKIN_MODE"                       value="INT_MODE" />
+<define key="BKIN_MODE2"                      value="INT_MODE" />
+
+-->

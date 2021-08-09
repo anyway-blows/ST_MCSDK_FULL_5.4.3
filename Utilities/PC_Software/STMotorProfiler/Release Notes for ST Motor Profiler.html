@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Release Notes for ST Motor Profiler</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:first-child { margin-top: -20px; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+html, body, #write { background: rgb(255, 255, 255); font-family: arial, sans-serif; font-weight: 400; }
+h1, h2, h3, h4, h5, h6 { font-family: arial, sans-serif; }
+html { font-family: arial, sans-serif; font-size: 14px; }
+#write { max-width: 914px; }
+#write > h1:first-child { margin-top: 2.75rem; }
+#write > h2:first-child { margin-top: 1.75rem; }
+#write > h3:first-child { margin-top: 1rem; }
+#write > h4:first-child { margin-top: 0.5rem; }
+h1 { font-size: 2rem; font-weight: bold; line-height: 4rem; margin: 0px 0px 1rem; padding: 20px 30px; text-align: center; color: rgb(51, 102, 255); }
+h2 { font-size: 1rem; font-weight: bold; font-style: italic; margin: 3rem 0px 1rem; padding-left: 0.2rem; text-align: left; color: white; background-color: blue; }
+h3 { font-size: 1rem; font-weight: bold; text-align: left; color: black; }
+h3 em { color: white; background-color: blue; padding-left: 0.2rem; padding-right: 5rem; font-style: normal; }
+h4 { font-size: 1rem; font-weight: bold; text-decoration: underline; text-align: left; color: black; }
+h5 { font-size: 1rem; font-weight: normal; text-decoration: underline; text-align: left; color: black; }
+h6 { font-size: 1rem; font-weight: normal; text-align: center; }
+p { color: black; font-size: 1rem; margin: 0px 0px 1rem; }
+li > p > em { font-style: normal; text-decoration: underline; }
+#write > h3.md-focus::before { left: -1.875rem; top: 0.5rem; padding: 2px; }
+#write > h4.md-focus::before { left: -1.875rem; top: 0.3125rem; padding: 2px; }
+#write > h5.md-focus::before { left: -1.875rem; top: 0.25rem; padding: 2px; }
+#write > h6.md-focus::before { left: -1.875rem; top: 0.125rem; padding: 2px; }
+ul { list-style-type: square; }
+a, .md-def-url { text-decoration: none; }
+a:hover { text-decoration: underline; }
+table { margin-bottom: 20px; }
+table th, table td { padding: 8px; line-height: 1.25rem; vertical-align: top; border: 1px solid rgb(91, 155, 213); }
+table thead { background-color: rgb(91, 155, 213); color: white; }
+table th { font-weight: bold; }
+table thead th { vertical-align: bottom; }
+table caption + thead tr:first-child th, table caption + thead tr:first-child td, table colgroup + thead tr:first-child th, table colgroup + thead tr:first-child td, table thead:first-child tr:first-child th, table thead:first-child tr:first-child td { border-top: 0px; }
+table tbody + tbody { border-top: 2px solid rgb(221, 221, 221); }
+table tbody tr:nth-child(2n+1) { background: rgb(222, 234, 246); }
+code { font-family: consolas, monospace; color: rgb(0, 112, 192); font-size: 0.9em; }
+.md-fences { border: 1px solid rgb(204, 204, 204); margin: 0px 0px 20px; font-size: 1em; padding: 0.4em 1em 0.3em; }
+.task-list { padding-left: 0px; }
+.task-list-item { padding-left: 2.125rem; }
+.task-list-item input { top: 3px; }
+.task-list-item input::before { content: ""; display: inline-block; width: 1rem; height: 1rem; vertical-align: middle; text-align: center; border: 1px solid gray; background-color: rgb(253, 253, 253); margin-left: 0px; margin-top: -0.5rem; }
+.task-list-item input:checked::before, .task-list-item input[checked]::before { content: "◼"; font-size: 0.8125rem; line-height: 0.9375rem; margin-top: -1rem; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .task-list-item input::before { margin-top: -0.2rem; }
+  .task-list-item input:checked::before, .task-list-item input[checked]::before { margin-top: -0.2rem; }
+}
+blockquote { margin: 0px 0px 1.11111rem; padding: 0.5rem 1.11111rem 0px 1.05556rem; border-left: 1px solid gray; }
+blockquote, blockquote p { line-height: 1; color: rgb(111, 111, 111); }
+#write pre.md-meta-block { min-height: 30px; background: rgb(248, 248, 248); padding: 3em 1.5em 1.5em; font-weight: 300; font-size: 1em; margin: -1.5em -1000px 2em; color: rgb(153, 153, 153); border-left: 1000px solid rgb(248, 248, 248); border-right: 1000px solid rgb(248, 248, 248); }
+.MathJax_Display { font-size: 0.9em; margin-top: 0.5em; margin-bottom: 0px; }
+p.mathjax-block, .mathjax-block { padding-bottom: 0px; }
+.mathjax-block > .code-tooltip { bottom: 5px; box-shadow: none; }
+.md-image > .md-meta { padding-left: 0.5em; padding-right: 0.5em; }
+.md-image > img { margin-top: 2px; }
+.md-image > .md-meta:first-of-type::before { padding-left: 4px; }
+#typora-source { color: rgb(85, 85, 85); }
+#md-searchpanel { border-bottom: 1px solid rgb(204, 204, 204); }
+#md-searchpanel .btn { border: 1px solid rgb(204, 204, 204); }
+#md-notification::before { top: 14px; }
+#md-notification { background: rgb(238, 238, 238); }
+.megamenu-menu-panel .btn { border: 1px solid rgb(204, 204, 204); }
+
+
+
+
+
+ .typora-export p, .typora-export .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name='header-n0' class='md-header-anchor '></a>Release Notes for ST Motor Profiler</h1><p><img src='../../../_htmresc/STlogo.png' alt='STlogo' referrerPolicy='no-referrer' /></p><h6><a name='header-n3' class='md-header-anchor '></a>Copyright © 2019 STMicroelectronics</h6><p>The ST Motor Profiler software tool provides the following features:</p><ul><li>A PC software application to auto-measure electromechanical parameters of PMSM motors ;</li><li>Embedded One Touch Tuning algorithm: a new algorithm that uses a single parameter to set up the speed controller according to the type of load.
+Together with the ST Motor Profiler software tool, it can be enabled to achieve the setup and run unknown motor from scratch </li><li>Measured motor parameters can be configured in the MC application, thanks to ST Motor Control Workbench.</li></ul><h2><a name='header-n12' class='md-header-anchor '></a>Update History</h2><h3><a name='header-n61' class='md-header-anchor '></a><em>V1.3.1 / 28-June-2019</em></h3><h4><a name='header-n64' class='md-header-anchor '></a>Main Changes</h4><ul><li><p>Added support for STM32G4, STM32F7, STM32F4 , STM32L4 based boards into Motor Profiler </p><ul><li>See section <a href='#header-n107'>Profiling motors with ST Motor Profiler</a> for precautions when using the Profiler</li></ul></li><li><p>The following issues have been fixed:</p><ul><li>Motor Profiler was not working on STM32F3 and L4 in one ADC configuration</li></ul></li></ul><h4><a name='header-n107' class='md-header-anchor '></a>Profiling motors with ST Motor Profiler</h4><p>When using the Motor Profiler the user must make sure that the motor is fully stopped (spinning at 0 RPM) before starting it again whatever the method (by clicking on <em>Play</em>, <em>Start Profile</em>, ...).</p><p>After a  fault occurred, or before starting the motor, the low side switches are activated in order to detect if the motor is spinning.Indeed, if the motor is spinning at that time, it may decelerate abruptly which can be dangerous. <strong>Great care must be taken to tightly fasten the motor so that it does not become dangerous when accelerating or decelerating brutally</strong>. </p><h4><a name='header-n110' class='md-header-anchor '></a></h4><h3><a name='header-n13' class='md-header-anchor '></a><em>V1.3.0 / 27-May-2019</em></h3><h4><a name='header-n14' class='md-header-anchor '></a>Main Changes</h4><ul><li><p>Added support for NUCLEO-STMG431RB+IHM016M1, NUCLEO-STMG431RB+IHM007M1 and B-G431B-ESC1 configurations for profiling motors.</p><ul><li>See section <a href='#header-n25'>Profiling motors with NUCLEO-G431RB setups</a> below for important notice about such configurations</li></ul></li><li><p>Added links to external video documentation on the detection of the number of pole pairs of a motor</p></li><li><p>Enhanced the ergonomics of the tool</p></li></ul><h4><a name='header-n25' class='md-header-anchor '></a>Profiling motors with NUCLEO-G431RB setups</h4><p>When using the Motor Profiler with configurations based on a NUCLEO-G431RB control board, the user must make sure that the motor is fully stopped (spinning at 0 RPM) before starting it again whatever the method (by clicking on <em>Play</em>, <em>Start Profile</em>, ...).</p><h3><a name='header-n27' class='md-header-anchor '></a><em>V1.1.2 / 06-Jul-2018</em></h3><h4><a name='header-n28' class='md-header-anchor '></a>Main Changes</h4><ul><li>Added support for the STEVAL-ESC001V1 ESC F3 board.</li></ul><h3><a name='header-n32' class='md-header-anchor '></a><em>V1.1.1 / 05-Jun-2018</em></h3><h4><a name='header-n33' class='md-header-anchor '></a>Main Changes</h4><ul><li>Added support for the STEVAL-IHM016 board.</li></ul><h3><a name='header-n37' class='md-header-anchor '></a><em>V1.0.0 / 08-Mar-2018</em></h3><h4><a name='header-n38' class='md-header-anchor '></a>Main Changes</h4><ul><li>No changes for ST Motor Profiler v1.0.0.</li></ul><h2><a name='header-n42' class='md-header-anchor '></a>Supported devices and boards</h2><p>The current version of ST Motor Profiler only supports a selection of Control and Power board pairs:</p><h3><a name='header-n44' class='md-header-anchor '></a>NUCLEO-F303RE:</h3><p>X-NUCLEO-IHM07M1,  X-NUCLEO-IHM08M1, X-NUCLEO-IHM16M1, STEVAL-IPM05F, STEVAL-IPM10B,  STEVAL-IPM15B, STEVAL-IPMNG3Q, STEVAL-IPMNM1N</p><h3><a name='header-n46' class='md-header-anchor '></a>NUCLEO-F302R8, NUCLEO-F401RE, NUCLEO-F446RE, NUCLEO-L476RG, NUCLEO-L452RE:</h3><p>X-NUCLEO-IHM07M1,  X-NUCLEO-IHM08M1, STEVAL-IPM05F, STEVAL-IPM10B,  STEVAL-IPM15B, STEVAL-IPMNG3Q, STEVAL-IPMNM1N</p><h3><a name='header-n48' class='md-header-anchor '></a>NUCLEO-F746ZG:</h3><p>X-NUCLEO-IHM07M1,  X-NUCLEO-IHM08M1</p><h3><a name='header-n50' class='md-header-anchor '></a>STM32303E-EVAL, STM3241G-EVAL, STM3240G-EVAL, STM32F769I-EVAL, STM32L476G-EVAL:</h3><p>STEVAL-IHM023V3, STEVAL-IHM028V2, STEVAL-IPM05F, STEVAL-IPM10B, STEVAL-IPM15B, STEVAL-IPMNG3Q, STEVAL-IPMNM1N</p><h2><a name='header-n53' class='md-header-anchor '></a>Known Limitations</h2><ul><li>The ST Motor Profiler software tools is running only on a PC system, and has been tested using a Windows 7 Operating System.</li></ul><h2><a name='header-n57' class='md-header-anchor '></a>License</h2><p>This software package is licensed by ST under ST license SLA0048, the &quot;License&quot;; You may not use this package except in compliance with the License. You may obtain a copy of the License at:</p><div style="text-align: center"><http: www.st.com="" sla0048=""></http:></div><div style="text-align: center">For a complete documentation on STM32 Microcontrollers, please visit us at http://www.st.com/STM32</div></div>
+</body>
+</html>

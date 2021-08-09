@@ -1,0 +1,1867 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<IP xmlns="http://mcd.rou.st.com/modules.php?name=mcu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" CodeTemplate="mc_c.ftl;mc_h.ftl" DBVersion="V4.0" IncludeFile="" Name="MotorControl" RootFolder="MCSDK_v5.4.3-Full/MotorControl/" Version="MCSDK_v5.4.3-Full" xsi:schemaLocation="http://mcd.rou.st.com/modules.php?name=mcu ../../../../../../../doc/V4/Development/Specifications/db/IP_Modes.xsd">
+	<RefConfigFile Name="DRIVE_PARAMETERS_H" Template="drive_parameters.h.ftl">
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="drive_parameters.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="ALIGNMENT_ANGLE_DEG" />
+		<Argument GenericType="simple" Name="ALIGNMENT_ANGLE_DEG2" />
+		<Argument GenericType="simple" Name="ALIGNMENT_DURATION" />
+		<Argument GenericType="simple" Name="ALIGNMENT_DURATION2" />
+		<Argument GenericType="simple" Name="ANGC" />
+		<Argument GenericType="simple" Name="ANGC2" />
+		<Argument GenericType="simple" Name="AUX_ENCODER" />
+		<Argument GenericType="simple" Name="AUX_ENCODER2" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_CORDIC" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_CORDIC2" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_PLL" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_PLL2" />    
+		<Argument GenericType="simple" Name="BEMF_CONSISTENCY_GAIN" />
+		<Argument GenericType="simple" Name="BEMF_CONSISTENCY_GAIN2" />
+		<Argument GenericType="simple" Name="BEMF_CONSISTENCY_TOL" />
+		<Argument GenericType="simple" Name="BEMF_CONSISTENCY_TOL2" />
+		<Argument GenericType="simple" Name="BUS_VOLTAGE_READING" />
+		<Argument GenericType="simple" Name="BUS_VOLTAGE_READING2" />     
+		<Argument GenericType="simple" Name="CONSTANT1_D" />
+		<Argument GenericType="simple" Name="CONSTANT1_D2" />
+		<Argument GenericType="simple" Name="CONSTANT1_Q" />
+		<Argument GenericType="simple" Name="CONSTANT1_Q2" />
+		<Argument GenericType="simple" Name="CONSTANT2_QD" />
+		<Argument GenericType="simple" Name="CONSTANT2_QD2" />
+		<Argument GenericType="simple" Name="CORD_BEMF_CONSISTENCY_GAIN" />
+		<Argument GenericType="simple" Name="CORD_BEMF_CONSISTENCY_GAIN2" />
+		<Argument GenericType="simple" Name="CORD_BEMF_CONSISTENCY_TOL" />
+		<Argument GenericType="simple" Name="CORD_BEMF_CONSISTENCY_TOL2" />
+		<Argument GenericType="simple" Name="CORD_F1" />
+		<Argument GenericType="simple" Name="CORD_F12" />
+		<Argument GenericType="simple" Name="CORD_F2" />
+		<Argument GenericType="simple" Name="CORD_F22" />
+		<Argument GenericType="simple" Name="CORD_FIFO_DEPTH_01HZ" />
+		<Argument GenericType="simple" Name="CORD_FIFO_DEPTH_01HZ2" />
+		<Argument GenericType="simple" Name="CORD_FIFO_DEPTH_DPP" />
+		<Argument GenericType="simple" Name="CORD_FIFO_DEPTH_DPP2" />
+		<Argument GenericType="simple" Name="CORD_GAIN1" />
+		<Argument GenericType="simple" Name="CORD_GAIN12" />
+		<Argument GenericType="simple" Name="CORD_GAIN2" />
+		<Argument GenericType="simple" Name="CORD_GAIN22" />
+		<Argument GenericType="simple" Name="CORD_MAX_ACCEL_DPPP" />
+		<Argument GenericType="simple" Name="CORD_MAX_ACCEL_DPPP2" />
+		<Argument GenericType="simple" Name="CORD_MEAS_ERRORS_BEFORE_FAULTS" />
+		<Argument GenericType="simple" Name="CORD_MEAS_ERRORS_BEFORE_FAULTS2" />
+		<Argument GenericType="simple" Name="CORD_VARIANCE_THRESHOLD" />
+		<Argument GenericType="simple" Name="CORD_VARIANCE_THRESHOLD2" />
+		<Argument GenericType="simple" Name="CURR_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="CURR_SAMPLING_TIME2" />
+		<Argument GenericType="simple" Name="DEFAULT_CONTROL_MODE" />
+		<Argument GenericType="simple" Name="DEFAULT_CONTROL_MODE2" />
+		<Argument GenericType="simple" Name="DEFAULT_FLUX_COMPONENT" />
+		<Argument GenericType="simple" Name="DEFAULT_FLUX_COMPONENT2" />
+		<Argument GenericType="simple" Name="DEFAULT_TARGET_SPEED_RPM" />
+		<Argument GenericType="simple" Name="DEFAULT_TARGET_SPEED_RPM2" />
+		<Argument GenericType="simple" Name="DEFAULT_TORQUE_COMPONENT" />
+		<Argument GenericType="simple" Name="DEFAULT_TORQUE_COMPONENT2" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="ENABLE_SL_ALGO_FROM_PHASE" />
+		<Argument GenericType="simple" Name="ENABLE_SL_ALGO_FROM_PHASE2" />
+		<Argument GenericType="simple" Name="ENC_AVERAGING_FIFO_DEPTH" />
+		<Argument GenericType="simple" Name="ENC_AVERAGING_FIFO_DEPTH2" />
+		<Argument GenericType="simple" Name="ENC_MEAS_ERRORS_BEFORE_FAULTS" />
+		<Argument GenericType="simple" Name="ENC_MEAS_ERRORS_BEFORE_FAULTS2" />
+		<Argument GenericType="simple" Name="ENCODER" />
+		<Argument GenericType="simple" Name="ENCODER2" />
+		<Argument GenericType="simple" Name="F1" />
+		<Argument GenericType="simple" Name="F12" />
+		<Argument GenericType="simple" Name="F2" />
+		<Argument GenericType="simple" Name="F22" />
+		<Argument GenericType="simple" Name="FEED_FORWARD_CURRENT_REG_ENABLING" />
+		<Argument GenericType="simple" Name="FEED_FORWARD_CURRENT_REG_ENABLING2" />
+		<Argument GenericType="simple" Name="FLUX_WEAKENING_ENABLING" />
+		<Argument GenericType="simple" Name="FLUX_WEAKENING_ENABLING2" />
+		<Argument GenericType="simple" Name="FINAL_I_ALIGNMENT" />
+		<Argument GenericType="simple" Name="FINAL_I_ALIGNMENT2" />
+		<Argument GenericType="simple" Name="FREQ_RATIO" />
+		<Argument GenericType="simple" Name="FREQ_RELATION" />
+		<Argument GenericType="simple" Name="FREQ_RELATION2" />
+		<Argument GenericType="simple" Name="FW_KIDIV" />
+		<Argument GenericType="simple" Name="FW_KIDIV2" />
+		<Argument GenericType="simple" Name="FW_KI_GAIN" />
+		<Argument GenericType="simple" Name="FW_KI_GAIN2" />
+		<Argument GenericType="simple" Name="FW_KPDIV" />
+		<Argument GenericType="simple" Name="FW_KPDIV2" />
+		<Argument GenericType="simple" Name="FW_KP_GAIN" />
+		<Argument GenericType="simple" Name="FW_KP_GAIN2" />
+		<Argument GenericType="simple" Name="FW_VOLTAGE_REF" />
+		<Argument GenericType="simple" Name="FW_VOLTAGE_REF2" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_KP_GAIN" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_KP_GAIN2" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_KI_GAIN" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_KI_GAIN2" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_KD_GAIN" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_KD_GAIN2" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_KPDIV" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_KPDIV2" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_KIDIV" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_KIDIV2" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_KDDIV" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_KDDIV2" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ANGLE_STEP" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ANGLE_STEP2" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_MOV_DURATION" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_MOV_DURATION2" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_HOLD_TIME" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_HOLD_TIME2" />
+		<Argument GenericType="simple" Name="GAIN1" />
+		<Argument GenericType="simple" Name="GAIN12" />
+		<Argument GenericType="simple" Name="GAIN2" />
+		<Argument GenericType="simple" Name="GAIN22" />
+		<Argument GenericType="simple" Name="HALL_AVERAGING_FIFO_DEPTH" />
+		<Argument GenericType="simple" Name="HALL_AVERAGING_FIFO_DEPTH2" />
+		<Argument GenericType="simple" Name="HALL_MEAS_ERRORS_BEFORE_FAULTS" />
+		<Argument GenericType="simple" Name="HALL_MEAS_ERRORS_BEFORE_FAULTS2" />    
+		<Argument GenericType="simple" Name="HALL_MTPA" />
+		<Argument GenericType="simple" Name="HALL_MTPA2" />            
+		<Argument GenericType="simple" Name="HALL_SENSORS" />
+		<Argument GenericType="simple" Name="HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="HFINJECTION" />
+		<Argument GenericType="simple" Name="HFINJECTION2" />
+		<Argument GenericType="simple" Name="HFI_AMPLITUDE" />
+		<Argument GenericType="simple" Name="HFI_AMPLITUDE2" />
+		<Argument GenericType="simple" Name="HFI_DC_0_COEFF" />
+		<Argument GenericType="simple" Name="HFI_DC_0_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_DC_1_COEFF" />
+		<Argument GenericType="simple" Name="HFI_DC_1_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_DC_2_COEFF" />
+		<Argument GenericType="simple" Name="HFI_DC_2_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_DC_3_COEFF" />
+		<Argument GenericType="simple" Name="HFI_DC_3_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_DC_4_COEFF" />
+		<Argument GenericType="simple" Name="HFI_DC_4_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_FREQUENCY" />
+		<Argument GenericType="simple" Name="HFI_FREQUENCY2" />
+		<Argument GenericType="simple" Name="HFI_HIFRAMPLSCAN" />
+		<Argument GenericType="simple" Name="HFI_HIFRAMPLSCAN2" />
+		<Argument GenericType="simple" Name="HFI_HP_ID_0_COEFF" />
+		<Argument GenericType="simple" Name="HFI_HP_ID_0_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_HP_ID_1_COEFF" />
+		<Argument GenericType="simple" Name="HFI_HP_ID_1_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_HP_ID_2_COEFF" />
+		<Argument GenericType="simple" Name="HFI_HP_ID_2_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_HP_ID_3_COEFF" />
+		<Argument GenericType="simple" Name="HFI_HP_ID_3_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_HP_ID_4_COEFF" />
+		<Argument GenericType="simple" Name="HFI_HP_ID_4_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_LOCKFREQ" />
+		<Argument GenericType="simple" Name="HFI_LOCKFREQ2" />
+		<Argument GenericType="simple" Name="HFI_LP_ID_0_COEFF" />
+		<Argument GenericType="simple" Name="HFI_LP_ID_0_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_LP_ID_1_COEFF" />
+		<Argument GenericType="simple" Name="HFI_LP_ID_1_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_LP_ID_2_COEFF" />
+		<Argument GenericType="simple" Name="HFI_LP_ID_2_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_LP_ID_3_COEFF" />
+		<Argument GenericType="simple" Name="HFI_LP_ID_3_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_LP_ID_4_COEFF" />
+		<Argument GenericType="simple" Name="HFI_LP_ID_4_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_MINIMUM_SPEED_RPM" />
+		<Argument GenericType="simple" Name="HFI_MINIMUM_SPEED_RPM2" />
+		<Argument GenericType="simple" Name="HFI_NOTCH_IQD_0_COEFF" />
+		<Argument GenericType="simple" Name="HFI_NOTCH_IQD_0_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_NOTCH_IQD_1_COEFF" />
+		<Argument GenericType="simple" Name="HFI_NOTCH_IQD_1_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_NOTCH_IQD_2_COEFF" />
+		<Argument GenericType="simple" Name="HFI_NOTCH_IQD_2_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_NOTCH_IQD_3_COEFF" />
+		<Argument GenericType="simple" Name="HFI_NOTCH_IQD_3_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_NOTCH_IQD_4_COEFF" />
+		<Argument GenericType="simple" Name="HFI_NOTCH_IQD_4_COEFF2" />
+		<Argument GenericType="simple" Name="HFI_NSDETPOINTSSKIP" />
+		<Argument GenericType="simple" Name="HFI_NSDETPOINTSSKIP2" />
+		<Argument GenericType="simple" Name="HFI_NSMAXDETPOINTS" />
+		<Argument GenericType="simple" Name="HFI_NSMAXDETPOINTS2" />
+		<Argument GenericType="simple" Name="HFI_NS_MIN_SAT_DIFF" />
+		<Argument GenericType="simple" Name="HFI_NS_MIN_SAT_DIFF2" />
+		<Argument GenericType="simple" Name="HFI_PID_KIDIV" />
+		<Argument GenericType="simple" Name="HFI_PID_KIDIV2" />
+		<Argument GenericType="simple" Name="HFI_PID_KI_DEFAULT" />
+		<Argument GenericType="simple" Name="HFI_PID_KI_DEFAULT2" />
+		<Argument GenericType="simple" Name="HFI_PID_KPDIV" />
+		<Argument GenericType="simple" Name="HFI_PID_KPDIV2" />
+		<Argument GenericType="simple" Name="HFI_PID_KP_DEFAULT" />
+		<Argument GenericType="simple" Name="HFI_PID_KP_DEFAULT2" />
+		<Argument GenericType="simple" Name="HFI_PLL_KI_DEFAULT" />
+		<Argument GenericType="simple" Name="HFI_PLL_KI_DEFAULT2" />
+		<Argument GenericType="simple" Name="HFI_PLL_KP_DEFAULT" />
+		<Argument GenericType="simple" Name="HFI_PLL_KP_DEFAULT2" />
+		<Argument GenericType="simple" Name="HFI_SCANROTATIONSNO" />
+		<Argument GenericType="simple" Name="HFI_SCANROTATIONSNO2" />
+		<Argument GenericType="simple" Name="HFI_SPD_BUFFER_DEPTH_01HZ" />
+		<Argument GenericType="simple" Name="HFI_SPD_BUFFER_DEPTH_01HZ2" />
+		<Argument GenericType="simple" Name="HFI_WAITAFTERNS" />
+		<Argument GenericType="simple" Name="HFI_WAITAFTERNS2" />
+		<Argument GenericType="simple" Name="HFI_WAITBEFORESN" />
+		<Argument GenericType="simple" Name="HFI_WAITBEFORESN2" />
+		<Argument GenericType="simple" Name="INRUSH_CURRLIMIT_ENABLING" />
+		<Argument GenericType="simple" Name="INRUSH_CURRLIMIT_ENABLING2" />
+		<Argument GenericType="simple" Name="INRUSH_CURRLIMIT_AT_POWER_ON" />
+		<Argument GenericType="simple" Name="INRUSH_CURRLIMIT_AT_POWER_ON2" />
+		<Argument GenericType="simple" Name="INRUSH_CURRLIMIT_CHANGE_AFTER_MS" />
+		<Argument GenericType="simple" Name="INRUSH_CURRLIMIT_CHANGE_AFTER_MS2" />
+		<Argument GenericType="simple" Name="IQMAX" />
+		<Argument GenericType="simple" Name="IQMAX2" />
+		<Argument GenericType="simple" Name="LOW_SIDE_SIGNALS_ENABLING" />
+		<Argument GenericType="simple" Name="LOW_SIDE_SIGNALS_ENABLING2" />
+		<Argument GenericType="simple" Name="MAX_APPLICATION_SPEED" />
+		<Argument GenericType="simple" Name="MAX_APPLICATION_SPEED2" />
+		<Argument GenericType="simple" Name="MEAS_ERRORS_BEFORE_FAULTS" />
+		<Argument GenericType="simple" Name="MEAS_ERRORS_BEFORE_FAULTS2" />
+		<Argument GenericType="simple" Name="MIN_APPLICATION_SPEED" />
+		<Argument GenericType="simple" Name="MIN_APPLICATION_SPEED2" />
+		<Argument GenericType="simple" Name="MTPA_ENABLING" />
+		<Argument GenericType="simple" Name="MTPA_ENABLING2" />
+		<Argument GenericType="simple" Name="NB_CONSECUTIVE_TESTS" />
+		<Argument GenericType="simple" Name="NB_CONSECUTIVE_TESTS2" />
+		<Argument GenericType="simple" Name="OBS_MEAS_ERRORS_BEFORE_FAULTS" />
+		<Argument GenericType="simple" Name="OBS_MEAS_ERRORS_BEFORE_FAULTS2" />
+		<Argument GenericType="simple" Name="OBS_MINIMUM_SPEED_RPM" />
+		<Argument GenericType="simple" Name="OBS_MINIMUM_SPEED_RPM2" />
+		<Argument GenericType="simple" Name="OFST" />
+		<Argument GenericType="simple" Name="OFST2" />
+		<Argument GenericType="simple" Name="ON_OVER_VOLTAGE" />
+		<Argument GenericType="simple" Name="ON_OVER_VOLTAGE2" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC2" />    
+		<Argument GenericType="simple" Name="OV_TEMPERATURE_HYSTERESIS_C" />
+		<Argument GenericType="simple" Name="OV_TEMPERATURE_HYSTERESIS_C2" />
+		<Argument GenericType="simple" Name="OV_TEMPERATURE_THRESHOLD_C" />
+		<Argument GenericType="simple" Name="OV_TEMPERATURE_THRESHOLD_C2" />
+		<Argument GenericType="simple" Name="OV_VOLTAGE_THRESHOLD_V" />
+		<Argument GenericType="simple" Name="OV_VOLTAGE_THRESHOLD_V2" />
+		<Argument GenericType="simple" Name="PFC_ENABLED" />
+		<Argument GenericType="simple" Name="PHASE1_DURATION" />
+		<Argument GenericType="simple" Name="PHASE1_DURATION2" />
+		<Argument GenericType="simple" Name="PHASE1_FINAL_CURRENT" />
+		<Argument GenericType="simple" Name="PHASE1_FINAL_CURRENT2" />
+		<Argument GenericType="simple" Name="PHASE1_FINAL_SPEED_RPM" />
+		<Argument GenericType="simple" Name="PHASE1_FINAL_SPEED_RPM2" />
+		<Argument GenericType="simple" Name="PHASE2_DURATION" />
+		<Argument GenericType="simple" Name="PHASE2_DURATION2" />
+		<Argument GenericType="simple" Name="PHASE2_FINAL_CURRENT" />
+		<Argument GenericType="simple" Name="PHASE2_FINAL_CURRENT2" />
+		<Argument GenericType="simple" Name="PHASE2_FINAL_SPEED_RPM" />
+		<Argument GenericType="simple" Name="PHASE2_FINAL_SPEED_RPM2" />
+		<Argument GenericType="simple" Name="PHASE3_DURATION" />
+		<Argument GenericType="simple" Name="PHASE3_DURATION2" />
+		<Argument GenericType="simple" Name="PHASE3_FINAL_CURRENT" />
+		<Argument GenericType="simple" Name="PHASE3_FINAL_CURRENT2" />
+		<Argument GenericType="simple" Name="PHASE3_FINAL_SPEED_RPM" />
+		<Argument GenericType="simple" Name="PHASE3_FINAL_SPEED_RPM2" />
+		<Argument GenericType="simple" Name="PHASE4_DURATION" />
+		<Argument GenericType="simple" Name="PHASE4_DURATION2" />
+		<Argument GenericType="simple" Name="PHASE4_FINAL_CURRENT" />
+		<Argument GenericType="simple" Name="PHASE4_FINAL_CURRENT2" />
+		<Argument GenericType="simple" Name="PHASE4_FINAL_SPEED_RPM" />
+		<Argument GenericType="simple" Name="PHASE4_FINAL_SPEED_RPM2" />
+		<Argument GenericType="simple" Name="PHASE5_DURATION" />
+		<Argument GenericType="simple" Name="PHASE5_DURATION2" />
+		<Argument GenericType="simple" Name="PHASE5_FINAL_CURRENT" />
+		<Argument GenericType="simple" Name="PHASE5_FINAL_CURRENT2" />
+		<Argument GenericType="simple" Name="PHASE5_FINAL_SPEED_RPM" />
+		<Argument GenericType="simple" Name="PHASE5_FINAL_SPEED_RPM2" />
+		<Argument GenericType="simple" Name="PID_FLUX_KD_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_FLUX_KD_DEFAULT2" />
+		<Argument GenericType="simple" Name="PID_FLUX_KI_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_FLUX_KI_DEFAULT2" />
+		<Argument GenericType="simple" Name="PID_FLUX_KP_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_FLUX_KP_DEFAULT2" />
+		<Argument GenericType="simple" Name="PID_SPEED_KD_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_SPEED_KD_DEFAULT2" />
+		<Argument GenericType="simple" Name="PID_SPEED_KI_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_SPEED_KI_DEFAULT2" />
+		<Argument GenericType="simple" Name="PID_SPEED_KP_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_SPEED_KP_DEFAULT2" />
+		<Argument GenericType="simple" Name="PID_TORQUE_KD_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_TORQUE_KD_DEFAULT2" />
+		<Argument GenericType="simple" Name="PID_TORQUE_KI_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_TORQUE_KI_DEFAULT2" />
+		<Argument GenericType="simple" Name="PID_TORQUE_KP_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_TORQUE_KP_DEFAULT2" />
+		<Argument GenericType="simple" Name="PLL_KI_GAIN" />
+		<Argument GenericType="simple" Name="PLL_KI_GAIN2" />
+		<Argument GenericType="simple" Name="PLL_KP_GAIN" />
+		<Argument GenericType="simple" Name="PLL_KP_GAIN2" />
+		<Argument GenericType="simple" Name="PWM_FREQ_SCALING" />
+		<Argument GenericType="simple" Name="PWM_FREQ_SCALING2" />
+		<Argument GenericType="simple" Name="PWM_FREQUENCY" />
+		<Argument GenericType="simple" Name="PWM_FREQUENCY2" />
+		<Argument GenericType="simple" Name="REGULATION_EXECUTION_RATE" />
+		<Argument GenericType="simple" Name="REGULATION_EXECUTION_RATE2" />
+		<Argument GenericType="simple" Name="R_BRAKE_SWITCH_OFF_THRES_V" />
+		<Argument GenericType="simple" Name="R_BRAKE_SWITCH_OFF_THRES_V2" />
+		<Argument GenericType="simple" Name="SEGDIV" />
+		<Argument GenericType="simple" Name="SEGDIV2" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SERIAL_COM_CHANNEL1" />
+		<Argument GenericType="simple" Name="SERIAL_COM_CHANNEL2" />
+		<Argument GenericType="simple" Name="SERIAL_COM_MODE" />
+		<Argument GenericType="simple" Name="SERIAL_COM_MOTOR" />
+		<Argument GenericType="simple" Name="SPEED_BAND_LOWER_LIMIT" />
+		<Argument GenericType="simple" Name="SPEED_BAND_LOWER_LIMIT2" />
+		<Argument GenericType="simple" Name="SPEED_BAND_UPPER_LIMIT" />
+		<Argument GenericType="simple" Name="SPEED_BAND_UPPER_LIMIT2" />
+		<Argument GenericType="simple" Name="SPEED_LOOP_FREQUENCY_HZ" />
+		<Argument GenericType="simple" Name="SPEED_LOOP_FREQUENCY_HZ2" />
+		<Argument GenericType="simple" Name="POSITION_LOOP_FREQUENCY_HZ" />
+		<Argument GenericType="simple" Name="POSITION_LOOP_FREQUENCY_HZ2" />		
+		<Argument GenericType="simple" Name="SP_KDDIV" />
+		<Argument GenericType="simple" Name="SP_KDDIV2" />
+		<Argument GenericType="simple" Name="SP_KIDIV" />
+		<Argument GenericType="simple" Name="SP_KIDIV2" />
+		<Argument GenericType="simple" Name="SP_KPDIV" />
+		<Argument GenericType="simple" Name="SP_KPDIV2" />
+		<Argument GenericType="simple" Name="STARTING_ANGLE_DEG" />
+		<Argument GenericType="simple" Name="STARTING_ANGLE_DEG2" />
+		<Argument GenericType="simple" Name="START_STOP_BTN" />
+		<Argument GenericType="simple" Name="ENC_USE_CH3" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_CORDIC" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_CORDIC2" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_PLL" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_PLL2" />    
+		<Argument GenericType="simple" Name="STO_FIFO_DEPTH_01HZ" />
+		<Argument GenericType="simple" Name="STO_FIFO_DEPTH_01HZ2" />
+		<Argument GenericType="simple" Name="STO_FIFO_DEPTH_DPP" />
+		<Argument GenericType="simple" Name="STO_FIFO_DEPTH_DPP2" />
+		<Argument GenericType="simple" Name="STO_HFI_RPM_TH" />
+		<Argument GenericType="simple" Name="STO_HFI_RPM_TH2" />
+		<Argument GenericType="simple" Name="SW_DEADTIME_NS" />
+		<Argument GenericType="simple" Name="SW_DEADTIME_NS2" />
+		<Argument GenericType="simple" Name="TEMP_ADC_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="TEMP_ADC_SAMPLING_TIME2" />
+		<Argument GenericType="simple" Name="TEMPERATURE_READING" />
+		<Argument GenericType="simple" Name="TEMPERATURE_READING2" />
+		<Argument GenericType="simple" Name="TF_KDDIV" />
+		<Argument GenericType="simple" Name="TF_KDDIV2" />
+		<Argument GenericType="simple" Name="TF_KIDIV" />
+		<Argument GenericType="simple" Name="TF_KIDIV2" />
+		<Argument GenericType="simple" Name="TF_KPDIV" />
+		<Argument GenericType="simple" Name="TF_KPDIV2" />
+		<Argument GenericType="simple" Name="TRANSITION_DURATION" />
+		<Argument GenericType="simple" Name="TRANSITION_DURATION2" />
+		<Argument GenericType="simple" Name="UD_VOLTAGE_THRESHOLD_V" />
+		<Argument GenericType="simple" Name="UD_VOLTAGE_THRESHOLD_V2" />
+		<Argument GenericType="simple" Name="VARIANCE_THRESHOLD" />
+		<Argument GenericType="simple" Name="VARIANCE_THRESHOLD2" />
+		<Argument GenericType="simple" Name="VBUS_ADC_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="VBUS_ADC_SAMPLING_TIME2" />    
+		<Argument GenericType="simple" Name="MOTOR_PROFILER" />        		
+	</RefConfigFile>
+	<RefConfigFile Name="MCTASKS_H" Template="mc_tasks.h.ftl">
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="mc_tasks.h" Version="v0.0.0" />
+	</RefConfigFile>
+	<RefConfigFile Name="MC_API_C" Template="mc_api.c.ftl">
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="mc_api.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="AUX_ENCODER" />
+		<Argument GenericType="simple" Name="AUX_ENCODER2" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="ENCODER" />
+		<Argument GenericType="simple" Name="ENCODER2" />
+		<Argument GenericType="simple" Name="HFINJECTION" />
+		<Argument GenericType="simple" Name="HFINJECTION2" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />		
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />				
+	</RefConfigFile>
+	<RefConfigFile Name="MC_CTRL_PROTOCOL_C" Template="motor_control_protocol.c.ftl">
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC | S_SERIAL_COMMUNICATION" Name="motor_control_protocol.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />		
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />		
+		<Argument GenericType="simple" Name="DRIVE_TYPE" />
+	</RefConfigFile>
+	<RefConfigFile Name="MC_CTRL_PROTOCOL_H" Template="motor_control_protocol.h.ftl">
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC | S_SERIAL_COMMUNICATION" Name="motor_control_protocol.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />		
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />		
+		<Argument GenericType="simple" Name="DRIVE_TYPE" />
+	</RefConfigFile>
+	<RefConfigFile Name="MC_API_H" Template="mc_api.h.ftl">
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="mc_api.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="AUX_ENCODER" />
+		<Argument GenericType="simple" Name="AUX_ENCODER2" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="ENCODER" />
+		<Argument GenericType="simple" Name="ENCODER2" />
+		<Argument GenericType="simple" Name="HFINJECTION" />
+		<Argument GenericType="simple" Name="HFINJECTION2" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />		
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />		
+	</RefConfigFile>
+	<RefConfigFile Name="MC_CONFIG_C" Template="mc_config.c.ftl">
+		<File Category="source" Condition="all" Name="mc_config.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="DRIVE_TYPE" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION2" />
+		<Argument GenericType="simple" Name="AUX_ENCODER" />
+		<Argument GenericType="simple" Name="AUX_ENCODER2" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_CORDIC" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_CORDIC2" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_PLL" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_PLL2" />
+		<Argument GenericType="simple" Name="BUS_VOLTAGE_READING" />
+		<Argument GenericType="simple" Name="BUS_VOLTAGE_READING2" />
+		<Argument GenericType="simple" Name="DAC_EMULATED" />		
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="DEBUG_DAC_CH1" />
+		<Argument GenericType="simple" Name="DEBUG_DAC_CH2" />
+		<Argument GenericType="simple" Name="DISSIPATIVE_BRAKE_POLARITY" />
+		<Argument GenericType="simple" Name="DISSIPATIVE_BRAKE_POLARITY2" />
+		<Argument GenericType="simple" Name="DRIVE_TYPE" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="ENCODER" />
+		<Argument GenericType="simple" Name="ENCODER2" />
+		<Argument GenericType="simple" Name="ENC_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="ENC_TIMER_SELECTION2" />
+		<Argument GenericType="simple" Name="FEED_FORWARD_CURRENT_REG_ENABLING" />
+		<Argument GenericType="simple" Name="FEED_FORWARD_CURRENT_REG_ENABLING2" />
+		<Argument GenericType="simple" Name="FLUX_WEAKENING_ENABLING" />
+		<Argument GenericType="simple" Name="FLUX_WEAKENING_ENABLING2" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />
+		<Argument GenericType="simple" Name="HALL_SENSORS" />
+		<Argument GenericType="simple" Name="HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="HALL_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="HALL_TIMER_SELECTION2" />
+		<Argument GenericType="simple" Name="HFINJECTION" />
+		<Argument GenericType="simple" Name="HFINJECTION2" />
+		<Argument GenericType="simple" Name="HW_OV_CURRENT_PROT_BYPASS" />
+		<Argument GenericType="simple" Name="HW_OV_CURRENT_PROT_BYPASS2" />
+		<Argument GenericType="simple" Name="ICS_SENSORS" />
+		<Argument GenericType="simple" Name="ICS_SENSORS2" />
+		<Argument GenericType="simple" Name="INRUSH_CURRLIMIT_ENABLING" />
+		<Argument GenericType="simple" Name="INRUSH_CURRLIMIT_ENABLING2" />
+		<Argument GenericType="simple" Name="INRUSH_CURR_LIMITER_POLARITY" />
+		<Argument GenericType="simple" Name="INRUSH_CURR_LIMITER_POLARITY2" />
+		<Argument GenericType="simple" Name="MTPA_ENABLING" />
+		<Argument GenericType="simple" Name="MTPA_ENABLING2" />
+		<Argument GenericType="simple" Name="ON_OVER_VOLTAGE" />
+		<Argument GenericType="simple" Name="ON_OVER_VOLTAGE2" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC2" />
+		<Argument GenericType="simple" Name="OTF_STARTUP" />
+		<Argument GenericType="simple" Name="OTF_STARTUP2" />
+		<Argument GenericType="simple" Name="OVERCURR_PROTECTION_HW_DISABLING" />
+		<Argument GenericType="simple" Name="OVERCURR_PROTECTION_HW_DISABLING2" />
+		<Argument GenericType="simple" Name="OV_TEMPERATURE_PROT_ENABLING" />
+		<Argument GenericType="simple" Name="OV_TEMPERATURE_PROT_ENABLING2" />
+		<Argument GenericType="simple" Name="PFC_ENABLED" />
+		<Argument GenericType="simple" Name="REGCONVADC" />
+		<Argument GenericType="simple" Name="REGCONVADC2" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SERIAL_COM_MODE" />
+		<Argument GenericType="simple" Name="SINGLEDRIVE" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT2" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_CORDIC" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_CORDIC2" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_PLL" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_PLL2" />
+		<Argument GenericType="simple" Name="TEMPERATURE_READING" />
+		<Argument GenericType="simple" Name="TEMPERATURE_READING2" />
+		<Argument GenericType="simple" Name="TEMP_FDBK_ADC" />
+		<Argument GenericType="simple" Name="TEMP_FDBK_ADC2" />
+		<Argument GenericType="simple" Name="TEMP_FDBK_CHANNEL" />
+		<Argument GenericType="simple" Name="TEMP_FDBK_CHANNEL2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_INDEPENDENT_RESOURCES" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_INDEPENDENT_RESOURCES2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_SHARED_RESOURCES" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_SHARED_RESOURCES2" />
+		<Argument GenericType="simple" Name="USART_SELECTION" />
+		<Argument GenericType="simple" Name="USE_STGAP1S" />
+		<Argument GenericType="simple" Name="VBUS_ADC" />
+		<Argument GenericType="simple" Name="VBUS_ADC2" />
+		<Argument GenericType="simple" Name="VBUS_CHANNEL" />
+		<Argument GenericType="simple" Name="VBUS_CHANNEL2" />
+		<Argument GenericType="simple" Name="PHASE_U_CURR_CHANNEL" />
+		<Argument GenericType="simple" Name="PHASE_U_CURR_CHANNEL2" />
+		<Argument GenericType="simple" Name="PHASE_V_CURR_CHANNEL" />
+		<Argument GenericType="simple" Name="PHASE_V_CURR_CHANNEL2" />
+		<Argument GenericType="simple" Name="PHASE_W_CURR_CHANNEL" />
+		<Argument GenericType="simple" Name="PHASE_W_CURR_CHANNEL2" />	
+		<Argument GenericType="simple" Name="ADC_1_PERIPH" />
+		<Argument GenericType="simple" Name="ADC_1_PERIPH2" />
+		<Argument GenericType="simple" Name="ADC_2_PERIPH" />
+		<Argument GenericType="simple" Name="ADC_2_PERIPH2" />
+		<Argument GenericType="simple" Name="ADC_PERIPH" />
+		<Argument GenericType="simple" Name="ADC_PERIPH2" />	
+		<Argument GenericType="simple" Name="PHASE_CURRENTS_ADC" />		
+		<Argument GenericType="simple" Name="PHASE_CURRENTS_ADC2" />			
+		<Argument GenericType="simple" Name="MC_TUNING_INTERFACE" />
+		<Argument GenericType="simple" Name="MOTOR_PROFILER" />       
+		<Argument GenericType="simple" Name="SERIAL_COM_CHANNEL1" />       
+		<Argument GenericType="simple" Name="SERIAL_COM_CHANNEL2" />       
+		<Argument GenericType="simple" Name="SERIAL_COM_MOTOR" />     
+		<Argument GenericType="simple" Name="ENC_USE_CH3" />		
+		<Argument GenericType="simple" Name="ENC_USE_CH32" />		
+	</RefConfigFile>
+	<RefConfigFile Name="MC_CONFIG_H" Template="mc_config.h.ftl">
+		<File Category="header" Condition="all" Name="mc_config.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="AUX_ENCODER" />
+		<Argument GenericType="simple" Name="AUX_ENCODER2" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_CORDIC" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_CORDIC2" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_PLL" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_PLL2" />
+		<Argument GenericType="simple" Name="BUS_VOLTAGE_READING" />
+		<Argument GenericType="simple" Name="BUS_VOLTAGE_READING2" />
+		<Argument GenericType="simple" Name="DAC_EMULATED" />
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="DRIVE_TYPE" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="ENCODER" />
+		<Argument GenericType="simple" Name="ENCODER2" />
+		<Argument GenericType="simple" Name="FEED_FORWARD_CURRENT_REG_ENABLING" />
+		<Argument GenericType="simple" Name="FEED_FORWARD_CURRENT_REG_ENABLING2" />
+		<Argument GenericType="simple" Name="FLUX_WEAKENING_ENABLING" />
+		<Argument GenericType="simple" Name="FLUX_WEAKENING_ENABLING2" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />
+		<Argument GenericType="simple" Name="HALL_SENSORS" />
+		<Argument GenericType="simple" Name="HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="HFINJECTION" />
+		<Argument GenericType="simple" Name="HFINJECTION2" />
+		<Argument GenericType="simple" Name="MTPA_ENABLING" />
+		<Argument GenericType="simple" Name="MTPA_ENABLING2" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC2" />
+		<Argument GenericType="simple" Name="PFC_ENABLED" />
+		<Argument GenericType="simple" Name="SINGLEDRIVE" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT2" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_CORDIC" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_CORDIC2" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_PLL" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_PLL2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="THREE_SHUNT2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_INDEPENDENT_RESOURCES" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_INDEPENDENT_RESOURCES2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_SHARED_RESOURCES" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_SHARED_RESOURCES2" />
+    <Argument GenericType="simple" Name="USE_STGAP1S" />
+		<Argument GenericType="simple" Name="VIEW_ENCODER_FEEDBACK" />
+		<Argument GenericType="simple" Name="VIEW_ENCODER_FEEDBACK2" />
+		<Argument GenericType="simple" Name="ICS_SENSORS" />
+		<Argument GenericType="simple" Name="ICS_SENSORS2" />
+		<Argument GenericType="simple" Name="ON_OVER_VOLTAGE" />
+		<Argument GenericType="simple" Name="ON_OVER_VOLTAGE2" />
+		<Argument GenericType="simple" Name="INRUSH_CURRLIMIT_ENABLING" />
+		<Argument GenericType="simple" Name="INRUSH_CURRLIMIT_ENABLING2" />
+		<Argument GenericType="simple" Name="HW_OV_CURRENT_PROT_BYPASS" />
+		<Argument GenericType="simple" Name="HW_OV_CURRENT_PROT_BYPASS2" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SERIAL_COM_MODE" />
+		<Argument GenericType="simple" Name="MC_TUNING_INTERFACE" />
+		<Argument GenericType="simple" Name="MOTOR_PROFILER" />    
+		<Argument GenericType="simple" Name="ENC_USE_CH3" />		
+		<Argument GenericType="simple" Name="ENC_USE_CH32" />		
+	</RefConfigFile>
+	<RefConfigFile Name="MC_STM_TYPES_H" Template="mc_stm_types.h.ftl">
+		<File Category="header" Condition="all" Name="mc_stm_types.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="DRIVE_TYPE" />
+		<Argument GenericType="simple" Name="PFC_ENABLED" />
+	</RefConfigFile>
+	<RefConfigFile Name="MC_TASKS_C" Template="mc_tasks.c.ftl">
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="mc_tasks.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="AMPLIFICATION_GAIN" />
+		<Argument GenericType="simple" Name="AMPLIFICATION_GAIN2" />
+		<Argument GenericType="simple" Name="AUX_ENCODER" />
+		<Argument GenericType="simple" Name="AUX_ENCODER2" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_CORDIC" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_CORDIC2" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_PLL" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_PLL2" />
+		<Argument GenericType="simple" Name="BOARD" />
+		<Argument GenericType="simple" Name="BUS_VOLTAGE_READING" />
+		<Argument GenericType="simple" Name="BUS_VOLTAGE_READING2" />
+		<Argument GenericType="simple" Name="CURRENT_READING_TOPOLOGY" />
+		<Argument GenericType="simple" Name="CURRENT_READING_TOPOLOGY2" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="ENCODER" />
+		<Argument GenericType="simple" Name="ENCODER2" />
+		<Argument GenericType="simple" Name="EXAMPLE_SPEEDMONITOR" />
+		<Argument GenericType="simple" Name="FEED_FORWARD_CURRENT_REG_ENABLING" />
+		<Argument GenericType="simple" Name="FEED_FORWARD_CURRENT_REG_ENABLING2" />
+		<Argument GenericType="simple" Name="OV_TEMPERATURE_PROT_ENABLING" />
+		<Argument GenericType="simple" Name="OV_TEMPERATURE_PROT_ENABLING2" />		
+		<Argument GenericType="simple" Name="OV_VOLTAGE_PROT_ENABLING" />
+		<Argument GenericType="simple" Name="OV_VOLTAGE_PROT_ENABLING2" />
+		<Argument GenericType="simple" Name="UV_VOLTAGE_PROT_ENABLING" />
+		<Argument GenericType="simple" Name="UV_VOLTAGE_PROT_ENABLING2" />
+		<Argument GenericType="simple" Name="FLUX_WEAKENING_ENABLING" />
+		<Argument GenericType="simple" Name="FLUX_WEAKENING_ENABLING2" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />
+		<Argument GenericType="simple" Name="HALL_SENSORS" />
+		<Argument GenericType="simple" Name="HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="HFINJECTION" />
+		<Argument GenericType="simple" Name="HFINJECTION2" />
+		<Argument GenericType="simple" Name="HW_OV_CURRENT_PROT_BYPASS" />
+		<Argument GenericType="simple" Name="HW_OV_CURRENT_PROT_BYPASS2" />
+		<Argument GenericType="simple" Name="ICS_SENSORS" />
+		<Argument GenericType="simple" Name="ICS_SENSORS2" />
+		<Argument GenericType="simple" Name="INRUSH_CURRLIMIT_ENABLING" />
+		<Argument GenericType="simple" Name="INRUSH_CURRLIMIT_ENABLING2" />
+		<Argument GenericType="simple" Name="MC_TUNING_INTERFACE" />
+		<Argument GenericType="simple" Name="MOTOR_PROFILER" />
+		<Argument GenericType="simple" Name="MTPA_ENABLING" />
+		<Argument GenericType="simple" Name="MTPA_ENABLING2" />
+		<Argument GenericType="simple" Name="ONE_TOUCH_TUNING" />
+		<Argument GenericType="simple" Name="ON_OVER_VOLTAGE" />
+		<Argument GenericType="simple" Name="ON_OVER_VOLTAGE2" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC2" />
+		<Argument GenericType="simple" Name="OTF_STARTUP" />
+		<Argument GenericType="simple" Name="OTF_STARTUP2" />
+		<Argument GenericType="simple" Name="PFC_ENABLED" />
+		<Argument GenericType="simple" Name="SINGLEDRIVE" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT2" />
+		<Argument GenericType="simple" Name="SMOOTH_BRAKING_ACTION_ON_OVERVOLTAGE" />
+		<Argument GenericType="simple" Name="SPEED_FEEDBACK_CHECK" />
+		<Argument GenericType="simple" Name="SPEED_FEEDBACK_CHECK2" />
+		<Argument GenericType="simple" Name="SPEED_SENSOR_SELECTION" />
+		<Argument GenericType="simple" Name="SPEED_SENSOR_SELECTION2" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_CORDIC" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_CORDIC2" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_PLL" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_PLL2" />
+		<Argument GenericType="simple" Name="TESTENV" />
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="THREE_SHUNT2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_INDEPENDENT_RESOURCES" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_INDEPENDENT_RESOURCES2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_SHARED_RESOURCES" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_SHARED_RESOURCES2" />
+    <Argument GenericType="simple" Name="USE_STGAP1S" />
+		<Argument GenericType="simple" Name="RTOS" />
+		<Argument GenericType="simple" Name="CUBE_MX_VER" />
+		<Argument GenericType="simple" Name="MC_TUNING_INTERFACE" />
+		<Argument GenericType="simple" Name="MOTOR_PROFILER" />    
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />
+	</RefConfigFile>
+	<RefConfigFile Name="REGULAR_CONVERSION_MANAGER_C" Template="regular_conversion_manager.c.ftl">
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="regular_conversion_manager.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="SINGLEDRIVE" />
+	</RefConfigFile>
+	<RefConfigFile Name="REGULAR_CONVERSION_MANAGER_H" Template="regular_conversion_manager.h.ftl">
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="regular_conversion_manager.h" Version="v0.0.0" />
+	</RefConfigFile>
+	<RefConfigFile Name="MC_MATH_C" Template="mc_math.c.ftl">
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="mc_math.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="SINGLEDRIVE" />
+	</RefConfigFile>	
+	<RefConfigFile Name="MC_MATH_H" Template="mc_math.h.ftl">
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="mc_math.h" Version="v0.0.0" />
+	</RefConfigFile>	
+	<RefConfigFile Name="MC_INTERFACE_C" Template="mc_interface.c.ftl">
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="mc_interface.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="SINGLEDRIVE" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />		
+	</RefConfigFile>	
+	<RefConfigFile Name="MC_INTERFACE_H" Template="mc_interface.h.ftl">
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="mc_interface.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />		
+	</RefConfigFile>		
+	<RefConfigFile Name="PARAMETERS_CONVERSION_H" Template="parameters_conversion.h.ftl">
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="parameters_conversion.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="ADC_REFERENCE_VOLTAGE" />
+		<Argument GenericType="simple" Name="AUX_ENCODER" />
+		<Argument GenericType="simple" Name="AUX_ENCODER2" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_CORDIC" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_CORDIC2" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_PLL" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_PLL2" />
+		<Argument GenericType="simple" Name="BUS_VOLTAGE_READING" />
+		<Argument GenericType="simple" Name="BUS_VOLTAGE_READING2" />
+		<Argument GenericType="simple" Name="CORD_FIFO_DEPTH_DPP" />
+		<Argument GenericType="simple" Name="CORD_FIFO_DEPTH_DPP2" />
+		<Argument GenericType="simple" Name="CTRBDID" />
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="DIFFERENTIAL_TERM_ENABLED" />
+		<Argument GenericType="simple" Name="DIFFERENTIAL_TERM_ENABLED2" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="ENCODER" />
+		<Argument GenericType="simple" Name="ENCODER2" />
+		<Argument GenericType="simple" Name="ENC_ICx_FILTER" />
+		<Argument GenericType="simple" Name="ENC_ICx_FILTER2" />
+		<Argument GenericType="simple" Name="ENC_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="ENC_TIMER_SELECTION2" />
+		<Argument GenericType="simple" Name="ETRFILTER" />
+		<Argument GenericType="simple" Name="FEED_FORWARD_CURRENT_REG_ENABLING" />
+		<Argument GenericType="simple" Name="FEED_FORWARD_CURRENT_REG_ENABLING2" />
+		<Argument GenericType="simple" Name="FLUX_WEAKENING_ENABLING" />
+		<Argument GenericType="simple" Name="FLUX_WEAKENING_ENABLING2" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />
+		<Argument GenericType="simple" Name="FREQ_RATIO" />
+		<Argument GenericType="simple" Name="FREQ_RELATION" />
+		<Argument GenericType="simple" Name="HALL_ICx_FILTER" />
+		<Argument GenericType="simple" Name="HALL_ICx_FILTER2" />
+		<Argument GenericType="simple" Name="HALL_SENSORS" />
+		<Argument GenericType="simple" Name="HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="HALL_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="HALL_TIMER_SELECTION2" />
+		<Argument GenericType="simple" Name="HFINJECTION" />
+		<Argument GenericType="simple" Name="HFINJECTION2" />
+		<Argument GenericType="simple" Name="ICS_SENSORS" />
+		<Argument GenericType="simple" Name="ICS_SENSORS2" />
+		<Argument GenericType="simple" Name="LOW_SIDE_SIGNALS_ENABLING" />
+		<Argument GenericType="simple" Name="LOW_SIDE_SIGNALS_ENABLING2" />
+		<Argument GenericType="simple" Name="MAX_MODULATION_INDEX" />
+		<Argument GenericType="simple" Name="MAX_MODULATION_INDEX2" />
+		<Argument GenericType="simple" Name="MOTOR_PROFILER" />
+		<Argument GenericType="simple" Name="PFC_ENABLED" />
+		<Argument GenericType="simple" Name="PLLTUNING" />
+		<Argument GenericType="simple" Name="PWBDID" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SINGLEDRIVE" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT2" />        
+		<Argument GenericType="simple" Name="START_STOP_BTN" />
+		<Argument GenericType="simple" Name="ENC_USE_CH3" />
+		<Argument GenericType="simple" Name="ENC_USE_CH32" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_CORDIC" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_CORDIC2" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_PLL" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_PLL2" />
+		<Argument GenericType="simple" Name="STO_FIFO_DEPTH_DPP" />
+		<Argument GenericType="simple" Name="STO_FIFO_DEPTH_DPP2" />
+		<Argument GenericType="simple" Name="SYNCFILTER" />
+		<Argument GenericType="simple" Name="TNOISE_NS" />
+		<Argument GenericType="simple" Name="TNOISE_NS2" />
+		<Argument GenericType="simple" Name="TRISE_NS" />
+		<Argument GenericType="simple" Name="TRISE_NS2" />
+		<Argument GenericType="simple" Name="UID" />
+		<Argument GenericType="simple" Name="USART_SELECTION" />
+		<Argument GenericType="simple" Name="RTOS" />
+	</RefConfigFile>
+	<RefConfigFile Name="PARAMETERS_CONVERSION_F0XX_H" Template="parameters_conversion_f0xx.h.ftl">
+		<File Category="header" Condition="STM32F0 &amp; S_DRIVE_TYPE_FOC" Name="parameters_conversion_f0xx.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="CURR_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT" />
+		<Argument GenericType="simple" Name="TEMP_ADC_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="VBUS_ADC_SAMPLING_TIME" />
+	</RefConfigFile>
+	<RefConfigFile Name="PARAMETERS_CONVERSION_G0XX_H" Template="parameters_conversion_g0xx.h.ftl">
+		<File Category="header" Condition="STM32G0 &amp; S_DRIVE_TYPE_FOC" Name="parameters_conversion_g0xx.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="CURR_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT" />
+		<Argument GenericType="simple" Name="TEMP_ADC_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="VBUS_ADC_SAMPLING_TIME" />
+	</RefConfigFile>  
+	<RefConfigFile Name="PARAMETERS_CONVERSION_F10X_H" Template="parameters_conversion_f10x.h.ftl">
+		<File Category="header" Condition="STM32F1 &amp; S_DRIVE_TYPE_FOC" Name="parameters_conversion_f10x.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="CURR_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="CURR_SAMPLING_TIME2" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC" />
+		<Argument GenericType="simple" Name="PFC_ENABLED" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION2" />
+		<Argument GenericType="simple" Name="STM32F103x_LD" />
+		<Argument GenericType="simple" Name="TEMP_ADC_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="TEMP_ADC_SAMPLING_TIME2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="THREE_SHUNT2" />
+		<Argument GenericType="simple" Name="VBUS_ADC_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="VBUS_ADC_SAMPLING_TIME2" />
+	</RefConfigFile>
+	<RefConfigFile Name="PARAMETERS_CONVERSION_F30X_H" Template="parameters_conversion_f30x.h.ftl">
+		<File Category="header" Condition="STM32F3 &amp; S_DRIVE_TYPE_FOC" Name="parameters_conversion_f30x.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="ADC_CLOCK_WB_DIV" />
+		<Argument GenericType="simple" Name="ADC_CLOCK_WB_DIV2" />
+		<Argument GenericType="simple" Name="CURR_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="CURR_SAMPLING_TIME2" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="HIGH_SIDE_IDLE_STATE" />
+		<Argument GenericType="simple" Name="HIGH_SIDE_IDLE_STATE2" />
+		<Argument GenericType="simple" Name="LOW_SIDE_IDLE_STATE" />
+		<Argument GenericType="simple" Name="LOW_SIDE_IDLE_STATE2" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC2" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION2" />
+		<Argument GenericType="simple" Name="PWM_FREQUENCY" />
+		<Argument GenericType="simple" Name="PWM_FREQUENCY2" />
+		<Argument GenericType="simple" Name="TEMP_ADC_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="TEMP_ADC_SAMPLING_TIME2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="THREE_SHUNT2" />
+		<Argument GenericType="simple" Name="VBUS_ADC_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="VBUS_ADC_SAMPLING_TIME2" />
+	</RefConfigFile>
+	<RefConfigFile Name="PARAMETERS_CONVERSION_L4XX_H" Template="parameters_conversion_l4xx.h.ftl">
+		<File Category="header" Condition="STM32L4 &amp; S_DRIVE_TYPE_FOC" Name="parameters_conversion_l4xx.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="CURR_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="HIGH_SIDE_IDLE_STATE" />
+		<Argument GenericType="simple" Name="LOW_SIDE_IDLE_STATE" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="TEMP_ADC_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="VBUS_ADC_SAMPLING_TIME" />
+	</RefConfigFile>	
+	<RefConfigFile Name="PARAMETERS_CONVERSION_F7XX_H" Template="parameters_conversion_f7xx.h.ftl">
+		<File Category="header" Condition="STM32F7 &amp; S_DRIVE_TYPE_FOC" Name="parameters_conversion_f7xx.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="CURR_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION2" />
+		<Argument GenericType="simple" Name="TEMP_ADC_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="TEMP_ADC_SAMPLING_TIME2" />
+		<Argument GenericType="simple" Name="VBUS_ADC_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="VBUS_ADC_SAMPLING_TIME2" />
+	</RefConfigFile>		
+	<RefConfigFile Name="PARAMETERS_CONVERSION_H7XX_H" Template="parameters_conversion_h7xx.h.ftl">
+		<File Category="header" Condition="STM32H7 &amp; S_DRIVE_TYPE_FOC" Name="parameters_conversion_h7xx.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="CURR_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION2" />
+		<Argument GenericType="simple" Name="TEMP_ADC_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="TEMP_ADC_SAMPLING_TIME2" />
+		<Argument GenericType="simple" Name="VBUS_ADC_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="VBUS_ADC_SAMPLING_TIME2" />
+	</RefConfigFile>	  
+	<RefConfigFile Name="PARAMETERS_CONVERSION_F4XX_H" Template="parameters_conversion_f4xx.h.ftl">
+		<File Category="header" Condition="STM32F4 &amp; S_DRIVE_TYPE_FOC" Name="parameters_conversion_f4xx.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="CURR_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="CURR_SAMPLING_TIME2" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC" />
+		<Argument GenericType="simple" Name="PWM_FREQUENCY" />
+		<Argument GenericType="simple" Name="PWM_FREQUENCY2" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION2" />
+		<Argument GenericType="simple" Name="TEMP_ADC_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="TEMP_ADC_SAMPLING_TIME2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="THREE_SHUNT2" />
+		<Argument GenericType="simple" Name="VBUS_ADC_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="VBUS_ADC_SAMPLING_TIME2" />
+	</RefConfigFile>
+	<RefConfigFile Name="PARAMETERS_CONVERSION_G4XX_H" Template="parameters_conversion_g4xx.h.ftl">
+		<File Category="header" Condition="STM32G4 &amp; S_DRIVE_TYPE_FOC" Name="parameters_conversion_g4xx.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="CURR_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="CURR_SAMPLING_TIME2" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC" />
+		<Argument GenericType="simple" Name="OPEN_LOOP_FOC2" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION2" />
+		<Argument GenericType="simple" Name="TEMP_ADC_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="TEMP_ADC_SAMPLING_TIME2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="THREE_SHUNT2" />
+		<Argument GenericType="simple" Name="VBUS_ADC_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="VBUS_ADC_SAMPLING_TIME2" />
+	</RefConfigFile>  
+	<RefConfigFile Name="PMSM_MOTOR_PARAMETERS_H" Template="pmsm_motor_parameters.h.ftl">
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="pmsm_motor_parameters.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="ENCODER_PPR" />
+		<Argument GenericType="simple" Name="ENCODER_PPR2" />
+		<Argument GenericType="simple" Name="HALL_PHASE_SHIFT" />
+		<Argument GenericType="simple" Name="HALL_PHASE_SHIFT2" />
+		<Argument GenericType="simple" Name="HALL_SENSORS_PLACEMENT" />
+		<Argument GenericType="simple" Name="HALL_SENSORS_PLACEMENT2" />
+		<Argument GenericType="simple" Name="ID_DEMAG" />
+		<Argument GenericType="simple" Name="ID_DEMAG2" />
+		<Argument GenericType="simple" Name="LS" />
+		<Argument GenericType="simple" Name="LS2" />
+		<Argument GenericType="simple" Name="MOTOR_MAX_SPEED_RPM" />
+		<Argument GenericType="simple" Name="MOTOR_MAX_SPEED_RPM2" />
+		<Argument GenericType="simple" Name="MOTOR_VOLTAGE_CONSTANT" />
+		<Argument GenericType="simple" Name="MOTOR_VOLTAGE_CONSTANT2" />
+		<Argument GenericType="simple" Name="NOMINAL_CURRENT" />
+		<Argument GenericType="simple" Name="NOMINAL_CURRENT2" />
+		<Argument GenericType="simple" Name="POLE_PAIR_NUM" />
+		<Argument GenericType="simple" Name="POLE_PAIR_NUM2" />
+		<Argument GenericType="simple" Name="RS" />
+		<Argument GenericType="simple" Name="RS2" />
+	</RefConfigFile>
+	<RefConfigFile Name="POWER_STAGE_PARAMETERS_H" Template="power_stage_parameters.h.ftl">
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="power_stage_parameters.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="AMPLIFICATION_GAIN" />
+		<Argument GenericType="simple" Name="AMPLIFICATION_GAIN2" />
+		<Argument GenericType="simple" Name="CURRENT_READING_TOPOLOGY" />
+		<Argument GenericType="simple" Name="CURRENT_READING_TOPOLOGY2" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="HW_DEAD_TIME_NS" />
+		<Argument GenericType="simple" Name="HW_DEAD_TIME_NS2" />
+		<Argument GenericType="simple" Name="NOMINAL_BUS_VOLTAGE_V" />
+		<Argument GenericType="simple" Name="NOMINAL_BUS_VOLTAGE_V2" />
+		<Argument GenericType="simple" Name="RSHUNT" />
+		<Argument GenericType="simple" Name="RSHUNT2" />
+		<Argument GenericType="simple" Name="T0_C" />
+		<Argument GenericType="simple" Name="T0_C2" />
+		<Argument GenericType="simple" Name="TNOISE_NS" />
+		<Argument GenericType="simple" Name="TNOISE_NS2" />
+		<Argument GenericType="simple" Name="TRISE_NS" />
+		<Argument GenericType="simple" Name="TRISE_NS2" />
+		<Argument GenericType="simple" Name="T_MAX" />
+		<Argument GenericType="simple" Name="T_MAX2" />
+    <Argument GenericType="simple" Name="USE_STGAP1S" />    
+		<Argument GenericType="simple" Name="V0_V" />
+		<Argument GenericType="simple" Name="V0_V2" />
+		<Argument GenericType="simple" Name="VBUS_PARTITIONING_FACTOR" />
+		<Argument GenericType="simple" Name="VBUS_PARTITIONING_FACTOR2" />
+		<Argument GenericType="simple" Name="dV_dT" />
+		<Argument GenericType="simple" Name="dV_dT2" />
+	</RefConfigFile>
+	<RefConfigFile Name="STM32_F0XX_MC_IT_C" Template="stm32f0xx_mc_it.c.ftl">
+		<File Category="source" Condition="STM32F0" Name="stm32f0xx_mc_it.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="AUX_ENCODER" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS" />
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="DRIVE_TYPE" />
+		<Argument GenericType="simple" Name="ENCODER" />
+		<Argument GenericType="simple" Name="HALL_SENSORS" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT" />
+		<Argument GenericType="simple" Name="START_STOP_BTN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PIN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PORT" />     
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />
+		<Argument GenericType="simple" Name="ENC_USE_CH3" />
+		<Argument GenericType="simple" Name="ENC_USE_CH32" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PIN" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PORT" /> 
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PIN2" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PORT2" /> 		
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="SERIAL_COM_MODE" />
+		<Argument GenericType="simple" Name="USART_SELECTION" />
+	</RefConfigFile>
+	<RefConfigFile Name="STM32_G0XX_MC_IT_C" Template="stm32g0xx_mc_it.c.ftl">
+		<File Category="source" Condition="STM32G0 &amp; S_DRIVE_TYPE_FOC" Name="stm32g0xx_mc_it.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="AUX_ENCODER" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS" />
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="ENCODER" />
+		<Argument GenericType="simple" Name="HALL_SENSORS" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="HALL_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="USART_SELECTION" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT" />
+		<Argument GenericType="simple" Name="START_STOP_BTN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PIN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PORT" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />
+		<Argument GenericType="simple" Name="ENC_USE_CH3" />
+		<Argument GenericType="simple" Name="ENC_USE_CH32" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PIN" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PORT" /> 
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PIN2" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PORT2" /> 		
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="SERIAL_COM_MODE" />
+	</RefConfigFile>  
+	<RefConfigFile Name="STM32_F10X_MC_IT_C" Template="stm32f10x_mc_it.c.ftl">
+		<File Category="source" Condition="STM32F1 &amp; S_DRIVE_TYPE_FOC" Name="stm32f10x_mc_it.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="ADC_PERIPH" />
+		<Argument GenericType="simple" Name="AUX_ENCODER" />
+		<Argument GenericType="simple" Name="AUX_ENCODER2" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="ENCODER" />
+		<Argument GenericType="simple" Name="ENCODER2" />
+		<Argument GenericType="simple" Name="HALL_SENSORS" />
+		<Argument GenericType="simple" Name="HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="ICS_SENSORS" />
+		<Argument GenericType="simple" Name="PFC_ENABLED" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION2" />
+		<Argument GenericType="simple" Name="SINGLEDRIVE" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT2" />
+		<Argument GenericType="simple" Name="START_STOP_BTN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PIN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PORT" />     
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />
+		<Argument GenericType="simple" Name="ENC_USE_CH3" />
+		<Argument GenericType="simple" Name="ENC_USE_CH32" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PIN" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PORT" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PIN2" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PORT2" /> 		
+		<Argument GenericType="simple" Name="STM32F103x_HD" />
+		<Argument GenericType="simple" Name="STM32F103x_LD" />
+		<Argument GenericType="simple" Name="STM32F103x_MD" />
+		<Argument GenericType="simple" Name="STM32PERFORMANCE" />
+		<Argument GenericType="simple" Name="STM32VALUE" />
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="THREE_SHUNT2" />
+		<Argument GenericType="simple" Name="SERIAL_COM_MODE" />
+		<Argument GenericType="simple" Name="RTOS" />
+	</RefConfigFile>   
+	<RefConfigFile Name="STM32_F30X_MC_IT_C" Template="stm32f30x_mc_it.c.ftl">
+		<File Category="source" Condition="STM32F3 &amp; S_DRIVE_TYPE_FOC" Name="stm32f30x_mc_it.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="ADC_1_PERIPH" />
+		<Argument GenericType="simple" Name="ADC_1_PERIPH2" />
+		<Argument GenericType="simple" Name="ADC_PERIPH" />
+		<Argument GenericType="simple" Name="ADC_PERIPH2" />
+		<Argument GenericType="simple" Name="AUX_ENCODER" />
+		<Argument GenericType="simple" Name="AUX_ENCODER2" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="ENCODER" />
+		<Argument GenericType="simple" Name="ENCODER2" />
+		<Argument GenericType="simple" Name="HALL_SENSORS" />
+		<Argument GenericType="simple" Name="HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="ICS_SENSORS" />
+		<Argument GenericType="simple" Name="ICS_SENSORS2" />
+		<Argument GenericType="simple" Name="PFC_ENABLED" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION" />
+ 		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION2" />   
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SINGLEDRIVE" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT2" />
+		<Argument GenericType="simple" Name="START_STOP_BTN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PIN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PORT" /> 
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />
+		<Argument GenericType="simple" Name="ENC_USE_CH3" />
+		<Argument GenericType="simple" Name="ENC_USE_CH32" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PIN" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PORT" /> 
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PIN2" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PORT2" /> 		
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="RTOS" />
+		<Argument GenericType="simple" Name="SERIAL_COM_MODE" />
+	</RefConfigFile>
+	<RefConfigFile Name="STM32_L4XX_MC_IT_C" Template="stm32l4xx_mc_it.c.ftl">
+		<File Category="source" Condition="STM32L4 &amp; S_DRIVE_TYPE_FOC" Name="stm32l4xx_mc_it.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="ADC_PERIPH" />
+		<Argument GenericType="simple" Name="AUX_ENCODER" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS" />
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="ENCODER" />
+		<Argument GenericType="simple" Name="HALL_SENSORS" />
+		<Argument GenericType="simple" Name="ICS_SENSORS" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT" />
+		<Argument GenericType="simple" Name="START_STOP_BTN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PIN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PORT" /> 
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />
+		<Argument GenericType="simple" Name="ENC_USE_CH3" />
+		<Argument GenericType="simple" Name="ENC_USE_CH32" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PIN" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PORT" /> 
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PIN2" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PORT2" /> 		
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_INDEPENDENT_RESOURCES" />
+		<Argument GenericType="simple" Name="SERIAL_COM_MODE" />
+		<Argument GenericType="simple" Name="RTOS" />
+	</RefConfigFile>	
+	<RefConfigFile Name="STM32_F7XX_MC_IT_C" Template="stm32f7xx_mc_it.c.ftl">
+		<File Category="source" Condition="STM32F7 &amp; S_DRIVE_TYPE_FOC" Name="stm32f7xx_mc_it.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="ADC_PERIPH" />
+		<Argument GenericType="simple" Name="AUX_ENCODER" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS" />
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="ENCODER" />
+		<Argument GenericType="simple" Name="HALL_SENSORS" />
+		<Argument GenericType="simple" Name="ICS_SENSORS" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT" />
+		<Argument GenericType="simple" Name="START_STOP_BTN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PIN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PORT" /> 
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />
+		<Argument GenericType="simple" Name="ENC_USE_CH3" />
+		<Argument GenericType="simple" Name="ENC_USE_CH32" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PIN" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PORT" /> 
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PIN2" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PORT2" /> 		
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_INDEPENDENT_RESOURCES" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION" />	
+		<Argument GenericType="simple" Name="SERIAL_COM_MODE" />
+		<Argument GenericType="simple" Name="RTOS" />
+	</RefConfigFile>
+	<RefConfigFile Name="STM32_H7XX_MC_IT_C" Template="stm32h7xx_mc_it.c.ftl">
+		<File Category="source" Condition="STM32H7 &amp; S_DRIVE_TYPE_FOC" Name="stm32h7xx_mc_it.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="ADC_PERIPH" />
+		<Argument GenericType="simple" Name="AUX_ENCODER" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS" />
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="ENCODER" />
+		<Argument GenericType="simple" Name="HALL_SENSORS" />
+		<Argument GenericType="simple" Name="ICS_SENSORS" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT" />
+		<Argument GenericType="simple" Name="START_STOP_BTN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PIN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PORT" /> 
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_INDEPENDENT_RESOURCES" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION" />	
+		<Argument GenericType="simple" Name="SERIAL_COM_MODE" />
+		<Argument GenericType="simple" Name="RTOS" />
+	</RefConfigFile>
+	<RefConfigFile Name="STM32_F4XX_MC_IT_C" Template="stm32f4xx_mc_it.c.ftl">
+		<File Category="source" Condition="STM32F4" Name="stm32f4xx_mc_it.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="AUX_ENCODER" />
+		<Argument GenericType="simple" Name="AUX_ENCODER2" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="DRIVE_TYPE" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="ENCODER" />
+		<Argument GenericType="simple" Name="ENCODER2" />
+		<Argument GenericType="simple" Name="HALL_SENSORS" />
+		<Argument GenericType="simple" Name="HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="ICS_SENSORS" />
+		<Argument GenericType="simple" Name="ICS_SENSORS2" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION2" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SINGLEDRIVE" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT2" />
+		<Argument GenericType="simple" Name="START_STOP_BTN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PIN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PORT" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />
+		<Argument GenericType="simple" Name="ENC_USE_CH3" />
+		<Argument GenericType="simple" Name="ENC_USE_CH32" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PIN" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PORT" /> 
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PIN2" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PORT2" /> 		
+		<Argument GenericType="simple" Name="THREE_SHUNT_INDEPENDENT_RESOURCES" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_INDEPENDENT_RESOURCES2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="SERIAL_COM_MODE" />
+		<Argument GenericType="simple" Name="RTOS" />
+		<Argument GenericType="simple" Name="USART_SELECTION" />
+	</RefConfigFile>
+	<RefConfigFile Name="STM32_G4XX_MC_IT_C" Template="stm32g4xx_mc_it.c.ftl">
+		<File Category="source" Condition="STM32G4" Name="stm32g4xx_mc_it.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="ADC_PERIPH" />
+		<Argument GenericType="simple" Name="ADC_PERIPH2" />
+		<Argument GenericType="simple" Name="AUX_ENCODER" />
+		<Argument GenericType="simple" Name="AUX_ENCODER2" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="DRIVE_TYPE" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="ENCODER" />
+		<Argument GenericType="simple" Name="ENCODER2" />
+		<Argument GenericType="simple" Name="HALL_SENSORS" />
+		<Argument GenericType="simple" Name="HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="ICS_SENSORS" />
+		<Argument GenericType="simple" Name="ICS_SENSORS2" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION" />
+ 		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION2" />    
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SINGLEDRIVE" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT2" />    
+		<Argument GenericType="simple" Name="START_STOP_BTN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PIN" />
+		<Argument GenericType="simple" Name="START_STOP_GPIO_PORT" />     
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />
+		<Argument GenericType="simple" Name="ENC_USE_CH3" />
+		<Argument GenericType="simple" Name="ENC_USE_CH32" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PIN" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PORT" /> 
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PIN2" />
+		<Argument GenericType="simple" Name="ENC_Z_GPIO_PORT2" /> 		
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="THREE_SHUNT2" />
+		<Argument GenericType="simple" Name="SERIAL_COM_MODE" />
+		<Argument GenericType="simple" Name="RTOS" />
+		<Argument GenericType="simple" Name="USART_SELECTION" />
+	</RefConfigFile>
+	<RefConfigFile Name="MC_PARAMETERS_H" Template="mc_parameters.h.ftl">
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="mc_parameters.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="ICS_SENSORS" />
+		<Argument GenericType="simple" Name="ICS_SENSORS2" />
+		<Argument GenericType="simple" Name="PFC_ENABLED" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="THREE_SHUNT2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_INDEPENDENT_RESOURCES" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_INDEPENDENT_RESOURCES2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_SHARED_RESOURCES" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_SHARED_RESOURCES2" />
+		<Argument GenericType="simple" Name="USE_INTERNAL_OPAMP" />
+		<Argument GenericType="simple" Name="USE_INTERNAL_OPAMP2" />
+		<Argument GenericType="simple" Name="MC_TUNING_INTERFACE" />
+		<Argument GenericType="simple" Name="MOTOR_PROFILER" />        
+	</RefConfigFile>		
+	<RefConfigFile Name="MC_PARAMETERS_C" Template="mc_parameters.c.ftl">
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="mc_parameters.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="ADC_1_PERIPH" />
+		<Argument GenericType="simple" Name="ADC_1_PERIPH2" />
+		<Argument GenericType="simple" Name="ADC_2_PERIPH" />
+		<Argument GenericType="simple" Name="ADC_2_PERIPH2" />
+		<Argument GenericType="simple" Name="ADC_PERIPH" />
+		<Argument GenericType="simple" Name="ADC_PERIPH2" />
+		<Argument GenericType="simple" Name="BKIN_MODE" />
+		<Argument GenericType="simple" Name="BKIN_MODE2" />
+		<Argument GenericType="simple" Name="BKIN2_MODE" />
+		<Argument GenericType="simple" Name="BKIN2_MODE2" />
+		<Argument GenericType="simple" Name="CURR_SAMPLING_TIME" />
+		<Argument GenericType="simple" Name="CURR_SAMPLING_TIME2" />
+		<Argument GenericType="simple" Name="ICS_SENSORS" />
+		<Argument GenericType="simple" Name="ICS_SENSORS2" />
+		<Argument GenericType="simple" Name="INTERNAL_OVERCURRENTPROTECTION" />
+		<Argument GenericType="simple" Name="INTERNAL_OVERCURRENTPROTECTION2" />
+		<Argument GenericType="simple" Name="INTERNAL_OVERVOLTAGEPROTECTION" />
+		<Argument GenericType="simple" Name="INTERNAL_OVERVOLTAGEPROTECTION2" />
+		<Argument GenericType="simple" Name="INVERTERBOARD" /> 
+		<Argument GenericType="simple" Name="LOW_SIDE_SIGNALS_ENABLING" />
+		<Argument GenericType="simple" Name="LOW_SIDE_SIGNALS_ENABLING2" />
+		<Argument GenericType="simple" Name="OCPA_INVERTINGINPUT_MODE" />
+		<Argument GenericType="simple" Name="OCPA_INVERTINGINPUT_MODE2" />
+		<Argument GenericType="simple" Name="OCPA_SELECTION" />
+		<Argument GenericType="simple" Name="OCPA_SELECTION2" />
+		<Argument GenericType="simple" Name="OCPB_INVERTINGINPUT_MODE" />
+		<Argument GenericType="simple" Name="OCPB_INVERTINGINPUT_MODE2" />
+		<Argument GenericType="simple" Name="OCPB_SELECTION" />
+		<Argument GenericType="simple" Name="OCPB_SELECTION2" />
+		<Argument GenericType="simple" Name="OCPC_INVERTINGINPUT_MODE" />
+		<Argument GenericType="simple" Name="OCPC_INVERTINGINPUT_MODE2" />
+		<Argument GenericType="simple" Name="OCPC_SELECTION" />
+		<Argument GenericType="simple" Name="OCPC_SELECTION2" />
+		<Argument GenericType="simple" Name="OCPREF" />
+		<Argument GenericType="simple" Name="OCPREF2" />
+		<Argument GenericType="simple" Name="OCP_INVERTINGINPUT_MODE" />
+		<Argument GenericType="simple" Name="OCP_INVERTINGINPUT_MODE2" />
+		<Argument GenericType="simple" Name="OCP_SELECTION" />
+		<Argument GenericType="simple" Name="OCP_SELECTION2" />
+		<Argument GenericType="simple" Name="OPAMP1_INVERTINGINPUT" />
+		<Argument GenericType="simple" Name="OPAMP1_INVERTINGINPUT2" />
+		<Argument GenericType="simple" Name="OPAMP1_NONINVERTINGINPUT_PHA" />
+		<Argument GenericType="simple" Name="OPAMP1_NONINVERTINGINPUT_PHA2" />
+		<Argument GenericType="simple" Name="OPAMP1_NONINVERTINGINPUT_PHB" />
+		<Argument GenericType="simple" Name="OPAMP1_NONINVERTINGINPUT_PHB2" />
+		<Argument GenericType="simple" Name="OPAMP1_NONINVERTINGINPUT_PHC" />
+		<Argument GenericType="simple" Name="OPAMP1_NONINVERTINGINPUT_PHC2" />
+		<Argument GenericType="simple" Name="OPAMP1_SELECTION" />
+		<Argument GenericType="simple" Name="OPAMP1_SELECTION2" />
+		<Argument GenericType="simple" Name="OPAMP2_INVERTINGINPUT" />
+		<Argument GenericType="simple" Name="OPAMP2_INVERTINGINPUT2" />
+		<Argument GenericType="simple" Name="OPAMP2_NONINVERTINGINPUT_PHA" />
+		<Argument GenericType="simple" Name="OPAMP2_NONINVERTINGINPUT_PHA2" />
+		<Argument GenericType="simple" Name="OPAMP2_NONINVERTINGINPUT_PHB" />
+		<Argument GenericType="simple" Name="OPAMP2_NONINVERTINGINPUT_PHB2" />
+		<Argument GenericType="simple" Name="OPAMP2_NONINVERTINGINPUT_PHC" />
+		<Argument GenericType="simple" Name="OPAMP2_NONINVERTINGINPUT_PHC2" />
+		<Argument GenericType="simple" Name="OPAMP2_SELECTION" />
+		<Argument GenericType="simple" Name="OPAMP2_SELECTION2" />
+		<Argument GenericType="simple" Name="OPAMP_SELECTION" />
+		<Argument GenericType="simple" Name="OPAMP_SELECTION2" />
+		<Argument GenericType="simple" Name="OVPREF" />
+		<Argument GenericType="simple" Name="OVPREF2" />
+		<Argument GenericType="simple" Name="PFC_ENABLED" />
+		<Argument GenericType="simple" Name="PHASE_CURRENTS_CHANNEL" />
+		<Argument GenericType="simple" Name="PHASE_CURRENTS_CHANNEL2" />
+		<Argument GenericType="simple" Name="PHASE_CURRENTS_ADC" />		
+		<Argument GenericType="simple" Name="PHASE_CURRENTS_ADC2" />
+    	<Argument GenericType="simple" Name="PHASE_U_CURR_CHANNEL" />
+		<Argument GenericType="simple" Name="PHASE_U_CURR_CHANNEL2" />
+		<Argument GenericType="simple" Name="PHASE_V_CURR_CHANNEL" />
+		<Argument GenericType="simple" Name="PHASE_V_CURR_CHANNEL2" />
+		<Argument GenericType="simple" Name="PHASE_W_CURR_CHANNEL" />
+		<Argument GenericType="simple" Name="PHASE_W_CURR_CHANNEL2" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="PWM_TIMER_SELECTION2" />
+		<Argument GenericType="simple" Name="REGCONVADC" />
+		<Argument GenericType="simple" Name="REGCONVADC2" />
+		<Argument GenericType="simple" Name="SINGLEDRIVE" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT" />
+		<Argument GenericType="simple" Name="SINGLE_SHUNT2" />
+		<Argument GenericType="simple" Name="SW_OV_CURRENT_PROT_ENABLING" />
+		<Argument GenericType="simple" Name="SW_OV_CURRENT_PROT_ENABLING2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT" />
+		<Argument GenericType="simple" Name="THREE_SHUNT2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_INDEPENDENT_RESOURCES" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_INDEPENDENT_RESOURCES2" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_SHARED_RESOURCES" />
+		<Argument GenericType="simple" Name="THREE_SHUNT_SHARED_RESOURCES2" />
+		<Argument GenericType="simple" Name="USE_INTERNAL_OPAMP" />
+		<Argument GenericType="simple" Name="USE_INTERNAL_OPAMP2" />
+		<Argument GenericType="simple" Name="SHARED_SIGNAL_ENABLE" />
+		<Argument GenericType="simple" Name="SHARED_SIGNAL_ENABLE2" />
+	    <Argument GenericType="simple" Name="DAC_OCP_A_M1" />
+	    <Argument GenericType="simple" Name="DAC_OCP_B_M1" />
+        <Argument GenericType="simple" Name="DAC_OCP_C_M1" />
+        <Argument GenericType="simple" Name="DAC_OCP_M1" />
+	    <Argument GenericType="simple" Name="DAC_OVP_M1" />
+	    <Argument GenericType="simple" Name="DAC_OCP_A_M2" />
+	    <Argument GenericType="simple" Name="DAC_OCP_B_M2" />
+        <Argument GenericType="simple" Name="DAC_OCP_C_M2" />
+	    <Argument GenericType="simple" Name="DAC_OCP_M2" />
+	    <Argument GenericType="simple" Name="DAC_OVP_M2" />
+		<Argument GenericType="simple" Name="MC_TUNING_INTERFACE" />
+		<Argument GenericType="simple" Name="MOTOR_PROFILER" />        
+	</RefConfigFile>	
+	<RefConfigFile Name="UI_TASK_C" Template="ui_task.c.ftl">
+		<File Category="source" Condition="all" Name="ui_task.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="DEFAULT_DAC_CHANNEL_1" />
+		<Argument GenericType="simple" Name="DEFAULT_DAC_CHANNEL_2" />
+		<Argument GenericType="simple" Name="DRIVE_TYPE" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SERIAL_COM_MODE" />
+		<Argument GenericType="simple" Name="START_STOP_BTN" />    
+	</RefConfigFile>
+	<RefConfigFile Name="UI_TASK_H" Template="ui_task.h.ftl">
+		<File Category="header" Condition="all" Name="ui_task.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="DRIVE_TYPE" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />    
+		<Argument GenericType="simple" Name="START_STOP_BTN" />    
+	</RefConfigFile>		
+	<RefConfigFile Name="USER_INTERFACE_C" Template="user_interface.c.ftl">
+		<File Category="source" Condition="all" Name="user_interface.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="ADC_REFERENCE_VOLTAGE" />
+		<Argument GenericType="simple" Name="AUX_ENCODER" />
+		<Argument GenericType="simple" Name="AUX_ENCODER2" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS" />
+		<Argument GenericType="simple" Name="AUX_HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_CORDIC" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_CORDIC2" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_PLL" />
+		<Argument GenericType="simple" Name="AUX_STATE_OBSERVER_PLL2" />
+		<Argument GenericType="simple" Name="VBUS_PARTITIONING_FACTOR" />
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="DRIVE_TYPE" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="ENCODER" />
+		<Argument GenericType="simple" Name="ENCODER2" />
+		<Argument GenericType="simple" Name="FEED_FORWARD_CURRENT_REG_ENABLING" />
+		<Argument GenericType="simple" Name="FEED_FORWARD_CURRENT_REG_ENABLING2" />
+		<Argument GenericType="simple" Name="FLUX_WEAKENING_ENABLING" />
+		<Argument GenericType="simple" Name="FLUX_WEAKENING_ENABLING2" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />		
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />	
+		<Argument GenericType="simple" Name="HALL_SENSORS" />
+		<Argument GenericType="simple" Name="HALL_SENSORS2" />
+		<Argument GenericType="simple" Name="HFINJECTION" />
+		<Argument GenericType="simple" Name="HFINJECTION2" />
+		<Argument GenericType="simple" Name="MOTOR_PROFILER" />
+		<Argument GenericType="simple" Name="PFC_ENABLED" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />    
+		<Argument GenericType="simple" Name="STATE_OBSERVER_CORDIC" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_CORDIC2" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_PLL" />
+		<Argument GenericType="simple" Name="STATE_OBSERVER_PLL2" />
+		<Argument GenericType="simple" Name="SIX_STEP_SPEED_LOOP" />
+		<Argument GenericType="simple" Name="SIX_STEP_POWER_BOARD" />
+	</RefConfigFile>
+	<RefConfigFile Name="USER_INTERFACE_H" Template="user_interface.h.ftl">
+		<File Category="header" Condition="all" Name="user_interface.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="DAC_FUNCTIONALITY" />
+		<Argument GenericType="simple" Name="DRIVE_TYPE" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />    
+		<Argument GenericType="simple" Name="CTRBDID" />
+		<Argument GenericType="simple" Name="PWBDID" />
+		<Argument GenericType="simple" Name="PWBDID2" />
+		<Argument GenericType="simple" Name="UID" />
+		<Argument GenericType="simple" Name="MOTOR_PROFILER" />   	
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING" />
+		<Argument GenericType="simple" Name="POSITION_CTRL_ENABLING2" />		
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />    
+	</RefConfigFile>
+	<RefConfigFile Name="PFC_PARAMETERS_H" Template="pfc_parameters.h.ftl">
+		<File Category="header" Condition="S_PFC &amp; S_DRIVE_TYPE_FOC" Name="pfc_parameters.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="CURRCTRLFREQUENCY" />
+		<Argument GenericType="simple" Name="CURR_KIDIV" />
+		<Argument GenericType="simple" Name="CURR_KPDIV" />
+		<Argument GenericType="simple" Name="FAULTPIN" />
+		<Argument GenericType="simple" Name="FAULTPOLARITY" />
+		<Argument GenericType="simple" Name="FAULTPORT" />
+		<Argument GenericType="simple" Name="ISAMPLINGTIMEREAL" />
+		<Argument GenericType="simple" Name="MAINSFREQ" />
+		<Argument GenericType="simple" Name="OUTPUTPOWERACTIVATION" />
+		<Argument GenericType="simple" Name="OUTPUTPOWERDEACTIVATION" />
+		<Argument GenericType="simple" Name="PFCAMPLGAIN" />
+		<Argument GenericType="simple" Name="PFCSHUNTRESISTOR" />
+		<Argument GenericType="simple" Name="PID_CURR_KI_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_CURR_KP_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_VOLT_KI_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_VOLT_KP_DEFAULT" />
+		<Argument GenericType="simple" Name="PROPDELAYOFF" />
+		<Argument GenericType="simple" Name="PROPDELAYON" />
+		<Argument GenericType="simple" Name="PWMFREQ" />
+		<Argument GenericType="simple" Name="STARTUPDURATION" />
+		<Argument GenericType="simple" Name="SWOVERVOLTAGETH" />
+		<Argument GenericType="simple" Name="VMAINS_PARTITIONING_FACTOR" />
+		<Argument GenericType="simple" Name="VOLTAGEREFERENCE" />
+		<Argument GenericType="simple" Name="VOLTCTRLFREQUENCY" />
+		<Argument GenericType="simple" Name="VOLT_KIDIV" />
+		<Argument GenericType="simple" Name="VOLT_KPDIV" />
+	</RefConfigFile>
+	<RefConfigFile Name="DAC_RCTIMER_UI_C" Template="dac_rctimer_ui.c.ftl">
+		<File Category="source" Condition="S_DAC_FUNCTIONALITY &amp; S_DAC_EMULATED &amp; S_DRIVE_TYPE_FOC" Name="dac_rctimer_ui.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="DAC_TIMER_CH1_GPIO_PORT" />
+		<Argument GenericType="simple" Name="DAC_TIMER_CH1_GPIO_PIN" />
+		<Argument GenericType="simple" Name="DAC_TIMER_CH2_GPIO_PORT" />
+		<Argument GenericType="simple" Name="DAC_TIMER_CH2_GPIO_PIN" />
+		<Argument GenericType="simple" Name="DAC_TIMER_SELECTION" />
+		<Argument GenericType="simple" Name="DAC_EMULATED_1" />
+		<Argument GenericType="simple" Name="DAC_EMULATED_2" />
+	</RefConfigFile>
+	<RefConfigFile Name="DAC_UI_C" Template="dac_ui.c.ftl">
+		<File Category="source" Condition="S_DAC_FUNCTIONALITY &amp; !S_DAC_EMULATED &amp; S_DRIVE_TYPE_FOC" Name="dac_ui.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="DEBUG_DAC_CH1" />
+		<Argument GenericType="simple" Name="DEBUG_DAC_CH2" />
+	</RefConfigFile>	
+	<RefConfigFile Name="6STEP_INIT_H" Template="6step_init.h.ftl">
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC" Name="6step_init.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="SIX_STEP_POWER_BOARD" />
+		<Argument GenericType="simple" Name="SIX_STEP_SENSING" />
+		<Argument GenericType="simple" Name="SIX_STEP_CONTROL_MODE" />
+		<Argument GenericType="simple" Name="SIX_STEP_SPEED_LOOP" />
+	</RefConfigFile>
+	<RefConfigFile Name="6STEP_INIT_C" Template="6step_init.c.ftl">
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC" Name="6step_init.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SIX_STEP_POWER_BOARD" />
+		<Argument GenericType="simple" Name="SIX_STEP_SENSING" />
+		<Argument GenericType="simple" Name="SIX_STEP_CONTROL_MODE" />
+		<Argument GenericType="simple" Name="SIX_STEP_SPEED_LOOP" />
+	</RefConfigFile>
+	<RefConfigFile Name="6STEP_CONF_H" Template="6step_conf.h.ftl">
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC" Name="6step_conf.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="MOTOR_REF" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SIX_STEP_SENSING" />
+		<Argument GenericType="simple" Name="SIX_STEP_CONTROL_MODE" />
+		<Argument GenericType="simple" Name="SIX_STEP_SPEED_LOOP" />
+		<Argument GenericType="simple" Name="SIX_STEP_SET_POINT_RAMPING" />
+		<Argument GenericType="simple" Name="SIX_STEP_THREE_PWM" />
+	</RefConfigFile>
+	<RefConfigFile Name="6STEP_CONF_C" Template="6step_conf.c.ftl">
+		<File Category="source" Condition="!S_DRIVE_TYPE_FOC" Name="6step_conf.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SIX_STEP_SENSING" />
+		<Argument GenericType="simple" Name="SIX_STEP_CONTROL_MODE" />
+		<Argument GenericType="simple" Name="SIX_STEP_SPEED_LOOP" />
+		<Argument GenericType="simple" Name="SIX_STEP_SET_POINT_RAMPING" />
+		<Argument GenericType="simple" Name="SIX_STEP_THREE_PWM" />
+		<Argument GenericType="simple" Name="SIX_STEP_POWER_BOARD" />
+	</RefConfigFile>
+	<RefConfigFile Name="6STEP_CORE_H" Template="6step_core.h.ftl">
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC" Name="6step_core.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="SIX_STEP_SENSING" />
+		<Argument GenericType="simple" Name="SIX_STEP_CONTROL_MODE" />
+		<Argument GenericType="simple" Name="SIX_STEP_SPEED_LOOP" />
+	</RefConfigFile>
+	<RefConfigFile Name="6STEP_CORE_C" Template="6step_core.c.ftl">
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC" Name="6step_core.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="SIX_STEP_SENSING" />
+		<Argument GenericType="simple" Name="SIX_STEP_CONTROL_MODE" />
+		<Argument GenericType="simple" Name="SIX_STEP_SPEED_LOOP" />
+		<Argument GenericType="simple" Name="SIX_STEP_SET_POINT_RAMPING" />
+		<Argument GenericType="simple" Name="SIX_STEP_THREE_PWM" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+	</RefConfigFile>
+	<RefConfigFile Name="6STEP_COM_C" Template="6step_com.c.ftl">
+		<File Category="source" Condition="!S_DRIVE_TYPE_FOC &amp; !S_SERIAL_COMMUNICATION" Name="6step_com.c" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="SIX_STEP_SENSING" />
+	</RefConfigFile>
+	<RefConfigFile Name="MOTOR_CONF_GBM2804H_100T" Template="motor_conf_GBM2804H-100T.h.ftl">
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; S_MOTOR_GBM2804H_100T" Name="Motor_Configuration.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="DEFAULT_TARGET_SPEED_RPM" />
+		<Argument GenericType="simple" Name="PID_SPEED_KP_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_SPEED_KI_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_SPEED_KD_DEFAULT" />
+		<Argument GenericType="simple" Name="SP_KPDIV" />
+		<Argument GenericType="simple" Name="RSHUNT" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="MOTOR_REF" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SIX_STEP_SENSING" />
+		<Argument GenericType="simple" Name="SIX_STEP_CONTROL_MODE" />
+		<Argument GenericType="simple" Name="SIX_STEP_SPEED_LOOP" />
+		<Argument GenericType="simple" Name="SIX_STEP_SET_POINT_RAMPING" />
+		<Argument GenericType="simple" Name="SIX_STEP_THREE_PWM" />
+	</RefConfigFile>
+	<RefConfigFile Name="MOTOR_CONF_BR2804_1700kv_H" Template="motor_conf_BR2804-1700kv.h.ftl">
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; S_MOTOR_BR2804_1700kv" Name="Motor_Configuration.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="DEFAULT_TARGET_SPEED_RPM" />
+		<Argument GenericType="simple" Name="PID_SPEED_KP_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_SPEED_KI_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_SPEED_KD_DEFAULT" />
+		<Argument GenericType="simple" Name="SP_KPDIV" />
+		<Argument GenericType="simple" Name="RSHUNT" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="MOTOR_REF" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SIX_STEP_SENSING" />
+		<Argument GenericType="simple" Name="SIX_STEP_CONTROL_MODE" />
+		<Argument GenericType="simple" Name="SIX_STEP_SPEED_LOOP" />
+		<Argument GenericType="simple" Name="SIX_STEP_SET_POINT_RAMPING" />
+		<Argument GenericType="simple" Name="SIX_STEP_THREE_PWM" />
+		<Argument GenericType="simple" Name="SIX_STEP_POWER_BOARD" />
+	</RefConfigFile>
+	<RefConfigFile Name="MOTOR_CONF_LA052_080E3NL1_3202_H" Template="motor_conf_LA052-080E3NL1-3202.h.ftl">
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; S_MOTOR_LA052_080E3NL1_3202" Name="Motor_Configuration.h" Version="v0.0.0" />
+		<Argument GenericType="simple" Name="DEFAULT_TARGET_SPEED_RPM" />
+		<Argument GenericType="simple" Name="PID_SPEED_KP_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_SPEED_KI_DEFAULT" />
+		<Argument GenericType="simple" Name="PID_SPEED_KD_DEFAULT" />
+		<Argument GenericType="simple" Name="SP_KPDIV" />
+		<Argument GenericType="simple" Name="RSHUNT" />
+		<Argument GenericType="simple" Name="DUALDRIVE" />
+		<Argument GenericType="simple" Name="MOTOR_REF" />
+		<Argument GenericType="simple" Name="SERIAL_COMMUNICATION" />
+		<Argument GenericType="simple" Name="SIX_STEP_SENSING" />
+		<Argument GenericType="simple" Name="SIX_STEP_CONTROL_MODE" />
+		<Argument GenericType="simple" Name="SIX_STEP_SPEED_LOOP" />
+		<Argument GenericType="simple" Name="SIX_STEP_SET_POINT_RAMPING" />
+		<Argument GenericType="simple" Name="SIX_STEP_THREE_PWM" />
+	</RefConfigFile>
+	<RefConfigFile Name="STEVAL_SPIN3202_CONF_H" Template="steval-spin3202_conf.h.ftl">
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_SPIN_3202" Name="steval-spin3202_conf.h" Version="v0.0.0" />
+	</RefConfigFile>
+	<RefConfigFile Name="STEVAL_SPIN3204_CONF_H" Template="steval-spin3204_conf.h.ftl">
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_SPIN_3204" Name="steval-spin3204_conf.h" Version="v0.0.0" />
+	</RefConfigFile>
+	<RefConfigFile Name="IHM07M1_CONF_H" Template="ihm07m1_conf.h.ftl">
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_IHM07M1" Name="ihm07m1_conf.h" Version="v0.0.0" />
+	</RefConfigFile>
+	<RefConfigFile Name="IHM08M1_CONF_H" Template="ihm08m1_conf.h.ftl">
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_IHM08M1" Name="ihm08m1_conf.h" Version="v0.0.0" />
+	</RefConfigFile>
+	<RefConfigFile Name="IHM16M1_CONF_H" Template="ihm16m1_conf.h.ftl">
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_IHM16M1" Name="ihm16m1_conf.h" Version="v0.0.0" />
+	</RefConfigFile>
+	<RefConfig Name="MC_FOC">
+		<Component Name="Middleware:MC:COMMON" />
+		<ConfigFile Name="MC_CONFIG_H" />
+		<ConfigFile Name="MC_CONFIG_C" />
+		<ConfigFile Name="MC_PARAMETERS_H" />		
+		<ConfigFile Name="MC_PARAMETERS_C" />		
+		<ConfigFile Name="MC_TASKS_C" />
+		<ConfigFile Name="MCTASKS_H" />
+		<ConfigFile Name="MC_API_C" />
+		<ConfigFile Name="MC_API_H" />
+		<ConfigFile Name="MC_CTRL_PROTOCOL_C" />
+		<ConfigFile Name="MC_CTRL_PROTOCOL_H" />
+		<ConfigFile Name="STM32_F0XX_MC_IT_C" />
+		<ConfigFile Name="STM32_F10X_MC_IT_C" />
+		<ConfigFile Name="STM32_F30X_MC_IT_C" />
+		<ConfigFile Name="STM32_L4XX_MC_IT_C" />
+		<ConfigFile Name="STM32_F7XX_MC_IT_C" />		
+    <ConfigFile Name="STM32_H7XX_MC_IT_C" />	    
+		<ConfigFile Name="STM32_F4XX_MC_IT_C" />
+		<ConfigFile Name="STM32_G4XX_MC_IT_C" />
+		<ConfigFile Name="STM32_G0XX_MC_IT_C" />
+		<ConfigFile Name="SNDP_H" />
+		<ConfigFile Name="MC_STM_TYPES_H" />
+		<ConfigFile Name="DRIVE_PARAMETERS_H" />
+		<ConfigFile Name="PARAMETERS_CONVERSION_H" />
+		<ConfigFile Name="PARAMETERS_CONVERSION_F0XX_H" />
+		<ConfigFile Name="PARAMETERS_CONVERSION_G0XX_H" />
+		<ConfigFile Name="PARAMETERS_CONVERSION_F10X_H" />
+		<ConfigFile Name="PARAMETERS_CONVERSION_F30X_H" />
+		<ConfigFile Name="PARAMETERS_CONVERSION_L4XX_H" />
+		<ConfigFile Name="PARAMETERS_CONVERSION_F7XX_H" />		
+		<ConfigFile Name="PARAMETERS_CONVERSION_H7XX_H" />    
+		<ConfigFile Name="PARAMETERS_CONVERSION_F4XX_H" />
+		<ConfigFile Name="PARAMETERS_CONVERSION_G4XX_H" />
+		<ConfigFile Name="PMSM_MOTOR_PARAMETERS_H" />
+		<ConfigFile Name="POWER_STAGE_PARAMETERS_H" />
+		<ConfigFile Name="PFC_PARAMETERS_H" />
+		<ConfigFile Name="DAC_RCTIMER_UI_C" />
+		<ConfigFile Name="DAC_UI_C" />		
+		<ConfigFile Name="UI_TASK_C" />
+		<ConfigFile Name="UI_TASK_H" />    
+		<ConfigFile Name="USER_INTERFACE_C" />
+		<ConfigFile Name="USER_INTERFACE_H" />
+		<ConfigFile Name="REGULAR_CONVERSION_MANAGER_C" />
+		<ConfigFile Name="REGULAR_CONVERSION_MANAGER_H" />
+		<ConfigFile Name="MC_MATH_C" />
+		<ConfigFile Name="MC_MATH_H" />
+		<ConfigFile Name="MC_INTERFACE_C" />
+		<ConfigFile Name="MC_INTERFACE_H" />		
+	</RefConfig>
+	<RefConfig Name="MC_SixStep">
+		<Component Name="Middleware:MC:COMMON6" />
+		<ConfigFile Name="6STEP_INIT_H" />
+		<ConfigFile Name="6STEP_INIT_C" />
+		<ConfigFile Name="6STEP_CONF_H" />
+		<ConfigFile Name="6STEP_CONF_C" />
+		<ConfigFile Name="6STEP_CORE_H" />
+		<ConfigFile Name="6STEP_CORE_C" />
+		<ConfigFile Name="6STEP_COM_C" />
+		<ConfigFile Name="STEVAL_SPIN3202_CONF_H" />
+		<ConfigFile Name="STEVAL_SPIN3204_CONF_H" />
+		<ConfigFile Name="IHM07M1_CONF_H" />
+		<ConfigFile Name="IHM08M1_CONF_H" />
+		<ConfigFile Name="IHM16M1_CONF_H" />
+		<ConfigFile Name="MOTOR_CONF_GBM2804H_100T" />
+		<ConfigFile Name="MOTOR_CONF_BR2804_1700kv_H" />
+		<ConfigFile Name="MOTOR_CONF_LA052_080E3NL1_3202_H" />
+		<ConfigFile Name="MC_CONFIG_H" />
+		<ConfigFile Name="MC_CONFIG_C" />
+		<ConfigFile Name="MC_CTRL_PROTOCOL_C" />
+		<ConfigFile Name="MC_CTRL_PROTOCOL_H" />
+		<ConfigFile Name="MC_STM_TYPES_H" />
+		<ConfigFile Name="STM32_F0XX_MC_IT_C" />
+		<ConfigFile Name="STM32_F4XX_MC_IT_C" />
+		<ConfigFile Name="STM32_G4XX_MC_IT_C" />
+		<ConfigFile Name="UI_TASK_C" />
+		<ConfigFile Name="UI_TASK_H" />    
+		<ConfigFile Name="USER_INTERFACE_C" />
+		<ConfigFile Name="USER_INTERFACE_H" />
+	</RefConfig>
+	<RefComponent Cclass="MC" Cgroup="COMMON" Cversion="5.0.0">
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/bus_voltage_sensor.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/circle_limitation.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/digital_output.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/DigitalOutputPrivate.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_ENCODER" Name="MCSDK/MCLib/Any/Inc/enc_align_ctrl.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_ENCODER" Name="MCSDK/MCLib/Any/Inc/encoder_speed_pos_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; (STM32F0 | STM32G0)" Name="MCSDK/MCLib/Any/Inc/fast_div.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_FEED_FORWARD_CURRENT_REG_ENABLING" Name="MCSDK/MCLib/Any/Inc/feed_forward_ctrl.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_FLUX_WEAKENING_ENABLING" Name="MCSDK/MCLib/Any/Inc/flux_weakening_ctrl.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_POSITION_CTRL_ENABLING" Name="MCSDK/MCLib/Any/Inc/trajectory_ctrl.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_USE_STGAP1S" Name="MCSDK/MCLib/Any/Inc/gap_gate_driver_ctrl.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_HALL_SENSORS" Name="MCSDK/MCLib/Any/Inc/hall_speed_pos_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_HFINJECTION" Name="MCSDK/MCLib/Any/Inc/hifreqinj_fpu_ctrl.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_HFINJECTION" Name="MCSDK/MCLib/Any/Inc/hifreqinj_fpu_speednposfdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_ICS_SENSORS" Name="MCSDK/MCLib/Any/Inc/ics_dd_pwmncurrfdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_INRUSH_CURRLIMIT_ENABLING" Name="MCSDK/MCLib/Any/Inc/inrush_current_limiter.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/Mainpage.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/mc_type.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/mc_tuning.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/motor_power_measurement.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_MTPA_ENABLING" Name="MCSDK/MCLib/Any/Inc/max_torque_per_ampere.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_MOTOR_PROFILER" Name="MCSDK/MCLib/Any/Inc/mp_self_com_ctrl.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_MOTOR_PROFILER" Name="MCSDK/MCLib/Any/Inc/mp_one_touch_tuning.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/ntc_temperature_sensor.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/open_loop.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/pid_regulator.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/pqd_motor_power_measurement.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/pwm_curr_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/pwm_common.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/r1_dd_pwm_curr_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/r3_dd_pwm_curr_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/ramp_ext_mngr.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; (S_BUS_VOLTAGE_READING | (S_DUALDRIVE &amp; _BUS_VOLTAGE_READING2))" Name="MCSDK/MCLib/Any/Inc/r_divider_bus_voltage_sensor.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/revup_ctrl.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/speed_pos_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/speed_torq_ctrl.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/state_machine.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/stm32f0xx_MisraCompliance.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/stm32f10x_MisraCompliance.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/stm32f2xx_MisraCompliance.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/stm32f30x_MisraCompliance.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/stm32f40x_MisraCompliance.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; (S_STATE_OBSERVER_CORDIC | S_STATE_OBSERVER_PLL)" Name="MCSDK/MCLib/Any/Inc/sto_speed_pos_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_STATE_OBSERVER_CORDIC" Name="MCSDK/MCLib/Any/Inc/sto_cordic_speed_pos_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_STATE_OBSERVER_PLL" Name="MCSDK/MCLib/Any/Inc/sto_pll_speed_pos_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; (!S_BUS_VOLTAGE_READING | (S_DUALDRIVE &amp; !S_BUS_VOLTAGE_READING2))" Name="MCSDK/MCLib/Any/Inc/virtual_bus_voltage_sensor.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Inc/virtual_speed_sensor.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Src/bus_voltage_sensor.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Src/circle_limitation.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Src/digital_output.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_ENCODER" Name="MCSDK/MCLib/Any/Src/enc_align_ctrl.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_ENCODER" Name="MCSDK/MCLib/Any/Src/encoder_speed_pos_fdbk.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; (STM32F0 | STM32G0)" Name="MCSDK/MCLib/Any/Src/fast_div.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_FEED_FORWARD_CURRENT_REG_ENABLING" Name="MCSDK/MCLib/Any/Src/feed_forward_ctrl.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_FLUX_WEAKENING_ENABLING" Name="MCSDK/MCLib/Any/Src/flux_weakening_ctrl.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_POSITION_CTRL_ENABLING" Name="MCSDK/MCLib/Any/Src/trajectory_ctrl.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_USE_STGAP1S" Name="MCSDK/MCLib/Any/Src/gap_gate_driver_ctrl.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_HALL_SENSORS" Name="MCSDK/MCLib/Any/Src/hall_speed_pos_fdbk.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_HFINJECTION" Name="MCSDK/MCLib/Any/Src/hifreqinj_fpu_ctrl.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_HFINJECTION" Name="MCSDK/MCLib/Any/Src/hifreqinj_fpu_speednposfdbk.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_INRUSH_CURRLIMIT_ENABLING" Name="MCSDK/MCLib/Any/Src/inrush_current_limiter.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Src/motor_power_measurement.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_MTPA_ENABLING" Name="MCSDK/MCLib/Any/Src/max_torque_per_ampere.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_MOTOR_PROFILER" Name="MCSDK/MCLib/Any/Src/mp_self_com_ctrl.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_MOTOR_PROFILER" Name="MCSDK/MCLib/Any/Src/mp_one_touch_tuning.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Src/ntc_temperature_sensor.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Src/open_loop.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Src/pid_regulator.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Src/pqd_motor_power_measurement.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Src/pwm_curr_fdbk.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Src/pwm_common.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; (S_BUS_VOLTAGE_READING | (S_DUALDRIVE &amp; S_BUS_VOLTAGE_READING2))" Name="MCSDK/MCLib/Any/Src/r_divider_bus_voltage_sensor.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Src/ramp_ext_mngr.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Src/revup_ctrl.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Src/speed_pos_fdbk.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Src/speed_torq_ctrl.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Src/state_machine.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_STATE_OBSERVER_CORDIC" Name="MCSDK/MCLib/Any/Src/sto_cordic_speed_pos_fdbk.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_STATE_OBSERVER_PLL" Name="MCSDK/MCLib/Any/Src/sto_pll_speed_pos_fdbk.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; (!S_BUS_VOLTAGE_READING | (S_DUALDRIVE &amp; !S_BUS_VOLTAGE_READING2))" Name="MCSDK/MCLib/Any/Src/virtual_bus_voltage_sensor.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib/Any/Src/virtual_speed_sensor.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32F0" Name="MCSDK/MCLib/F0xx/Inc/r1_f0xx_pwm_curr_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT &amp; STM32F0" Name="MCSDK/MCLib/F0xx/Inc/r3_f0xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32F0" Name="MCSDK/MCLib/F0xx/Src/r1_f0xx_pwm_curr_fdbk.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT &amp; STM32F0" Name="MCSDK/MCLib/F0xx/Src/r3_f0xx_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32G0" Name="MCSDK/MCLib/G0xx/Inc/r1_g0xx_pwm_curr_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT &amp; STM32G0" Name="MCSDK/MCLib/G0xx/Inc/r3_g0xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32G0" Name="MCSDK/MCLib/G0xx/Src/r1_g0xx_pwm_curr_fdbk.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT &amp; STM32G0" Name="MCSDK/MCLib/G0xx/Src/r3_g0xx_pwm_curr_fdbk.c" />    
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_ICS_SENSORS &amp; STM32F1 &amp; S_STM32F103x_HD" Name="MCSDK/MCLib/F1xx/Inc/ics_hd2_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_ICS_SENSORS &amp; STM32F1 &amp; S_STM32F103x_HD" Name="MCSDK/MCLib/F1xx/Src/ics_hd2_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32F1 &amp; S_STM32F103x_HD" Name="MCSDK/MCLib/F1xx/Inc/r1_hd2_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32F1 &amp; S_STM32F103x_HD" Name="MCSDK/MCLib/F1xx/Src/r1_hd2_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT &amp; STM32F1" Name="MCSDK/MCLib/F1xx/Inc/r3_2_f1xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT &amp; STM32F1" Name="MCSDK/MCLib/F1xx/Src/r3_2_f1xx_pwm_curr_fdbk.c" />
+
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_ICS_SENSORS &amp; STM32F1 &amp; S_STM32F103x_MD" Name="MCSDK/MCLib/F1xx/Inc/ics_lm1_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_ICS_SENSORS &amp; STM32F1 &amp; S_STM32F103x_MD" Name="MCSDK/MCLib/F1xx/Src/ics_lm1_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32F1 &amp; (S_STM32F103x_MD | S_STM32F103x_LD)" Name="MCSDK/MCLib/F1xx/Inc/r1_vl1_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32F1 &amp; (S_STM32F103x_MD | S_STM32F103x_LD)" Name="MCSDK/MCLib/F1xx/Src/r1_vl1_pwm_curr_fdbk.c" />
+
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_ICS_SENSORS &amp; STM32F3" Name="MCSDK/MCLib/F3xx/Inc/ics_f30x_pwm_curr_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32F3" Name="MCSDK/MCLib/F3xx/Inc/r1_f30x_pwm_curr_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT &amp; STM32F3" Name="MCSDK/MCLib/F3xx/Inc/r3_1_f30x_pwm_curr_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT_SHARED_RESOURCES &amp; STM32F3" Name="MCSDK/MCLib/F3xx/Inc/r3_2_f30x_pwm_curr_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT_INDEPENDENT_RESOURCES &amp; STM32F3" Name="MCSDK/MCLib/F3xx/Inc/r3_2_f30x_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_ICS_SENSORS &amp; STM32F3" Name="MCSDK/MCLib/F3xx/Src/ics_f30x_pwm_curr_fdbk.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32F3" Name="MCSDK/MCLib/F3xx/Src/r1_f30x_pwm_curr_fdbk.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT &amp; STM32F3" Name="MCSDK/MCLib/F3xx/Src/r3_1_f30x_pwm_curr_fdbk.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT_SHARED_RESOURCES &amp; STM32F3" Name="MCSDK/MCLib/F3xx/Src/r3_2_f30x_pwm_curr_fdbk.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT_INDEPENDENT_RESOURCES &amp; STM32F3" Name="MCSDK/MCLib/F3xx/Src/r3_2_f30x_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_ICS_SENSORS &amp; STM32F4" Name="MCSDK/MCLib/F4xx/Inc/ics_f4xx_pwm_curr_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32F4" Name="MCSDK/MCLib/F4xx/Inc/r1_f4xx_pwm_curr_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT_INDEPENDENT_RESOURCES &amp; STM32F4" Name="MCSDK/MCLib/F4xx/Inc/r3_2_f4xx_pwm_curr_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT &amp; STM32F4" Name="MCSDK/MCLib/F4xx/Inc/r3_1_f4xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_ICS_SENSORS &amp; STM32F4" Name="MCSDK/MCLib/F4xx/Src/ics_f4xx_pwm_curr_fdbk.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32F4" Name="MCSDK/MCLib/F4xx/Src/r1_f4xx_pwm_curr_fdbk.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT_INDEPENDENT_RESOURCES &amp; STM32F4" Name="MCSDK/MCLib/F4xx/Src/r3_2_f4xx_pwm_curr_fdbk.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT &amp; STM32F4" Name="MCSDK/MCLib/F4xx/Src/r3_1_f4xx_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32L4" Name="MCSDK/MCLib/L4xx/Inc/r1_l4xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32L4" Name="MCSDK/MCLib/L4xx/Src/r1_l4xx_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_ICS_SENSORS &amp; STM32L4" Name="MCSDK/MCLib/L4xx/Inc/ics_l4xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_ICS_SENSORS &amp; STM32L4" Name="MCSDK/MCLib/L4xx/Src/ics_l4xx_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT &amp; STM32L4" Name="MCSDK/MCLib/L4xx/Inc/r3_1_l4xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT &amp; STM32L4" Name="MCSDK/MCLib/L4xx/Src/r3_1_l4xx_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT_INDEPENDENT_RESOURCES &amp; STM32L4" Name="MCSDK/MCLib/L4xx/Inc/r3_2_l4xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT_INDEPENDENT_RESOURCES &amp; STM32L4" Name="MCSDK/MCLib/L4xx/Src/r3_2_l4xx_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT_INDEPENDENT_RESOURCES &amp; STM32G4" Name="MCSDK/MCLib/G4xx/Inc/r3_2_g4xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT_INDEPENDENT_RESOURCES &amp; STM32G4" Name="MCSDK/MCLib/G4xx/Src/r3_2_g4xx_pwm_curr_fdbk.c" />		
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_ICS_SENSORS &amp; STM32G4" Name="MCSDK/MCLib/G4xx/Inc/ics_g4xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_ICS_SENSORS &amp; STM32G4" Name="MCSDK/MCLib/G4xx/Src/ics_g4xx_pwm_curr_fdbk.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32G4" Name="MCSDK/MCLib/G4xx/Src/r1_g4xx_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32G4" Name="MCSDK/MCLib/G4xx/Inc/r1_g4xx_pwm_curr_fdbk.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32F7" Name="MCSDK/MCLib/F7xx/Inc/r1_F7xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32F7" Name="MCSDK/MCLib/F7xx/Src/r1_F7xx_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_ICS_SENSORS &amp; STM32F7" Name="MCSDK/MCLib/F7xx/Inc/ics_F7xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_ICS_SENSORS &amp; STM32F7" Name="MCSDK/MCLib/F7xx/Src/ics_F7xx_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT &amp; STM32F7" Name="MCSDK/MCLib/F7xx/Inc/r3_1_f7xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT &amp; STM32F7" Name="MCSDK/MCLib/F7xx/Src/r3_1_f7xx_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT_INDEPENDENT_RESOURCES &amp; STM32F7" Name="MCSDK/MCLib/F7xx/Inc/r3_2_f7xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT_INDEPENDENT_RESOURCES &amp; STM32F7" Name="MCSDK/MCLib/F7xx/Src/r3_2_f7xx_pwm_curr_fdbk.c" />
+    <File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32H7" Name="MCSDK/MCLib/H7xx/Inc/r1_h7xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_SINGLE_SHUNT &amp; STM32H7" Name="MCSDK/MCLib/H7xx/Src/r1_h7xx_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_ICS_SENSORS &amp; STM32H7" Name="MCSDK/MCLib/H7xx/Inc/ics_h7xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_ICS_SENSORS &amp; STM32H7" Name="MCSDK/MCLib/H7xx/Src/ics_h7xx_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT &amp; STM32H7" Name="MCSDK/MCLib/H7xx/Inc/r3_1_h7xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT &amp; STM32H7" Name="MCSDK/MCLib/H7xx/Src/r3_1_h7xx_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT_INDEPENDENT_RESOURCES &amp; STM32H7" Name="MCSDK/MCLib/H7xx/Inc/r3_2_h7xx_pwm_curr_fdbk.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_THREE_SHUNT_INDEPENDENT_RESOURCES &amp; STM32H7" Name="MCSDK/MCLib/H7xx/Src/r3_2_h7xx_pwm_curr_fdbk.c" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_PFC" Name="MCSDK/MCLib/Any/Inc/pfc.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_PFC" Name="MCSDK/MCLib/Any/Src/pfc.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/SystemDriveParams/DACParams.h" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_SERIAL_COMMUNICATION" Name="MCSDK/SystemDriveParams/USARTParams.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_DAC_FUNCTIONALITY &amp; !S_DAC_EMULATED" Name="MCSDK/UILibrary/Inc/dac_ui.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_DAC_FUNCTIONALITY" Name="MCSDK/UILibrary/Inc/dac_common_ui.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_DAC_FUNCTIONALITY &amp; S_DAC_EMULATED" Name="MCSDK/UILibrary/Inc/dac_rctimer_ui.h" />
+		<File Category="header" Condition="S_SERIAL_COMMUNICATION" Name="MCSDK/UILibrary/Inc/frame_communication_protocol.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/UILibrary/Inc/ui_irq_handler.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/UILibrary/Inc/UIIRQHandlerClass.h" />
+		<File Category="header" Condition="S_DRIVE_TYPE_FOC &amp; S_SERIAL_COMMUNICATION &amp; !S_SERIAL_COMMUNICATION_BIDIRECTIONAL" Name="MCSDK/UILibrary/Inc/unidirectional_fast_com.h" />
+		<File Category="header" Condition="S_SERIAL_COMMUNICATION" Name="MCSDK/UILibrary/Inc/usart_frame_communication_protocol.h" />
+
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_DAC_FUNCTIONALITY" Name="MCSDK/UILibrary/Src/dac_common_ui.c" />
+		<File Category="source" Condition="S_SERIAL_COMMUNICATION" Name="MCSDK/UILibrary/Src/frame_communication_protocol.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC" Name="MCSDK/UILibrary/Src/ui_irq_handler.c" />
+		<File Category="source" Condition="S_DRIVE_TYPE_FOC &amp; S_SERIAL_COMMUNICATION &amp; !S_SERIAL_COMMUNICATION_BIDIRECTIONAL" Name="MCSDK/UILibrary/Src/unidirectional_fast_com.c" />
+		<File Category="source" Condition="S_SERIAL_COMMUNICATION" Name="MCSDK/UILibrary/Src/usart_frame_communication_protocol.c" />
+	</RefComponent>
+	<RefComponent Cclass="MC" Cgroup="COMMON6" Cversion="5.0.0">
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC" Name="MCSDK/MCLib6Step/Inc/6step_def.h" />
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; !S_SERIAL_COMMUNICATION" Name="MCSDK/MCLib6Step/Inc/6step_com.h" />
+		<File Category="header" Condition="" Name="MCSDK/MCLib/Any/Inc/mc_type.h" />
+		<File Category="header" Condition="S_SERIAL_COMMUNICATION" Name="MCSDK/UILibrary/Inc/frame_communication_protocol.h" />
+		<File Category="source" Condition="S_SERIAL_COMMUNICATION" Name="MCSDK/UILibrary/Src/frame_communication_protocol.c" />
+		<File Category="header" Condition="S_SERIAL_COMMUNICATION" Name="MCSDK/UILibrary/Inc/usart_frame_communication_protocol.h" />
+		<File Category="source" Condition="S_SERIAL_COMMUNICATION" Name="MCSDK/UILibrary/Src/usart_frame_communication_protocol.c" />
+		<File Category="source" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_IHM07M1" Name="MCSDK/BSP/Components/l6230/l6230.c" />
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_IHM07M1" Name="MCSDK/BSP/Components/l6230/l6230.h" />
+		<File Category="source" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_IHM16M1" Name="MCSDK/BSP/Components/stspin830/stspin830.c" />
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_IHM16M1" Name="MCSDK/BSP/Components/stspin830/stspin830.h" />
+		<File Category="source" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_IHM16M1" Name="MCSDK/BSP/Components/stspin830/g431rb_bus.c" />
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_IHM16M1" Name="MCSDK/BSP/Components/stspin830/g431rb_bus.h" />
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_IHM16M1" Name="MCSDK/BSP/Components/stspin830/g431rb_errno.h" />
+		<File Category="source" Condition="!S_DRIVE_TYPE_FOC &amp; (S_SIX_STEP_POWER_BOARD_SPIN_3202 | S_SIX_STEP_POWER_BOARD_SPIN_3204)" Name="MCSDK/BSP/Components/stspin32f0a/stspin32f0a.c" />
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; (S_SIX_STEP_POWER_BOARD_SPIN_3202 | S_SIX_STEP_POWER_BOARD_SPIN_3204)" Name="MCSDK/BSP/Components/stspin32f0a/stspin32f0a.h" />
+		<File Category="source" Condition="!S_DRIVE_TYPE_FOC &amp; (S_SIX_STEP_POWER_BOARD_SPIN_3202 | S_SIX_STEP_POWER_BOARD_SPIN_3204)" Name="MCSDK/BSP/Components/stspin32f0a/f031c6_bus.c" />
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; (S_SIX_STEP_POWER_BOARD_SPIN_3202 | S_SIX_STEP_POWER_BOARD_SPIN_3204)" Name="MCSDK/BSP/Components/stspin32f0a/f031c6_bus.h" />
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; (S_SIX_STEP_POWER_BOARD_SPIN_3202 | S_SIX_STEP_POWER_BOARD_SPIN_3204)" Name="MCSDK/BSP/Components/stspin32f0a/f031c6_errno.h" />
+		<File Category="source" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_IHM07M1" Name="MCSDK/BSP/IHM07M1/ihm07m1.c" />
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_IHM07M1" Name="MCSDK/BSP/IHM07M1/ihm07m1.h" />
+		<File Category="source" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_IHM08M1" Name="MCSDK/BSP/IHM08M1/ihm08m1.c" />
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_IHM08M1" Name="MCSDK/BSP/IHM08M1/ihm08m1.h" />
+		<File Category="source" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_IHM16M1" Name="MCSDK/BSP/IHM16M1/ihm16m1.c" />
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_IHM16M1" Name="MCSDK/BSP/IHM16M1/ihm16m1.h" />
+		<File Category="source" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_SPIN_3202" Name="MCSDK/BSP/STEVAL-SPIN3202/steval-spin3202.c" />
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_SPIN_3202" Name="MCSDK/BSP/STEVAL-SPIN3202/steval-spin3202.h" />    
+		<File Category="source" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_SPIN_3204" Name="MCSDK/BSP/STEVAL-SPIN3204/steval-spin3204.c" />
+		<File Category="header" Condition="!S_DRIVE_TYPE_FOC &amp; S_SIX_STEP_POWER_BOARD_SPIN_3204" Name="MCSDK/BSP/STEVAL-SPIN3204/steval-spin3204.h" />
+	</RefComponent>
+</IP>

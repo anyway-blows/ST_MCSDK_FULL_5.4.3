@@ -1,0 +1,1 @@
+<#include "../F1/STEVAL-IHM034V2/STM32F103RC - 72 MHz.ftl" >
